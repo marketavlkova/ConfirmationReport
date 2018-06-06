@@ -1,0 +1,6 @@
+**/.DS_Store
+CR.*
+!.tex
+*.log
+text/**
+!text/*.tex

@@ -1,0 +1,467 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Template for thesis / confirmation report Massey University                                                     %%%
+% Autor: Marketa Vlkova (marketa.m.vlkova@gmail.com)                                                       %%%
+%
+% Version: 1.0							                                                                       %%%
+% modified from sci.muni.thesis.sty version 1.7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\filename{mu.thesis.sty}
+\def\filedate{2018/06/06}
+\def\fileversion{1.0}
+
+\@ifundefined{NeedsTeXFormat}{
+\typeout{*******************************************************************************}
+\ProvidesClass{mu.thesis}[\filedate\space v\fileversion]
+\typeout{Author: Marketa Vlkova (marketa.m.vlkova@gmail.com}
+\typeout{For original sci.muni.thesis.sty see: http://www.sci.muni.cz/en/BcMgrStudium/}
+\typeout{}
+\typeout{*******************************************************************************}
+}{
+\NeedsTeXFormat{LaTeX2e}
+\typeout{*******************************************************************************}
+\ProvidesClass{mu.thesis}[\filedate\space v\fileversion]
+\typeout{Author: Marketa Vlkova (marketa.m.vlkova@gmail.com}
+\typeout{For original sci.muni.thesis.sty see: http://www.sci.muni.cz/en/BcMgrStudium/}
+\typeout{}
+\typeout{*******************************************************************************}
+\RequirePackage{etoolbox,graphicx,textfit,changepage,setspace,ifthen,fancyhdr,calc,pdfpages,makeidx,color}
+\RequirePackage{hyperref}
+\RequirePackage[all]{hypcap}
+}
+
+\DeclareOption{Bc}{\newcommand{\ThesisType}{Bachelor's Thesis}}
+\DeclareOption{Mgr}{\newcommand{\ThesisType}{Master's Thesis}}
+\DeclareOption{Hons}{\newcommand{\ThesisType}{Honors Thesis}}
+\DeclareOption{PhD}{\newcommand{\ThesisType}{Dissertation}}
+\DeclareOption{ConfRep}{\newcommand{\ThesisType}{Confirmation Report}}
+
+\DeclareOption{Color}{\hypersetup{
+linkcolor=red,
+citecolor=gray,
+filecolor=gray,
+urlcolor=gray,
+}}
+
+\DeclareOption{Tisk}{\hypersetup{
+linkcolor=black,
+citecolor=black,
+filecolor=black,
+urlcolor=black,
+}}
+
+\ProcessOptions
+
+\overfullrule10pt
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% OUTSET DEFINITION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\DepartmentName}[1]{\newcommand{\Department}{#1}}
+\newcommand{\YearOfSubmit}[1]{\newcommand{\YearSubmit}{#1}}
+\newcommand{\Author}[2]{\newcommand{\AuthorName}{#1} \newcommand{\AuthorDegree}{#2}}
+\newcommand{\ThesisName}[2]{\newcommand{\TitlePageThesisName}{#1} \newcommand{\TitleOfThesis}{#2}}
+\newcommand{\Supervisor}[1]{\newcommand{\ThesisSupervisor}{#1}}
+\newcommand{\Course}[1]{\newcommand{\FieldOfStudy}{#1}}
+\newcommand{\Keys}[1]{\newcommand{\Keywords}{#1}}
+\newcommand{\PageNumber}[1]{\newcommand{\Pages}{#1}}
+\newcommand{\AbstractText}[1]{\newcommand{\Abstract}{#1}}
+\newcommand{\AknowledgementText}[1]{\newcommand{\Aknowledgement}{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PAGE MARGINS SETTINGS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\newcommand{\HeadingSize}{12 pt+\@ptsize pt}
+\makeatother
+\usepackage[top=22mm,bottom=24mm,left=34mm,right=25mm,headsep=6mm,footskip=8mm,includeheadfoot,
+headheight=\HeadingSize]{geometry}
+
+%%%%%%%%%%%%%%%%%
+%%%%% DATE %%%%%
+%%%%%%%%%%%%%%%%%
+
+\def\Today{\number\day.~\ifcase
+\month\or January\or February\or
+March\or April\or May\or
+June\or July\or August\or
+September\or October\or November\or
+December\fi \space\number\year}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% CLEARDOUBLEPAGE DEFINITION - THERE WILL BE NO HEADING ADN FOOTER ON BLANK PAGES WHEN USING TWO-SIDE PRINT %%%%%%%
+
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+    \hbox{}
+    \thispagestyle{empty}
+    \newpage
+    \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother \clearpage{\pagestyle{empty}\cleardoublepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% HEADING OF OUTSET %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\newcommand{\Outset}[1]{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries  #1\par\nobreak
+    \vskip 30\p@
+  }}
+\makeatother
+
+%%%%%%%%%%%%%%%%%
+%%%%% FOLDER %%%%%
+%%%%%%%%%%%%%%%%%
+
+\newcommand{\Folder}{
+\pagestyle{empty}
+\begin{titlepage}
+\pdfbookmark{Folder}{Folder}
+\pagenumbering{Alph}
+
+\newlength{\departmentwidth} %% sets text width with name of the department
+\settowidth{\departmentwidth}{\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Department}}}}
+
+\newlength{\collegewidth} %% sets text wide with college name
+\settowidth{\collegewidth}{\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{College of Science}}}}
+
+
+  \begin{center}
+    {\fontsize{22pt}{28pt}\selectfont{\textbf{MASSEY UNIVERSITY}}}\\[2mm]
+    {\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{College of Science}}}}\\
+    \ifthenelse{\lengthtest{\departmentwidth > 0.95\collegewidth}}%
+        {\textbf{\textsc{\scaletowidth{0.95\collegewidth}{\Department}}}}%
+        {\vspace*{-3mm}\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Department}}}}
+  \end{center}
+
+\vfill
+
+  \begin{center}
+    {\fontsize{34pt}{20pt}\selectfont{\bf \ThesisType}}
+  \end{center}
+
+\vfill
+
+
+\setbox2=\hbox{\textbf{\textsc{\AuthorName}}}
+\setbox1=\hbox{textbf{\textsc{Z}}}
+\ht2=\the\ht1
+\setbox0=\hbox{\resizebox{0.68\textwidth}{!}{\box2}}
+
+\newlength{\folderwidth} %% sets text width with author name
+\settowidth{\folderwidth}{\fontsize{22pt}{28pt}\selectfont{\textbf{\textsc{\AuthorName}}}}
+
+\begin{raggedright}
+ \ifthenelse{\lengthtest{\folderwidth > 0.65\textwidth}}%
+       {\noindent \resizebox{!}{\the\ht0}{{\textbf{\textsc{Auckland \YearSubmit}}}} \hfill \copy0}
+       {{\fontsize{22pt}{28pt}\selectfont{\textbf{\textsc{Auckland \YearSubmit \hfill \AuthorName}}}}}
+\end{raggedright}
+
+\end{titlepage}
+ 
+\cleardoublepage
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% TITLE PAGE %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\TitlePage}{
+\pagenumbering{roman}
+\pagestyle{empty}
+\pdfbookmark{Title Page}{Title Page}
+
+
+\changetext{}{11.6mm}{}{}{}
+\begin{adjustwidth}{-12mm}{}
+\vspace*{-5mm}
+% \hspace{-17mm}
+%\begin{minipage}{113mm}
+  \begin{center}\vspace*{3mm}
+    {\fontsize{22pt}{28pt}\selectfont{\textbf{MASSEY UNIVERSITY}}}\\[2mm]
+    {\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{College of Science}}}}\\[1mm]
+%
+    \settowidth{\departmentwidth}{\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Department}}}}
+   
+\settowidth{\collegewidth}{\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{College of Science}}}}
+%    
+    \ifthenelse{\lengthtest{\departmentwidth > 0.95\departmentwidth}}%
+        {\vspace*{-0.5mm}\textbf{\textsc{\scaletowidth{0.95\collegewidth}{\Department}}}\\[-1mm]}%
+        {\vspace*{-4mm}\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Department}}}\\[-6mm]}
+    \noindent \rule{\textwidth}{2pt}\vspace*{2mm}
+  \end{center}
+%\end{minipage}\hspace{2mm}
+\end{adjustwidth}
+\changetext{}{-11.6mm}{}{}{}
+
+ \vfill
+
+\newlength{\authorwidth} %% sets text width with author name
+\settowidth{\authorwidth}{\fontsize{26pt}{28pt}\selectfont{\bf \AuthorName}}
+
+  \begin{raggedright}
+    \begin{spacing}{2.8}
+      {\fontsize{35pt}{28pt}\selectfont{\bf \TitlePageThesisName}}\\[-2mm]
+    \end{spacing}
+      {\fontsize{20pt}{28pt}\selectfont{\ThesisType}}\\[5mm]
+    \ifthenelse{\lengthtest{\authorwidth > 0.98\textwidth}}%
+        {\hspace*{-1mm}\textbf{\scaletowidth{0.98\textwidth}{\AuthorName}}}%
+        {\fontsize{26pt}{28pt}\selectfont{\bf \AuthorName}}
+  \end{raggedright}
+
+\vspace*{5mm}
+\vfill
+
+\newlength{\titlew} %% sets text width with supervisor name
+\settowidth{\titlew}{\fontsize{18.5pt}{20pt}\selectfont{\textbf{Supervisor: \ThesisSupervisor}}}
+
+\setbox2=\hbox{\bf Supervisor: \ThesisSupervisor}
+\setbox1=\hbox{\bf A}
+\ht2=\the\ht1
+\setbox0=\hbox{\resizebox{0.75\textwidth}{!}{\box2}}
+
+\begin{raggedright}
+ \ifthenelse{\lengthtest{\titlew > 0.72\textwidth}}%
+       {\noindent\copy0 \hfill \resizebox{!}{\the\ht0}{\bf Auckland \YearSubmit}}
+       {{\fontsize{18.5pt}{20pt}\selectfont{\textbf{Supervisor: \ThesisSupervisor \hfill Auckland
+\YearSubmit}}}}
+\end{raggedright}
+
+\normalsize
+
+\cleardoublepage
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% BIBLIOGRAPHIC ENTRY %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\BibliographicEntry}{
+\pdfbookmark{Bibliographic Entry}{Bibliographic Entry}
+\Outset{Bibliographic Entry}
+\thispagestyle{empty}
+
+\newlength{\leftw}
+\settowidth{\leftw}{{\bf Number of Pages:} } %% set necessary width of left column 
+
+\newlength{\rightw}
+\setlength{\rightw}{\textwidth - \rightw - 24 pt} %% calculate right column
+
+\noindent
+\begin{tabular}{ p{\leftw} p{\rightw} }
+  {\bf Author:}           & \AuthorDegree\\
+                          & College of Science, Massey University\\
+                          & \Department \\[6mm]
+  {\bf Title of Thesis:}  & \TitleOfThesis  \\[6mm]
+  {\bf Course:}   & \FieldOfStudy \\[6mm]
+  {\bf Number of Pages:}  & \Pages \\[6mm]
+  {\bf Keywords:}         & \Keywords
+\end{tabular}
+
+\cleardoublepage
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% OUTSET %%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\MakeOutset}{\Folder\TitlePage\BibliographicEntry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% ABSTRACT %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\AbstractPage}{
+\pdfbookmark{Abstract}{Abstract}
+\Outset{Abstract}
+
+\Abstract
+
+\vspace*{\fill}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% AKNOWLEDGEMENT %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\AknowledgementPage}{
+\pdfbookmark{Aknowledgement}{Aknowledgement}
+\Outset{Aknowledgement}
+\thispagestyle{empty}
+
+\Aknowledgement
+
+\vspace*{\fill}
+\cleardoublepage
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SETTING OF BASIC HEADING AND FOOTER %%%%%%%%%%%%%%%%%%%%%%%
+
+\def\headrulewidth{0pt}%
+\def\footrulewidth{0pt}%
+
+\makeatletter
+\fancypagestyle{plain}{%
+\fancyhf{}
+  \if@twoside
+    \fancyfoot[RO]{\it\small--\,\thepage\,--}\fancyfoot[LE]{\it\small--\,\thepage\,--}% TWOSIDE
+  \else
+    \fancyfoot[R]{\it\small--\,\thepage\,--}% ONESIDE
+  \fi
+}
+
+\newcommand{\HeadingIntro}{
+\pagestyle{fancy}%
+\fancyhf{}%
+  \if@twoside
+    \fancyhead[CO]{\small\it Introduction\ \hrulefill\ \thepage}% TWOSIDE
+    \fancyhead[CE]{\small\it\thepage\ \hrulefill\ Introduction}% TWOSIDE
+  \else
+    \fancyhead[C]{\small\it Introduction\ \hrulefill\ \thepage}% ONESIDE
+  \fi
+}
+
+\newcommand{\HeadingAbbrev}{
+\pagestyle{fancy}%
+\fancyhf{}%
+  \if@twoside
+    \fancyhead[CO]{\small\it List of Abbreviations\ \hrulefill\ \thepage}% TWOSIDE
+    \fancyhead[CE]{\small\it\thepage\ \hrulefill\ List of Abbreviations}% TWOSIDE
+  \else
+    \fancyhead[C]{\small\it List of Abbreviations\ \hrulefill\ \thepage}% ONESIDE
+  \fi
+}
+
+\newcommand{\HeadingChapters}{%
+\pagestyle{fancy}%
+\fancyhf{}%
+  \if@twoside
+    \fancyhead[CO]{\small\it \chaptername\ \leftmark\ \hrulefill\ \thepage}% TWOSIDE
+    \fancyhead[CE]{\small\it\thepage\ \hrulefill\ \chaptername\ \leftmark}% TWOSIDE
+  \else
+    \fancyhead[C]{\small\it \chaptername\ \leftmark\ \hrulefill\ \thepage}% ONESIDE
+  \fi
+}
+
+\newcommand{\HeadingConclusion}{
+\pagestyle{fancy}%
+\fancyhf{}%
+  \if@twoside
+    \fancyhead[CO]{\small\it Conclusion\ \hrulefill\ \thepage}% TWOSIDE
+    \fancyhead[CE]{\small\it\thepage\ \hrulefill\ Conclusion}% TWOSIDE
+   \else
+    \fancyhead[C]{\small\it Conclusion\ \hrulefill\ \thepage}% ONESIDE
+  \fi
+}
+
+\newcommand{\HeadingAppendix}{
+\pagestyle{fancy}%
+\fancyhf{}%
+  \if@twoside
+    \fancyhead[CO]{\small\it Appendix\ \hrulefill\ \thepage}% TWOSIDE
+    \fancyhead[CE]{\small\it\thepage\ \hrulefill\ Appendix}% TWOSIDE
+   \else
+    \fancyhead[C]{\small\it Appendix\ \hrulefill\ \thepage}% ONESIDE
+  \fi
+}
+
+
+\newcommand{\HeadingLiterature}{
+\pagestyle{plain}%
+\fancyhf{}%
+  \if@twoside
+    \fancyhead[CO]{\small\it \bibname\ \hrulefill\ \thepage}% TWOSIDE
+    \fancyhead[CE]{\small\it\thepage\ \hrulefill\ \small \bibname}% TWOSIDE
+  \else
+    \fancyhead[C]{\small\it \bibname\ \hrulefill\ \thepage}% ONESIDE
+  \fi
+}
+
+\newcommand{\HeadingIndex}{
+\pagestyle{plain}%
+\fancyhf{}%
+  \if@twoside
+    \fancyhead[CO]{\small\it \indexname\ \hrulefill\ \thepage}% TWOSIDE
+    \fancyhead[CE]{\small\it\thepage\ \hrulefill\ \indexname}% TWOSIDE
+  \else
+    \fancyhead[C]{\small\it \indexname\ \hrulefill\ \thepage}% ONESIDE
+  \fi
+}
+
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% INDEX %%%%%%%%
+
+\makeatletter
+\renewenvironment{theindex}
+               {\if@twocolumn
+                  \@restonecolfalse
+                \else
+                  \@restonecoltrue
+                \fi
+                \twocolumn[\phantomsection\addcontentsline{toc}{chapter}{\indexname}\@makeschapterhead{\indexname}]%
+                \@mkboth{\MakeUppercase\indexname}%
+                        {\MakeUppercase\indexname}%
+                \thispagestyle{plain}\parindent\z@
+                \parskip\z@ \@plus .3\p@\relax
+                \columnseprule \z@
+                \columnsep 35\p@
+                \let\item\@idxitem}
+               {\if@restonecol\onecolumn\else\clearpage\fi}
+\makeatother
+
+\newcommand{\MakeIndex}{
+\printindex
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%  INFORMATION FOR PDF %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\AtEndPreamble{
+\hypersetup{
+pdfencoding=unicode,
+pdftitle={\TitleOfThesis. \ThesisType},
+pdfauthor={\AuthorName{} (\Today)},
+pdfsubject={Massey University, College of Science, {\Department}, Auckland \YearSubmit},
+pdfkeywords={\Keywords},
+linktoc=all,
+breaklinks=true,
+colorlinks=true,
+pdfencoding=auto,
+%% for other more options see: http://www.tug.org/applications/hyperref/manual.html
+}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% IMPROVED TABLE OF CONTENT VISUALIZATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{tocloft}
+
+\renewcommand{\cftbeforetoctitleskip}{21.5mm} %%% Space before title
+\renewcommand{\cftaftertoctitleskip}{6.5mm}   %%% Space after title
+
+\renewcommand{\cftchapfont}{\bfseries}        %%% font of chapter name in table of content
+\renewcommand{\cftchappagefont}{\bfseries}    %%% font for page number in chapter
+\renewcommand{\cftchappresnum}{Chapter }     %%% text ``Chapter'' is written before chapter number
+\renewcommand{\cftchapaftersnum}{.}           %%% ``.'' is written after chapter number
+\renewcommand{\cftchapnumwidth}{22mm}         %%% space after chapter number
+\renewcommand{\cftchapleader}{ \bf\dotfill\ } %%% separator between chapter name and page number
+
+\setlength{\cftsecindent}{6mm}                %%% width of indentation for section
+\setlength{\cftbeforesecskip}{0.7mm}          %%% vertical space above section
+\setlength{\cftsecnumwidth}{8mm}              %%% space after section number
+\renewcommand{\cftsecdotsep}{3}               %%% density of filling between section name and page number
+
+\setlength{\cftsubsecindent}{14mm}            %%% width of indentation for subsection
+\setlength{\cftbeforesubsecskip}{0.5mm}       %%% vertical space above subsection
+\setlength{\cftsubsecnumwidth}{10mm}          %%% space after subsection number
+\renewcommand{\cftsubsecdotsep}{3}            %%% density of fillinf between subsection name and page number
+
+\newcommand{\MakeContent}{\tableofcontents}

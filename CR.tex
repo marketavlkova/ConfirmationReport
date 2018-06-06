@@ -1,0 +1,221 @@
+% \documentclass[11pt,a4paper,oneside,final]{book} %% FOR ONE-SIDE PRINT
+% \documentclass[11pt,a4paper,twoside,final]{book} %% FOR TWO-SIDE PRINT
+ \documentclass[12pt,a4paper,oneside,final]{book} %% FOR ONE-SIDE PRINT
+% \documentclass[12pt,a4paper,twoside,final]{book} %% FOR TWO-SIDE PRINT
+
+%%%%%%%%%%%%
+%% Choose document coding system
+%%%%%%%%%%%%
+
+\usepackage[utf8]{inputenc} 
+% \usepackage[cp1250]{inputenc} %% SETTINGS FOR WINDOWS
+\usepackage[IL2]{fontenc} %fonts for Czech/Slovak, shouldn't make problems in English
+
+\usepackage[german, czech]{babel}
+% \usepackage[slovak]{babel}
+% \usepackage[english]{babel}
+% \usepackage{czech}
+% \usepackage{slovak}
+
+\usepackage{mathptmx}  %% free font Adobe Times Roman
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PACKAGES NECESSARY FOR THE TEMPLATE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[authoryear]{natbib}
+%\PassOptionsToPackage{
+ %       natbib=true,
+	%			style=apa,
+   %     url=true,
+		%		hyperref=true,
+     %       }   {biblatex}
+\bibpunct{(}{)}{,}{a}{}{,}
+\let\cite\citep
+
+\usepackage{longtable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PACKAGES FOR MATH %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath,amssymb,amsthm}
+
+\usepackage{floatrow} %%%capposition=top puts descriptions of tables above the tables
+
+%%%%%%%%%%%%
+%% SET THESE DETAILS
+%%%%%%%%%%%%
+
+\usepackage[ConfRep,Color]{mu.thesis}
+%% Possible options:
+%% Bc - for Bachelor's Thesis
+%% Mgr - for Master's Thesis
+%% Hons - for Honors Thesis
+%% PhD - for Dissertation
+%% ConfRep - for Confirmation Report
+%% Color - for document with colored links
+%% Tisk - for document in black & white
+
+\DepartmentName{Institute of Natural and Mathematical Sciences}
+
+\YearOfSubmit{2016}
+
+\Author{Markéta Vlková}{Mgr. Markéta Vlková}
+
+\ThesisName{Natural variation among \textit{E.~coli} isolates in transcriptional responses and memory}{{Natural variation among \textit{E.~coli} isolates in transcriptional}\\ & {responses and memory}}
+
+\Supervisor{Dr. Olin Silander}
+
+\Course{Microbiology and Genetics}
+
+\PageNumber{54\,$+$\,3}
+
+\Keys{\textit{E.~coli}; transcription; epigenetics}
+
+\AbstractText%
+{Within the Czech polar expeditions to Johann Gregor Mendel Station on James Ross Island, Antarctica, biotic and abiotic microbial samples were collected.
+We picked out 439 presumptive pseudomonads isolated during the years 2011-2014 for further investigation.
+Initial sorting based on two genus specific PCRs separated 240 strains of them as \textit{Pseudomonas} species and these were then more characterized.
+
+Phenotypic methods included e.g. abilities to utilize various saccharides, growth on special media or under different temperature conditions.
+Some results of biochemical tests were used for the preliminary species identification.
+To show the overall phenotypic similarity of our samples we performed a cluster and an ordination analysis.
+Both methods separated 28 strains with problematical identification from the main cluster.
+They might be inaccurately included among pseudomonads by the genus specific PCRs.
+
+For genotyping we used a repetitive PCR (rep-PCR) approach.
+Surprisingly the dendrogram based on this method does not correspond with the phenotyping results.
+Thus we chose eight strains for sequencing of three \textit{Pseudomonas} conservative genes (\textit{rrs}, \textit{rpoB} and \textit{rpoD}) to determine their taxonomic affiliation.
+
+The established approach is possible to successfully use for \textit{Pseudomonas} species selection.
+However, our results show how much the species determination of psychrotrophic isolates from Antarctica is limited on the phenotype level.
+There still remains to verify the suitability of the rep-PCR method for genotyping of used strains.
+}
+
+\AknowledgementText%
+{Na tomto místě bych chtěla velice poděkovat doc. RNDr. Ivu Sedláčkovi, CSc. za cenné konzultace, pomoc, rady, připomínky a veškerý čas, který mi během zpracovávání práce věnoval.
+
+Jmenovitě bych také ráda poděkovala Kamilu S. Jaroňovi za věnovaný čas a~pomoc při~statistickém zpracování dat a~Mgr. Ivaně Mašlaňové, Ph.D. za~podporu a~rady se~sekvenační analýzou.
+
+Mé upřímné díky dále patří celému kolektivu České sbírky mikroorganismů za vytvoření příjemných pracovních podmínek a vlídné přijetí.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% YOUR OWN COMMANDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% HERE YOU CAN DEFINE YOUR OWN COMMANDS TO MAKE YOUR WRITTING EASIER %%%%%%%%%%%%%%%%
+
+\newcommand{\Cbb}{\mathbb{C}}
+\newcommand{\Rbb}{\mathbb{R}}
+\newcommand{\Zbb}{\mathbb{Z}}
+\newcommand{\Nbb}{\mathbb{N}}
+
+%\usepackage[draft]{graphicx} %%%this was in the original version, but i got problem with it and don't know why, so I disabled it%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% CREATE AUXILIARY FILE FOR INDEX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeindex
+
+\usepackage{titlesec}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\setlength{\LTcapwidth}{8in} %%% nastaví šířku popisu tabulek "longtable" - normálně nejsou stejně široké jako u "table" %%%
+\usepackage{pdfpages} %%% pro možnost vložení externího pdf souboru %%%
+\usepackage{hyperref} %%% pro crosslink příloh v pdf %%%
+\newcounter{includepdfpage} %%% pro zprovoznění crosslinku u příloh %%%
+%\usepackage[usenames, dvipsnames]{color} %%% pro definování vlastních barev písma %%%
+\usepackage{enumitem}  %%% pro redukci mezer v itemize %%%
+\usepackage{multicol} %%% pro itemize ve víze sloupcích %%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT BEGINNING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% OUTSET %%%%%%%%%%%%%%%%%
+
+\MakeOutset
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ABSTRACT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\AbstractPage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% AKNOWLEDGEMENT %%%%%%%%%%%%%%%
+
+\AknowledgementPage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% POUZE PROHLASENI %%%%%%%%%%%%%%%%%%%
+%
+% \ProhlaseniBezPodekovani
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%% OBSAH %%%%%%%%%%%%%%%%%%%%%%%%
+
+\pdfbookmark{Table of Contents}{Table of Contents}
+\MakeContent
+\addtocontents{toc}{~\hfill\textbf{Page}\par}%%% adds word "Page" above the list of page numbers in the table of contents
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TEXT PRACE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter. #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection. #1}{}}
+\renewcommand{\figurename}{\underline{Figure}}
+\renewcommand{\tablename}{\underline{Table}}
+\floatsetup[table]{capposition=top}
+
+\newcommand{\tax}[1]{\mbox{%
+	\textit{%
+		#1%
+	}%
+}}
+
+\HeadingAbbrev
+\input{text/01_Abbreviations}
+
+\HeadingIntro
+\input{text/02_Introduction}
+\renewcommand{\chaptername}{Chapter}
+
+\input{text/03_Objective}
+
+\HeadingChapters
+\input{text/04_Methods}
+
+\input{text/05_Results}
+
+\input{text/06_Discussion}
+
+\HeadingConclusion
+\input{text/07_Conclusion}
+
+\HeadingAppendix
+\input{text/08_Appendix}
+
+
+\renewcommand{\bibname}{References}
+\HeadingLiterature
+\addcontentsline{toc}{chapter}{\bibname}
+
+\bibliographystyle{apalike-marketa}
+\bibliography{Literature}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% EMPTY PAGE TO THE END %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\thispagestyle{empty}
+\fancyhf{}
+\newpage
+\mbox{}
+
+\end{document}
