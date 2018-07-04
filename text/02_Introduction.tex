@@ -19,17 +19,87 @@ Since its first isolation from infant faeces by Theodor Escherich in 1885 \cite{
 \tax{E. coli} is known to be a part of normal intestine microbiota.
 On the other hand extraintestinal infections caused by this bacterium are common and some strains (e.g. STEC) even possess virulence factors leading to heavy intestinal infections when expressed \cite{allocati2013escherichia}.
 
-
-Although the presence of \tax{E. coli} in water is still widely used as an indicator of fecal contamination recent studies show that some \tax{E. coli} isolates are able to  reproduce in soil \cite{byappanahalli2004indigenous, somorin2016general}.
-Moreover strains inhabiting soil for a long time were found to be distinctive \cite{walk2009cryptic, walk2015cryptic}.
-This raises the questions how these bacteria survive outside their hosts and how do they evolve under such conditions.
-
 \section{Transcription and memory}
-A bacterial genome consists of hundreds and thousands of genes, but not all of them are active at all the time.
-Gene expression changes during a cell cycle, when a nutrient source is altered or if surrounding conditions begin to be unfavourable.
+%A bacterial genome consists of hundreds and thousands of genes, but not all of them are active at all the time.
+%Gene expression changes during a cell cycle, when a nutrient source is altered or if surrounding conditions begin to be unfavourable.
 It is vital for a living cell to sense what is happening in the environment it is present at and react accordingly by transcription initiation or silencing of appropriate genes.
 Some studies has shown that cells with the same genetic background might react differently or at a different rate to the same stimulus based on their and their ancestors recent experience \cite{mathis2017asymmetric, ronin2017long}.
 Such ability is advantageous especially if the change in the conditions is predictable and repeats periodically.
+
+\subsection{Cellular responses}
+Ability to sense changes in both surrounding and intracellular environment and to respond to them is essential for every living cell.
+Important decision makings rely on the information acquired this way, for example if the cell should start dividing, whether to stay in actual place or to move elsewhere or if as a pathogen start to produce virulence factors or not \cite{gottesman2003proteolysis, sourjik2012responding, cui2018novel}.
+To manage and orchestrate all possible responses to multiple signals cells evolved a network of extra- and intracellular signaling pathways.
+%%% want to add some comment about me focusing to transcriptional regulation and mention that regulation at other levels (translation, protein activity) occur as well
+
+\subsubsection{Direct signaling pathways}
+When a signal molecule is imported through cell membrane into cytosol or is produced by the cell and subsequently interacts with gene regulatory protein we can talk about direct signaling.
+This is often the case in the regulation of carbohydrate catabolism and amino acid biosynthesis genes \cite{charlier1992arginine, weickert1992isorepressor, pittard1996various, wheatley2013structural}.
+Two simple models are described below.
+
+Cells avoid wasteful production of proteins which are not used at all the time.
+For instance, there is no sense in producing heaps of enzyme hydrolysing lactose (lacZ) if no lactose is present.
+To achieve this \tax{E. coli} expresses \tax{lac} repressor (LacI) \cite{hudson1990co}.
+However, \tax{lac} operon transcription is required if lactose is present in the media.
+Here \tax{lac} operon inducers take a turn.
+Lactose analogue IPTG and allolactose are true inducers of \tax{lac} operon as lactose permease imports them into the cell where they bind directly to the repressor LacI.
+Lactose itself has to modified to its isomer allolactose by $\beta$-galactosidase (LacZ) at first \cite{jobe1972lac, wheatley2013structural}.
+LacI binding to promoter DNA is then released triggering \tax{lacZYA} expression (Fig. \ref{dir}\textcolor{red}{a}) if an simultaneous activation by general regulatory protein CRP occurs \cite{hudson1990co, clark2005molecular}.
+
+%%% i'm going to change the picture a bit, showing that ArgR doesn't affect only one promoter...
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.4]{text/Pictures/DirectSignaling.png}
+	\caption{Scheme of direct signaling. \textbf{a} if \tax{lac} operon inducer (allolactose) is present it binds to LacI repressor and induces \tax{lac} operon transcription. \textbf{b} expression of arginine structural genes is co-repressed by arginine itself, because without it ArgR repressor cannot bind to DNA.}
+	\label{dir}
+\end{figure}
+
+Contrary to galactoside induction of \tax{lac} operon, arginine acts as a co-repressor of its own biosynthesis (Fig. \ref{dir}\textcolor{red}{b}).
+This means that when a bacterium does not have enough of this amino acid available for protein production the transcription of arginine genes is active \cite{charlier2004biosynthesis, caldara2006arginine}.
+On the other hand, when arginine is abundant in the culture medium and thus in the cell, there is no need to make more of it.
+The cell has ArgR repressor present in cytosol but ArgR itself cannot bind to DNA and inhibit transcription in the arginine absence \cite{clark2005molecular, caldara2006arginine}.
+However when there is plenty of arginine in the cell it binds to ArgR and as a co-repressor inhibits expression of arginine structural genes binding to an appropriate promoter \cite{charlier1992arginine, charlier2004biosynthesis, clark2005molecular}.
+
+\subsubsection{Two-component system}
+Direct signaling is straight forward, but an external signal molecule is not always imported into the cell.
+Instead covalent modifications of sensory protein by a chemical group are used in some cases \cite{ninfa1986covalent, falke1997two}.
+This is mostly the case of regulation of genes involved in stress response.
+But it it not limited only to stress responses as the two-component system represents a dominant and versatile form of bacterial sense-response processes \cite{karniol2004hwe, kaczmarczyk2014complex, cui2018novel}.
+It utilizes phosphate as a chemical group, however other groups can be used for cell signalling as well e.g. methyl, acetyl, AMP or even redox reactions \cite{kim2002oxyr, chaparro2010toxt, wang2010acetylation, you2013coordination}.
+
+A classic two-component system consists of a transmembrane sensory kinase which is autophosphorylated at its histidine residue after receiving physical or chemical signal from the environment (Fig. \ref{two}\textcolor{red}{a}).
+To be able to phosphorylate itself the kinase requires ATP or other phosphate donor.
+Next, the phosphorylated kinase transfers the phosphate group to its partner regulatory protein enabling its activity, most often DNA-binding \cite{lynch2012prioritization, gao2015temporal, cui2018novel}.
+This protein receives the phosphate to its aspartate residue and might act as both gene repressor and/or activator.
+Alternatively, the output of the two-component system can be a modification of biochemical activity of target proteins or RNAs instead or on the top of the change in gene expression \cite{shu2002antar, chambonnier2016hybrid}.
+
+The described kinases and cognate regulatory proteins do not necessarily need to be separated units.
+Proteins with histidine kinase domains connected to aspartate domains of DNA-binding proteins are known.
+These hybrid systems are usually located in cell membrane with their sensory domains in periplasmic space (Fig. \ref{two}\textcolor{red}{b}) \cite{lynch2012prioritization, hirano2013regulon}.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.85]{text/Pictures/TwoComponent.jpeg}
+	\caption{Two-component signaling pathways. \textbf{a} histidine kinase (HK) autophosphorylates in response to a signal and subsequently transfers the phosphate to a response regulator (RR) which generates output. \textbf{b} a hybrid system comprises both components (HK and RR) into a single protein. \textbf{c} in phosphorelay the phosphate is transferred multiple times before reaching its final RR. \textbf{d} some RR can be activated by several HK including metabolites such as acetyl phosphate. \textbf{e} one HK might phosphorylate multiple RR generating various outputs. (reproduced from \cite{groisman2016feedback})}
+	\label{two}
+\end{figure}
+
+Another version of two-component system is phosphorelay (Fig. \ref{two}\textcolor{red}{c}).
+In this case multiple steps of phosphate transfer occur before the final phosphorylation of target regulator.
+Histidine domain of sensor protein serves here as a phosphate donor to an aspartate domain of the same or another protein.
+From this domain the phosphate is further transferred to another histidine domain.
+This can exist again within the same protein or as a separated one.
+And finally, the aspartate domain of a DNA-binding regulator receives phosphate from the third domain in row.
+These multiple steps allow easier regulation by other signals as the phosphorelay can be silenced at any of the intermediate steps during the transmission \cite{perego2001pentapeptide, groisman2016feedback}.
+
+Systems where a regulatory protein can be phosphorylated by different sensory units also occur.
+And even phosphorylated metabolites might act as signal donors (Fig. \ref{two}\textcolor{red}{d}).
+This results in similar outputs in response to various signals \cite{kaczmarczyk2014complex, chambonnier2016hybrid}.
+
+Contrary, some cases require various response to a single signal, when multiple genes are affected.
+A divergent signal transmission mediates this (Fig. \ref{two}\textcolor{red}{e}) as one sensory kinase is able to phosphorylate aspartate domains of different acceptor proteins \cite{mika2005two, groisman2016feedback}.
+Moreover, all these variations of two-component system mentioned above combine in cells producing a complex sensory-response network \cite{kaczmarczyk2014complex, chambonnier2016hybrid}.
+%%% should i describe the responses more in detail?
 
 \subsection{Epigenetic mechanisms in bacteria}
 Epigenetics is understood as a heritable change in gene expression without simultaneous changes in DNA primary sequence.
@@ -57,6 +127,7 @@ This happens if another regulatory protein recognises a specific DNA biding site
 Such mechanism leading to epigenetic switch is well characterized in synthesis of \tax{pap} pili in uropathogenic \tax{E. coli} (UPEC) \cite{peterson2008competitive}.
 The regulatory sequence of the \tax{pap} operon contains two sets of Lrp binding sites 1-3 and 4-6.
 In both of them GATC sequence is present, GATC$^{prox}$ within site 2 and GATC$^{dist}$ within site 5 (Fig.~\ref{pap}) \cite{blyn1990regulation}.
+%%% I know, I'll change the picture later...
 \begin{figure}[t!]
   \centering
   \includegraphics[scale=1.5]{text/Pictures/papPili.jpeg}
@@ -101,6 +172,13 @@ This state is preserved in a sub-population of induced cells after transfer into
 Thus the high level of permease leads to high intracellular TMG concentration which in turn acts as permease transcription activator.
 On the other side naive cells have very small amounts of LacY if any thus they are not able to obtain TMG from the solution to activate \tax{lac} operon expression \cite{smits2006phenotypic, casadesus2013programmed}.
 
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.2]{text/Pictures/perOperonRegulation.jpg}
+	\caption{Scheme of EPEC virulence regulation. PerA positivelly autoregulates \tax{perABC} operon and the triggers expression of type IV pili. PerC activates transcription of Ler which is the main regulator of T3SS secretion system machinery. (reproduced from \cite{ronin2017long})}
+	\label{per}
+\end{figure}
+
 Another nice example of a long-term virulence epigenetic switch mediated by a positive feedback loop was published last year.
 Enteropathogenic \tax{E. coli} (EPEC) coexists in two, non-virulent and hyper-virulent, sub-populations during growth \cite{ronin2017long}.
 This bimodality was first observed  using ScanLag \cite{levin2014scanlag} as a difference in growth rates of the two groups resulting in BIG and SMALL colony morphotypes, for early and late appearing colonies, respectively.
@@ -108,13 +186,33 @@ In transcription level it is a change in \tax{per} operon expression (located on
 EPEC cultivation in virulence-activating conditions gives rise to \tax{per}-ON hyper-virulent aggregative sub-population (SMALL phenotype) reaching nearly 100\% \cite{ronin2017long}.
 Interestingly this high ratio of \tax{per}-ON vs \tax{per}-OFF cells remains for many generations even after transferring the culture back into non-activating conditions, although naive EPEC culture contains only a minority of \tax{per}-ON cells.
 Transition back from \tax{per}-ON to \tax{per}-OFF phase is achieved when cells are grown up to stationary phase.
-The long-term stability of \tax{per}-ON state relies on a positive feedback of PerA which acts as activator of its own gene beside \tax{perB} and \tax{perC} in \tax{per} operon (Fig.~\ref{per}) \cite{ibarra2003identification, ronin2017long}.
-\begin{figure}[h!]
-  \centering
-  \includegraphics[scale=0.2]{text/Pictures/perOperonRegulation.jpg}
-	\caption{Scheme of EPEC virulence regulation. PerA positivelly autoregulates \tax{perABC} operon and the triggers expression of type IV pili. PerC activates transcription of Ler which is the main regulator of T3SS secretion system machinery. (reproduced from \cite{ronin2017long})}
-	\label{per}
-\end{figure}
+The long-term stability of \tax{per}-ON state relies on a positive feedback of PerA which acts as an activator of its own gene beside \tax{perB} and \tax{perC} in the \tax{per} operon (Fig.~\ref{per}) \cite{ibarra2003identification, ronin2017long}.
+%%% More examples of positive feedback to add???
+
+As an illustration of \textbf{double negative feedback loop} in epigenetic regulation a switch between lytic and lysogenic cycle of \tax{E. coli} phage $\lambda$ is often described \cite{smits2006phenotypic, casadesus2013programmed}.
+After inserting its DNA the virus cycle might undergo two different ways - i.e. either replicate producing a lot of new phages and heading for bacterial lysis or integrate its own DNA into the bacterial chromosome and persist there within a lysogeny.
+The fate of the phage lies in two repressors, CI and Cro, each repressing transcription of the other \cite{eisen1970regulation, neubauer1970immunity}.
+Besides CI inhibits phage propagation genes and activates its own transcription.
+However, both CI and Cro are produced since the beginning of the infection.
+If the level of CI reaches a certain threshold and outcompetes Cro, whose activity is suppressed, the phage enters a lysogenic cycle staying dormant in the cell thanks to CI-\tax{cI} positive feedback loop.
+Otherwise Cro levels rise further inhibiting CI production and establishing phage proliferation with subsequent cell lysis \cite{svenningsen2005role}.
+It should be noted that although it is not predictable whether the phage enters lytic or lysogenic cycle, the ratio of lysed/lysogenized cells depends on bacterial physiologic situation and other environmental factors as well.
+Interestingly, Toman et al. used the CI-Cro system for epigenetic reuglation of \tax{gal} operon in \tax{E. coli} \cite{toman1985system}.
+%%% it's not epigenetics in E. coli, but in the phage lambda! (except for the engineered system by Toman et al.)
+
+%As the CI-Cro regulation is a phage system, the first evidence of bacterial epigenetics driven by a double negative feedback loop was published just 3 years ago.
+
+%%% detection of double negative feedback loop originating in bacteria?
+%%% double negative feedback detected in "A Novel Feedback Loop That Controls Bimodal Expression of Genetic Competence" which talks about cell competence
+%%% there is no direct evidence for epigenetics playing role in it, however paper "Agent-based modeling of competence phenotype switching in Bacillus subtilis" suggests it might be so according to their model
+%%% especially when in similar case - bacillus sporulation is it proven in: "Bet-hedging and epigenetic inheritance in bacterial cell development"
+
+
+%%% swapped paragraph from 0.1 Taxonomy and characteristic of E. coli
+Although the presence of \tax{E. coli} in water is still widely used as an indicator of fecal contamination recent studies show that some \tax{E. coli} isolates are able to  reproduce in soil \cite{byappanahalli2004indigenous, somorin2016general}.
+Moreover strains inhabiting soil for a long time were found to be distinctive \cite{walk2009cryptic, walk2015cryptic}.
+This raises the questions how these bacteria survive outside their hosts and how do they evolve under such conditions.
+
 
 
 
