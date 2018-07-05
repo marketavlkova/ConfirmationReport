@@ -4,3 +4,4 @@ CR.*
 *.log
 text/**
 !text/*.tex
+*text/02_*_*.tex
