@@ -4,7 +4,7 @@
 % Autor: Marketa Vlkova (marketa.m.vlkova@gmail.com)                                                       %%%
 %
 % Version: 1.0							                                                                       %%%
-% modified from sci.muni.thesis.sty version 1.7
+% modified from sci.muni.thesis.sty version 1.7 made by Petr Zemanek (zemanekp@math.muni.cz}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \def\filename{mu.thesis.sty}
@@ -163,7 +163,7 @@ December\fi \space\number\year}
 \end{raggedright}
 
 \end{titlepage}
- 
+
 \cleardoublepage
 }
 
@@ -187,9 +187,9 @@ December\fi \space\number\year}
     {\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{College of Science}}}}\\[1mm]
 %
     \settowidth{\departmentwidth}{\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Department}}}}
-   
+
 \settowidth{\collegewidth}{\fontsize{21pt}{28pt}\selectfont{\textbf{\textsc{College of Science}}}}
-%    
+%
     \ifthenelse{\lengthtest{\departmentwidth > 0.95\departmentwidth}}%
         {\vspace*{-0.5mm}\textbf{\textsc{\scaletowidth{0.95\collegewidth}{\Department}}}\\[-1mm]}%
         {\vspace*{-4mm}\fontsize{16pt}{28pt}\selectfont{\textbf{\textsc{\Department}}}\\[-6mm]}
@@ -247,7 +247,7 @@ December\fi \space\number\year}
 \thispagestyle{empty}
 
 \newlength{\leftw}
-\settowidth{\leftw}{{\bf Number of Pages:} } %% set necessary width of left column 
+\settowidth{\leftw}{{\bf Number of Pages:} } %% set necessary width of left column
 
 \newlength{\rightw}
 \setlength{\rightw}{\textwidth - \rightw - 24 pt} %% calculate right column
