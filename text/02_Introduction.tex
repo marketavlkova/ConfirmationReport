@@ -14,6 +14,9 @@
 \hspace*{3,5cm} Order: \hspace{0,5cm} \tax{Enterobacteriales}\\%
 \hspace*{4,5cm} Family: \hspace{0,5cm} \tax{Enterobacteriaceae}\\%
 
+% 2018.07.12
+% not sure this should be the top section. the fact that it's e. coli si not critical
+% just start at section 0.2? 
 \tax{E. coli} is Gram-negative bacterium with facultative anaerobic metabolism.
 Since its first isolation from infant faeces by Theodor Escherich in 1885 \cite{friedmann2006escherich}, this organism was found in gastrointestinal tract of other warm-blooded animals and reptiles \cite{gopee2000longitudinal} as well as in environmental samples such as soil or water.
 \tax{E. coli} is known to be a part of normal intestine microbiota.
@@ -26,6 +29,9 @@ It is vital for a living cell to sense what is happening in the environment it i
 Some studies has shown that cells with the same genetic background might react differently or at a different rate to the same stimulus based on their and their ancestors recent experience \cite{mathis2017asymmetric, ronin2017long}.
 Such ability is advantageous especially if the change in the conditions is predictable and repeats periodically.
 
+% 2018.07.12
+% might need a nice transition from 0.2 to 0.2.1 0.2 could be expanded a bit?
+% I (or someone else) can help with grammar corrections later
 \subsection{Cellular responses}
 Ability to sense changes in both surrounding and intracellular environment and to respond to them is essential for every living cell.
 Important decision makings rely on the information acquired this way, for example if the cell should start dividing, whether to stay in actual place or to move elsewhere or if as a pathogen start to produce virulence factors or not \cite{gottesman2003proteolysis, sourjik2012responding, cui2018novel}.
@@ -38,11 +44,15 @@ When a signal molecule is imported through cell membrane into cytosol or is prod
 This is often the case in the regulation of carbohydrate catabolism and amino acid biosynthesis genes \cite{charlier1992arginine, weickert1992isorepressor, pittard1996various, wheatley2013structural}.
 Two simple models are described below.
 
+% 2018.07.12
+% "producing heaps" is a bit colloquial. stay slightly more formal in your writing
 Cells avoid wasteful production of proteins which are not used at all the time.
 For instance, there is no sense in producing heaps of enzyme hydrolysing lactose (lacZ) if no lactose is present.
 To achieve this \tax{E. coli} expresses \tax{lac} repressor (LacI) \cite{hudson1990co}.
 However, \tax{lac} operon transcription is required if lactose is present in the media.
+% 2018.07.12 not *required* per se, but *desired*
 Here \tax{lac} operon inducers take a turn.
+% 2018.07.12 don't really like IPTG as a *true* inducer as it's not a substance E. coli would encounter in nature
 Lactose analogue IPTG and allolactose are true inducers of \tax{lac} operon as lactose permease imports them into the cell where they bind directly to the repressor LacI.
 Lactose itself has to modified to its isomer allolactose by $\beta$-galactosidase (LacZ) at first \cite{jobe1972lac, wheatley2013structural}.
 LacI binding to promoter DNA is then released triggering \tax{lacZYA} expression (Fig. \ref{dir}\textcolor{red}{a}) if an simultaneous activation by general regulatory protein CRP occurs \cite{hudson1990co, clark2005molecular}.
@@ -54,6 +64,8 @@ LacI binding to promoter DNA is then released triggering \tax{lacZYA} expression
 	\label{dir}
 \end{figure}
 
+% 2018.07.12 you need a transition here to talking about arginine, e.g. "For other metabolic pathways..."
+% you might also talk about other direct inducers that are not metabolic, e.g. SOS/lexA/recA
 Contrary to galactoside induction of \tax{lac} operon, arginine acts as a co-repressor of its own biosynthesis (Fig. \ref{dir}\textcolor{red}{b}).
 This means that when a bacterium does not have enough of this amino acid available for protein production the transcription of arginine genes is active \cite{charlier2004biosynthesis, caldara2006arginine}.
 On the other hand, when arginine is abundant in the culture medium and thus in the cell, there is no need to make more of it.
@@ -61,6 +73,7 @@ The cell has ArgR repressor present in cytosol but ArgR itself cannot bind to DN
 However when there is plenty of arginine in the cell it binds to ArgR and as a co-repressor inhibits expression of arginine structural genes binding to an appropriate promoter \cite{charlier1992arginine, charlier2004biosynthesis, clark2005molecular}.
 
 \subsubsection{Two-component system}
+% 2018.07.12 this intro paragraph is quite confusing. Start instead with something similar to the next paragraph?
 Direct signaling is straight forward, but an external signal molecule is not always imported into the cell.
 Instead covalent modifications of sensory protein by a chemical group are used in some cases \cite{ninfa1986covalent, falke1997two}.
 This is mostly the case of regulation of genes involved in stress response.
@@ -105,6 +118,7 @@ Moreover, all these variations of two-component system mentioned above combine i
 As mentioned above several ways of control of gene products take place in bacterial cells.
 Regulation of translation in bacteria is a useful tool for controlling differential production of proteins coded within the same operon and thus transcribed on the same mRNA \cite{dar2018extensive}.
 In the case of enzymes responding to quick changes it is useful to have those prepared in the cell even if not in use at the time.
+% 2018.07.12 might be useful to give some indication of the time scale for thee pathways, eg transciption speed, mRNA half life, protein half life. e.g. if you want to react in seconds you can't depend on txn and tln, but if you need to react in minutes/hours it's fine.
 When it comes to a sudden change in the environment the cell doesn't need to wait until the protein is transcribed and translated, but it only releases the activity of such protein.
 Histidine kinases of two-component system mentioned above serve as a good example.
 Transcriptional regulation on the other hand might be considered as the most economical as it inhibits the very synthesis of products which are not needed at the moment.
@@ -212,6 +226,8 @@ Lastly \textbf{YhdJ} is an orphan MT methylating 3' adenine of 5'-ATGCAT-3' sequ
 Deleting \tax{yhdJ} gene produces neither loss of viability of \tax{E. coli} nor changes in its phenotype.
 In addition, the expression of the gene is very low under usual laboratory conditions and nothing is known about transcription regulation of the gene \cite{broadbent2007yhdj}.
 
+% 2018.06.28
+% Eventually, go into way more detail here, as this will end up as a full section on lac. But if you are leaving this as a brief intro to positive, negative, double negative, that's fine. You might also start with sensing/reaction and then move to epigenetics. This is a reasonable ref I think *An introduction to systems biology: design principles of biological circuits*, although you always have to be a little careful with Uri Alon's take on things, sometimes it's a bit too facile.
 \subsubsection{Feedback loops}
 System where a product is able to affect positively or negatively its own production is called a feedback loop.
 The influence of the output on itself might be direct or indirect if multiple effectors are involved.
