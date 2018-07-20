@@ -9,23 +9,67 @@
 
 \shorthandoff{-} 
 
-\section{Původ, sběr a zpracování vzorků}
-K práci byly použity izoláty uložené v České sbírce mikroorganismů jako pracovní kmeny.
-Jednalo se o soubor vzorků pocházejících z Antarktidy, jenž byl vyizolován v~letech 2011 až 2014.
+\section{Strains and growth conditions}
+All strains used in this work belong to the genus \tax{Escherichia coli} and are derived from a classical laboratory strain K12 (MG1655) and an environmental strain SC1\textunderscore D9 isolated from a bank of St. Louis River in Minnesota within a great sampling study \cite{ishii2006presence}.
+In future work additional environmental isolates are likely to be used.
 
-U abiotických vzorků byla odebírána především zemina a voda.
-Z vody se naočkovávalo přímo 100 $\mu$l vzorku na misku s R2A agarem [Oxoid] bez ředění.
-Vzorky půdy a horniny byly suspendovány ve 3 ml fyziologického roztoku.
-Poté bylo provedeno desetinné ředění až do 10$^{-7}$ a následoval opět výsev jako u vzorků vody.
-Narostlé kmeny s rozmanitou makroskopickou morfologií byly
-odpichovány z misek s R2A agarem po kultivaci v 15$^\circ$C do křížového roztěru pro posouzení čistoty kultury.
+\begin{center}
+	\begin{longtable}[c]{|l|c|c|c|c|}
+\caption{Strains used in the study so far} \label{strains} \\
 
-Biotické vzorky pocházely z tuleňů.
-Jednalo se především o výtěry z tlamy a rekta do~transportního media Amies [Dispolab].
-Kmeny byly izolovány na BHI agarech [Bio-Rad] po kultivaci v 30$^\circ$C.
+\toprule \multicolumn{1}{|l|}{\textbf{Strain ID}} & \multicolumn{1}{c|}{\textbf{Relevant genotype}} & \multicolumn{1}{c|}{\textbf{Promoter}} & \multicolumn{1}{c|}{\textbf{Ancestor}} & \multicolumn{1}{c|}{\textbf{Reference}} \\
+\midrule
+\endhead
 
-Všechny tyto kroky (sběr vzorků, výsev a izolace čistých kultur) probíhaly dle zavedených a standardních postupů České sbírky mikroorganismů.
+\bottomrule
+\endlastfoot
 
+MG1655 & \tax{E. coli} K12 wild-type & - & - & \cite{blattner1997complete} \\
+\hline
+SC1\textunderscore D9 & ? & - & - & ? \\
+%%% should I use the same reference as above? (ishii2006presence)
+\hline
+pUA66-K12 & pUA66 & - & MG1655 & \cite{zaslaver2006comprehensive} \\
+\hline
+pU139-K12 & pU139 & - & MG1655 & \cite{zaslaver2006comprehensive} \\
+\hline
+pU139-D9 & pU139 & - & SC1\textunderscore D9 & this study \\
+\hline
+ASC662 & \tax{lacZ-GFP} & - & MG1655 & \cite{kiviet2014stochasticity} \\
+\hline
+pZ1\textunderscore K12-K12 & \tax{placZ::GFP} & MG1655 & MG1655 & \cite{zaslaver2006comprehensive} \\
+\hline
+pZ2\textunderscore K12-K12 & \tax{placZ::GFP} & MG1655 & MG1655 & this study \\
+\hline
+pZ2\textunderscore K12-D9 & \tax{placZ::GFP} & MG1655 & SC1\textunderscore D9 & ? \\
+\hline
+pZ\textunderscore D9-D9 & \tax{placZ::GFP} & SC1\textunderscore D9 & SC1\textunderscore D9 & ? \\
+\hline
+pZ\textunderscore D9-K12 & \tax{placZ::GFP} & SC1\textunderscore D9 & MG1655 & ? \\
+\hline
+pZm1\textunderscore D9-K12 & \tax{placZm172::GFP} & SC1\textunderscore D9 & MG1655 & ? \\
+\hline
+pZm2\textunderscore D9-K12 & \tax{placZm279::GFP} & SC1\textunderscore D9 & MG1655 & ? \\
+\hline
+pA\textunderscore K12-K12 & \tax{precA::GFP} & MG1655 & MG1655 & \cite{zaslaver2006comprehensive} \\
+\hline
+pA\textunderscore K12-D9 & \tax{precA::GFP} & MG1655 & SC1\textunderscore D9 & this study \\
+\hline
+Top10 & \text{*} & - & MG1655 & ? \\
+\hline
+pLW001-Top10 & pLW001 & - & Top10 & ? \\
+	\end{longtable}
+\footnotesize
+	\emph{\text{*}} F– mcrA $\Delta$(mrr-hsdRMS-mcrBC) $\Phi$80lacZ$\Delta$M15 $\Delta$lacX74 recA1 araD139 $\Delta$(ara leu)7697 galU galK rpsL(Str$^{R}$) endA1 nupG\\*
+%%% I took it from Quartzy and found out it differs a bit from E. coli genotypes description in https://openwetware.org/wiki/E._coli_genotypes#TOP10_.28Invitrogen.29
+%%% is it correct???
+\end{center}
+
+For most purposes M9 minimal medium supplemented with 0.4\% of a single carbon source was used.
+As those D(+)-glucose, lactose, D(+)-galactose, L-arabinose and D(-)-ribose were chosen.
+For DNA isolation all strain were grown in LB medium (liquid or 1.5\% agar).
+Kanamycin to concentration 50$\mu$g/ml was also added to the media if the bacterium contained pU139 or pUA66 plasmid (with or without promoter upstream of GFP).
+All strains were grown at 37$^{\circ}$C, except for pLW001-Top10 which was grown at 30$^{\circ}$C.
 
 \section{Uchovávání izolátů}
 Čisté izolované kmeny i použité referenční kmeny (CCM) byly uchovávány v hlubokomrazících boxech při -70$^{\circ}$C na keramických nosičích (korálcích) v polypropylenových zkumavkách.
