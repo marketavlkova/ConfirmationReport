@@ -26,7 +26,7 @@ In future work additional environmental isolates are likely to be used.
 
 MG1655 & \tax{E. coli} K12 wild-type & - & - & \cite{blattner1997complete} \\
 \hline
-SC1\textunderscore D9 & ? & - & - & ? \\
+SC1\textunderscore D9 & \textcolor{red}{?} & - & - & \textcolor{red}{?} \\
 %%% should I use the same reference as above? (ishii2006presence)
 \hline
 pUA66-K12 & pUA66 & - & MG1655 & \cite{zaslaver2006comprehensive} \\
@@ -41,23 +41,23 @@ pZ1\textunderscore K12-K12 & \tax{placZ::GFP} & MG1655 & MG1655 & \cite{zaslaver
 \hline
 pZ2\textunderscore K12-K12 & \tax{placZ::GFP} & MG1655 & MG1655 & this study \\
 \hline
-pZ2\textunderscore K12-D9 & \tax{placZ::GFP} & MG1655 & SC1\textunderscore D9 & ? \\
+pZ2\textunderscore K12-D9 & \tax{placZ::GFP} & MG1655 & SC1\textunderscore D9 & \textcolor{red}{?} \\
 \hline
-pZ\textunderscore D9-D9 & \tax{placZ::GFP} & SC1\textunderscore D9 & SC1\textunderscore D9 & ? \\
+pZ\textunderscore D9-D9 & \tax{placZ::GFP} & SC1\textunderscore D9 & SC1\textunderscore D9 & \textcolor{red}{?} \\
 \hline
-pZ\textunderscore D9-K12 & \tax{placZ::GFP} & SC1\textunderscore D9 & MG1655 & ? \\
+pZ\textunderscore D9-K12 & \tax{placZ::GFP} & SC1\textunderscore D9 & MG1655 & \textcolor{red}{?} \\
 \hline
-pZm1\textunderscore D9-K12 & \tax{placZm172::GFP} & SC1\textunderscore D9 & MG1655 & ? \\
+pZm1\textunderscore D9-K12 & \tax{placZm172::GFP} & SC1\textunderscore D9 & MG1655 & \textcolor{red}{?} \\
 \hline
-pZm2\textunderscore D9-K12 & \tax{placZm279::GFP} & SC1\textunderscore D9 & MG1655 & ? \\
+pZm2\textunderscore D9-K12 & \tax{placZm279::GFP} & SC1\textunderscore D9 & MG1655 & \textcolor{red}{?} \\
 \hline
 pA\textunderscore K12-K12 & \tax{precA::GFP} & MG1655 & MG1655 & \cite{zaslaver2006comprehensive} \\
 \hline
 pA\textunderscore K12-D9 & \tax{precA::GFP} & MG1655 & SC1\textunderscore D9 & this study \\
 \hline
-Top10 & \text{*} & - & MG1655 & ? \\
+Top10 & \text{*} & - & MG1655 & \textcolor{red}{?} \\
 \hline
-pLW001-Top10 & pLW001 & - & Top10 & ? \\
+pLW001-Top10 & pLW001 & - & Top10 & \textcolor{red}{?} \\
 	\end{longtable}
 \footnotesize
 	\emph{\text{*}} F– mcrA $\Delta$(mrr-hsdRMS-mcrBC) $\Phi$80lacZ$\Delta$M15 $\Delta$lacX74 recA1 araD139 $\Delta$(ara leu)7697 galU galK rpsL(Str$^{R}$) endA1 nupG\\*
@@ -65,61 +65,42 @@ pLW001-Top10 & pLW001 & - & Top10 & ? \\
 %%% is it correct???
 \end{center}
 
-For flow cytometry and microscopy purposes M9 minimal medium [] supplemented with 0.4\% of a single carbon source was used.
-As those D(+)-glucose [], lactose [], D(+)-galactose [], L-arabinose [] and D(-)-ribose [] were chosen.
-In other cases in LB medium [] (liquid or 1.5\% agar []) was used.
-Kanamycin [] to concentration 50$\mu$g/ml was also added to the media if the bacterium contained pU139 or pUA66 plasmid (with or without promoter upstream of GFP).
-All strains were grown at 37$^{\circ}$C, except for pLW001-Top10 which was grown at 30$^{\circ}$C (and presence of 100$\mu$g/ml Ampicillin [] as well).
+For flow cytometry and microscopy purposes M9 minimal medium [Sigma-Aldrich] supplemented with 0.4\% of a single carbon source was used.
+As those D(+)-glucose [LabServ], lactose [Ajax Finechem], D(+)-galactose [Acros Organics], L-arabinose [Alfa Aesar] and D(-)-ribose [Acros Organics] were chosen.
+In other cases in LB medium [Invitrogen] (liquid or 1.5\% agar [BD]) was used.
+Kanamycin [PanReac AppliChem] to concentration 50$\mu$g/ml was also added to the media if the bacterium contained pU139 or pUA66 plasmid (with or without promoter upstream of GFP).
+All strains were grown at 37$^{\circ}$C, except for pLW001-Top10 which was grown at 30$^{\circ}$C (and presence of 100$\mu$g/ml Ampicillin [PanReac AppliChem] as well).
 
 \section{Transformation}
+Desired plasmids for transformation were isolated from donor strains grown in liquid LB supplemented with appropriated antibiotic and using StrataPrep Plasmid Miniprep Kit according to manufacture's instructions.
+The only exceptions were using sterile deionized water instead of elution buffer and growing pLW001-Top10 strain for 24h at 30$^{\circ}$C prior to the very plasmid isolation.
+If the concentration of acquired plasmid DNA was too low, it was concentrated using centrifugal vacuum concentrator [Eppendorf\textsuperscript{\textregistered} Basic Model 5301] at room temperature.
+
 \subsection{Preparing electrocompetent cells}
 A flask of 1l capacity containing 100ml of liquid LB was inoculated by 1ml of overnight culture (or appropriate volumes) and incubated at 37$^{\circ}$C with shaking.
 After reaching OD$_{600}$ between 0.5 -- 0.9 the culture was fast chilled by swirling in ice slurry for 5 -- 10min and then kept in the slurry for 1h.
 Next the culture was transferred into 2 pre-chilled 50ml falcon tubes and centrifuged  at 4$^{\circ}$C for 10min at 4200G.
-The supernatant was discarded and pellet was washed twice in about 25ml of 10\% glycerol [] with centrifugation at 4$^{\circ}$C for 10min at 4500G.
+The supernatant was discarded and pellet was washed twice in about 25ml of 10\% glycerol [\textcolor{red}{?}] with centrifugation at 4$^{\circ}$C for 10min at 4500G.
 The final supernatant (about 0.5ml when starting with 100ml culture) was pooled into one falcon tube and aliquoted into pre-chilled (in -80$^{\circ}$C freezer) 1.7ml tubes.
 
 \subsection{Electroporation}
 A tube of electrocompetent cells was thawed on ice and 1$\mu$l of desired plasmid was added to it.
 The cells were then transferred into 0.1cm electroporation cuvette [BioRad] and electroporated at 1850V [Eppendorf Eporator\textsuperscript{\textregistered}].
-500ml of SOC media () was added immediately to the cuvette and the whole content then transferred into pre-warmed 5ml tube.
-After incubation for 1h at 37$^{\circ}$C (or 2h at 30$^{\circ}$C in case of pLW001 plasmid background) with shaking, 10-fold dilutions up to 10$^{-3}$ were prepared and spread by beads on LB agar plates containing appropriate antibiotic as well as non-diluted culture.
+500ml of SOC media (\textcolor{red}{content}) was added immediately to the cuvette and the whole content then transferred into pre-warmed 5ml tube.
+After incubation for 1h at 37$^{\circ}$C (or 2h at 30$^{\circ}$C in case of pLW001 plasmid background) with shaking, 10-fold dilutions up to 10$^{-3}$ were prepared and spread by sterile beads on LB agar plates containing appropriate antibiotic as well as non-diluted culture.
 Plates were then incubated overnight at 37$^{\circ}$C (or two overnights at 30$^{\circ}$C) and single colonies were checked for desired plasmid presence by PCR.
 
-\section{Fenotypové metody}
-\subsection{Morfologie buněk a kolonií}
-Popis morfologie buněk, Gramovo barvení, zapsání tvaru a barvy kolonií proběhlo dle~běžných standardů České sbírky mikroorganismů.
+\subsection{TSS transformation}
+A flask of 100ml capacity containing 10ml of liquid LB was inoculated by 0.1ml of overnight MG1655 culture (for other strains electroporation was used) and incubated at 37$^{\circ}$C with shaking.
+When OD$_{600}$ rose to values between 0.5 -- 0.9 the culture was fast chilled by swirling in ice slurry for 15min.
+Next 0.75ml of the chilled culture was transferred into 5ml tube containing the same amount of ice cold 2x TSS (\textcolor{red}{content}) and was incubated on ice slurry for 30min.
+2$\mu$l of desired plasmid was then added to the cells with subsequent incubation on ice slurry for another 1h.
+After additional incubation for 1h at 37$^{\circ}$C with shaking, cells were centrifuged at maximum speed (i.e. 14000rpm = 20817G) for 5min at room temperature, supernatant was discarded and pellet re-suspended in 0.2ml of LB.
+From this 10-fold dilutions were prepared up to 10$^{-3}$ and these were spread by sterile beads on LB agar plates containing appropriate antibiotic as well as non-diluted culture.
+Plates were then incubated overnight at 37$^{\circ}$C and single colonies were checked for desired plasmid presence by PCR.
 
-\subsection{Biochemické testy}
-Základních 34 testů u všech gramnegativních nefermentujících kmenů z Antarktidy bylo provedeno dle standardních postupů České sbírky mikroorganismů.
-Na základě těchto výsledků se vytypovali presumptivní zástupci pseudomonád, kteří byli dále konfirmováni pomocí uniplex PCR.
+\section{Activity assays of \tax{lacZ} promoter}
 
-Dodatečné testy k detekci exprese enzymů a využívání dalších látek jsem prováděla u~240 kmenů, jenž byly vyhodnoceny dle uniplex PCR jako \tax{Pseudomonas} sp.
-Pro stanovení přítomnosti či absence daného znaku jsem použila klasické zkumavkové a miskové testy.
-Kultivace probíhala v 15$^{\circ}$C či 30$^{\circ}$C (dle optimálního růstu jednotlivých kmenů).
-
-\subsubsection{Okyselování a alkalizace cukrů}
-Testovala jsem schopnost jednotlivých kmenů využívat L-arabinózu, D-arabinózu, ribózu, galaktózu, trehalózu a sacharózu jako zdroj uhlíku a energie (acidifikace media).
-
-Polotuhé medium jsem připravila přidáním 10~ml zásobního 10\% cukerného roztoku předem vysterilizovaného při 118$^{\circ}$C po 20 minut do 90~ml sterilního OF bazálního media [Merck] (11~g/l; sterilizace: 121$^{\circ}$C, 15~min.) ochlazeného na cca 60$^{\circ}$C.
-Po důkladném promíchání jsem roztok ještě za tepla rozplnila do sterilních zkumavek.
-
-Bakteriální kmeny jsem očkovala vpichem.
-Výsledky se odečítaly po 1 až 8 dnech kultivace.
-Tvorba kyselin se projevila změnou barvy původního neutrálního media ze~zelené na~žlutou.
-V případě alkalizace se medium zbarvilo do modra.
-Jako pH indikátor zde sloužila bromtymolová modř.
-
-\subsubsection{Hydrolýza elastinu}
-Jde o test na detekci produkce extracelulárního enzymu elastázy, jenž může být znakem virulence.
-
-Použité medium se sestávalo z 3~g elastinu s kongočervení a 20~g agaru [HiMedia] na 1~litr BHI (brain-heart infusion) [Bio-Rad].
-Po 15 minutové sterilizaci při 121$^{\circ}$C jsem medium rozlila do Petriho misek.
-
-Na misku bylo pomocí bakteriologické kličky očkováno po osmi kmenech.
-Odečet výsledků probíhal po 1 až 14 dnech kultivace.
-Hydrolýza elastinu se projevila projasněním media v místě růstu bakterie příp. i v jejím okolí.
-Zaznamenávala jsem též černání media v~místě nárůstu kmenů.
 
 \shorthandon{-} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
