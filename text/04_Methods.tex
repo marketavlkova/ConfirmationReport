@@ -91,16 +91,53 @@ After incubation for 1h at 37$^{\circ}$C (or 2h at 30$^{\circ}$C in case of pLW0
 Plates were then incubated overnight at 37$^{\circ}$C (or two overnights at 30$^{\circ}$C) and single colonies were checked for desired plasmid presence by PCR.
 
 \subsection{TSS transformation}
-A flask of 100ml capacity containing 10ml of liquid LB was inoculated by 0.1ml of overnight MG1655 culture (for other strains electroporation was used) and incubated at 37$^{\circ}$C with shaking.
+A flask of 100ml capacity containing 10ml of liquid LB was inoculated by 0.1ml of overnight MG1655 culture (for other strains or plasmid size above 5kb electroporation was used) and incubated at 37$^{\circ}$C with shaking.
 When OD$_{600}$ rose to values between 0.5 -- 0.9 the culture was fast chilled by swirling in ice slurry for 15min.
-Next 0.75ml of the chilled culture was transferred into 5ml tube containing the same amount of ice cold 2x TSS (\textcolor{red}{content}) and was incubated on ice slurry for 30min.
+Next 0.75ml of the chilled culture was transferred into 5ml tube containing the same amount of ice cold 2x TSS (see Table \ref{tss}) and was incubated on ice slurry for 30min.
 2$\mu$l of desired plasmid was then added to the cells with subsequent incubation on ice slurry for another 1h.
 After additional incubation for 1h at 37$^{\circ}$C with shaking, cells were centrifuged at maximum speed (i.e. 14000rpm = 20817G) for 5min at room temperature, supernatant was discarded and pellet re-suspended in 0.2ml of LB.
 From this 10-fold dilutions were prepared up to 10$^{-3}$ and these were spread by sterile beads on LB agar plates containing appropriate antibiotic as well as non-diluted culture.
 Plates were then incubated overnight at 37$^{\circ}$C and single colonies were checked for desired plasmid presence by PCR.
 
-\section{Activity assays of \tax{lacZ} promoter}
+\begin{center}
+	\begin{longtable}[c]{|l|c|c|}
+\caption{Content of 2x TSS} \label{tss} \\
 
+\toprule \multicolumn{1}{|l|}{\textbf{Component}} & \multicolumn{1}{c|}{\textbf{Amount per 100ml of 2x TSS}} & \multicolumn{1}{c|}{\textbf{Supplier}} \\
+\midrule
+\endhead
+
+\bottomrule
+\endlastfoot
+
+Bacto-Tryptone & 0.8g & \textcolor{red}{?} \\
+\hline
+Yeast extract & 0.5g & \textcolor{red}{?} \\
+\hline
+NaCl & 0.5g & VWR \\
+\hline
+PEG 8000 & 20.0g & VWR \\
+\hline
+1M MgSO$_{4}$ & 10ml & Scharlau \\
+\hline
+DMSO & 10ml & Sigma-Aldrich \\
+	\end{longtable}
+\end{center}
+
+
+\section{Activity assays of promoters}
+\subsection{Promoter \tax{lacZ}}
+M9 media with 0.4\% of chosen carbon sources (0.2ml) in 96-well micro-titre plates were inoculated by strains from a glycerol stock in duplicates using a pin replicator [Boekel Industries].
+After overnight incubation at 37$^{\circ}$C without shaking the strains were transferred into the same fresh media by the same pin replicator and incubated again at 37$^{\circ}$C without shaking for 4h.
+Before acquiring the data from samples with flow cytometer [BD FACSDiva version 6.1.3], all strains were 10-fold (MG1655 background) or 20-fold (SC1\textunderscore D9 background) diluted in 1x PBS with $\sim$1\% formaldehyde [Sigma-Aldrich].
+Data from 10 -- 100 thousands of events were collected using GFP filter 513/17 [BD] and exported into Flow Cytometry Standard (FCS) files.
+These files were then analysed in R (version 3.4.3) using flowCore package (version 1.44.1) \cite{hahne2009flowcore}.
+Scripts used for data analysis are available at \href{https://github.com/marketavlkova/LacZ_FC}{GitHub}.
+
+\subsection{Promoter \tax{recA}}
+M9 media supplemented with 0.4\% glucose and Ciprofloxacin [\textcolor{red}{?}] at sub-MIC concentrations (0.5ng/ml, 1.0ng/ml, 2.0ng/ml and 4.0ng/ml) in 96-well micro-titre plates were inoculated by strains from a glycerol stock in duplicates using a pin replicator.
+Further steps were the same as for \tax{lacZ} promoter assay (using M9 with glucose and Ciprofloxacin).
+Scripts used for data analysis of \tax{recA} promoter are available at \href{https://github.com/marketavlkova/RecA}{GitHub} in a separated repository.
 
 \shorthandon{-} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
