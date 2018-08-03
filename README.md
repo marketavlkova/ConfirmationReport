@@ -1,7 +1,7 @@
 # ConfirmationReport
 Repository of Confirmation Report at Massey University
 
-Tacked files:
+Tracked files:
 CR.tex is the main file used for creating PDF in texmaker or whatever LaTeX editor you use.
 Every chapter is located in text directory, ordered by the filename number.
 Literature.bib contains BibTeX library, apalike-mv.bst defines citation style.
