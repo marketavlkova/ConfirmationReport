@@ -32,35 +32,37 @@ Importantly the variability in the way how to overcome such conditions still occ
 And those cells which don't manage to adapt are excluded from such environments by natural selection and die.
 %%% Add references?
 
-\subsection{Evolvability}
-Ability and capacity to evolve is important due to perpetually changing conditions bacteria are exposed to.
-And not only the conditions themselves, but also the duration of certain conditions, a particular bacterium is used to, can vary.
-The extent an individual is likely to accumulate beneficial mutations in defined condition is connected with its viability in that condition.
-The same beneficial mutation doesn't represent the same degree of improvement for two strains with similar genetic background but different fitness.
-A mutation that would have just a small impact on the fitter strain, have usually much bigger benefit for the other and thus is more likely to fix in the population.
-In this context the less fit an organism in the environment is the higher is its evolvability, which can be understood here as a potential to evolve.
-This has certain limits however, because when the strain's fitness is too low it's more likely going to extinct than to evolve depending on the population size.
-%%% I'm not sure if I'm going to leave the paragraph here or delete it...
+%%%\subsection{Evolvability}
+%%%Ability and capacity to evolve is important due to perpetually changing conditions bacteria are exposed to.
+%%%And not only the conditions themselves, but also the duration of certain conditions, a particular bacterium is used to, can vary.
+%%%The extent an individual is likely to accumulate beneficial mutations in defined condition is connected with its viability in that condition.
+%%%The same beneficial mutation doesn't represent the same degree of improvement for two strains with similar genetic background but different fitness.
+%%%A mutation that would have just a small impact on the fitter strain, have usually much bigger benefit for the other and thus is more likely to fix in the population.
+%%%In this context the less fit an organism in the environment is the higher is its evolvability, which can be understood here as a potential to evolve.
+%%%This has certain limits however, because when the strain's fitness is too low it's more likely going to extinct than to evolve depending on the population size.
+%%% I'm not sure if I'm going to leave the paragraph or delete it...
 
-\section{Transcription and memory}
-%%%A bacterial genome consists of hundreds and thousands of genes, but not all of them are active at all the time.
-%%%Gene expression changes during a cell cycle, when a nutrient source is altered or if surrounding conditions begin to be unfavourable.
-It is vital for a living cell to sense what is happening in the environment it is present at and react accordingly by transcription initiation or silencing of appropriate genes.
-Some studies has shown that cells with the same genetic background might react differently or at a different rate to the same stimulus based on their and their ancestors recent experience \cite{mathis2017asymmetric, ronin2017long}.
-Such ability is advantageous especially if the change in the conditions is predictable and repeats periodically.
 
-% 2018.07.12
-% might need a nice transition from 0.2 to 0.2.1 0.2 could be expanded a bit?
-% I (or someone else) can help with grammar corrections later
-\subsection{Cellular responses}
-Ability to sense changes in both surrounding and intracellular environment and to respond to them is essential for every living cell.
-Important decision makings rely on the information acquired this way, for example if the cell should start dividing, whether to stay in actual place or to move elsewhere or if as a pathogen start to produce virulence factors or not \cite{gottesman2003proteolysis, sourjik2012responding, cui2018novel}.
+\section{Cellular responses}
+It is vital for a living cell to sense what is happening in the environment it is present at and react accordingly.
+If reaction time, before facing death, is limited to seconds there is no time for change in transcription or translation level.
+In that case the cell fate depends on the proteins it has already synthesised and when none with an appropriate enzymatic activity is present the cell dies.
+As an example of change in protein LexA activity mediated by RecA in SOS response can serve.
+Both enzymes are expressed at a basal level even when the cell experiences no excessive DNA damage \cite{brent1980lexa, casaregola1982quantitative}.
+After exposure e.g. to UV light RecA protein binds to affected DNA and activates self-cleavage of LexA which serves as inhibitor of other SOS response genes \cite{giese2008reca}.
+
+On the other hand the necessity to react in minutes or hours is enough to activate and silence appropriate genes.
+Such transcriptional responses are adequate in slowly changing environments e.g. decrease in preferred carbon source concentration.
+When a non-preferred carbon source is present as well the cells are brought to decision whether to enter long-term stationary phase or begin to utilize the alternative carbon source.
+In any case they have to alter their transcription accordingly.
+
+However other important decision makings rely on the information acquired from environment as well.
+Should the cell start dividing, stay in actual place or move elsewhere or if as a pathogen start producing virulence factors or not \cite{gottesman2003proteolysis, sourjik2012responding, cui2018novel}?
 To manage and orchestrate all possible responses to multiple signals cells evolved a network of extra- and intracellular signaling pathways.
 As I focus on transcriptional responses the following text covers mostly these cases.
-However, regulation on translation level or control of activity of existing proteins occur in bacteria as well.
 
-\subsubsection{Direct signaling pathways}
-When a signal molecule is imported through cell membrane into cytosol or is produced by the cell and subsequently interacts with gene regulatory protein we can talk about direct signaling.
+\subsection{Direct signaling pathways}
+When a signal molecule is imported through cell membrane into cytosol or is produced by the cell and subsequently interacts with gene regulatory protein (LexA) we can talk about direct signaling.
 This is often the case in the regulation of carbohydrate catabolism and amino acid biosynthesis genes \cite{charlier1992arginine, weickert1992isorepressor, pittard1996various, wheatley2013structural}.
 Two simple models are described below.
 
@@ -88,7 +90,7 @@ On the other hand, when arginine is abundant in the culture medium and thus in t
 The cell has ArgR repressor present in cytosol but ArgR itself cannot bind to DNA and inhibit transcription in the arginine absence \cite{clark2005molecular, caldara2006arginine}.
 However when there is plenty of arginine in the cell it binds to ArgR and as a co-repressor inhibits expression of arginine structural genes binding to an appropriate promoter \cite{charlier1992arginine, charlier2004biosynthesis, clark2005molecular}.
 
-\subsubsection{Two-component system}
+\subsection{Two-component system}
 % 2018.07.12 this intro paragraph is quite confusing. Start instead with something similar to the next paragraph?
 Direct signaling is straight forward, but an external signal molecule is not always imported into the cell.
 Instead covalent modifications of sensory protein by a chemical group are used in some cases \cite{ninfa1986covalent, falke1997two}.
@@ -130,19 +132,30 @@ A divergent signal transmission mediates this (Fig. \ref{two}\textcolor{red}{e})
 Moreover, all these variations of two-component system mentioned above combine in cells producing a complex sensory-response network \cite{kaczmarczyk2014complex, chambonnier2016hybrid}.
 %%% should i describe the responses more in detail?
 
-\subsection{Bacterial gene regulation}
+%%% FIRST I WROTE IT IN THIS SECTION, BUT IT'S MORE SUITABLE FOR SECTION ABOUT MEMORY I THINK:
+%%% The way a bacterium reacts to a certain condition differs from a cell to cell depending on the cell cycle it is in, metabolic activity and remaining energy i.e. ATP present in the cell.
+%%% However not all variations can be explained by that as even within these lets say homogeneous groups differences in behaviour are observed.
+%%% More or less past events were shown to play a role in some of such instances, in others bet hedging strategy is likely the cause.
+
+
+\section{Bacterial gene regulation}
 As mentioned above several ways of control of gene products take place in bacterial cells.
-Regulation of translation in bacteria is a useful tool for controlling differential production of proteins coded within the same operon and thus transcribed on the same mRNA \cite{dar2018extensive}.
-In the case of enzymes responding to quick changes it is useful to have those prepared in the cell even if not in use at the time.
-% 2018.07.12 might be useful to give some indication of the time scale for thee pathways, eg transciption speed, mRNA half life, protein half life. e.g. if you want to react in seconds you can't depend on txn and tln, but if you need to react in minutes/hours it's fine.
-When it comes to a sudden change in the environment the cell doesn't need to wait until the protein is transcribed and translated, but it only releases the activity of such protein.
-Histidine kinases of two-component system mentioned above serve as a good example.
+While control of protein activity helps to respond to quick environmental changes, translational regulation is a useful tool for controlling differential production of proteins coded within the same operon and thus transcribed on the same mRNA \cite{dar2018extensive}.
 Transcriptional regulation on the other hand might be considered as the most economical as it inhibits the very synthesis of products which are not needed at the moment.
 This saves resources and energy for synthesis of desired gene outputs.
 The last mentioned type of regulation is delineated further in detail.
-%%% Add more references?
+%%% Add more info and/or references?
 
-\subsubsection{DNA accessibility}
+%%% A BIT MORE INFO ABOUT TRANSLATIONAL REGULATION IF NEEDED:
+%%% Maltose operon \tax{malEFG} is one of them.
+%%% Transmembrane proteins MalF and MalG are required in much lower amount than substrate-binding MalE protein for maltose ABC transporter function \cite{newbury1987differential}.
+%%% Differential mRNA decay thus ensures there isn't too much of one protein (MalF and MalG) or too few of the other (MalE) even when transcribed together.
+
+%%% THIS SHOULD BE MOVED INTO SECTION DEDICATED TO BACTERIAL MEMORY:
+%%% Some studies has shown that cells with the same genetic background might react differently or at a different rate to the same stimulus based on their and their ancestors recent experience \cite{mathis2017asymmetric, ronin2017long}.
+%%% Such ability is advantageous especially if the change in the conditions is predictable and repeats periodically.
+
+\subsection{DNA accessibility}
 Having coding sequence and promoter of certain gene physically accessible for specific transcription regulation is one of the prerequisites of its expression.
 Moreover differential physical access to DNA within chromosome presents one of the explanations to observed variations in promoters activity based on their position in the chromosome \cite{bryant2014chromosome}.
 Nucleoid associated proteins (NAPs) and supercoiling are general mechanisms affecting this accessibility.
@@ -177,7 +190,7 @@ Although some NAPs such as Fis and H-NS might affect the supercoiling levels \ci
 The former releases positive the latter negative supercoiling \cite{wang1971interaction, gellert1976dna}.
 If high levels of supercoiling are not released the access to the DNA reduces and even already initiated transcription is slowed down or terminated \cite{chong2014mechanism}.
 
-\subsubsection{Regulation of transcription initiation}
+\subsection{Regulation of transcription initiation}
 Initiation of transcription is the very first step of gene expression and as that it is highly regulated.
 The crucial step is RNA polymerase binding to the promoter sequence.
 The rate of transcription initiation is proportional to the total amount of produced mRNA specifically if an early transcription termination doesn't occur \cite{kennell1977transcription, iyer1996absolute}.
@@ -227,7 +240,7 @@ This is facilitated by enhancer binding proteins (EBPs) which interact with the 
 Nevertheless, EBPs bind upstream of the promoter elements, so to get in contact with the $\sigma^{54}$ factor a loop has to be produced.
 Production of this loop is known to be mediated by nucleoid associated protein IHF which as well as other NAPs plays also a role in DNA accessibility \cite{de1991upstream, sze2001vivo}.
 
-\subsubsection{Regulation of mRNA elongation and transcription termination}
+\subsection{Regulation of mRNA elongation and transcription termination}
 After a successful transcription initiation the elongation of mRNA follows until termination comes to place.
 Even though the main transcription regulation occurs at the level of transcription initiation, elongation and termination can be also modulated, ranging from repression of elongation \cite{monsalve1996protein}, through elongation pausing and backtracking \cite{mustaev2017transcription} to transcription attenuation and anti-termination \cite{naville2009transcription}.
 %%% do you want me to describe those more in detail or can I leave it just like that?
@@ -238,12 +251,13 @@ Moreover one transcription factor can regulate multiple genes as well as being c
 Regulation of gene expression thus exhibit a huge network of mutually controlled outputs based on the information acquired by a cell.
 %%% Add references?
 
-\subsection{Epigenetic mechanisms in bacteria}
+
+\section{Epigenetic mechanisms in bacteria}
 Epigenetics is understood as a heritable change in gene expression without simultaneous changes in DNA primary sequence.
 Various epigenetic mechanisms such as histone modifications, genomic imprinting or RNA associated silencing are well studied in eukaryotes \cite{durso2014mechanisms}.
 In bacterial domain DNA methylation by methyltransferases is mostly mentioned, although positive and double negative feedback loops play their role as well especially in terms of population bistability \cite{casadesus2006epigenetic, casadesus2013programmed, adhikari2016dna}.
 
-\subsubsection{DNA methylation by orphan methyltransferases}
+\subsection{DNA methylation by orphan methyltransferases}
 Orphan methyltransferases (MTs) were initially studied within restriction-modification system as a bacterial defence against phages, although Dam's ability to alter some gene expression was already described in mid-80s \cite{sternberg1985evidence, bickle1993biology}.
 As orphan MTs lack their cognate restriction endonucleases their role in bacterial cells is not as a primitive immune system, but among others can act as a transcription regulators.
 I describe the epigenetic mechanisms of Dam in detail below as the MT whose relationship to cell memory is most understood.
@@ -296,7 +310,7 @@ In addition, the expression of the gene is very low under usual laboratory condi
 
 % 2018.06.28
 % Eventually, go into way more detail here, as this will end up as a full section on lac. But if you are leaving this as a brief intro to positive, negative, double negative, that's fine. You might also start with sensing/reaction and then move to epigenetics. This is a reasonable ref I think *An introduction to systems biology: design principles of biological circuits*, although you always have to be a little careful with Uri Alon's take on things, sometimes it's a bit too facile.
-\subsubsection{Feedback loops}
+\subsection{Feedback loops}
 System where a product is able to affect positively or negatively its own production is called a feedback loop.
 The influence of the output on itself might be direct or indirect if multiple effectors are involved.
 Feedback loops are quite common in bacterial gene regulation and can lead to epigenetic switches \cite{smits2006phenotypic, veening2008bistability}.
@@ -352,7 +366,9 @@ Although the presence of \tax{E. coli} in water is still widely used as an indic
 Moreover strains inhabiting soil for a long time were found to be distinctive \cite{walk2009cryptic, walk2015cryptic}.
 This raises the questions how these bacteria survive outside their hosts and how do they evolve under such conditions.
 
+\section{How does selection affect responses and memory?}
 
+\section{Natural variation in responses and memory}
 
 
 \cleardoublepage
