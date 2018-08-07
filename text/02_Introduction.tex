@@ -116,7 +116,10 @@ Moreover, all these variations of two-component system mentioned above combine i
 %%% More or less past events were shown to play a role in some of such instances, in others bet hedging strategy is likely the cause.
 
 
-\section{Bacterial gene regulation}
+\section{Transcription networks}
+%%% I SHOULD ADD SOMETHING HERE AND CHANGE ACCORDINGLY THE INTRO TO Bacterial gene regulation
+
+\subsection{Bacterial gene regulation}
 As mentioned above several ways of control of gene products take place in bacterial cells.
 While control of protein activity helps to respond to quick environmental changes, translational regulation is a useful tool for controlling differential production of proteins coded within the same operon and thus transcribed on the same mRNA \cite{dar2018extensive}.
 Transcriptional regulation on the other hand might be considered as the most economical as it inhibits the very synthesis of products which are not needed at the moment.
@@ -133,7 +136,7 @@ The last mentioned type of regulation is delineated further in detail.
 %%% Some studies has shown that cells with the same genetic background might react differently or at a different rate to the same stimulus based on their and their ancestors recent experience \cite{mathis2017asymmetric, ronin2017long}.
 %%% Such ability is advantageous especially if the change in the conditions is predictable and repeats periodically.
 
-\subsection{DNA accessibility}
+\subsubsection{DNA accessibility}
 Having coding sequence and promoter of certain gene physically accessible for specific transcription regulation is one of the prerequisites of its expression.
 Moreover differential physical access to DNA within chromosome presents one of the explanations to observed variations in promoters activity based on their position in the chromosome \cite{bryant2014chromosome}.
 Nucleoid associated proteins (NAPs) and supercoiling are general mechanisms affecting this accessibility.
@@ -168,7 +171,7 @@ Although some NAPs such as Fis and H-NS might affect the supercoiling levels \ci
 The former releases positive the latter negative supercoiling \cite{wang1971interaction, gellert1976dna}.
 If high levels of supercoiling are not released the access to the DNA reduces and even already initiated transcription is slowed down or terminated \cite{chong2014mechanism}.
 
-\subsection{Regulation of transcription initiation}
+\subsubsection{Regulation of transcription initiation}
 Initiation of transcription is the very first step of gene expression and as that it is highly regulated.
 The crucial step is RNA polymerase binding to the promoter sequence.
 The rate of transcription initiation is proportional to the total amount of produced mRNA specifically if an early transcription termination doesn't occur \cite{kennell1977transcription, iyer1996absolute}.
@@ -218,7 +221,7 @@ This is facilitated by enhancer binding proteins (EBPs) which interact with the 
 Nevertheless, EBPs bind upstream of the promoter elements, so to get in contact with the $\sigma^{54}$ factor a loop has to be produced.
 Production of this loop is known to be mediated by nucleoid associated protein IHF which as well as other NAPs plays also a role in DNA accessibility \cite{de1991upstream, sze2001vivo}.
 
-\subsection{Regulation of mRNA elongation and transcription termination}
+\subsubsection{Regulation of mRNA elongation and transcription termination}
 After a successful transcription initiation the elongation of mRNA follows until termination comes to place.
 Even though the main transcription regulation occurs at the level of transcription initiation, elongation and termination can be also modulated, ranging from repression of elongation \cite{monsalve1996protein}, through elongation pausing and backtracking \cite{mustaev2017transcription} to transcription attenuation and anti-termination \cite{naville2009transcription}.
 %%% DO YOU WANT ME TO DESCRIBE THOSE MORE IN DETAIL OR CAN I LEAVE IT JUST LIKE THAT?
@@ -229,6 +232,25 @@ Moreover one transcription factor can regulate multiple genes as well as being c
 Regulation of gene expression thus exhibit a huge network of mutually controlled outputs based on the information acquired by a cell.
 %%% ADD REFERENCES?
 
+\subsection{Regulatory kinetics}
+For better understanding the whole transcription network regulation, it is important to look at the speed of different regulatory circuits as well.
+This is usually characterised by a rise-time, i.e. time when the concentration of a gene product reaches its half maximal concentration after gene induction.
+
+\subsubsection{Promoter strength and protein lifetime}
+Naturally the more easily and often RNA polymerase binds effectively to a promoter the more of an appropriate protein is produced at the time.
+The strength of the promoter is given by its nucleotide sequence and binding of transcription factors increases or decreases RNA polymerase affinity to it.
+On the other side of this equilibrium is degradation of the product, as its stability in certain conditions determines its lifetime.
+A functional protein is also diluted during cell division, which further reduces its amount per cell.
+
+\subsubsection{Regulatory network motifs}
+As an additional fine tuning of transcriptional response speed the simple network motifs themselves can be considered.
+It was shown that a negatively autoregulated gene reaches the same concentration much faster than if it is not autoregulated \cite{rosenfeld2002negative}.
+In other words negative feedback loop shortens the product rise-time.
+It also reduces the variability in product concentration maintaining it in optimal concentration limits \cite{becskei2000engineering}.
+This enables the cell to use stronger promoters for proteins needed in a short time, but at low concentration without overshoots and risks of protein toxicity.
+
+Positive autoregulation exhibits right the opposite traits.
+Longer time is needed to reach full activation of genes with positive feedback loop and higher variability or noise in product concentration is observed \cite{maeda2006regulatory, sayut2007noise}.
 
 \section{Epigenetic mechanisms in bacteria}
 Epigenetics is understood as a heritable change in gene expression without simultaneous changes in DNA primary sequence.
