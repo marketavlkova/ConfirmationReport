@@ -242,7 +242,7 @@ The strength of the promoter is given by its nucleotide sequence and binding of 
 On the other side of this equilibrium is degradation of the product, as its stability in certain conditions determines its lifetime.
 A functional protein is also diluted during cell division, which further reduces its amount per cell.
 
-\subsubsection{Regulatory network motifs}
+\subsubsection{Transcriptional network motifs}
 As an additional fine tuning of transcriptional response speed the simple network motifs themselves can be considered.
 It was shown that a negatively autoregulated gene reaches the same concentration much faster than if it is not autoregulated \cite{rosenfeld2002negative}.
 In other words negative feedback loop shortens the product rise-time.
@@ -250,7 +250,27 @@ It also reduces the variability in product concentration maintaining it in optim
 This enables the cell to use stronger promoters for proteins needed in a short time, but at low concentration without overshoots and risks of protein toxicity.
 
 Positive autoregulation exhibits right the opposite traits.
-Longer time is needed to reach full activation of genes with positive feedback loop and higher variability or noise in product concentration is observed \cite{maeda2006regulatory, sayut2007noise}.
+Slower and noisier initial response to gene activation is observed in case of positive feedback loops compared to no feedback systems \cite{maeda2006regulatory, sayut2007noise}.
+Although it takes longer for the cell to reach certain level of desired protein, this motif allows to react to much lower concentrations of signal.
+
+Next common regulatory motifs in \tax{E. coli} are feed-forward loops (FFLs).
+By FFL is meant a regulatory circuit when a transcription factor X regulates other transcription factor Y and both (X and Y) regulate a gene or operon Z.
+There is further distinction between coherent and incoherent FFL.
+When the regulation of Z by factor X has the same sign (positive or negative) as regulation of Z by X through Y we talk about coherent FFL.
+If the signs are opposite the FFL is considered incoherent \cite{shen2002network}.
+It was predicted that coherent FFLs cause sign-sensitive delays in regulatory kinetics and incoherent FFLs should act as sign-sensitive accelelators \cite{mangan2003structure}.
+The most abundant schemes were later experimentally confirmed.
+
+In coherent FFL type 1 factor X activates factor Y expression and both X and Y positively regulate transcription of Z \cite{mangan2003structure}.
+There are two possible ways of induction of Z expression in this system.
+First, both factors X and Y has to bind Z promoter to trigger transcription - AND-gate logic (AND-FFL).
+Or only one of both is sufficient to activate Z gene - OR-gate logic (OR-FFL).
+The AND-FFL was shown to delay full gene expression compared to non-FFL system \cite{mangan2003coherent}, while no delay was observed in the inverse (ON to OFF) transition.
+To test OR-FFL a system where X and Y act in additive manner to activate Z was used and termed as SUM-FFL \cite{kalir2005coherent}.
+This motif behaves right the opposite way than AND-FFL.
+Transition from OFF to ON shows no delays.
+But when factor X was deactivated the ON to OFF step was considerably delayed in comparison with strain with deleted gene for factor Y.
+
 
 \section{Epigenetic mechanisms in bacteria}
 Epigenetics is understood as a heritable change in gene expression without simultaneous changes in DNA primary sequence.
