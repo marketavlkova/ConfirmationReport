@@ -234,7 +234,7 @@ Regulation of gene expression thus exhibit a huge network of mutually controlled
 
 \subsection{Regulatory kinetics}
 For better understanding the whole transcription network regulation, it is important to look at the speed of different regulatory circuits as well.
-This is usually characterised by a rise-time, i.e. time when the concentration of a gene product reaches its half maximal concentration after gene induction.
+This is usually characterised by a rise-time (or response time), i.e. time when the concentration of a gene product reaches its half maximal concentration after gene induction.
 
 \subsubsection{Promoter strength and protein lifetime}
 Naturally the more easily and often RNA polymerase binds effectively to a promoter the more of an appropriate protein is produced at the time.
@@ -258,8 +258,9 @@ By FFL is meant a regulatory circuit when a transcription factor X regulates oth
 There is further distinction between coherent and incoherent FFL.
 When the regulation of Z by factor X has the same sign (positive or negative) as regulation of Z by X through Y we talk about coherent FFL.
 If the signs are opposite the FFL is considered incoherent \cite{shen2002network}.
-It was predicted that coherent FFLs cause sign-sensitive delays in regulatory kinetics and incoherent FFLs should act as sign-sensitive accelelators \cite{mangan2003structure}.
+It was predicted that coherent FFLs cause sign-sensitive delays in regulatory kinetics and incoherent FFLs should act as sign-sensitive accelelators and exhibit transient pulses of expression \cite{mangan2003structure}.
 The most abundant schemes were later experimentally confirmed.
+%%% IT'D BE GOOD TO HAVE PICTURE TO SUPPORT THE LAST SENTECE OF THE PARAGRAPH.
 
 In coherent FFL type 1 factor X activates factor Y expression and both X and Y positively regulate transcription of Z \cite{mangan2003structure}.
 There are two possible ways of induction of Z expression in this system.
@@ -270,7 +271,17 @@ To test OR-FFL a system where X and Y act in additive manner to activate Z was u
 This motif behaves right the opposite way than AND-FFL.
 Transition from OFF to ON shows no delays.
 But when factor X was deactivated the ON to OFF step was considerably delayed in comparison with strain with deleted gene for factor Y.
-The former motif (AND-FFL) thus prevents Z expression when concentration of X fluctuates close to a threshold, while the latter circuit (SUM-FFL) enables production of Z even if X concentration drops below a threshold for a while.
+The former motif (AND-FFL) thus prevents Z expression when concentration of X fluctuates close to a threshold, while the latter circuit (SUM-FFL) enables continuous production of Z even if X concentration drops below a threshold for a while.
+
+From incoherent FFL motifs the type 1 is predominant in \tax{E. coli} transcriptional network.
+Factor X here positively regulates both Y and Z, however factor Y acts as an inhibitor of Z gene.
+The model predicted this incoherent FFL to speed up transcriptional responses, but weak pulse-generating power was expected \cite{mangan2003structure}.
+Nevertheless this motif was used to create effective pulsers \cite{basu2004spatiotemporal}.
+Later the acceleration trait was experimentally confirmed as well despite the fact that other motifs contribute to the used regulatory system \cite{mangan2006incoherent}.
+This suggests that the motifs' fundamental functions are preserved even when interconnected with other motifs.
+Overall this type of regulation similarly to negative feedback loop shortens the rise-time, but unlike the negative feedback doesn't preserve overshoots rather the opposite.
+The overshoot is seen as a pulse of high gene Z expression which is subsequently inhibited by factor Y, but not necessarily back to the basal level.
+
 
 \section{Epigenetic mechanisms in bacteria}
 Epigenetics is understood as a heritable change in gene expression without simultaneous changes in DNA primary sequence.
