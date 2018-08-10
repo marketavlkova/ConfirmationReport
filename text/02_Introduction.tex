@@ -7,46 +7,63 @@
 
 \shorthandoff{-} 
 \section{Natural selection}
+% I've put in a couple of grammar / punctuation changes that are obvious or simple and not added a comment.
+% I've put in a lot fo commas. Maybe I like them too much?
+
+% "domain" and "regulated" not quite the right words.
 Bacterial domain exhibits genotypic and phenotypic variability even at the levels of genus.
-This variability is continuously regulated by natural selection as the cells better adapted to the current conditions are more likely to survive and proliferate.
-In the case of unicellular organisms the survival game is more stringent because they face the changing conditions directly.
-Drought, nutrient poor environments or high UV radiation are some of the most harsh environmental conditions bacteria can experience.
-Nevertheless even in these conditions we find viable cells which evolved to survive them for either short or long period of time.
-Importantly the variability in the way how to overcome such conditions still occurs and can be driven by other kinds of selection.
+This variability is continuously regulated by natural selection as the cells that are better adapted to the current conditions are more likely to survive and proliferate.
+% the "drect experience" argument seems hard to make. I also experience the environment directly (perhaps my gametes do not?)
+In the case of unicellular organisms the survival game is more stringent, because they face the changing conditions directly.
+Drought, nutrient poor environments, or high UV radiation are some of the most harsh environmental conditions bacteria can experience.
+Nevertheless even in these conditions we find viable cells which have evolved to survive them for either short or long period of time.
+% I don't quite understand "in the way how to overcome"
+Importantly, the variability in the way how to overcome such conditions still occurs and can be driven by other kinds of selection.
 And those cells which don't manage to adapt are excluded from such environments by natural selection and die.
 %%% ADD REFERENCES?
 
 
 \section{Cellular responses}
+% "vital" is almost a pun here
 It is vital for a living cell to sense what is happening in the environment it is present at and react accordingly.
+% not facing death, but actually dying
 If reaction time, before facing death, is limited to seconds there is no time for change in transcription or translation level.
-In that case the cell fate depends on the proteins it has already synthesised and when none with an appropriate enzymatic activity is present the cell dies.
+In that case the cell fate depends on the proteins it has already synthesised, and when none with an appropriate enzymatic activity is present, the cell dies.
+% not sure this is a good example, the cell can survive hours after damage and activates a pathway to do this, involving sulA.
+% E. coli chemotaxis is probably a better example.
 As an example a change in LexA protein activity mediated by RecA in SOS response can serve.
 Both enzymes are expressed at a basal level even when the cell experiences no excessive DNA damage \cite{brent1980lexa, casaregola1982quantitative}.
 After exposure e.g. to UV light RecA protein binds to the affected DNA and activates self-cleavage of LexA which serves as an inhibitor of other SOS response genes \cite{giese2008reca}.
 
 On the other hand the necessity to react in minutes or hours is enough to activate and silence appropriate genes.
 Such transcriptional responses are adequate in slowly changing environments e.g. decrease in preferred carbon source concentration.
+% could also put in SOS here. Might mention riboswitches if you want to talk about translation control?
 When a non-preferred carbon source is present as well the cells are brought to decision whether to enter long-term stationary phase or begin to utilize the alternative carbon source.
 In any case they have to alter their transcription accordingly.
 
+% this next para is okay, but all the processes in it basically come down to protein modification (e.g. chemotaxis-like response), translation, or transcription. I think you can go directly into the next section.)
 However other important decision makings rely on the information acquired from environment as well.
 Should the cell start dividing, stay in actual place or move elsewhere or if as a pathogen start producing virulence factors or not \cite{gottesman2003proteolysis, sourjik2012responding, cui2018novel}?
 To manage and orchestrate all possible responses to multiple signals cells evolved a network of extra- and intracellular signaling pathways.
 As I focus on transcriptional responses the following text covers mostly these cases.
 
 \subsection{Direct signaling pathways}
-When a signal molecule is imported through cell membrane into cytosol or is produced by the cell (LexA) and subsequently interacts with gene regulatory protein we can talk about direct signaling.
+% don't need to be specific (lexA)
+When a signal molecule is imported through cell membrane into cytosol or is produced by the cell and subsequently interacts 
+% we can term this as, not "talk about"
+with gene regulatory protein (LexA) we can talk about direct signaling.
 This is often the case in the regulation of carbohydrate catabolism and amino acid biosynthesis genes \cite{charlier1992arginine, weickert1992isorepressor, pittard1996various, wheatley2013structural}.
 Two simple models are described below.
 
 Cells avoid wasteful production of proteins which are not used at all the time.
 For instance, there is no sense in producing plenty of enzyme hydrolysing lactose (lacZ) if no lactose is present.
-To achieve this \tax{E. coli} expresses \tax{lac} repressor (LacI) \cite{hudson1990co}.
+To achieve this, \tax{E. coli} expresses \tax{lac} repressor (LacI) \cite{hudson1990co}.
 However, \tax{lac} operon transcription is desired if lactose is present in the media.
 Here \tax{lac} operon inducers take a turn.
+% what does "true" mean?
 Allolactose is a true inducer of \tax{lac} operon as lactose permease imports it into the cell where it binds directly to the repressor LacI.
 Lactose itself has to modified to this isomer allolactose by $\beta$-galactosidase (LacZ) at first \cite{jobe1972lac, wheatley2013structural}.
+% it's affected by crp binding, "if" is perhaps a strong word?
 LacI binding to the promoter DNA is then released triggering \tax{lacZYA} expression (Fig. \ref{dir}\textcolor{red}{a}) if an simultaneous activation by general regulatory protein CRP occurs \cite{hudson1990co, clark2005molecular}.
 
 \begin{figure}[ht]
@@ -60,6 +77,10 @@ LacI binding to the promoter DNA is then released triggering \tax{lacZYA} expres
 %%% I CHANGED IT. IS IT BETTER? OR DO YOU WANT MORE FLUENT TRANSITION?
 % you might also talk about other direct inducers that are not metabolic, e.g. SOS/lexA/recA
 %%% I MADE A MENTION OF lexA/recA ABOVE IN Cellular responses AND REFER TO IT A BIT IN THE FIRST SENTECE OF THIS SECTION. DO YOU STILL WANT ME TO DESCRIBE OTHER (NOT METABOLIC) DIRECT INDUCERS?
+
+%% No, this is good. I like the "lactose...other metabolic stuff might be different..." transition.
+
+% "molecular mechanisms differ", not "things might work the opposite"
 For other metabolic pathways things might work the opposite way, however.
 Arginine, for instance, acts as a co-repressor of its own biosynthesis (Fig. \ref{dir}\textcolor{red}{b}).
 This means that when a bacterium does not have enough of this amino acid available for protein production the transcription of arginine genes is active \cite{charlier2004biosynthesis, caldara2006arginine}.
@@ -67,15 +88,22 @@ On the other hand, when arginine is abundant in the culture medium and thus in t
 The cell has ArgR repressor present in cytosol but ArgR itself cannot bind to DNA and inhibit transcription in the arginine absence \cite{clark2005molecular, caldara2006arginine}.
 However when there is plenty of arginine in the cell it binds to ArgR and as a co-repressor inhibits expression of arginine structural genes binding to an appropriate promoter \cite{charlier1992arginine, charlier2004biosynthesis, clark2005molecular}.
 
-\subsection{Two-component system}
+% Actually, you title the previous section as "Direct signalling pathways" Could you entitle this one as "Indirect signalling pathways" just for the nice contrast? Then two-component is just one example of indirect signalling.
+\subsection{Two-component systems}
 % 2018.07.12 this intro paragraph is quite confusing. Start instead with something similar to the next paragraph?
 %%% IS IT OK IF I DELETE THE WHOLE PARAGRAPH LIKE THIS?
+
+% yup.
+
+
 %%%Direct signaling is straight forward, but an external signal molecule is not always imported into the cell.
 %%%Instead covalent modifications of sensory protein by a chemical group are used in some cases \cite{ninfa1986covalent, falke1997two}.
 %%%This is mostly the case of regulation of genes involved in stress response.
 %%%But it it not limited only to stress responses as the two-component system represents a dominant and versatile form of bacterial sense-response processes \cite{karniol2004hwe, kaczmarczyk2014complex, cui2018novel}.
 %%%It utilizes phosphate as a chemical group, however other groups can be used for cell signalling as well e.g. methyl, acetyl, AMP or even redox reactions \cite{kim2002oxyr, chaparro2010toxt, wang2010acetylation, you2013coordination}.
 
+% so if you re-title the section, this would be "A classic example of indirect signalling is the two component system..."
+% can you also put the word "transcription" somewhere in this section (keeps focus on txn as a common theme throughout).
 A classic two-component system consists of a transmembrane sensory kinase which is autophosphorylated at its histidine residue after receiving physical or chemical signal from the environment (Fig. \ref{two}\textcolor{red}{a}).
 To be able to phosphorylate itself the kinase requires ATP or other phosphate donor.
 Next, the phosphorylated kinase transfers the phosphate group to its partner regulatory protein enabling its activity, most often DNA-binding \cite{lynch2012prioritization, gao2015temporal, cui2018novel}.
@@ -110,15 +138,21 @@ A divergent signal transmission mediates this (Fig. \ref{two}\textcolor{red}{e})
 Moreover, all these variations of two-component system mentioned above combine in cells producing a complex sensory-response network \cite{kaczmarczyk2014complex, chambonnier2016hybrid}.
 %%% SHOULD I DESCRIBE THE RESPONSES MORE IN DETAIL?
 
+% No, I think what you have no is fine. You have a brief introduction to each concept, which is nice.
+
 %%% FIRST I WROTE IT IN THIS SECTION, BUT IT'S MORE SUITABLE FOR SECTION ABOUT MEMORY I THINK:
 %%% The way a bacterium reacts to a certain condition differs from a cell to cell depending on the cell cycle it is in, metabolic activity and remaining energy i.e. ATP present in the cell.
 %%% However not all variations can be explained by that as even within these lets say homogeneous groups differences in behaviour are observed.
 %%% More or less past events were shown to play a role in some of such instances, in others bet hedging strategy is likely the cause.
 
 
+% transcriptional networks
 \section{Transcription networks}
 %%% I SHOULD ADD SOMETHING HERE AND CHANGE ACCORDINGLY THE INTRO TO Bacterial gene regulation
+% not sure what you mean here.
 
+
+% After starting this section, I think you should put direct/indirect signalling *within* this section. Otherwise it makes it seem like they are different from the process of txn, which you descirbe here. So it's good if you start out with global changes (e.g. DNA accessiblilty, then move to more local (TFs and txn initiation)
 \subsection{Bacterial gene regulation}
 As mentioned above several ways of control of gene products take place in bacterial cells.
 While control of protein activity helps to respond to quick environmental changes, translational regulation is a useful tool for controlling differential production of proteins coded within the same operon and thus transcribed on the same mRNA \cite{dar2018extensive}.
@@ -127,6 +161,7 @@ This saves resources and energy for synthesis of desired gene outputs.
 The last mentioned type of regulation is delineated further in detail.
 %%% ADD MORE INFO AND/OR REFERENCES?
 
+% sure, maltose is classic and might be an option. but you don't need your sections too long.
 %%% A BIT MORE INFO ABOUT TRANSLATIONAL REGULATION IF NEEDED:
 %%% Maltose operon \tax{malEFG} is one of them.
 %%% Transmembrane proteins MalF and MalG are required in much lower amount than substrate-binding MalE protein for maltose ABC transporter function \cite{newbury1987differential}.
@@ -180,6 +215,7 @@ Here I'm going to describe local regulation of this step involving transcription
 Activity of these factors corresponds to signals the cell acquires from internal or external environment as mentioned in the section dedicated to cellular responses.
 Even though some factors control only one promoter, majority of at least \tax{E. coli} promoters is regulated by more of them \cite{karp2014ecocyc}.
 
+% have you mentioned -10 / -35 yet? Should you explain what they are and what they're for?
 \textbf{Repression} of promoters is often based on producing an obstacle in the place of -10 and -35 elements which blocks RNA polymerase binding to the promoter.
 This is being achieved by various mechanisms.
 The simplest one is repressor binding to the operator which overlaps one or both of those promoter elements \cite{brent1981mechanism} (Fig.~\ref{txn}\textcolor{red}{a}).
@@ -225,6 +261,7 @@ Production of this loop is known to be mediated by nucleoid associated protein I
 After a successful transcription initiation the elongation of mRNA follows until termination comes to place.
 Even though the main transcription regulation occurs at the level of transcription initiation, elongation and termination can be also modulated, ranging from repression of elongation \cite{monsalve1996protein}, through elongation pausing and backtracking \cite{mustaev2017transcription} to transcription attenuation and anti-termination \cite{naville2009transcription}.
 %%% DO YOU WANT ME TO DESCRIBE THOSE MORE IN DETAIL OR CAN I LEAVE IT JUST LIKE THAT?
+% No, the detail is great, it might even be too much in some places...
 
 To the end of the section about transcription regulation it is good to point out the complexity of the whole process.
 Even when both global and specific regulation of transcription initiation permit transcript production the gene expression is still regulated further downstream e.g. during mRNA elongation or translation.
@@ -243,8 +280,10 @@ On the other side of this equilibrium is degradation of the product, as its stab
 A functional protein is also diluted during cell division, which further reduces its amount per cell.
 
 \subsubsection{Transcriptional network motifs}
+% some figures / cartoons here? Could be useful. This seciton is good otherwise.
 As an additional fine tuning of transcriptional response speed the simple network motifs themselves can be considered.
-It was shown that a negatively autoregulated gene reaches the same concentration much faster than if it is not autoregulated \cite{rosenfeld2002negative}.
+% the "same" concentration == equilibrium concentration?
+It has been shown that a negatively autoregulated gene reaches the same concentration much faster than if it is not autoregulated \cite{rosenfeld2002negative}.
 In other words negative feedback loop shortens the product rise-time.
 It also reduces the variability in product concentration maintaining it in optimal concentration limits \cite{becskei2000engineering}.
 This enables the cell to use stronger promoters for proteins needed in a short time but at low concentration without overshoots and risks of protein toxicity.
@@ -254,10 +293,13 @@ Slower and noisier initial response to gene activation is observed in case of po
 Although it takes longer for the cell to reach certain level of desired protein, this motif allows to react to much lower concentrations of signal.
 
 Next common regulatory motifs in \tax{E. coli} are feed-forward loops (FFLs).
+% the grammar in the next sentence is a bit off.
+% there's a lot of abbreviations (e.g. FFL) and X factors piling up here. Can you change "X" to something mroe reader friendly? Not sure what / how...
 By FFL is meant a regulatory circuit when a transcription factor X regulates other transcription factor Y and both (X and Y) regulate a gene or operon Z.
 There is further distinction between coherent and incoherent FFL.
 When the regulation of Z by factor X has the same sign (positive or negative) as regulation of Z by X through Y we talk about coherent FFL.
 If the signs are opposite the FFL is considered incoherent \cite{shen2002network}.
+% "has been shown" or "has been predicted"?
 It was predicted that coherent FFLs cause sign-sensitive delays in regulatory kinetics and incoherent FFLs should act as sign-sensitive accelelators and exhibit transient pulses of expression \cite{mangan2003structure}.
 The most abundant schemes were later experimentally confirmed.
 %%% IT'D BE GOOD TO HAVE PICTURE TO SUPPORT THE LAST SENTECE OF THE PARAGRAPH.
@@ -289,6 +331,10 @@ Various epigenetic mechanisms such as histone modifications, genomic imprinting 
 In bacterial domain DNA methylation by methyltransferases is mostly mentioned, although positive and double negative feedback loops play their role as well especially in terms of population bistability \cite{casadesus2006epigenetic, casadesus2013programmed, adhikari2016dna}.
 
 \subsection{DNA methylation by orphan methyltransferases}
+% in my opinion you can shrink this section a bit.
+% one thing to note is that you have gone back and forth between very general topics (the toplogy of regulation networks), to more specific mechanisms (regulating txn via TFs), to very specific mechanisms (dam / dcm). Don't dive too deep. Deep dives into very particular cellular mechanisms can be for later (e.g. if you end up doing a lot fo work on one type of mechanism).
+
+% I would start section 0.4 with feedback loops (so switch 0.4.2 and 0.4.1), as it follows naturally from the last bit of 0.3.2 Then you can mention methylation as *another* way besides TFs that epigenetic inheritance can occur, rather than making it the focus of the section.
 Orphan methyltransferases (MTs) were initially studied within restriction-modification system as a bacterial defence against phages, although Dam's ability to alter some gene expression was already described in mid-80s \cite{sternberg1985evidence, bickle1993biology}.
 As orphan MTs lack their cognate restriction endonucleases their role in bacterial cells is not as a primitive immune system, but among others can act as a transcription regulators.
 I describe the epigenetic mechanisms of Dam in detail below as the MT whose relationship to cell memory is most understood.
@@ -310,6 +356,8 @@ Such mechanism leading to epigenetic switch is well characterized in synthesis o
 The regulatory sequence of the \tax{pap} operon contains two sets of Lrp binding sites 1-3 and 4-6.
 In both of them GATC sequence is present, GATC$^{prox}$ within site 2 and GATC$^{dist}$ within site 5 (Fig.~\ref{pap}) \cite{blyn1990regulation}.
 %%% is this picture better? or is it too simple?
+
+% rarely are pictures *too* simple. This is good. Maybe label the lrp sites as you refer to them in the text?
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.3]{text/Pictures/papPili.png}
@@ -364,6 +412,8 @@ On the other side naive cells have very small amounts of LacY if any thus they a
 \end{figure}
 
 Another nice example of a long-term virulence epigenetic switch mediated by a positive feedback loop was published last year.
+% see also https://www.nature.com/articles/nature1191
+% http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001928
 Enteropathogenic \tax{E. coli} (EPEC) coexists in two, non-virulent and hyper-virulent, sub-populations during growth \cite{ronin2017long}.
 This bimodality was first observed  using ScanLag \cite{levin2014scanlag} as a difference in growth rates of the two groups resulting in BIG and SMALL colony morphotypes, for early and late appearing colonies, respectively.
 At transcription level it is a change in \tax{per} operon expression (located on EAF plasmid) and \tax{per} regulated genes.
