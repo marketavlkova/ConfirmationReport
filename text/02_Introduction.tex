@@ -140,10 +140,6 @@ The last mentioned type of regulation is delineated further in detail.
 %%% Transmembrane proteins MalF and MalG are required in much lower amount than substrate-binding MalE protein for maltose ABC transporter function \cite{newbury1987differential}.
 %%% Differential mRNA decay thus ensures there isn't too much of one protein (MalF and MalG) or too few of the other (MalE) even when transcribed together.
 
-%%% THIS SHOULD BE MOVED INTO SECTION DEDICATED TO BACTERIAL MEMORY:
-%%% Some studies has shown that cells with the same genetic background might react differently or at a different rate to the same stimulus based on their and their ancestors recent experience \cite{mathis2017asymmetric, ronin2017long}.
-%%% Such ability is advantageous especially if the change in the conditions is predictable and repeats periodically.
-
 \subsubsection{DNA accessibility}
 Having coding sequence and promoter of certain gene physically accessible for specific transcription regulation is one of the prerequisites of its expression.
 Moreover differential physical access to DNA within a chromosome presents one of the explanations to observed variations in promoters activity based on their position in the chromosome \cite{bryant2014chromosome}.
@@ -261,6 +257,8 @@ This enables the cell to use stronger promoters for proteins needed in a short t
 Positive autoregulation exhibits right the opposite traits.
 Slower and noisier initial response to gene activation is observed in case of positive feedback loops compared to no feedback systems \cite{maeda2006regulatory, sayut2007noise}.
 Although it takes longer for the cell to reach certain level of desired protein, this motif allows to react to much lower concentrations of signal.
+Moreover, both graded and hysteretic expression can be observed in positively autoregulated genes \cite{maeda2006regulatory}.
+%%% IS THIS ENOUGH TO MENTION DIFFERENCE IN GRADED AND BINARY RESPONSE IN HERE OR DO YOU WANT ME TO EXPAND IT MORE IN e.g. A SEPARATE PARAGRAPH
 
 Next common regulatory motifs in \tax{E. coli} are feed-forward loops (FFLs).
 % the grammar in the next sentence is a bit off.
@@ -294,16 +292,73 @@ Overall this type of regulation similarly to negative feedback loop shortens the
 The overshoot is seen as a pulse of high gene Z expression which is subsequently inhibited by factor Y, but not necessarily back to the basal level.
 
 
-\section{Epigenetic mechanisms in bacteria}
+\section{Epigenetics in bacteria}
 Epigenetics is understood as a heritable change in gene expression without simultaneous changes in DNA primary sequence.
+Some studies has shown that cells with the same genetic background might react differently or at a different rate to the same stimulus based on their and their ancestors recent experience \cite{mathis2017asymmetric, ronin2017long}.
+Such ability is advantageous especially if the change in the conditions is predictable and repeats periodically.
+
+\subsection{Mechanisms of bacterial memory}
 Various epigenetic mechanisms such as histone modifications, genomic imprinting or RNA associated silencing are well studied in eukaryotes \cite{durso2014mechanisms}.
 In bacterial domain DNA methylation by methyltransferases is mostly mentioned, although positive and double negative feedback loops play their role as well especially in terms of population bistability \cite{casadesus2006epigenetic, casadesus2013programmed, adhikari2016dna}.
 
-\subsection{DNA methylation by orphan methyltransferases}
+% 2018.06.28
+% Eventually, go into way more detail here, as this will end up as a full section on lac. But if you are leaving this as a brief intro to positive, negative, double negative, that's fine. You might also start with sensing/reaction and then move to epigenetics. This is a reasonable ref I think *An introduction to systems biology: design principles of biological circuits*, although you always have to be a little careful with Uri Alon's take on things, sometimes it's a bit too facile.
+\subsubsection{Feedback loops}
+System where a product is able to affect positively or negatively its own production is called a feedback loop.
+The influence of the output on itself might be direct or indirect if multiple effectors are involved.
+Feedback loops are quite common in bacterial gene regulation and can lead to epigenetic switches \cite{smits2006phenotypic, veening2008bistability}.
+Positive feedback loop and double negative feedback loop are known to play a role in memory of prokaryotes so far and are characterized in detail below.
+
+\textbf{Positive feedback loop} is the first described example of bacterial epigenetics.
+It was shown already in 1957 that \tax{E. coli} sub-population primed by high concentration of lactose analogue TMG is able to maintain \tax{lac} operon fully induced even in low non-inducible TMG concentrations \cite{novick1957enzyme}.
+While if the same bacteria are exposed to the low non-inducible TMG concentration without priming the \tax{lac} operon remains repressed by LacI.
+The mechanism behind this resides in different levels of $\beta$-galactoside permease (LacY) in TMG induced and naive cells.
+Induced population has high level of the permease present in membrane as \tax{lacY} gene expression is activated by high TMG concentrations.
+This state is preserved in a sub-population of induced cells after transfer into low TMG concentration as the abundant permease is able to maintain intracellular TMG level high enough to avoid LacI repression.
+Thus the high level of permease leads to high intracellular TMG concentration which in turn acts as permease transcription activator.
+On the other side naive cells have very small amounts of LacY if any thus they are not able to obtain TMG from the solution to activate \tax{lac} operon expression \cite{smits2006phenotypic, casadesus2013programmed}.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.2]{text/Pictures/perOperonRegulation.jpg}
+	\caption{Scheme of EPEC virulence regulation. PerA positivelly autoregulates \tax{perABC} operon and the triggers expression of type IV pili. PerC activates transcription of Ler which is the main regulator of T3SS secretion system machinery. (reproduced from \cite{ronin2017long})}
+	\label{per}
+\end{figure}
+
+Another nice example of a long-term virulence epigenetic switch mediated by a positive feedback loop was published last year.
+% see also https://www.nature.com/articles/nature1191
+% http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001928
+Enteropathogenic \tax{E. coli} (EPEC) coexists in two, non-virulent and hyper-virulent, sub-populations during growth \cite{ronin2017long}.
+This bimodality was first observed  using ScanLag \cite{levin2014scanlag} as a difference in growth rates of the two groups resulting in BIG and SMALL colony morphotypes, for early and late appearing colonies, respectively.
+At transcription level it is a change in \tax{per} operon expression (located on EAF plasmid) and \tax{per} regulated genes.
+EPEC cultivation in virulence-activating conditions gives rise to \tax{per}-ON hyper-virulent aggregative sub-population (SMALL phenotype) reaching nearly 100\% \cite{ronin2017long}.
+Interestingly this high ratio of \tax{per}-ON vs \tax{per}-OFF cells remains for many generations even after transferring the culture back into non-activating conditions, although naive EPEC culture contains only a minority of \tax{per}-ON cells.
+Transition back from \tax{per}-ON to \tax{per}-OFF phase is achieved when cells are grown up to stationary phase.
+The long-term stability of \tax{per}-ON state relies on a positive feedback of PerA which acts as an activator of its own gene beside \tax{perB} and \tax{perC} in the \tax{per} operon (Fig.~\ref{per}) \cite{ibarra2003identification, ronin2017long}.
+%%% More examples of positive feedback to add???
+
+As an illustration of \textbf{double negative feedback loop} in epigenetic regulation a switch between lytic and lysogenic cycle of \tax{E. coli} phage $\lambda$ is often described \cite{smits2006phenotypic, casadesus2013programmed}.
+After inserting its DNA the virus cycle might undergo two different ways - i.e. either replicate producing a lot of new phages and heading for bacterial lysis or integrate its own DNA into the bacterial chromosome and persist there within a lysogeny.
+The fate of the phage lies in two repressors, CI and Cro, each repressing transcription of the other \cite{eisen1970regulation, neubauer1970immunity}.
+Besides CI inhibits phage propagation genes and activates its own transcription.
+However, both CI and Cro are produced since the beginning of the infection.
+If the level of CI reaches a certain threshold and outcompetes Cro, whose activity is suppressed, the phage enters a lysogenic cycle staying dormant in the cell thanks to CI-\tax{cI} positive feedback loop.
+Otherwise Cro levels rise further inhibiting CI production and establishing phage proliferation with subsequent cell lysis \cite{svenningsen2005role}.
+It should be noted that although it is not predictable whether the phage enters lytic or lysogenic cycle, the ratio of lysed/lysogenized cells depends on bacterial physiologic situation and other environmental factors as well.
+Interestingly, Toman et al. used the CI-Cro system for epigenetic reuglation of \tax{gal} operon in \tax{E. coli} \cite{toman1985system}.
+%%% it's not epigenetics in E. coli, but in the phage lambda! (except for the engineered system by Toman et al.)
+
+%%%As the CI-Cro regulation is a phage system, the first evidence of bacterial epigenetics driven by a double negative feedback loop was published just 3 years ago.
+
+%%% detection of double negative feedback loop originating in bacteria?
+%%% double negative feedback detected in "A Novel Feedback Loop That Controls Bimodal Expression of Genetic Competence" which talks about cell competence
+%%% there is no direct evidence for epigenetics playing role in it, however paper "Agent-based modeling of competence phenotype switching in Bacillus subtilis" suggests it might be so according to their model
+%%% especially when in similar case - bacillus sporulation is it proven in: "Bet-hedging and epigenetic inheritance in bacterial cell development"
+
+\subsubsection{DNA methylation by orphan methyltransferases}
 % in my opinion you can shrink this section a bit.
 % one thing to note is that you have gone back and forth between very general topics (the toplogy of regulation networks), to more specific mechanisms (regulating txn via TFs), to very specific mechanisms (dam / dcm). Don't dive too deep. Deep dives into very particular cellular mechanisms can be for later (e.g. if you end up doing a lot fo work on one type of mechanism).
 
-% I would start section 0.4 with feedback loops (so switch 0.4.2 and 0.4.1), as it follows naturally from the last bit of 0.3.2 Then you can mention methylation as *another* way besides TFs that epigenetic inheritance can occur, rather than making it the focus of the section.
 Orphan methyltransferases (MTs) were initially studied within restriction-modification system as a bacterial defence against phages, although Dam's ability to alter some gene expression was already described in mid-80s \cite{sternberg1985evidence, bickle1993biology}.
 As orphan MTs lack their cognate restriction endonucleases their role in bacterial cells is not as a primitive immune system, but among others can act as a transcription regulators.
 I describe the epigenetic mechanisms of Dam in detail below as the MT whose relationship to cell memory is most understood.
@@ -355,59 +410,31 @@ Lastly \textbf{YhdJ} is an orphan MT methylating 3' adenine of 5'-ATGCAT-3' sequ
 Deleting \tax{yhdJ} gene produces neither loss of viability of \tax{E. coli} nor changes in its phenotype.
 In addition, the expression of the gene is very low under usual laboratory conditions and nothing is known about transcription regulation of the gene \cite{broadbent2007yhdj}.
 
-% 2018.06.28
-% Eventually, go into way more detail here, as this will end up as a full section on lac. But if you are leaving this as a brief intro to positive, negative, double negative, that's fine. You might also start with sensing/reaction and then move to epigenetics. This is a reasonable ref I think *An introduction to systems biology: design principles of biological circuits*, although you always have to be a little careful with Uri Alon's take on things, sometimes it's a bit too facile.
-\subsection{Feedback loops}
-System where a product is able to affect positively or negatively its own production is called a feedback loop.
-The influence of the output on itself might be direct or indirect if multiple effectors are involved.
-Feedback loops are quite common in bacterial gene regulation and can lead to epigenetic switches \cite{smits2006phenotypic, veening2008bistability}.
-Positive feedback loop and double negative feedback loop are known to play a role in memory of prokaryotes so far and are characterized in detail below.
+\subsection{Predictive cell behaviour}
+An ability to predict an upcoming change in the environment is beneficial for any organism.
+No matter whether the change means a presence of antibiotic or just shift in carbon source availability.
+If a bacterium is able to predict such event it has a fitness advantage over those who don't expect this to happen in that community.
 
-\textbf{Positive feedback loop} is the first described example of bacterial epigenetics.
-It was shown already in 1957 that \tax{E. coli} sub-population primed by high concentration of lactose analogue TMG is able to maintain \tax{lac} operon fully induced even in low non-inducible TMG concentrations \cite{novick1957enzyme}.
-While if the same bacteria are exposed to the low non-inducible TMG concentration without priming the \tax{lac} operon remains repressed by LacI.
-The mechanism behind this resides in different levels of $\beta$-galactoside permease (LacY) in TMG induced and naive cells.
-Induced population has high level of the permease present in membrane as \tax{lacY} gene expression is activated by high TMG concentrations.
-This state is preserved in a sub-population of induced cells after transfer into low TMG concentration as the abundant permease is able to maintain intracellular TMG level high enough to avoid LacI repression.
-Thus the high level of permease leads to high intracellular TMG concentration which in turn acts as permease transcription activator.
-On the other side naive cells have very small amounts of LacY if any thus they are not able to obtain TMG from the solution to activate \tax{lac} operon expression \cite{smits2006phenotypic, casadesus2013programmed}.
+Circadian rhythms in photoautotrophic Cyanobacteria can be considered as one example of predictive behaviour in bacterial world.
+It consists of alternation between photosynthetic activity during day and nitrogen fixation at night.
+This periodicity persists in complete darkness or light for days.
+It can also be reset by light or dark pulses in a way that two genetically identical populations act in the opposite way (oxygen production or nitrogen fixation) in constant dark or light conditions at the same time \cite{kondo1993circadian}.
+Similar oscillatory rhythm was described in a bacterium other than Cyanobacterium as well.
+\tax{Rhodobacter sphaeroides} was observed to keep changing gene expression in circadian (aerobic conditions) or ultradian (anaerobic conditions) rythms \cite{min2005rhythmic}.
+Recent study investigating connection between day-and-night cycle and overall gene expression of microbial mat suggest that daily rhythmicity might not be uncommon outside Cyanobacteria \cite{hornlein2018daily}.
+They state that 50\% of the rhythmic genes was derived from phylum \tax{Proteobacteria}.
 
-\begin{figure}[h!]
-  \centering
-  \includegraphics[scale=0.2]{text/Pictures/perOperonRegulation.jpg}
-	\caption{Scheme of EPEC virulence regulation. PerA positivelly autoregulates \tax{perABC} operon and the triggers expression of type IV pili. PerC activates transcription of Ler which is the main regulator of T3SS secretion system machinery. (reproduced from \cite{ronin2017long})}
-	\label{per}
-\end{figure}
+Next predictive behaviour with no connection to day-and-night regime was observed in \tax{E. coli}.
+Naturally it faces recurrent transitions between mammalian gastrointestinal tract (GIT) and outside environment.
+In GIT the temperature is usually higher than outside and oxygen is limited.
+However, during the transition from mammalian host the surrounding temperature decreases and oxygen levels rise.
+Consistent with predictive behaviour \tax{E. coli} strongly represses genes responsible for aerobic metabolism when cultivation temperature increases from 25$^{\circ}$C to 37$^{\circ}$C (without change in oxygen levels) in laboratory conditions \cite{tagkopoulos2008predictive}.
+While if the temperature drops correlation in up-regulation of aerobic metabolism genes occurs.
+Without the host-environment transition context this behaviour might seem maladaptive.
+So they also evolved this strain in conditions where increase in temperature was followed by oxygen saturation and after temperature decreased anaerobic conditions were established.
+After 1000 generations a substantial increase in fitness of evolved lines compared to ancestor is observed in such conditions.
+Besides, decrease in correlation between global transcriptional responses to temperature upshift and oxygen upshift in evolved strain is described.
 
-Another nice example of a long-term virulence epigenetic switch mediated by a positive feedback loop was published last year.
-% see also https://www.nature.com/articles/nature1191
-% http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001928
-Enteropathogenic \tax{E. coli} (EPEC) coexists in two, non-virulent and hyper-virulent, sub-populations during growth \cite{ronin2017long}.
-This bimodality was first observed  using ScanLag \cite{levin2014scanlag} as a difference in growth rates of the two groups resulting in BIG and SMALL colony morphotypes, for early and late appearing colonies, respectively.
-At transcription level it is a change in \tax{per} operon expression (located on EAF plasmid) and \tax{per} regulated genes.
-EPEC cultivation in virulence-activating conditions gives rise to \tax{per}-ON hyper-virulent aggregative sub-population (SMALL phenotype) reaching nearly 100\% \cite{ronin2017long}.
-Interestingly this high ratio of \tax{per}-ON vs \tax{per}-OFF cells remains for many generations even after transferring the culture back into non-activating conditions, although naive EPEC culture contains only a minority of \tax{per}-ON cells.
-Transition back from \tax{per}-ON to \tax{per}-OFF phase is achieved when cells are grown up to stationary phase.
-The long-term stability of \tax{per}-ON state relies on a positive feedback of PerA which acts as an activator of its own gene beside \tax{perB} and \tax{perC} in the \tax{per} operon (Fig.~\ref{per}) \cite{ibarra2003identification, ronin2017long}.
-%%% More examples of positive feedback to add???
-
-As an illustration of \textbf{double negative feedback loop} in epigenetic regulation a switch between lytic and lysogenic cycle of \tax{E. coli} phage $\lambda$ is often described \cite{smits2006phenotypic, casadesus2013programmed}.
-After inserting its DNA the virus cycle might undergo two different ways - i.e. either replicate producing a lot of new phages and heading for bacterial lysis or integrate its own DNA into the bacterial chromosome and persist there within a lysogeny.
-The fate of the phage lies in two repressors, CI and Cro, each repressing transcription of the other \cite{eisen1970regulation, neubauer1970immunity}.
-Besides CI inhibits phage propagation genes and activates its own transcription.
-However, both CI and Cro are produced since the beginning of the infection.
-If the level of CI reaches a certain threshold and outcompetes Cro, whose activity is suppressed, the phage enters a lysogenic cycle staying dormant in the cell thanks to CI-\tax{cI} positive feedback loop.
-Otherwise Cro levels rise further inhibiting CI production and establishing phage proliferation with subsequent cell lysis \cite{svenningsen2005role}.
-It should be noted that although it is not predictable whether the phage enters lytic or lysogenic cycle, the ratio of lysed/lysogenized cells depends on bacterial physiologic situation and other environmental factors as well.
-Interestingly, Toman et al. used the CI-Cro system for epigenetic reuglation of \tax{gal} operon in \tax{E. coli} \cite{toman1985system}.
-%%% it's not epigenetics in E. coli, but in the phage lambda! (except for the engineered system by Toman et al.)
-
-%%%As the CI-Cro regulation is a phage system, the first evidence of bacterial epigenetics driven by a double negative feedback loop was published just 3 years ago.
-
-%%% detection of double negative feedback loop originating in bacteria?
-%%% double negative feedback detected in "A Novel Feedback Loop That Controls Bimodal Expression of Genetic Competence" which talks about cell competence
-%%% there is no direct evidence for epigenetics playing role in it, however paper "Agent-based modeling of competence phenotype switching in Bacillus subtilis" suggests it might be so according to their model
-%%% especially when in similar case - bacillus sporulation is it proven in: "Bet-hedging and epigenetic inheritance in bacterial cell development"
 
 \section{How does selection affect responses and memory?}
 
