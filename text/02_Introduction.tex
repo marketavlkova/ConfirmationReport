@@ -326,8 +326,6 @@ On the other side naive cells have very small amounts of LacY if any thus they a
 \end{figure}
 
 Another nice example of a long-term virulence epigenetic switch mediated by a positive feedback loop was published last year.
-% see also https://www.nature.com/articles/nature1191
-% http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001928
 Enteropathogenic \tax{E. coli} (EPEC) coexists in two, non-virulent and hyper-virulent, sub-populations during growth \cite{ronin2017long}.
 This bimodality was first observed  using ScanLag \cite{levin2014scanlag} as a difference in growth rates of the two groups resulting in BIG and SMALL colony morphotypes, for early and late appearing colonies, respectively.
 At transcription level it is a change in \tax{per} operon expression (located on EAF plasmid) and \tax{per} regulated genes.
@@ -436,12 +434,6 @@ Evolution under high lactose concentrations without maltose resulted in loss in 
 The same authors investigated anticipation of oxidative stress by yeast which occurs in its natural habitat upon transition from fermentation to respiration.
 \tax{Saccharomyces cerevisiae} uses heat-shock, ethanol and low pH as cues to prepare for its coming without actually experiencing it at the time \cite{mitchell2009adaptive}.
 
-Evolution of classical Pavlovian reflex to originally neutral signal in microorganisms was published last year \cite{lopez2017adaptive}.
-As the neutral signal caffeine was added to media which yeast \tax{S. cerevisiae} was expect to associate with upcoming 5-fluoroorotic acid presence (metabolised into toxic substance).
-This predictive-like response appeared just within few hundred generations, but was not stable over time.
-Thus, little is still known whether microorganisms are able to learn or more accurately evolve such reflex to neutral cues in laboratory conditions.
-The papers mentioned above indicate so \cite{tagkopoulos2008predictive, mitchell2009adaptive} and a mathematical model supports this hypothesis if benefits of such prediction exceed its costs in other environments \cite{mitchell2011mathematical}, but no experimental evidence is available so far.
-
 
 \section{Natural selection on responses and memory}
 The current knowledge about gene expression in prokaryotes shows that transcription is a fairly regulated process.
@@ -463,16 +455,27 @@ Sensitivity of promoter variants from natural isolates could be then compared to
 Looking simply at the distribution of concentration sensitivity of naturally occurring promoters could also provide useful information in this matter.
 
 \subsection{Selection on noise}
-Prior works have clearly shown that expression noise is shaped by natural selection.
-Generally essential genes and genes with high effect on overall expression (i.e. some transcription factors) exhibit low transcriptional noise \cite{silander2012genome, metzger2015selection}.
+Prior works have clearly shown that expression noise is evolvable \cite{richard2014does}.
+Generally essential, constitutional genes and genes with high effect on overall expression (i.e. some transcription factors) tend to have low transcriptional noise \cite{silander2012genome, metzger2015selection}.
 In constrast another interesting study describes higher noise in promoters from natural isolates of \tax{E. coli} compared to those of experimentally evolved lines just for their mean expression \cite{wolf2015expression}.
-These results suggest that for different genes there is different optimum of transcriptional noise.
-More recent studies conclude on that as well \cite{barroso2017evolution}%%%, duveau2018fitness}. 
-%%%Most of this work was done on a yeast \tax{Saccharomyces cerevisiae} \cite{metzger2015selection, duveau2018fitness} and \tax{E. coli} \cite{silander2012genome, wolf2015expression}.
-%%%But some work on other eukaryotic model organisms such as \tax{Drosophila melanogaster} \cite{schor2017promoter} and mouse \cite{barroso2017evolution} has been done as well.
-
+These results suggest that for different genes and/or at different niches there is a different optimum of transcriptional noise.
+Indeed, a very recent study of the effect of expression noise on fitness of \tax{Saccharomyces cerevisiae} reveals that high noise is beneficial when expression level is far from optimum and vice versa \cite{duveau2018fitness}.
+They also indicate that after introduction of an organism into a new environment selection might act towards high noise in expression of some genes before an appropriate expression plasticity evolves.
+However, mutations in promoter regions usually change both expression level and noise at the same time \cite{metzger2015selection}.
+Besides microorganisms some work in this area on other model organisms such as \tax{Drosophila melanogaster} \cite{schor2017promoter} and mouse \cite{barroso2017evolution} has been done as well.
 
 \subsection{Selection on memory}
+As mentioned above some bacteria are able to predict upcoming event based on othervise unrelated signal \cite{kondo1993circadian, min2005rhythmic, tagkopoulos2008predictive, mitchell2009adaptive}.
+Microorganisms can also react faster to a signal if they were exposed to the same singal in past \cite{novick1957enzyme, mathis2017asymmetric}.
+And in the case of epigenetic bistability, a subpopulation remains in a different physiological state than the rest of the culture in response to a signal \cite{arnoldini2014bistable, ronin2017long}.
+
+An attempt of evolution of classical Pavlovian reflex to originally neutral signal in microorganisms was published last year \cite{lopez2017adaptive}.
+As the neutral signal caffeine was added to media which yeast \tax{S. cerevisiae} was expected to associate with upcoming 5-fluoroorotic acid presence (metabolised into a toxic substance).
+This predictive-like response appeared just within few hundred generations, but was not stable over time.
+Thus, little is still known whether microorganisms are able to evolve such reflex to neutral cues in laboratory conditions.
+The papers mentioned above suggest so \cite{tagkopoulos2008predictive, mitchell2009adaptive} and a mathematical model supports this hypothesis if benefits of such prediction exceed its costs in other environments \cite{mitchell2011mathematical}, but no experimental evidence is available so far.
+Nevertheless the reported decoupling of reaction to a signal in the absence of expected outcome is a good indication of selection acting on predictive behaviour \cite{tagkopoulos2008predictive, mitchell2009adaptive}.
+
 
 
 
