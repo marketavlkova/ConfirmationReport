@@ -56,7 +56,7 @@ LacI binding to the promoter DNA is then released triggering \tax{lacZYA} expres
 \begin{figure}[ht]
   \centering
   \includegraphics[scale=0.27]{text/Pictures/DirectSignaling.png}
-	\caption{Scheme of direct signaling; \textbf{a} if \tax{lac} operon inducer (allolactose) is present it binds to LacI repressor and induces \tax{lac} operon transcription; \textbf{b} expression of arginine structural genes is co-repressed by arginine itself, because without it ArgR repressor cannot bind to DNA.}
+	\caption{Schemes of direct signaling; \textbf{a} if \tax{lac} operon inducer (allolactose) is present it binds to LacI repressor and induces \tax{lac} operon transcription; \textbf{b} expression of arginine structural genes is co-repressed by arginine itself, because without it ArgR repressor cannot bind to DNA.}
 	\label{dir}
 \end{figure}
 
@@ -238,16 +238,17 @@ Moreover, both graded and hysteretic expression can be observed in positively au
 
 Next common regulatory motifs in \tax{E. coli} are feed-forward loops (FFLs).
 % the grammar in the next sentence is a bit off.
+%%% IS THE NEXT SENTENCE BETTER?
 % there's a lot of abbreviations (e.g. FFL) and X factors piling up here. Can you change "X" to something mroe reader friendly? Not sure what / how...
-By FFL is meant a regulatory circuit when a transcription factor X regulates other transcription factor Y and both (X and Y) regulate a gene or operon Z (Fig.~\ref{motifs}\textcolor{red}{c} and \textcolor{red}{d}).
+%%% I THINK THE FIGURE I ADDED MIGHT HELP. WHAT DO YOU THINK?
+FFL is a regulatory circuit when a transcription factor X regulates other transcription factor Y and both (X and Y) regulate a gene or operon Z (Fig.~\ref{motifs}\textcolor{red}{c} and \textcolor{red}{d}).
 There is further distinction between coherent and incoherent FFL.
-When the regulation of Z by factor X has the same sign (positive or negative) as regulation of Z by X through Y we talk about coherent FFL (Fig.~\ref{motifs}\textcolor{red}{c}).
+When the regulation of Z by factor X has the same sign (positive or negative) as regulation of Z by X \textit{through} Y we talk about coherent FFL (Fig.~\ref{motifs}\textcolor{red}{c}).
 If the signs are opposite the FFL is considered incoherent \cite{shen2002network} (Fig.~\ref{motifs}\textcolor{red}{d}).
 It has been predicted that coherent FFLs cause sign-sensitive delays in regulatory kinetics and incoherent FFLs should act as sign-sensitive accelelators and exhibit transient pulses of expression \cite{mangan2003structure}.
 The most abundant schemes were later experimentally confirmed.
-%%% IT'D BE GOOD TO HAVE PICTURE TO SUPPORT THE LAST SENTECE OF THE PARAGRAPH.
 
-In coherent FFL type 1 (Fig.~\ref{motifs}\textcolor{red}{c},C1) factor X activates factor Y expression and both X and Y positively regulate transcription of Z \cite{mangan2003structure}.
+In coherent FFL type 1 (Fig.~\ref{motifs}\textcolor{red}{c}, C1) factor X activates factor Y expression and both X and Y positively regulate transcription of Z \cite{mangan2003structure}.
 There are two possible ways of induction of Z expression in this system.
 First, both factors X and Y has to bind Z promoter to trigger transcription - AND-gate logic (AND-FFL).
 Or only one of both is sufficient to activate Z gene - OR-gate logic (OR-FFL).
@@ -261,7 +262,7 @@ The former motif (AND-FFL) thus prevents Z expression when concentration of X fl
 From incoherent FFL motifs the type 1 (Fig.~\ref{motifs}\textcolor{red}{d}, I1) is predominant in \tax{E. coli} transcriptional network.
 Factor X here positively regulates both Y and Z, however factor Y acts as an inhibitor of Z gene.
 The model predicted this incoherent FFL to speed up transcriptional responses, but weak pulse-generating power was expected \cite{mangan2003structure}.
-Nevertheless this motif was used to create effective pulsers \cite{basu2004spatiotemporal}.
+Nevertheless, this motif was used to create effective pulsers \cite{basu2004spatiotemporal}.
 Later the acceleration trait was experimentally confirmed as well despite the fact that other motifs contribute to the used regulatory system \cite{mangan2006incoherent}.
 This suggests that the motifs' fundamental functions are preserved even when combined with other motifs.
 Overall this type of regulation similarly to negative feedback loop shortens the rise-time, but unlike the negative feedback doesn't avoid overshoots rather the opposite.
@@ -275,41 +276,43 @@ Such ability is advantageous especially if the change in the conditions is predi
 
 \subsection{Mechanisms of bacterial memory}
 Various epigenetic mechanisms such as histone modifications, genomic imprinting or RNA associated silencing are well studied in eukaryotes \cite{durso2014mechanisms}.
-In bacterial domain DNA methylation by methyltransferases is mostly mentioned, although positive and double negative feedback loops play their role as well especially in terms of population bistability \cite{casadesus2006epigenetic, casadesus2013programmed, adhikari2016dna}.
+In the case of bacteria DNA methylation by methyltransferases is mostly mentioned, although positive and double negative feedback loops play their role as well especially in terms of population bistability \cite{casadesus2006epigenetic, casadesus2013programmed, adhikari2016dna}.
+Moreover, a new way of memory based on protein aggregation was revealed recently \cite{govers2018protein} and is described further in more detail.
 
 % 2018.06.28
 % Eventually, go into way more detail here, as this will end up as a full section on lac. But if you are leaving this as a brief intro to positive, negative, double negative, that's fine. You might also start with sensing/reaction and then move to epigenetics. This is a reasonable ref I think *An introduction to systems biology: design principles of biological circuits*, although you always have to be a little careful with Uri Alon's take on things, sometimes it's a bit too facile.
+%%% DO YOU STILL WANT ME TO GO INTO MORE DETAIL ABOUT lac OPERON REGULATION? I DESCRIBE IT IN SOME DETAIL WITHIN SECTION ABOUT CELLULAR RESPONSES...
 \subsubsection{Feedback loops}
-System where a product is able to affect positively or negatively its own production is called a feedback loop.
-The influence of the output on itself might be direct or indirect if multiple effectors are involved.
+System where a product is able to affect positively or negatively its own production, i.e. a feedback loop was already mentioned in the context of transcriptional network kinetics.
+This part is dedicated to another aspect autoregulations play in bacterial cells - memory. 
+The influence of the output on itself transcription might be direct or indirect if multiple effectors are involved.
 Feedback loops are quite common in bacterial gene regulation and can lead to epigenetic switches \cite{smits2006phenotypic, veening2008bistability}.
 Positive feedback loop and double negative feedback loop are known to play a role in memory of prokaryotes so far and are characterized in detail below.
 
 \textbf{Positive feedback loop} is the first described example of bacterial epigenetics.
 It was shown already in 1957 that \tax{E. coli} sub-population primed by high concentration of lactose analogue TMG is able to maintain \tax{lac} operon fully induced even in low non-inducible TMG concentrations \cite{novick1957enzyme}.
 While if the same bacteria are exposed to the low non-inducible TMG concentration without priming the \tax{lac} operon remains repressed by LacI.
-The mechanism behind this resides in different levels of $\beta$-galactoside permease (LacY) in TMG induced and naive cells.
-Induced population has high level of the permease present in membrane as \tax{lacY} gene expression is activated by high TMG concentrations.
+The mechanism behind this resides in different levels of $\beta$-galactoside permease (LacY) present in TMG induced and naive cells.
+Induced population has high level of the permease in cell membrane, because \tax{lacY} gene expression has been activated by previous high TMG concentrations.
 This state is preserved in a sub-population of induced cells after transfer into low TMG concentration as the abundant permease is able to maintain intracellular TMG level high enough to avoid LacI repression.
 Thus the high level of permease leads to high intracellular TMG concentration which in turn acts as permease transcription activator.
-On the other side naive cells have very small amounts of LacY if any thus they are not able to obtain TMG from the solution to activate \tax{lac} operon expression \cite{smits2006phenotypic, casadesus2013programmed}.
+On the other side naive cells have very small amounts of LacY if any, so they are not able to obtain enough TMG from the solution to activate \tax{lac} operon expression \cite{smits2006phenotypic, casadesus2013programmed}.
 
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.2]{text/Pictures/perOperonRegulation.jpg}
-	\caption{Scheme of EPEC virulence regulation. PerA positivelly autoregulates \tax{perABC} operon and the triggers expression of type IV pili. PerC activates transcription of Ler which is the main regulator of T3SS secretion system machinery. (reproduced from \cite{ronin2017long})}
+	\caption{Scheme of EPEC virulence regulation. PerA positivelly autoregulates \tax{perABC} operon and triggers expression of type IV pili. PerC activates transcription of Ler which is the main regulator of T3SS secretion system machinery. (reproduced from \cite{ronin2017long})}
 	\label{per}
 \end{figure}
 
-Another nice example of a long-term virulence epigenetic switch mediated by a positive feedback loop was published last year.
-Enteropathogenic \tax{E. coli} (EPEC) coexists in two, non-virulent and hyper-virulent, sub-populations during growth \cite{ronin2017long}.
+Another nice example of a long-term epigenetic switch mediated by a positive feedback loop was published last year.
+Enteropathogenic \tax{E. coli} (EPEC) has been revealed to coexists in two, non-virulent and hyper-virulent, sub-populations \cite{ronin2017long}.
 This bimodality was first observed  using ScanLag \cite{levin2014scanlag} as a difference in growth rates of the two groups resulting in BIG and SMALL colony morphotypes, for early and late appearing colonies, respectively.
 At transcription level it is a change in \tax{per} operon expression (located on EAF plasmid) and \tax{per} regulated genes.
 EPEC cultivation in virulence-activating conditions gives rise to \tax{per}-ON hyper-virulent aggregative sub-population (SMALL phenotype) reaching nearly 100\% \cite{ronin2017long}.
 Interestingly this high ratio of \tax{per}-ON vs \tax{per}-OFF cells remains for many generations even after transferring the culture back into non-activating conditions, although naive EPEC culture contains only a minority of \tax{per}-ON cells.
 Transition back from \tax{per}-ON to \tax{per}-OFF phase is achieved when cells are grown up to stationary phase.
 The long-term stability of \tax{per}-ON state relies on a positive feedback of PerA which acts as an activator of its own gene beside \tax{perB} and \tax{perC} in the \tax{per} operon (Fig.~\ref{per}) \cite{ibarra2003identification, ronin2017long}.
-%%% More examples of positive feedback to add???
 
 As an illustration of \textbf{double negative feedback loop} in epigenetic regulation a switch between lytic and lysogenic cycle of \tax{E. coli} phage $\lambda$ is often described \cite{smits2006phenotypic, casadesus2013programmed}.
 After inserting its DNA the virus cycle might undergo two different ways - i.e. either replicate producing a lot of new phages and heading for bacterial lysis or integrate its own DNA into the bacterial chromosome and persist there within a lysogeny.
@@ -328,21 +331,22 @@ Interestingly, Toman et al. used the CI-Cro system for epigenetic reuglation of 
 %%% double negative feedback detected in "A Novel Feedback Loop That Controls Bimodal Expression of Genetic Competence" which talks about cell competence
 %%% there is no direct evidence for epigenetics playing role in it, however paper "Agent-based modeling of competence phenotype switching in Bacillus subtilis" suggests it might be so according to their model
 %%% especially when in similar case - bacillus sporulation is it proven in: "Bet-hedging and epigenetic inheritance in bacterial cell development"
+%%% Olin also argumented by "An excitable gene regulatory circuit induces transient cellular differentiation", because they say becoming competent is probabilistic in Bacillus
 
 \subsubsection{DNA methylation by orphan methyltransferases}
 % in my opinion you can shrink this section a bit.
 % one thing to note is that you have gone back and forth between very general topics (the toplogy of regulation networks), to more specific mechanisms (regulating txn via TFs), to very specific mechanisms (dam / dcm). Don't dive too deep. Deep dives into very particular cellular mechanisms can be for later (e.g. if you end up doing a lot fo work on one type of mechanism).
-
+%%% TOO MUCH SHRINK OR OK?
 Orphan methyltransferases (MTs) were initially studied within restriction-modification system as a bacterial defence against phages, although Dam's ability to alter some gene expression was already described in mid-80s \cite{sternberg1985evidence, bickle1993biology}.
 As orphan MTs lack their cognate restriction endonucleases their role in bacterial cells is not as a primitive immune system, but among others can act as a transcription regulators.
 I describe the epigenetic mechanisms of Dam in detail below as the MT whose relationship to cell memory is most understood.
 Some authors consider the change in expression of certain genes in \tax{Caulobacter crescentus} which is associated with an orphan MT called CcrM to be epigenetic as well \cite{casadesus2006epigenetic, adhikari2016dna}.
 However I do not include it here as these transcriptional changes are not heritable and occur only during a part of a cell cycle.
-Other \tax{E. coli} orhan MTs are mentioned briefly as well although none of them is known to play a role in epigenetics so far.
+%%%Other \tax{E. coli} orhan MTs are mentioned briefly as well although none of them is known to play a role in epigenetics so far.
 
-\textbf{Dam}, one of two first orphan MTs described in \tax{E. coli}, methylates adenine in 5'-GATC-3' sequences to N$^6$-methyladenine (6mA) \cite{marinus1973isolation}.
-Its homologs were found in some bacteriophages as well as in other \tax{Gammaproteobacteria}, however many of bacterial DNA adenine methylases are associated with restriction endonucleases \cite{low2001roles, casadesus2006epigenetic, bochow2012bacteriophage}.
-On the other hand strains having an orphan DNA adenine methylase can be characterized by presence of SeqA and MutH, overrepresentation of GATC sites in \tax{oriC}, genes close to it and in the \tax{dnaA} promoter \cite{sobetzko2016distamo}.
+Dam, one of two first orphan MTs described in \tax{E. coli}, methylates adenine in 5'-GATC-3' sequences to N$^6$-methyladenine (6mA) \cite{marinus1973isolation}.
+%%%Its homologs were found in some bacteriophages as well as in other \tax{Gammaproteobacteria}, however many of bacterial DNA adenine methylases are associated with restriction endonucleases \cite{low2001roles, casadesus2006epigenetic, bochow2012bacteriophage}.
+%%%On the other hand strains having an orphan DNA adenine methylase can be characterized by presence of SeqA and MutH, overrepresentation of GATC sites in \tax{oriC}, genes close to it and in the \tax{dnaA} promoter \cite{sobetzko2016distamo}.
 For most of the DNA both strands of chromosome are fully methylated throughout the cell cycle if Dam is present.
 Of course, one of the exceptions is a short time hemimethylation of a leading strand and Okazaki fragments right after their synthesis during replication.
 Both strands lack GATC methylation in \tax{dam} mutants, moreover higher mutation rate, uncoordinated replication initiation or loss of virulence were observed as well.
@@ -351,8 +355,19 @@ Interestingly for some species e.g. \tax{Vibrio cholerae} the presence of an orp
 As implied above several GATC sites escape Dam methylation.
 This happens if another regulatory protein recognises a specific DNA biding site which overlaps GATC sequence and thus competes with Dam for it \cite{correnti2002dam}.
 Such mechanism leading to epigenetic switch is well characterized in synthesis of \tax{pap} pili in uropathogenic \tax{E. coli} (UPEC) \cite{peterson2008competitive}.
-The regulatory sequence of the \tax{pap} operon contains two sets of Lrp binding sites 1-3 and 4-6.
-In both of them GATC sequence is present, GATC$^{prox}$ within site 2 and GATC$^{dist}$ within site 5 (Fig.~\ref{pap}) \cite{blyn1990regulation}.
+%%%The regulatory sequence of the \tax{pap} operon contains two sets of Lrp binding sites 1-3 and 4-6.
+%%%In both of them the GATC sequence is present, GATC$^{prox}$ within site 2 and GATC$^{dist}$ within site 5 (Fig.~\ref{pap}) \cite{blyn1990regulation}.
+The regulatory sequence of the \tax{pap} operon contains two sets of Lrp binding sites GATC$^{prox}$ and GATC$^{dist}$ \cite{blyn1990regulation}.
+During the OFF phase \tax{pap} pili are not produced because Lrp occupies GATC$^{prox}$ site which remains nonmethylated on both strands while GATC$^{dist}$ is fully methylated (Fig.~\ref{pap}).
+Lrp in this position prevents binding not only by Dam but by $\sigma^{70}$ RNA polymerase as well inhibiting expression of \tax{papBA} gene \cite{weyand2000regulation}.
+For switch to ON phase an initial Lrp dissociation from GATC$^{prox}$ is necessary.
+This likely happens during replication when an opportunity for Lrp to bind the hemimethylated GATC$^{dist}$ site instead of GATC$^{prox}$ raises.
+The probability of this switch depends on the level of regulatory protein PapI in the cell as complex PapI/Lrp has lower affinity to GATC$^{prox}$ but binds more likely to hemimethylated GATC$^{dist}$ than to fully methylated DNA \cite{hernday2003mechanism}.
+Besides Lrp release from GATC$^{prox}$ site enables access of Dam to it so it can become methylated which further reduces Lrp affinity to this site.
+Even though RNA polymerase's access to \tax{papBA} promoter is not blocked any more the expression itself requires cAMP-CAP \cite{weyand2001essential}.
+When PapB is beeing produced it acts as a \tax{papI} gene transcription activator leading to a feedback loop which stabilizes the cells in ON phase \cite{forsman1989autoregulation}.
+However the described transition from OFF to ON phase occurs with 100-fold lower frequency than vice versa \cite{blyn1990regulation}.
+The process of this opposite transition i.e. from ON to OFF phase involves transfer of Lrp from GATC$^{dist}$ to GATC$^{prox}$ during replication but the exact mechanism is not fully understood yet \cite{adhikari2016dna}.
 
 % This is good. Maybe label the lrp sites as you refer to them in the text?
 \begin{figure}[h!]
@@ -361,43 +376,33 @@ In both of them GATC sequence is present, GATC$^{prox}$ within site 2 and GATC$^
 	\caption{Scheme of the \tax{pap} phase OFF to ON switch. (reproduced from \cite{low2001roles})}
 	\label{pap}
 \end{figure}
-During the OFF phase \tax{pap} pili are not produced because Lrp occupies GATC$^{prox}$ site which remains nonmethylated on both strands while GATC$^{dist}$ is fully methylated.
-Lrp in this position prevents binding not only by Dam but by $\sigma^{70}$ RNA polymerase as well inhibiting expression of \tax{papBA} gene \cite{weyand2000regulation}.
-For switch to ON phase an initial Lrp dissociation from sites 1-3 is necessary.
-This likely happens during replication when an opportunity for Lrp to bind the hemimethylated GATC$^{dist}$ site instead of GATC$^{prox}$ raises.
-The probability of this switch depends on the level of regulatory protein PapI in the cell as complex PapI/Lrp has lower affinity to site 2 but binds more likely to hemimethylated sites 4-6 than to fully methylated DNA \cite{hernday2003mechanism}.
-Besides Lrp release from GATC$^{prox}$ site enables access of Dam to it so it can become methylated which further reduces Lrp affinity to 1-3 sites.
-Even though RNA polymerase's access to \tax{papBA} promoter is not blocked any more the expression itself requires cAMP-CAP \cite{weyand2001essential}.
-When PapB is beeing produced it acts as a \tax{papI} gene transcription activator leading to a feedback loop which stabilizes the cells in ON phase \cite{forsman1989autoregulation}.
-However the described transition from OFF to ON phase occurs with 100-fold lower frequency than vice versa \cite{blyn1990regulation}.
-The process of this opposite transition i.e. from ON to OFF phase involves transfer of Lrp from GATC$^{dist}$ to GATC$^{prox}$ during replication but the exact mechanism is not fully understood yet \cite{adhikari2016dna}.
 
-Another well known orphan MT in \tax{E. coli} is \textbf{Dcm} which methylates second cytosine in 5'-CC(A/T)GG-3' motif to 5-methylcytosine (5mC) \cite{marinus1973isolation}.
-Even though neither this one is necessary for \tax{E. coli} survival and some strains were found lacking \tax{dcm} gene, link between certain genes expression and presence of this MT was described.
-Dcm seems to slow down expression of ribosomal genes \tax{rplC} and \tax{rpsJ} and inhibit transcription of \tax{sugE} gene connected with higher antimicrobial resistance \cite{militello2012conservation, militello2014cytosine}.
-Both is happening predominantly during early stationary phase.
-Next study shows increased expression of stress response sigma factor RpoS in \tax{dcm} mutant \cite{kahramanoglou2012genomics}.
-Recently additional 63 genes were discovered to be affected if Dcm activity is inhibited \cite{militello20165}.
-Most of these genes are up-regulater during early stationary phase if methylation by Dcm is silenced.
+%%%Another well known orphan MT in \tax{E. coli} is \textbf{Dcm} which methylates second cytosine in 5'-CC(A/T)GG-3' motif to 5-methylcytosine (5mC) \cite{marinus1973isolation}.
+%%%Even though neither this one is necessary for \tax{E. coli} survival and some strains were found lacking \tax{dcm} gene, link between certain genes expression and presence of this MT was described.
+%%%Dcm seems to slow down expression of ribosomal genes \tax{rplC} and \tax{rpsJ} and inhibit transcription of \tax{sugE} gene connected with higher antimicrobial resistance \cite{militello2012conservation, militello2014cytosine}.
+%%%Both is happening predominantly during early stationary phase.
+%%%Next study shows increased expression of stress response sigma factor RpoS in \tax{dcm} mutant \cite{kahramanoglou2012genomics}.
+%%%Recently additional 63 genes were discovered to be affected if Dcm activity is inhibited \cite{militello20165}.
+%%%Most of these genes are up-regulater during early stationary phase if methylation by Dcm is silenced.
 
-Lastly \textbf{YhdJ} is an orphan MT methylating 3' adenine of 5'-ATGCAT-3' sequence to 6mA when overexpressed.
-Deleting \tax{yhdJ} gene produces neither loss of viability of \tax{E. coli} nor changes in its phenotype.
-In addition, the expression of the gene is very low under usual laboratory conditions and nothing is known about transcription regulation of the gene \cite{broadbent2007yhdj}.
+%%%Lastly \textbf{YhdJ} is an orphan MT methylating 3' adenine of 5'-ATGCAT-3' sequence to 6mA when overexpressed.
+%%%Deleting \tax{yhdJ} gene produces neither loss of viability of \tax{E. coli} nor changes in its phenotype.
+%%%In addition, the expression of the gene is very low under usual laboratory conditions and nothing is known about transcription regulation of the gene \cite{broadbent2007yhdj}.
 
 \subsubsection{Protein aggregation}
-At the end of previous month a new mechanism of bacterial memory was described \cite{govers2018protein}.
-Protein aggregates (PAs) which are usually formed in response to a proteotoxic stress (e.g. sub-lethal heat-shock) were found to protect cells which bear them against new proteotoxic stresses.
+At the end of previous month a new mechanism of bacterial memory was described.
+Protein aggregates (PAs) which are usually formed in response to a proteotoxic stress (e.g. sub-lethal heat-shock) were found to protect cells which bear them against new proteotoxic stresses \cite{govers2018protein}.
 Those PAs are asymmetrically divided between daughter cells and gradually disaggregated.
-However, the disaggregation of PAs is very slow.
-This thus provides a long-time memory in PA-bearing cells of such past events.
+As this disaggregation is very slow, it provides a long-time memory in PA-bearing cells of past proteotoxic events.
 The authors show that cells which inherit protein aggregates are more likely to survive sub-lethal heat-shock or streptomycin exposure.
 They also resume growth much earlier than genetically identical cells without PA.
 %%% DO YOU WANT ME TO WRITE MORE ABOUT THIS?
 
 \subsection{Predictive cell behaviour}
-An ability to predict an upcoming change in the environment is beneficial for any organism.
-No matter whether the change means a presence of antibiotic or just shift in carbon source availability.
+An ability to predict an upcoming event in the environment is beneficial for any organism.
+No matter whether the event means a presence of antibiotic or just a shift in carbon source availability.
 If a bacterium is able to predict such event it has a fitness advantage over those who don't expect this to happen in that community.
+It is so, because such cell starts up its expression for future change in advance which doesn't cause a delay in response at the time the change emerges.
 
 Circadian rhythms in photoautotrophic Cyanobacteria can be considered as one example of predictive behaviour in bacterial world.
 It consists of alternation between photosynthetic activity during day and nitrogen fixation at night.
@@ -411,7 +416,7 @@ They state that 50\% of the rhythmic genes was derived from phylum \tax{Proteoba
 Next predictive behaviour with no connection to day-and-night regime was observed in \tax{E. coli}.
 Naturally it faces recurrent transitions between mammalian gastrointestinal tract (GIT) - higher temperature, lower oxygen - and outside environment - lower temperature, higher oxygen.
 Consistent with predictive behaviour \tax{E. coli} strongly represses genes responsible for aerobic metabolism to temperature increase (without change in oxygen levels) in laboratory conditions \cite{tagkopoulos2008predictive}.
-While if the temperature drops correlation in up-regulation of aerobic metabolism genes occurs.
+While if the temperature drops, correlation in up-regulation of aerobic metabolism genes occurs.
 They also evolved this strain in conditions where an increase in temperature was followed by oxygen saturation and temperature decrease by anaerobic conditions.
 The two responses were successfully decoupled after 1000 generations suggesting that anticipatory regulation can be evolved for and against.
 
@@ -423,25 +428,22 @@ The same authors investigated anticipation of oxidative stress by yeast which oc
 
 \section{Natural selection on responses and memory}
 The current knowledge about gene expression in prokaryotes shows that transcription is a fairly regulated process.
-But how this regulation evolved under selection in natural conditions is not fully understood.
-Hypothesis about selection acting on transcriptional sensitivity, noise and possible memory exist.
-%%% FIND REFERENCES FOR THAT!!!
-Some supporting evidence and experiments exist, yet a lot remains to unravel still.
+But how this regulation evolved under selection in natural conditions is not fully understood yet.
 
 \subsection{Selection on sensitivity}
 It was mentioned above that cells possess mechanisms to modulate time-dependent sensitivity of gene expression to a signal (e.g. FFLs).
 Some of them are overrepresented in living organisms over others compared to randomized networks \cite{shen2002network, mangan2003structure}.
 Bacteria are thus under natural selection towards accurate timing of their responses.
-But is concentration-dependent sensitivity to a signal under selective pressure as well?
-Common sense says there should be selection towards the concentration of a signal that is informative in the particular environment.
+But is concentration-dependent sensitivity to a signal under the selective pressure as well?
+Common sense says there should be selection towards the concentration of a signal that is somehow informative in the particular environment.
 To the best of our knowledge no research investigated this so far.
 %%% OR SHOULD I SAY "MY" KNOWLEDGE?
 A possible way how to look into whether selection acts to reach certain level of sensitivity of promoters to a signal level is through experimental evolution.
 Sensitivity of promoter variants from natural isolates could be then compared to those of lines evolved under low to high levels of an appropriate signal.
-Looking simply at the distribution of concentration sensitivity of naturally occurring promoters could also provide useful information in this matter.
+Looking simply at the distribution of concentration sensitivity of naturally occurring promoters could also provide an useful information in this matter.
 
 \subsection{Selection on noise}
-Prior works have clearly shown that expression noise is evolvable \cite{richard2014does}.
+In the case of expression noise, prior works have clearly shown that it is an evolvable trait \cite{richard2014does}.
 Generally essential, constitutional genes and genes with high effect on overall expression (i.e. some transcription factors) tend to have low transcriptional noise \cite{silander2012genome, metzger2015selection}.
 In constrast another interesting study describes higher noise in promoters from natural isolates of \tax{E. coli} compared to those of experimentally evolved lines just for their mean expression \cite{wolf2015expression}.
 These results suggest that for different genes and/or at different niches there is a different optimum of transcriptional noise.
@@ -449,10 +451,10 @@ Indeed, a very recent study of the effect of expression noise on fitness of \tax
 They also indicate that after introduction of an organism into a new environment selection might act towards high noise in expression of some genes before an appropriate expression plasticity evolves.
 However, note that mutations in promoter regions usually change both expression level and noise at the same time \cite{metzger2015selection}.
 Some work in this area on other model organisms such as \tax{Drosophila melanogaster} \cite{schor2017promoter} and mouse \cite{barroso2017evolution} has been done as well.
-But it still remains to validate that it is actually selected for certain levels of noise in natural environment by looking into noise variations of individual genes among distinct microbial isolates.
+But it still remains to validate that it is actually selected for certain levels of noise in natural environment by looking into noise variations of individual genes among distinct microbial isolates coming from the same location.
 
 \subsection{Selection on memory}
-As mentioned above some bacteria can react faster to a signal if they were exposed to the same singal in past \cite{novick1957enzyme}.
+It is known that some bacteria can react faster to a signal if they were exposed to the same singal in past \cite{novick1957enzyme}.
 The development of microfluidics devices has enabled to study microbial adaptive memory at single cell level.
 For example, sister and cousin cells have correlated lag times upon glucose-lactose media switch \cite{boulineau2013single, kaiser2018monitoring}.
 LacY production in \tax{E. coli} continues after a short lactose pulse although the lactose is no longer present \cite{lambert2014memory} and \tax{E. coli} also keeps producing more LacZ even after reaching maximal growth rate and thus overshooting its actual need \cite{kaiser2018monitoring}.
