@@ -40,6 +40,44 @@ Exported FCS files were then analysed in R - used scripts are available at \href
 \subsection{Activity of \tax{lacZ} promoters}
 
 
+
+
+\section{Construction of pADOUCH plasmid}
+As we could see, \tax{lacZ} promoters cloned into plasmids were active even in non-lactose environments, but that is not the case for strain ASC662 which has GFP gene integrated into chromosome.
+We hypothesise, that this differential results might be caused by the naturally low amounts of LacI repressor present the in cells.
+When we increase the copy number of \tax{lacZ} promoter, all LacI proteins becomes saturated and some promoters escape the repression, even though the plasmids used should produce only several copies within a cell \cite{zaslaver2006comprehensive}.
+To confirm that we decided to place the \tax{lacZ::GFP} sequences into chromosome, creating only one additional \tax{lacZ} promoter per cell.
+We have available pLW001 plasmid which is suitable for chromosomal integration (\hyperlink{pLW001}{Appendix 5}) in our lab made previously by a colleague Daying Wen.
+However, this plasmid lacks ribosome binding site (RBS) as it was constructed in order to study natural ribosome binding sites within promoters.
+Thus we decided to construct a new plasmid by replacing the GFP gene present in pLW001 vector with the GFP sequence we have in our negative control plasmid pUA66 (\hyperlink{pUA66seq}{Appendix 1}) together with its strong RBS, some additional restriction sites and terminator (Fig. \ref{cloning}).
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.4]{text/Pictures/Cloning.png}
+	\caption{Scheme of pADOUCH plasmid construction by replacing GFP sequence from pLW001 vector by sequence from pUA66 plasmid.}
+	\label{cloning}
+\end{figure}
+
+After cloning a colony PCR of using pUA66\textunderscore clon primers (Table \ref{pcr}) successfully amplified sequence of expected length (1100bp) in all 8 transformants tested (Fig. \ref{colonyPCR}).
+PCR using ATT-RP2 and PSC-FP2 primers was then performed on clones 1:3(1) and 1:5(4) together with pLW001-Top10 and all these PCR products were sent for sequencing to Macrogen, Korea.
+For sequencing the same primers were used as for the sequence amplification.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.2]{text/Pictures/ColonyPCR.jpg}
+	\caption{Electrophoresis of colony PCR using pUA66\textunderscore clon primers; M - marker; first 8 samples (1:5(1) - 1:3(2)) - tested clones; pLW001-Top10 and Top10 - negative controls with template DNA; pUA66-K12 - positive control; NEG - negative control without template DNA.}
+	\label{colonyPCR}
+\end{figure}
+
+Sequencing confirmed the presence of desired insert in digested pLW001 vector.
+However, 4 SNPs compared to the expected reference were identified (Fig. \ref{1:3(1)seq}).
+But as both sequenced clones have exactly the same SNPs (\hyperlink{pADOUCHseq}{Appendix 6}) and all of these SNPs were synonymous (Fig. \ref{1:3(1)seq}), it is probably that the sequence of GFP gene in the pUA66 plasmid we have is not accurate.
+Complete revised sequence of pADOUCH vector can be found in \hyperlink{pADOUCHwhole}{Appendix 7}.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[scale=0.26]{text/Pictures/pADOUCHseq.png}
+	\caption{Excerpt of 1:3(1) clone sequence alignment with expected pADOUCH references. DNA sequence is dotted except for SNPs; protein sequence is always beneath its DNA sequence.}
+	\label{1:3(1)seq}
+\end{figure}
+
 \shorthandon{-} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
