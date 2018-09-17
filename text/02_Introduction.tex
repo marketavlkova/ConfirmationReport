@@ -106,6 +106,55 @@ Contrary, some cases require various response to a single signal, when multiple 
 A divergent signal transmission mediates this (Fig. \ref{two}\textcolor{red}{e}) as one sensory kinase is able to phosphorylate aspartate domains of different acceptor proteins \cite{mika2005two, groisman2016feedback}.
 Moreover, all these variations of two-component system mentioned above combine in cells producing a complex sensory-response network \cite{kaczmarczyk2014complex, chambonnier2016hybrid}.
 
+\subsubsection{Regulatory kinetics}
+For better understanding of the whole transcription network regulation, it is important to look at the speed of different regulatory circuits as well.
+%%%\subsubsection{Promoter strength and protein lifetime}
+Naturally the more easily and often RNA polymerase binds effectively to a promoter the more of an appropriate protein is produced at the time.
+The strength of the promoter is given by its nucleotide sequence and binding of transcription factors increases or decreases RNA polymerase affinity to it.
+On the other side of this equilibrium is degradation of the product, as its stability in certain conditions determines its lifetime.
+A functional protein is also diluted during cell division, which further reduces its amount per cell.
+
+%%%\subsubsection{Transcriptional network motifs}
+\textbf{Feedback loop} is a transcriptional network motif in which the product affects positively or negatively its own production  (Fig.~\ref{motifs}).
+Such motifs have also its effect on the speed of cellular responses.
+Negative feedback loop, i.e. circuit where the product inhibits its own expression, decreases the response time \cite{rosenfeld2002negative}.
+It also reduces the variability in product concentration decreasing cell-to-cell and temporal variability \cite{becskei2000engineering}.
+This enables the cell to use stronger promoters for proteins needed in a short time but at low concentration without overshoots and risks of protein toxicity.
+
+Positive autoregulation, i.e. motif in which the product further induces the expression of the gene coding it (Fig.~\ref{motifs}\textcolor{red}{b}), exhibits the opposite traits then negative feedback.
+Transcriptional activation is slower and noisier in case of positive feedback loops compared to no feedback systems \cite{maeda2006regulatory, sayut2007noise}.
+Although it takes longer for the cell to reach certain level of desired protein, this motif allows to react to much lower concentrations of a signal.
+Moreover, both graded and hysteretic expression can occur in positively autoregulated genes \cite{maeda2006regulatory}.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.29]{text/Pictures/TxnMotifs.png}
+	\caption{Schemes of transcriptional network motifs; \textbf{a} negative feedback loop - gene product represses its own transcription; \textbf{b} positive feedback loop - gene product induced transcription of its own gene; \textbf{c} coherent feed-forward loops; \textbf{d} incoherent feed-forward loops.}
+	\label{motifs}
+\end{figure}
+
+\textbf{Feed forward loops} (FFLs) are also common regulatory motifs.
+They affect response time in cells as well, but each type of FFL do so in a bit different way \cite{shen2002network}.
+FFL generally, is a regulatory circuit when a transcription factor X regulates another transcription factor, Y, and both (X and Y) regulate a gene or operon Z (Fig.~\ref{motifs}\textcolor{red}{c} and \textcolor{red}{d}).
+It has been predicted that coherent FFLs cause sign-sensitive delays in regulatory kinetics and incoherent FFLs should act as sign-sensitive accelelators and exhibit transient pulses of expression \cite{mangan2003structure}.
+The most abundant schemes were later experimentally confirmed \cite{mangan2003coherent, kalir2005coherent, mangan2006incoherent}.
+The distinction between coherent and incoherent FFL depends on whether the sign (positive or negative) of Z regulation caused by factor X \textit{through} Y is the same as regulation of Z by X itself \cite{shen2002network, mangan2003structure}.
+
+Coherent FFL type 1 (Fig.~\ref{motifs}\textcolor{red}{c}, C1), where both X and Y has to bind to trigger transcription (AND-gate logic) delays full gene expression compared to non-FFL system \cite{mangan2003coherent}, while no delay was observed in the inverse (ON to OFF) transition.
+On the other hand, when only factor X or Y is sufficient to induce Z transcription (OR- gate logic in C1 FFL) transition from OFF to ON shows no delays  \cite{kalir2005coherent}.
+But when factor X is deactivated the ON to OFF step is considerably delayed in comparison with strain with deleted gene for factor Y.
+The former motif (AND-FFL) thus prevents Z expression when concentration of X fluctuates close to a threshold, while the latter circuit (OR-FFL) enables continuous production of Z even if X concentration drops below a threshold for a while.
+
+From incoherent FFL motifs the type 1 (Fig.~\ref{motifs}\textcolor{red}{d}, I1) is predominant in \tax{E. coli} transcriptional network.
+Factor X here positively regulates both Y and Z, however factor Y acts as an inhibitor of Z gene.
+The model predicted this incoherent FFL to speed up transcriptional responses, but weak pulse-generating power was expected \cite{mangan2003structure}.
+Nevertheless, this motif was used to create effective pulsers \cite{basu2004spatiotemporal}.
+Later the acceleration trait was experimentally confirmed as well despite the fact that other motifs contribute to the used regulatory system \cite{mangan2006incoherent}.
+This suggests that the motifs' fundamental functions are preserved even when combined with other motifs.
+Overall this type of regulation similarly to negative feedback loop shortens the rise-time, but unlike the negative feedback doesn't avoid overshoots rather the opposite.
+The overshoot is seen as a pulse of high gene Z expression which is subsequently inhibited by factor Y, but not necessarily back to the basal level.
+
+
 % 17.9.2018
 % Thjs needs a better title, as above you have been talking about "bacterial gene regulation"
 \subsection{Bacterial gene regulation}
@@ -212,75 +261,6 @@ Even when both global and specific regulation of transcription initiation permit
 Moreover one transcription factor can regulate multiple genes as well as being co-regulated by several factors including itself.
 Regulation of gene expression thus exhibit a huge network of mutually controlled outputs based on the information acquired by a cell.
 
-
-% 17.9.2018
-% I would almost flip this whole sectiobn up top, after Transcriptional Networks, as this is more general - topology - followed by specific examples. Or you could name specific examples and mechanisms after mentioning each type of topoology.
-\subsection{Regulatory kinetics}
-For better understanding of the whole transcription network regulation, it is important to look at the speed of different regulatory circuits as well.
-This is usually characterised by a rise-time (or response time), i.e. time when the concentration of a gene product reaches its half maximal concentration after gene induction.
-
-\subsubsection{Promoter strength and protein lifetime}
-Naturally the more easily and often RNA polymerase binds effectively to a promoter the more of an appropriate protein is produced at the time.
-The strength of the promoter is given by its nucleotide sequence and binding of transcription factors increases or decreases RNA polymerase affinity to it.
-On the other side of this equilibrium is degradation of the product, as its stability in certain conditions determines its lifetime.
-A functional protein is also diluted during cell division, which further reduces its amount per cell.
-
-\subsubsection{Transcriptional network motifs}
-The speed of response is affected by the type of transcriptional circuitry that controls it (Fig.~\ref{motifs}).
-Negative feedback loop decreases the response time \cite{rosenfeld2002negative}.
-It also reduces the variability in product concentration decreasing cell-to-cell and temporal variability \cite{becskei2000engineering}.
-This enables the cell to use stronger promoters for proteins needed in a short time but at low concentration without overshoots and risks of protein toxicity.
-
-Positive autoregulation (Fig.~\ref{motifs}\textcolor{red}{b}) exhibits the opposite traits.
-Transcriptional activation is slower and noisier in case of positive feedback loops compared to no feedback systems \cite{maeda2006regulatory, sayut2007noise}.
-Although it takes longer for the cell to reach certain level of desired protein, this motif allows to react to much lower concentrations of signal.
-Moreover, both graded and hysteretic expression can occur in positively autoregulated genes \cite{maeda2006regulatory}.
-%%% IS THIS ENOUGH TO MENTION DIFFERENCE IN GRADED AND BINARY RESPONSE IN HERE OR DO YOU WANT ME TO EXPAND IT MORE IN e.g. A SEPARATE PARAGRAPH?
-
-\begin{figure}[ht!]
-  \centering
-  \includegraphics[scale=0.29]{text/Pictures/TxnMotifs.png}
-	\caption{Schemes of transcriptional network motifs; \textbf{a} negative feedback loop - gene product represses its own transcription; \textbf{b} positive feedback loop - gene product induced transcription of its own gene; \textbf{c} coherent feed-forward loops; \textbf{d} incoherent feed-forward loops.}
-	\label{motifs}
-\end{figure}
-
-Feed forward loops (FFLs) are also common regulatory motifs.
-% the grammar in the next sentence is a bit off.
-%%% IS THE NEXT SENTENCE BETTER?
-% there's a lot of abbreviations (e.g. FFL) and X factors piling up here. Can you change "X" to something mroe reader friendly? Not sure what / how...
-%%% I THINK THE FIGURE I ADDED MIGHT HELP. WHAT DO YOU THINK?
-FFL is a regulatory circuit when a transcription factor X regulates another transcription factor, Y, and both (X and Y) regulate a gene or operon Z (Fig.~\ref{motifs}\textcolor{red}{c} and \textcolor{red}{d}).
-% 17.9.2018
-% in general you could place REFs a little earlier than you do, and perhaps use a few more.
-There is further distinction between coherent and incoherent FFL.
-% 17.9.2018
-% I think you first need to say something about how this affects the response, as you did above - slow, fast, noisy, etc.
-When the regulation of Z by factor X has the same sign (positive or negative) as regulation of Z by X \textit{through} Y we talk about coherent FFL (Fig.~\ref{motifs}\textcolor{red}{c}).
-If the signs are opposite, the FFL is considered incoherent \cite{shen2002network} (Fig.~\ref{motifs}\textcolor{red}{d}).
-It has been predicted that coherent FFLs cause sign-sensitive delays in regulatory kinetics and incoherent FFLs should act as sign-sensitive accelelators and exhibit transient pulses of expression \cite{mangan2003structure}.
-The most abundant schemes were later experimentally confirmed.
-
-In coherent FFL type 1 (Fig.~\ref{motifs}\textcolor{red}{c}, C1) factor X activates factor Y expression and both X and Y positively regulate transcription of Z \cite{mangan2003structure}.
-There are two possible ways of induction of Z expression in this system.
-First, both factors X and Y has to bind Z promoter to trigger transcription - AND-gate logic (AND-FFL).
-Or only one of both is sufficient to activate Z gene - OR-gate logic (OR-FFL).
-The AND-FFL delays full gene expression compared to non-FFL system \cite{mangan2003coherent}, while no delay was observed in the inverse (ON to OFF) transition.
-% 17.9.2018
-% "was used" - and in general use less passive and more active voice, although this is up to you really...
-To test OR-FFL a system where X and Y act in additive manner to activate Z was used and termed as SUM-FFL \cite{kalir2005coherent}.
-This motif behaves right the opposite way than AND-FFL.
-Transition from OFF to ON shows no delays.
-But when factor X was deactivated the ON to OFF step was considerably delayed in comparison with strain with deleted gene for factor Y.
-The former motif (AND-FFL) thus prevents Z expression when concentration of X fluctuates close to a threshold, while the latter circuit (SUM-FFL) enables continuous production of Z even if X concentration drops below a threshold for a while.
-
-From incoherent FFL motifs the type 1 (Fig.~\ref{motifs}\textcolor{red}{d}, I1) is predominant in \tax{E. coli} transcriptional network.
-Factor X here positively regulates both Y and Z, however factor Y acts as an inhibitor of Z gene.
-The model predicted this incoherent FFL to speed up transcriptional responses, but weak pulse-generating power was expected \cite{mangan2003structure}.
-Nevertheless, this motif was used to create effective pulsers \cite{basu2004spatiotemporal}.
-Later the acceleration trait was experimentally confirmed as well despite the fact that other motifs contribute to the used regulatory system \cite{mangan2006incoherent}.
-This suggests that the motifs' fundamental functions are preserved even when combined with other motifs.
-Overall this type of regulation similarly to negative feedback loop shortens the rise-time, but unlike the negative feedback doesn't avoid overshoots rather the opposite.
-The overshoot is seen as a pulse of high gene Z expression which is subsequently inhibited by factor Y, but not necessarily back to the basal level.
 
 
 \section{Epigenetics in bacteria}
