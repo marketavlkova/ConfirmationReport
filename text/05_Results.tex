@@ -41,16 +41,16 @@ Exported FCS files were then analysed in R - used scripts are available at \href
 
 
 
-
+% 17.9.2018
+% where is this name from?
 \section{Construction of pADOUCH plasmid}
 As we could see, \tax{lacZ} promoters cloned into plasmids were active even in non-lactose environments, but that is not the case for strain ASC662 which has GFP gene integrated into chromosome.
 We hypothesise, that this differential results might be caused by the naturally low amounts of LacI repressor present in a cell.
 When a cell makes multiple copies of \tax{lacZ} promoter by its sequence on a plasmid, all LacI proteins become saturated and a part of the promoters escape the repression, even though the plasmids used should produce only several copies within a cell \cite{zaslaver2006comprehensive}.
 To confirm that we decided to place the \tax{placZ::GFP} sequences into chromosome, creating only one additional \tax{lacZ} promoter per a cell.
 
-We have available pLW001 plasmid which is suitable for chromosomal integration (\hyperlink{pLW001}{Appendix 5}) in our lab made previously by a colleague Daying Wen.
-However, this plasmid lacks ribosome binding site (RBS) as it was constructed in order to study natural ribosome binding sites within promoters.
-Thus we decided to construct a new plasmid by replacing the GFP gene present in pLW001 vector with the GFP sequence we have in our negative control plasmid pUA66 (\hyperlink{pUA66seq}{Appendix 1}) together with its strong RBS, some additional restriction sites and a terminator (Fig. \ref{cloning}).
+We have available pLW001 plasmid which is suitable for chromosomal integration (\hyperlink{pLW001}{Appendix 5}) however, this plasmid lacks ribosome binding site (RBS).
+Thus we constructed a new plasmid by replacing the GFP gene present in pLW001 vector with the GFP sequence we have in our negative control plasmid pUA66 (\hyperlink{pUA66seq}{Appendix 1}) together with its strong RBS, some additional restriction sites and a transcriptional terminator (Fig. \ref{cloning}).
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.4]{text/Pictures/Cloning.png}
@@ -58,19 +58,18 @@ Thus we decided to construct a new plasmid by replacing the GFP gene present in 
 	\label{cloning}
 \end{figure}
 
-After cloning a colony PCR using pUA66\textunderscore clon primers (Table \ref{pcr}) successfully amplified sequence of expected length (1.1 kb) in all 8 transformants tested (Fig. \ref{colonyPCR}).
-PCR using ATT-RP2 and PSC-FP2 primers (Table \ref{pcr}) was then performed on clones 1:3(1) and 1:5(4) together with pLW001-Top10 and all these PCR products were sent for sequencing to Macrogen, Korea.
-For sequencing the same primers were used as for the sequence amplification.
+% 17.9.2018
+% "tested" - showing what? e.g. "showing that successful integration had occurred."
+We successfully amplified sequence of expected length (1.1 kb) in all 8 transformants tested (Fig. \ref{colonyPCR}).
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.2]{text/Pictures/ColonyPCR.jpg}
 	\caption{Electrophoresis of colony PCR using pUA66\textunderscore clon primers; M - marker; first 8 samples (1:5(1) - 1:3(2)) - tested clones; pLW001-Top10 and Top10 - negative controls with template DNA; pUA66-K12 - positive control; NEG - negative control without template DNA.}
 	\label{colonyPCR}
 \end{figure}
-
-Sequencing confirmed the presence of desired insert in digested pLW001 vector.
-However, four SNPs compared to the expected reference were identified (Fig. \ref{1:3(1)seq}).
-But as both sequenced clones have exactly the same SNPs (\hyperlink{pADOUCHseq}{Appendix 6}) and all of these SNPs are synonymous (Fig. \ref{1:3(1)seq}), we probably had an inaccurate sequence of GFP gene in the pUA66 plasmid.
+Sanger sequencing confirmed the presence of desired insert in digested pLW001 vector.
+However, we identified four SNPs compared to the expected sequence in GFP gene (Fig. \ref{1:3(1)seq}).
+But as both sequenced clones have exactly the same SNPs (\hyperlink{pADOUCHseq}{Appendix 6}) and all of these SNPs are synonymous (Fig. \ref{1:3(1)seq}), we inferred that the reference sequence of GFP gene in the pUA66 plasmid was inaccurate.
 Complete revised sequence of pADOUCH vector can be found in \hyperlink{pADOUCHwhole}{Appendix 7}.
 \begin{figure}[ht]
   \centering

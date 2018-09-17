@@ -19,38 +19,57 @@ These differences could be driven by other selection forces acting simultaneousl
 Anyway, cells which don't manage to adapt to the new conditions are excluded by natural selection and die.
 %%% SHOULD I FIND AND ADD SOME REFERENCES?
 
-
+% 17.9.2018
+% see if you can get someone to proff grammar? Georgia?
 \section{Transcriptional networks}
 
 \subsection{Cellular responses}
-It is essential for a living cell to sense what is happening in the environment it is present at and react accordingly.
-If reaction time, before death, is limited to seconds there is no time for change in transcription or translation level.
-In that case the cell fate depends on the proteins it has already synthesised, and when none with an appropriate enzymatic activity is present, the cell dies.
-Nice example of fast response to a signal is chemotaxis.
-When a motile bacterium occurs in attractant (sugars, amino acids) or repellent (metabolites, some divalent cations) gradient, it swim towards or away from the higher concentration of it, respectively.
+% 17.9.2018
+% I think you can go into a bit more detail about what you are going to say below here. e.g. once you talk about transcription, "Responses time depend on the topology of the circuit, the signals that bacteria have observed previously (memory), and any predicitve behaviour that the bacteria are capable of. Below I go into each of these properties in more detail to establish the current state of the field..." Then first, your section on topology (eg FFLs) and effects on response, memory, etc., then with specific examples. Then prediction, then the fact that not much is known about selection on memory, response, et.c except circumstantial evidence (e.g. the predictive behaviour of things in the gut).
+It is essential for a living cell to sense what is happening in the environment and react accordingly.
+% 17.9.2018
+% you could give some intuition as to why you don't always want second-level reaction. e.g. if you don't want to produce a ton of protein for a response that is likely to be very transient.
+If the timescale of this reaction should be on the order of seconds, there is no time for changes in transcription or translation.
+In that case the cell fate depends on the proteins or other small molecules it has already synthesised, and when none with an appropriate enzymatic activity is present, the cell dies. % not always dies - often a cell just won't do as well as it *could* do, e.g. grow as fast, have a higher *chance* of dying, etc.
+One example of a fast response to a signal is chemotaxis.
+When a motile bacterium occurs in an attractant (e.g. nutrients such as sugars or amino acids) or repellent (toxic metabolites, some divalent cations) gradient, it swim towards or away from the higher concentration of it, respectively.
+% 17.9.2018
+% say something more specific about the mechanisms and how it occurs ona second-level timescale
 In order to react swiftly, the cell needs to have the flagella already expressed.
 
-On the other hand the necessity to react in minutes or hours is enough to activate and silence appropriate genes.
-Such transcriptional responses are adequate in slowly changing environments e.g. decrease in preferred carbon source concentration.
+On the other hand if it is advantageous or only necessary to react in minutes or hours responses can be mediated through translational or transcriptional changes.
+% 17.9.2018
+% I would say this is also good for cases in which responding immediately might hurt you e.g. if the responser is a huge physiological change and costs a lot of energy, it is not advantageous to respond all the time.
+Transcriptional responses are adequate in slowly changing environments (e.g. decrease in preferred carbon source concentration).
 % could also put in SOS here. Might mention riboswitches if you want to talk about translation control?
 %%% DO YOU WANT ME TO EXPAND THIS OR WAS IT JUST SUGGESTION, WHICH IS NOT NECESSARY TO DO?
 When a non-preferred carbon source is present as well the cells are brought to decision whether to enter long-term stationary phase or begin to utilize the alternative carbon source.
 In any case they have to alter their transcription accordingly.
-To manage and orchestrate all possible responses to multiple signals cells evolved a network of extra- and intracellular signaling pathways.
+To manage and orchestrate many responses to multiple signals cells evolved a network of extra- and intracellular signaling pathways.
 As I focus on transcriptional responses the following text covers mostly these cases.
 
 \subsubsection{Direct signalling pathways}
+% 17.9.2018
+% what would you call UV or heat? Also direct?
 Direct signalling is a case when a signal molecule is imported through cell membrane into cytosol or is produced by the cell and subsequently interacts with gene regulatory protein.
 This is often the case in the regulation of carbohydrate catabolism and amino acid biosynthesis genes \cite{charlier1992arginine, weickert1992isorepressor, pittard1996various, wheatley2013structural}.
 Two simple models are described below.
 
-Cells avoid wasteful production of proteins which are not used at all the time.
+Cells avoid wasteful production of proteins which are not used at all the time. % Reference?
+% 17.9.2018
+% well, if lactose might be there soon, there is some advantage to producing it, or a small amount at least
 For instance, there is no sense in producing plenty of enzyme hydrolysing lactose (lacZ) if no lactose is present.
+% 17.9.2018
+% you should say something about why you are focusing on E. coli, either here or above?
 To achieve this, \tax{E. coli} expresses \tax{lac} repressor (LacI) \cite{hudson1990co}.
+% 17.9.2018
+% "take a turn" is a bit too colloquial?
 However, \tax{lac} operon transcription is desired if lactose is present in the media.
 Here \tax{lac} operon inducers take a turn.
 Allolactose - \tax{lac} operon inducer - is imported by lactose permease into the cell where it binds directly to the repressor LacI.
 Lactose itself has to be modified to the allolactose by $\beta$-galactosidase (LacZ) at first \cite{jobe1972lac, wheatley2013structural}.
+% 17.9.2018
+% CRP - which does what...or reacts to what...
 LacI binding to the promoter DNA is then released triggering \tax{lacZYA} expression (Fig. \ref{dir}\textcolor{red}{a}) together with binding of general regulatory protein CRP \cite{hudson1990co, clark2005molecular}.
 
 \begin{figure}[ht]
@@ -60,16 +79,16 @@ LacI binding to the promoter DNA is then released triggering \tax{lacZYA} expres
 	\label{dir}
 \end{figure}
 
-For other metabolic pathways things might work in a different way, however.
+For other metabolic pathways regulation might occur through a different mechanism, however.
 Arginine, for instance, acts as a co-repressor of its own biosynthesis (Fig. \ref{dir}\textcolor{red}{b}).
-This means that when a bacterium does not have enough of this amino acid available for protein production the transcription of arginine genes is active \cite{charlier2004biosynthesis, caldara2006arginine}.
+Thus, when a bacterium does not have enough of this amino acid available for protein production the transcription of arginine genes is active \cite{charlier2004biosynthesis, caldara2006arginine}.
 On the other hand, when arginine is abundant in the culture medium and thus in the cell, there is no need to make more of it.
 The cell has ArgR repressor present in cytosol but ArgR itself cannot bind to DNA and inhibit transcription in the arginine absence \cite{clark2005molecular, caldara2006arginine}.
 However when there is plenty of arginine in the cell it binds to ArgR and as a co-repressor inhibits expression of arginine structural genes binding to an appropriate promoter \cite{charlier1992arginine, charlier2004biosynthesis, clark2005molecular}.
 
 \subsubsection{Indirect signalling pathways}
-A classic example of indirect signalling is two-component system.
-It consists of a transmembrane sensory kinase which is autophosphorylated at its histidine residue after receiving physical or chemical signal from the environment (Fig. \ref{two}\textcolor{red}{a}).
+A classic example of indirect signalling is the two-component system.
+This consists of a transmembrane sensory kinase which is autophosphorylated at its histidine residue after receiving physical or chemical signal from the environment (Fig. \ref{two}\textcolor{red}{a}).
 To be able to phosphorylate itself the kinase requires ATP or other phosphate donor.
 Next, the phosphorylated kinase transfers the phosphate group to its partner regulatory protein enabling its activity, most often DNA-binding and transcriptional regulation \cite{lynch2012prioritization, gao2015temporal, cui2018novel}.
 This protein receives the phosphate to its aspartate residue and might act as both gene repressor and/or activator.
@@ -88,10 +107,10 @@ These hybrid systems are usually located in cell membrane with their sensory dom
 
 Another version of two-component system is phosphorelay (Fig. \ref{two}\textcolor{red}{c}).
 In this case multiple steps of phosphate transfer occur before the final phosphorylation of target regulator.
-Histidine domain of sensor protein serves here as a phosphate donor to an aspartate domain of the same or another protein.
+The histidine domain of a sensor protein serves here as a phosphate donor to an aspartate domain of the same or another protein.
 From this domain the phosphate is further transferred to another histidine domain.
 This can exist again within the same protein or as a separated one.
-And finally, the aspartate domain of a DNA-binding regulator receives phosphate from the third domain in row.
+Finally, the aspartate domain of a DNA-binding regulator receives phosphate from the third domain in row.
 These multiple steps allow an easier regulation by other signals as the phosphorelay can be silenced at any of the intermediate steps during the transmission \cite{perego2001pentapeptide, groisman2016feedback}.
 
 Systems where a regulatory protein can be phosphorylated by different sensory units also occur.
@@ -102,16 +121,17 @@ Contrary, some cases require various response to a single signal, when multiple 
 A divergent signal transmission mediates this (Fig. \ref{two}\textcolor{red}{e}) as one sensory kinase is able to phosphorylate aspartate domains of different acceptor proteins \cite{mika2005two, groisman2016feedback}.
 Moreover, all these variations of two-component system mentioned above combine in cells producing a complex sensory-response network \cite{kaczmarczyk2014complex, chambonnier2016hybrid}.
 
+% 17.9.2018
+% Thjs needs a better title, as above you have been talking about "bacterial gene regulation"
 \subsection{Bacterial gene regulation}
 As mentioned above several ways of control of gene products take place in cells.
 While control of protein activity helps to respond to quick environmental changes, translational regulation is a useful tool for controlling differential production of proteins coded within the same operon and thus transcribed on the same mRNA \cite{dar2018extensive}.
 Transcriptional regulation on the other hand might be considered as the most economical as it inhibits the very synthesis of products which are not needed at the moment.
 This saves resources and energy for synthesis of desired gene outputs.
-The last mentioned type of regulation is delineated further in detail.
+As the latter type of regulation is the focus of this this work, I outline the important aspects of this process in more detail below.
 
 \subsubsection{DNA accessibility}
-Having coding sequence and promoter of certain gene physically accessible for transcriptional machinery is one of the prerequisites of its expression.
-Moreover differential physical access to DNA within a chromosome presents one of the explanations to observed variations in promoters activity based on their position in the chromosome \cite{bryant2014chromosome}.
+Differential physical access to DNA within a chromosome presents one of the explanations to observed variations in promoters activity based on their position in the chromosome \cite{bryant2014chromosome}.
 Nucleoid associated proteins (NAPs) and supercoiling are general mechanisms affecting this accessibility.
 NAPs' role in several cell processes such as replication, horizontal gene transfer or transcription regulation was shown \cite{dixon1984protein, kayoko1992histone, aznar2013hha}.
 Here I mention principally their global influence of gene expression and respective DNA accessibility to other DNA-binding transcriptional factors and RNA polymerase.
@@ -190,12 +210,14 @@ RNA polymerase binding to these promoters without activator is weakened or impai
 And this is also where the operators of such activators are located (Fig.~\ref{txn}\textcolor{red}{b}).
 A bound activator then brings the elements into the optimal position for RNA polymerase recruitment \cite{heldwein2001crystal}.
 
-All activation mechanisms mentioned above just enable RNA polymerase binding strong enough for an efficient transcription initiation.
-Other kind of activation of transcription initiation is not even required for most RNA polymerase holoenzymes.
-However, RNA polymerase containing $\sigma^{54}$ factor is unable to unwind promoter DNA to begin transcribe.
-This is facilitated by enhancer binding proteins (EBPs) which interact with the $\sigma^{54}$ factor \cite{morett1989vivo, cannon2000dna}.
-Nevertheless, EBPs bind upstream of the promoter elements, so to get in contact with the $\sigma^{54}$ factor a loop has to be produced.
-Production of this loop is known to be mediated by nucleoid associated protein IHF which as well as other NAPs plays a role in DNA accessibility \cite{de1991upstream, sze2001vivo}.
+% 17.9.2018
+% this is a lot of detail on s54, not sure it's needed.
+%%%All activation mechanisms mentioned above just enable RNA polymerase binding strong enough for an efficient transcription initiation.
+%%%Other kind of activation of transcription initiation is not even required for most RNA polymerase holoenzymes.
+%%%However, RNA polymerase containing $\sigma^{54}$ factor is unable to unwind promoter DNA to begin transcribe.
+%%%This is facilitated by enhancer binding proteins (EBPs) which interact with the $\sigma^{54}$ factor \cite{morett1989vivo, cannon2000dna}.
+%%%Nevertheless, EBPs bind upstream of the promoter elements, so to get in contact with the $\sigma^{54}$ factor a loop has to be produced.
+%%%Production of this loop is known to be mediated by nucleoid associated protein IHF which as well as other NAPs plays a role in DNA accessibility \cite{de1991upstream, sze2001vivo}.
 
 \subsubsection{Regulation of mRNA elongation and transcription termination}
 After a successful transcription initiation the elongation of mRNA follows until termination comes to place.
@@ -206,6 +228,8 @@ Even when both global and specific regulation of transcription initiation permit
 Moreover one transcription factor can regulate multiple genes as well as being co-regulated by several factors including itself.
 Regulation of gene expression thus exhibit a huge network of mutually controlled outputs based on the information acquired by a cell.
 
+% 17.9.2018
+% I would almost flip this whole sectiobn up top, after Transcriptional Networks, as this is more general - topology - followed by specific examples. Or you could name specific examples and mechanisms after mentioning each type of topoology.
 \subsection{Regulatory kinetics}
 For better understanding of the whole transcription network regulation, it is important to look at the speed of different regulatory circuits as well.
 This is usually characterised by a rise-time (or response time), i.e. time when the concentration of a gene product reaches its half maximal concentration after gene induction.
@@ -217,16 +241,15 @@ On the other side of this equilibrium is degradation of the product, as its stab
 A functional protein is also diluted during cell division, which further reduces its amount per cell.
 
 \subsubsection{Transcriptional network motifs}
-As an additional fine tuning of transcriptional response speed the simple network motifs themselves can be considered (Fig.~\ref{motifs}).
-It has been shown that a negatively autoregulated gene (Fig.~\ref{motifs}\textcolor{red}{a}) reaches equilibrium concentration much faster than if it is not autoregulated \cite{rosenfeld2002negative}.
-In other words negative feedback loop shortens the product rise-time.
-It also reduces the variability in product concentration maintaining it in optimal concentration limits \cite{becskei2000engineering}.
+The speed of response is affected by the type of transcriptional circuitry that controls it (Fig.~\ref{motifs}).
+Negative feedback loop decreases the response time \cite{rosenfeld2002negative}.
+It also reduces the variability in product concentration decreasing cell-to-cell and temporal variability \cite{becskei2000engineering}.
 This enables the cell to use stronger promoters for proteins needed in a short time but at low concentration without overshoots and risks of protein toxicity.
 
-Positive autoregulation (Fig.~\ref{motifs}\textcolor{red}{b}) exhibits right the opposite traits.
-Slower and noisier initial response to gene activation is observed in case of positive feedback loops compared to no feedback systems \cite{maeda2006regulatory, sayut2007noise}.
+Positive autoregulation (Fig.~\ref{motifs}\textcolor{red}{b}) exhibits the opposite traits.
+Transcriptional activation is slower and noisier in case of positive feedback loops compared to no feedback systems \cite{maeda2006regulatory, sayut2007noise}.
 Although it takes longer for the cell to reach certain level of desired protein, this motif allows to react to much lower concentrations of signal.
-Moreover, both graded and hysteretic expression can be observed in positively autoregulated genes \cite{maeda2006regulatory}.
+Moreover, both graded and hysteretic expression can occur in positively autoregulated genes \cite{maeda2006regulatory}.
 %%% IS THIS ENOUGH TO MENTION DIFFERENCE IN GRADED AND BINARY RESPONSE IN HERE OR DO YOU WANT ME TO EXPAND IT MORE IN e.g. A SEPARATE PARAGRAPH?
 
 \begin{figure}[ht!]
@@ -236,15 +259,19 @@ Moreover, both graded and hysteretic expression can be observed in positively au
 	\label{motifs}
 \end{figure}
 
-Next common regulatory motifs in \tax{E. coli} are feed-forward loops (FFLs).
+Feed forward loops (FFLs) are also common regulatory motifs.
 % the grammar in the next sentence is a bit off.
 %%% IS THE NEXT SENTENCE BETTER?
 % there's a lot of abbreviations (e.g. FFL) and X factors piling up here. Can you change "X" to something mroe reader friendly? Not sure what / how...
 %%% I THINK THE FIGURE I ADDED MIGHT HELP. WHAT DO YOU THINK?
-FFL is a regulatory circuit when a transcription factor X regulates other transcription factor Y and both (X and Y) regulate a gene or operon Z (Fig.~\ref{motifs}\textcolor{red}{c} and \textcolor{red}{d}).
+FFL is a regulatory circuit when a transcription factor X regulates another transcription factor, Y, and both (X and Y) regulate a gene or operon Z (Fig.~\ref{motifs}\textcolor{red}{c} and \textcolor{red}{d}).
+% 17.9.2018
+% in general you could place REFs a little earlier than you do, and perhaps use a few more.
 There is further distinction between coherent and incoherent FFL.
+% 17.9.2018
+% I think you first need to say something about how this affects the response, as you did above - slow, fast, noisy, etc.
 When the regulation of Z by factor X has the same sign (positive or negative) as regulation of Z by X \textit{through} Y we talk about coherent FFL (Fig.~\ref{motifs}\textcolor{red}{c}).
-If the signs are opposite the FFL is considered incoherent \cite{shen2002network} (Fig.~\ref{motifs}\textcolor{red}{d}).
+If the signs are opposite, the FFL is considered incoherent \cite{shen2002network} (Fig.~\ref{motifs}\textcolor{red}{d}).
 It has been predicted that coherent FFLs cause sign-sensitive delays in regulatory kinetics and incoherent FFLs should act as sign-sensitive accelelators and exhibit transient pulses of expression \cite{mangan2003structure}.
 The most abundant schemes were later experimentally confirmed.
 
@@ -252,7 +279,9 @@ In coherent FFL type 1 (Fig.~\ref{motifs}\textcolor{red}{c}, C1) factor X activa
 There are two possible ways of induction of Z expression in this system.
 First, both factors X and Y has to bind Z promoter to trigger transcription - AND-gate logic (AND-FFL).
 Or only one of both is sufficient to activate Z gene - OR-gate logic (OR-FFL).
-The AND-FFL was shown to delay full gene expression compared to non-FFL system \cite{mangan2003coherent}, while no delay was observed in the inverse (ON to OFF) transition.
+The AND-FFL delays full gene expression compared to non-FFL system \cite{mangan2003coherent}, while no delay was observed in the inverse (ON to OFF) transition.
+% 17.9.2018
+% "was used" - and in general use less passive and more active voice, although this is up to you really...
 To test OR-FFL a system where X and Y act in additive manner to activate Z was used and termed as SUM-FFL \cite{kalir2005coherent}.
 This motif behaves right the opposite way than AND-FFL.
 Transition from OFF to ON shows no delays.
@@ -282,6 +311,8 @@ Moreover, a new way of memory based on protein aggregation was revealed recently
 % 2018.06.28
 % Eventually, go into way more detail here, as this will end up as a full section on lac. But if you are leaving this as a brief intro to positive, negative, double negative, that's fine. You might also start with sensing/reaction and then move to epigenetics. This is a reasonable ref I think *An introduction to systems biology: design principles of biological circuits*, although you always have to be a little careful with Uri Alon's take on things, sometimes it's a bit too facile.
 %%% DO YOU STILL WANT ME TO GO INTO MORE DETAIL ABOUT lac OPERON REGULATION? I DESCRIBE IT IN SOME DETAIL WITHIN SECTION ABOUT CELLULAR RESPONSES...
+% 17.9.2018
+% I think you could just incorporate some of these above, which you already do but only briefly, e.g. by mentioning hysteresis above.
 \subsubsection{Feedback loops}
 System where a product is able to affect positively or negatively its own production, i.e. a feedback loop was already mentioned in the context of transcriptional network kinetics.
 This part is dedicated to another aspect autoregulations play in bacterial cells - memory. 
@@ -305,9 +336,8 @@ On the other side naive cells have very small amounts of LacY if any, so they ar
 	\label{per}
 \end{figure}
 
-Another nice example of a long-term epigenetic switch mediated by a positive feedback loop was published last year.
-Enteropathogenic \tax{E. coli} (EPEC) has been revealed to coexists in two, non-virulent and hyper-virulent, sub-populations \cite{ronin2017long}.
-This bimodality was first observed  using ScanLag \cite{levin2014scanlag} as a difference in growth rates of the two groups resulting in BIG and SMALL colony morphotypes, for early and late appearing colonies, respectively.
+Another nice example of a long-term epigenetic switch mediated by a positive feedback loop was published recently.
+Enteropathogenic \tax{E. coli} (EPEC) has been revealed to coexists in two, non-virulent and hyper-virulent, sub-populations, each having lag phases of different length \cite{ronin2017long}.
 At transcription level it is a change in \tax{per} operon expression (located on EAF plasmid) and \tax{per} regulated genes.
 EPEC cultivation in virulence-activating conditions gives rise to \tax{per}-ON hyper-virulent aggregative sub-population (SMALL phenotype) reaching nearly 100\% \cite{ronin2017long}.
 Interestingly this high ratio of \tax{per}-ON vs \tax{per}-OFF cells remains for many generations even after transferring the culture back into non-activating conditions, although naive EPEC culture contains only a minority of \tax{per}-ON cells.
@@ -389,38 +419,37 @@ The process of this opposite transition i.e. from ON to OFF phase involves trans
 %%%Deleting \tax{yhdJ} gene produces neither loss of viability of \tax{E. coli} nor changes in its phenotype.
 %%%In addition, the expression of the gene is very low under usual laboratory conditions and nothing is known about transcription regulation of the gene \cite{broadbent2007yhdj}.
 
-\subsubsection{Protein aggregation}
-At the end of previous month a new mechanism of bacterial memory was described.
-Protein aggregates (PAs) which are usually formed in response to a proteotoxic stress (e.g. sub-lethal heat-shock) were found to protect cells which bear them against new proteotoxic stresses \cite{govers2018protein}.
-Those PAs are asymmetrically divided between daughter cells and gradually disaggregated.
-As this disaggregation is very slow, it provides a long-time memory in PA-bearing cells of past proteotoxic events.
-The authors show that cells which inherit protein aggregates are more likely to survive sub-lethal heat-shock or streptomycin exposure.
-They also resume growth much earlier than genetically identical cells without PA.
-%%% DO YOU WANT ME TO WRITE MORE ABOUT THIS?
+%%%\subsubsection{Protein aggregation}
+%%%At the end of previous month a new mechanism of bacterial memory was described.
+%%%Protein aggregates (PAs) which are usually formed in response to a proteotoxic stress (e.g. sub-lethal heat-shock) were found to protect cells which bear them against new proteotoxic stresses \cite{govers2018protein}.
+%%%Those PAs are asymmetrically divided between daughter cells and gradually disaggregated.
+%%%As this disaggregation is very slow, it provides a long-time memory in PA-bearing cells of past proteotoxic events.
+%%%The authors show that cells which inherit protein aggregates are more likely to survive sub-lethal heat-shock or streptomycin exposure.
+%%%They also resume growth much earlier than genetically identical cells without PA.
 
 \subsection{Predictive cell behaviour}
-An ability to predict an upcoming event in the environment is beneficial for any organism.
+An ability to predict an upcoming event in the environment can be beneficial for any organism.
 No matter whether the event means a presence of antibiotic or just a shift in carbon source availability.
 If a bacterium is able to predict such event it has a fitness advantage over those who don't expect this to happen in that community.
 It is so, because such cell starts up its expression for future change in advance which doesn't cause a delay in response at the time the change emerges.
 
-Circadian rhythms in photoautotrophic Cyanobacteria can be considered as one example of predictive behaviour in bacterial world.
+Circadian rhythms in photoautotrophic Cyanobacteria is one example of predictive behaviour in bacteria.
 It consists of alternation between photosynthetic activity during day and nitrogen fixation at night.
 This periodicity persists in complete darkness or light for days.
 It can also be reset by light or dark pulses in a way that two genetically identical populations act in the opposite way (oxygen production or nitrogen fixation) in constant dark or light conditions at the same time \cite{kondo1993circadian}.
 Similar oscillatory rhythm was described in a bacterium other than Cyanobacterium as well.
-\tax{Rhodobacter sphaeroides} was observed to keep changing gene expression in circadian (aerobic conditions) or ultradian (anaerobic conditions) rythms \cite{min2005rhythmic}.
-Recent study investigating connection between day-and-night cycle and overall gene expression of microbial mat suggest that daily rhythmicity might not be uncommon outside Cyanobacteria \cite{hornlein2018daily}.
+\tax{Rhodobacter sphaeroides} also controls gene expression in circadian (aerobic conditions) or ultradian (anaerobic conditions) rythms \cite{min2005rhythmic}.
+A recent study investigating the connection between day-and-night cycle and overall gene expression of microbial mat suggest that daily rhythmicity might not be uncommon outside Cyanobacteria \cite{hornlein2018daily}.
 They state that 50\% of the rhythmic genes was derived from phylum \tax{Proteobacteria}.
 
-Next predictive behaviour with no connection to day-and-night regime was observed in \tax{E. coli}.
+Predictive behaviour has been observed in \tax{E. coli} as well.
 Naturally it faces recurrent transitions between mammalian gastrointestinal tract (GIT) - higher temperature, lower oxygen - and outside environment - lower temperature, higher oxygen.
 Consistent with predictive behaviour \tax{E. coli} strongly represses genes responsible for aerobic metabolism to temperature increase (without change in oxygen levels) in laboratory conditions \cite{tagkopoulos2008predictive}.
 While if the temperature drops, correlation in up-regulation of aerobic metabolism genes occurs.
 They also evolved this strain in conditions where an increase in temperature was followed by oxygen saturation and temperature decrease by anaerobic conditions.
 The two responses were successfully decoupled after 1000 generations suggesting that anticipatory regulation can be evolved for and against.
 
-A year later, prediction of maltose environment to lactose exposure in \tax{E. coli} was described \cite{mitchell2009adaptive}.
+A year later, prediction of maltose environment to lactose exposure in \tax{E. coli} was also described \cite{mitchell2009adaptive}.
 Evolution under high lactose concentrations without maltose resulted in loss in prediction of maltose exposure and evolved lines exhibit a big fitness disadvantage compared to ancestor upon lactose-maltose transition.
 The same authors investigated anticipation of oxidative stress by yeast which occurs in its natural habitat upon transition from fermentation to respiration.
 \tax{Saccharomyces cerevisiae} uses heat-shock, ethanol and low pH as cues to prepare for its coming without actually experiencing it at the time \cite{mitchell2009adaptive}.
@@ -433,12 +462,14 @@ But how this regulation evolved under selection in natural conditions is not ful
 \subsection{Selection on sensitivity}
 It was mentioned above that cells possess mechanisms to modulate time-dependent sensitivity of gene expression to a signal (e.g. FFLs).
 Some of them are overrepresented in living organisms over others compared to randomized networks \cite{shen2002network, mangan2003structure}.
-Bacteria are thus under natural selection towards accurate timing of their responses.
+This suggests that selection has acted to increase accurate timing of their responses.
 But is concentration-dependent sensitivity to a signal under the selective pressure as well?
-Common sense says there should be selection towards the concentration of a signal that is somehow informative in the particular environment.
-To the best of our knowledge no research investigated this so far.
+Generally there should be selection towards the concentration of a signal that is somehow informative in the particular environment.
+But, there has been little work to address this question this so far.
 %%% OR SHOULD I SAY "MY" KNOWLEDGE?
-A possible way how to look into whether selection acts to reach certain level of sensitivity of promoters to a signal level is through experimental evolution.
+One way to look into whether it is possible for promoter sensitivity to change in response to selection is through experimental evolution.
+% 17.9.2018
+% okay, good, this is a question about natural selection. But it's not the same as experimental evolution...
 Sensitivity of promoter variants from natural isolates could be then compared to those of lines evolved under low to high levels of an appropriate signal.
 Looking simply at the distribution of concentration sensitivity of naturally occurring promoters could also provide an useful information in this matter.
 
@@ -455,7 +486,6 @@ But it still remains to validate that it is actually selected for certain levels
 
 \subsection{Selection on memory}
 It is known that some bacteria can react faster to a signal if they were exposed to the same singal in past \cite{novick1957enzyme}.
-The development of microfluidics devices has enabled to study microbial adaptive memory at single cell level.
 For example, sister and cousin cells have correlated lag times upon glucose-lactose media switch \cite{boulineau2013single, kaiser2018monitoring}.
 LacY production in \tax{E. coli} continues after a short lactose pulse although the lactose is no longer present \cite{lambert2014memory} and \tax{E. coli} also keeps producing more LacZ even after reaching maximal growth rate and thus overshooting its actual need \cite{kaiser2018monitoring}.
 Similar behaviour was observed e.g in yeast galactose system \cite{zacharioudakis2007yeast, razinkov2013measuring}.
@@ -464,27 +494,31 @@ But a question still remains: are these observed traits really what is actively 
 Some bacteria are also able to predict upcoming event based on othervise unrelated signal \cite{kondo1993circadian, min2005rhythmic, tagkopoulos2008predictive, mitchell2009adaptive}.
 An attempt of evolution of classical Pavlovian reflex to originally neutral signal in microorganisms was published last year \cite{lopez2017adaptive}.
 As the neutral signal caffeine was added to media which yeast \tax{S. cerevisiae} was expected to associate with upcoming 5-fluoroorotic acid presence (metabolised into a toxic substance).
+% 17.9.2018
+% I think there's no probelm in saying that more work needs to be done to establish this phenomenon...unless you think this paper presents good evidence (I cant remember).
 This predictive-like response appeared just within few hundred generations, but was not stable over time.
 Thus, little is still known how microorganisms evolve such reflex to neutral cues.
 A mathematical model suggests this to occur if benefits of such prediction exceed its costs in other environments \cite{mitchell2011mathematical}, but no experimental evidence is available so far.
 Nevertheless the reported decoupling of reaction to a signal in the absence of expected outcome is an indication of selection acting on predictive behaviour \cite{tagkopoulos2008predictive, mitchell2009adaptive}.
 
 Basically all work in this area has been done on single strains.
+% 17.9.2018
+% Almost all work on bacterial responses, memory, and predictive behaviour has been performed on lab strains" (don't forget C cresecentus, B subtilis, and P. fluorescens (among others).
 But the questions about how natural selection acts on transcriptional responses and memory in bacteria cannot be fully addressed without exploring natural variability in individual promoters among various isolates of the same genus.
 Because without the knowledge of the natural phenotypic and genotypic variation in responses and memory we can just guess how selection forces shape these traits in nature, at what extent or whether they really do so.
 And this is something no one have looked into in detail as yet.
 
 
-\section{Natural variation in responses and memory}
-Although the presence of \tax{E. coli} in water is still widely used as an indicator of fecal contamination, recent studies show that some \tax{E. coli} isolates are able to  reproduce in outside environment \cite{byappanahalli2004indigenous, somorin2016general}.
-Moreover, strains inhabiting soil for a long time were found to be distinctive from those isolated from animals \cite{walk2009cryptic, walk2015cryptic}.
-This raises the questions how these bacteria survive outside their hosts.
-The ability of \tax{E. coli} to adapt to such different environments as animal gut and soil or water are, might also help us understand the evolution of promoters to fluctuating environments and bacterial memory.
-
-When looking at adaptation of a species to various conditions, one should consider not only genotypic, but pheontypic variation as well.
-It is now well known and generally accepted that even cells with the same genotype do not necessarily exhibit the same phenotype in identical conditions \cite{ronin2017long, govers2018protein}.
-On the other hand various genetic backgrounds might still have very similar phenotype in some cases if evolution in environment with strong selection occurs.
-In other words various strains might come to the same phenotype by different genotypic solutions.
+%%%\section{Natural variation in responses and memory}
+%%%Although the presence of \tax{E. coli} in water is still widely used as an indicator of fecal contamination, recent studies show that some \tax{E. coli} isolates are able to  reproduce in outside environment \cite{byappanahalli2004indigenous, somorin2016general}.
+%%%Moreover, strains inhabiting soil for a long time were found to be distinctive from those isolated from animals \cite{walk2009cryptic, walk2015cryptic}.
+%%%This raises the questions how these bacteria survive outside their hosts.
+%%%The ability of \tax{E. coli} to adapt to such different environments as animal gut and soil or water are, might also help us understand the evolution of promoters to fluctuating environments and bacterial memory.
+%%%
+%%%When looking at adaptation of a species to various conditions, one should consider not only genotypic, but pheontypic variation as well.
+%%%It is now well known and generally accepted that even cells with the same genotype do not necessarily exhibit the same phenotype in identical conditions \cite{ronin2017long, govers2018protein}.
+%%%On the other hand various genetic backgrounds might still have very similar phenotype in some cases if evolution in environment with strong selection occurs.
+%%%In other words various strains might come to the same phenotype by different genotypic solutions.
 
 \shorthandon{-}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
