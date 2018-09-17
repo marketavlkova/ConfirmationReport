@@ -7,17 +7,12 @@
 \section{Natural selection}
 Bacteria exhibit genotypic and phenotypic variability even at the levels of genus.
 This variability is continuously shaped by natural selection as the cells that are better adapted to the current conditions are more likely to survive and proliferate.
-% the "drect experience" argument seems hard to make. I also experience the environment directly (perhaps my gametes do not?)
-%%% BETTER OR DO YOU WANT ME TO CHANGE THE SENTENCE COMPLETELY? (ADDED limited ability to escape)
 In the case of unicellular organisms the survival game is more stringent, because they face the changing conditions directly and have limited ability to escape.
 Drought, nutrient poor environments, or high UV radiation are some of the most harsh environments bacteria can experience.
 Nevertheless even in these we find viable cells which have evolved to survive for either short or long period of time.
-% I don't quite understand "in the way how to overcome"
-%%% BETTER?
 Importantly, cells have evolved multiple ways how to overcome such conditions and thus variability in survival strategies in the same environment still occurs.
 These differences could be driven by other selection forces acting simultaneously or could be a result of previous evolution in response to a similar environment.
 Anyway, cells which don't manage to adapt to the new conditions are excluded by natural selection and die.
-%%% SHOULD I FIND AND ADD SOME REFERENCES?
 
 % 17.9.2018
 % see if you can get someone to proff grammar? Georgia?
@@ -27,50 +22,40 @@ Anyway, cells which don't manage to adapt to the new conditions are excluded by 
 % 17.9.2018
 % I think you can go into a bit more detail about what you are going to say below here. e.g. once you talk about transcription, "Responses time depend on the topology of the circuit, the signals that bacteria have observed previously (memory), and any predicitve behaviour that the bacteria are capable of. Below I go into each of these properties in more detail to establish the current state of the field..." Then first, your section on topology (eg FFLs) and effects on response, memory, etc., then with specific examples. Then prediction, then the fact that not much is known about selection on memory, response, et.c except circumstantial evidence (e.g. the predictive behaviour of things in the gut).
 It is essential for a living cell to sense what is happening in the environment and react accordingly.
-% 17.9.2018
-% you could give some intuition as to why you don't always want second-level reaction. e.g. if you don't want to produce a ton of protein for a response that is likely to be very transient.
 If the timescale of this reaction should be on the order of seconds, there is no time for changes in transcription or translation.
-In that case the cell fate depends on the proteins or other small molecules it has already synthesised, and when none with an appropriate enzymatic activity is present, the cell dies. % not always dies - often a cell just won't do as well as it *could* do, e.g. grow as fast, have a higher *chance* of dying, etc.
+In that case the cell fate depends on the proteins or other small molecules it has already synthesised, and when none with an appropriate enzymatic activity is present, the cell has a higher chance of dying.
 One example of a fast response to a signal is chemotaxis.
 When a motile bacterium occurs in an attractant (e.g. nutrients such as sugars or amino acids) or repellent (toxic metabolites, some divalent cations) gradient, it swim towards or away from the higher concentration of it, respectively.
 % 17.9.2018
 % say something more specific about the mechanisms and how it occurs ona second-level timescale
 In order to react swiftly, the cell needs to have the flagella already expressed.
 
-On the other hand if it is advantageous or only necessary to react in minutes or hours responses can be mediated through translational or transcriptional changes.
-% 17.9.2018
-% I would say this is also good for cases in which responding immediately might hurt you e.g. if the responser is a huge physiological change and costs a lot of energy, it is not advantageous to respond all the time.
-Transcriptional responses are adequate in slowly changing environments (e.g. decrease in preferred carbon source concentration).
-% could also put in SOS here. Might mention riboswitches if you want to talk about translation control?
-%%% DO YOU WANT ME TO EXPAND THIS OR WAS IT JUST SUGGESTION, WHICH IS NOT NECESSARY TO DO?
+On the other hand if it is advantageous or only necessary to react in minutes or hours, responses can be mediated through translational or transcriptional changes.
+Sometimes a fast change in expression might be even detrimental, especially in the case of an extensive physiological reprogramming.
+Such alterations consume a lot of energy.
+For the cell is thus more profitable to do not respond at once.
+Cell might even benefit from not responding at all for some time, for example if the signal triggering costly response is only transient.
+Transcriptional responses are also adequate in slowly changing environments (e.g. decrease in preferred carbon source concentration).
 When a non-preferred carbon source is present as well the cells are brought to decision whether to enter long-term stationary phase or begin to utilize the alternative carbon source.
 In any case they have to alter their transcription accordingly.
-To manage and orchestrate many responses to multiple signals cells evolved a network of extra- and intracellular signaling pathways.
+To manage and orchestrate many responses to multiple signals cells evolved a network of extra- and intracellular signalling pathways.
 As I focus on transcriptional responses the following text covers mostly these cases.
 
 \subsubsection{Direct signalling pathways}
-% 17.9.2018
-% what would you call UV or heat? Also direct?
 Direct signalling is a case when a signal molecule is imported through cell membrane into cytosol or is produced by the cell and subsequently interacts with gene regulatory protein.
 This is often the case in the regulation of carbohydrate catabolism and amino acid biosynthesis genes \cite{charlier1992arginine, weickert1992isorepressor, pittard1996various, wheatley2013structural}.
-Two simple models are described below.
+Physical signals such as UV or heat are also considered direct, although no active import takes place in the signalling, cell's interior cannot avoid them.
+Two simple models of direct signalling are described below.
 
-Cells avoid wasteful production of proteins which are not used at all the time. % Reference?
-% 17.9.2018
-% well, if lactose might be there soon, there is some advantage to producing it, or a small amount at least
-For instance, there is no sense in producing plenty of enzyme hydrolysing lactose (lacZ) if no lactose is present.
-% 17.9.2018
-% you should say something about why you are focusing on E. coli, either here or above?
-To achieve this, \tax{E. coli} expresses \tax{lac} repressor (LacI) \cite{hudson1990co}.
-% 17.9.2018
-% "take a turn" is a bit too colloquial?
-However, \tax{lac} operon transcription is desired if lactose is present in the media.
-Here \tax{lac} operon inducers take a turn.
+In order to save energy, it is be advantageous for cells to avoid wasteful production of proteins which are not used at all the time.
+For instance, there is no sense in producing plenty of enzyme hydrolysing lactose (LacZ) if no lactose is present or expected to be present soon.
+This is well studied in the best known bacterial model organism \tax{E. coli}.
+To avoid wasteful production of LacZ, \tax{E. coli} expresses \tax{lac} repressor (LacI) \cite{hudson1990co}.
+However, \tax{lac} operon transcription is desired if lactose is present in the media, this is ensured by \tax{lac} operon inducers.
 Allolactose - \tax{lac} operon inducer - is imported by lactose permease into the cell where it binds directly to the repressor LacI.
 Lactose itself has to be modified to the allolactose by $\beta$-galactosidase (LacZ) at first \cite{jobe1972lac, wheatley2013structural}.
-% 17.9.2018
-% CRP - which does what...or reacts to what...
 LacI binding to the promoter DNA is then released triggering \tax{lacZYA} expression (Fig. \ref{dir}\textcolor{red}{a}) together with binding of general regulatory protein CRP \cite{hudson1990co, clark2005molecular}.
+CRP levels rise when the availability of a preferred carbon source (e.g. glucose) drops.
 
 \begin{figure}[ht]
   \centering
@@ -128,7 +113,64 @@ As mentioned above several ways of control of gene products take place in cells.
 While control of protein activity helps to respond to quick environmental changes, translational regulation is a useful tool for controlling differential production of proteins coded within the same operon and thus transcribed on the same mRNA \cite{dar2018extensive}.
 Transcriptional regulation on the other hand might be considered as the most economical as it inhibits the very synthesis of products which are not needed at the moment.
 This saves resources and energy for synthesis of desired gene outputs.
-As the latter type of regulation is the focus of this this work, I outline the important aspects of this process in more detail below.
+As the latter type of regulation is the focus of this work, I outline the important aspects of this process in more detail below.
+
+\subsubsection{Regulation of transcription initiation}
+Initiation of transcription is the very first step of gene expression and as that it is highly regulated.
+The crucial step is RNA polymerase binding to the promoter sequence, which contains motifs known as the -35 element, the extended -10 element, the -10 element, the
+discriminator region, the UP element and the core recognition element.
+These elements mediate interaction of promoter and RNA polymerase and their proximity to consensus sequences influences the strength of the promoter.
+The rate of transcription initiation is proportional to the total amount of produced mRNA specifically if an early transcription termination doesn't occur \cite{kennell1977transcription, iyer1996absolute}.
+Here I'm going to describe regulation of this step involving transcription factors.
+Activity of these factors corresponds to signals the cell acquires from internal or external environment as mentioned in the section dedicated to cellular responses.
+Even though some factors control only one promoter, majority of at least \tax{E. coli} promoters is regulated by more of them \cite{karp2014ecocyc}.
+
+\textbf{Repression} of promoters is often based on producing an obstacle in the place of -10 and -35 elements which blocks RNA polymerase binding to the promoter.
+This is being achieved by various mechanisms.
+The simplest one is repressor binding to the operator which overlaps one or both of those promoter elements \cite{brent1981mechanism} (Fig.~\ref{txn}\textcolor{red}{a}).
+Other promoters have distant operators outside -10 and -35 elements, but bound repressors cluster creating a DNA loop which also constitutes a blockage \cite{semsey2004dna} (Fig.~\ref{txn}\textcolor{red}{a}).
+A more complex and indirect way of repression is by inhibiting activators (described below) - i.e. repressors acting as anti-activators \cite{sogaard1993protein}.
+Because some promoters require activation for the transcription initiation, anti-activation might be sufficient for complete repression (Fig.~\ref{txn}\textcolor{red}{a}).
+
+Activity of certain promoters can be controlled gradually.
+Such promoter sequences have arrays of operators and the amount of bound repressors affects the strength of the repression.
+Some promoters are also recognized by more than one kind of repressor which usually don't affect each other \cite{el2009repression}.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.4]{text/Pictures/TxnInitRegulation.png}
+	\caption{Regulation of transcription initiation by repressors and activators. (reproduced from \cite{browning2016local})}
+	\label{txn}
+\end{figure}
+
+\textbf{Activation}, on the other hand, enables particular gene transcription or increases strength of RNA polymerase binding to the promoter.
+Similar to the repression, some activators interact directly with RNA polymerase but other act indirectly as anti-repressors most often by releasing and preventing repressor binding to the operator \cite{frederix2011co}.
+Besides affecting sequence specific repressors, some indirect activators affect also binding of nucleoid associated proteins (NAPs; described more in the next section), altering access for RNA polymerase to the promoter sequence \cite{santana2001transcriptional}.
+Direct activators mostly facilitate the very interaction of RNA polymerase and promoter.
+Three mechanisms of direct activation are usually described: class I activation, class II activation and activation by conformational change.
+
+Class I activators bind upstream of -35 element and interact with $\alpha$ subunit of RNA polymerase \cite{ushida1990helical} (Fig.~\ref{txn}\textcolor{red}{b}).
+Operators of class II activators in turn overlap with -35 promoter element and the activators interact with given $\sigma$ factor of RNA polymerase \cite{igarashi1991functional} (Fig.~\ref{txn}\textcolor{red}{b}).
+Moreover bound class II activator prevents binding of the RNA polymerase $\alpha$ subunit to the preferred position right upstream of -35 element.
+Class I and class II activation thus can occur simultaneously on the same promoter when two different activators are required to trigger the transcription \cite{lloyd2002requirement}.
+
+The last classical activation mechanism causes a conformational change of the sequence between -10 and -35 elements.
+RNA polymerase binding to these promoters without activator is weakened or impaired due to inappropriate distance between -10 and -35 elements.
+And this is also where the operators of such activators are located (Fig.~\ref{txn}\textcolor{red}{b}).
+A bound activator then brings the elements into the optimal position for RNA polymerase recruitment \cite{heldwein2001crystal}.
+
+% 17.9.2018
+% this is a lot of detail on s54, not sure it's needed.
+%%%All activation mechanisms mentioned above just enable RNA polymerase binding strong enough for an efficient transcription initiation.
+%%%Other kind of activation of transcription initiation is not even required for most RNA polymerase holoenzymes.
+%%%However, RNA polymerase containing $\sigma^{54}$ factor is unable to unwind promoter DNA to begin transcribe.
+%%%This is facilitated by enhancer binding proteins (EBPs) which interact with the $\sigma^{54}$ factor \cite{morett1989vivo, cannon2000dna}.
+%%%Nevertheless, EBPs bind upstream of the promoter elements, so to get in contact with the $\sigma^{54}$ factor a loop has to be produced.
+%%%Production of this loop is known to be mediated by nucleoid associated protein IHF which as well as other NAPs plays a role in DNA accessibility \cite{de1991upstream, sze2001vivo}.
+
+\subsubsection{Regulation of mRNA elongation and transcription termination}
+After a successful transcription initiation the elongation of mRNA follows until termination comes to place.
+Even though the main transcription regulation occurs at the level of transcription initiation, elongation and termination can be also modulated, ranging from repression of elongation \cite{monsalve1996protein}, through elongation pausing and backtracking \cite{mustaev2017transcription} to transcription attenuation and anti-termination \cite{naville2009transcription}.
 
 \subsubsection{DNA accessibility}
 Differential physical access to DNA within a chromosome presents one of the explanations to observed variations in promoters activity based on their position in the chromosome \cite{bryant2014chromosome}.
@@ -157,7 +199,7 @@ This bending is essential for e.g. transcription initiation of ribosomal gene \t
 These two NAPs described here belong among the ones which are most understood these days and don't represent an exhaustive outline of all bacterial NAPs.
 Review from 2010 lists 14 additional bacterial NAPs \cite{dillon2010bacterial}, but even their list is not complete \cite{aznar2013hha}.
 
-At the end of this block I'd like to mention supercoiling which also affects the access to the genetic code \cite{brahms1985activation}.
+Supercoiling is another general mechanism affecting the access to the genetic code \cite{brahms1985activation}.
 Overwinding (positive supercoiling) and underwinding (negative supercoiling) is generated during transcription when a transcription bubble forms \cite{wu1988transcription}.
 This happens thanks to the helical structure of DNA.
 Although some NAPs such as Fis and H-NS might affect the supercoiling levels \cite{ouafa2012nucleoid} topoisomerases take care of this process.
@@ -165,68 +207,11 @@ Although some NAPs such as Fis and H-NS might affect the supercoiling levels \ci
 The former releases positive the latter negative supercoiling \cite{wang1971interaction, gellert1976dna}.
 If high levels of supercoiling are not released the access to the DNA is reduced and even already initiated transcription is slowed down or terminated \cite{chong2014mechanism}.
 
-\subsubsection{Regulation of transcription initiation}
-Initiation of transcription is the very first step of gene expression and as that it is highly regulated.
-The crucial step is RNA polymerase binding to the promoter sequence, which contains motifs known as the -35 element, the extended -10 element, the -10 element, the
-discriminator region, the UP element and the core recognition element.
-These elements mediate interaction of promoter and RNA polymerase and their proximity to consensus sequences influences the strength of the promoter.
-The rate of transcription initiation is proportional to the total amount of produced mRNA specifically if an early transcription termination doesn't occur \cite{kennell1977transcription, iyer1996absolute}.
-Global control of this process based on physical access to DNA was described in the previous section.
-Here I'm going to describe local regulation of this step involving transcription factors.
-Activity of these factors corresponds to signals the cell acquires from internal or external environment as mentioned in the section dedicated to cellular responses.
-Even though some factors control only one promoter, majority of at least \tax{E. coli} promoters is regulated by more of them \cite{karp2014ecocyc}.
-
-\textbf{Repression} of promoters is often based on producing an obstacle in the place of -10 and -35 elements which blocks RNA polymerase binding to the promoter.
-This is being achieved by various mechanisms.
-The simplest one is repressor binding to the operator which overlaps one or both of those promoter elements \cite{brent1981mechanism} (Fig.~\ref{txn}\textcolor{red}{a}).
-Other promoters have distant operators outside -10 and -35 elements, but bound repressors cluster creating a DNA loop which also constitutes a blockage \cite{semsey2004dna} (Fig.~\ref{txn}\textcolor{red}{a}).
-A more complex and indirect way of repression is by inhibiting activators (described below) - i.e. repressors acting as anti-activators \cite{sogaard1993protein}.
-Because some promoters require activation for the transcription initiation, anti-activation might be sufficient for complete repression (Fig.~\ref{txn}\textcolor{red}{a}).
-
-Activity of certain promoters can be controlled gradually.
-Such promoter sequences have arrays of operators and the amount of bound repressors affects the strength of the repression.
-Some promoters are also recognized by more than one kind of repressor which usually don't affect each other \cite{el2009repression}.
-
-\begin{figure}[ht!]
-  \centering
-  \includegraphics[scale=0.4]{text/Pictures/TxnInitRegulation.png}
-	\caption{Regulation of transcription initiation by repressors and activators. (reproduced from \cite{browning2016local})}
-	\label{txn}
-\end{figure}
-
-\textbf{Activation}, on the other hand, enables particular gene transcription or increases strength of RNA polymerase binding to the promoter.
-Similar to the repression, some activators interact directly with RNA polymerase but other act indirectly as anti-repressors most often by releasing and preventing repressor binding to the operator \cite{frederix2011co}.
-Besides affecting sequence specific repressors, some indirect activators affect also binding of NAPs, thus opening an access for RNA polymerase to the promoter sequence \cite{santana2001transcriptional}.
-Direct activators mostly facilitate the very interaction of RNA polymerase and promoter.
-Three mechanisms of direct activation are usually described: class I activation, class II activation and activation by conformational change.
-
-Class I activators bind upstream of -35 element and interact with $\alpha$ subunit of RNA polymerase \cite{ushida1990helical} (Fig.~\ref{txn}\textcolor{red}{b}).
-Operators of class II activators in turn overlap with -35 promoter element and the activators interact with given $\sigma$ factor of RNA polymerase \cite{igarashi1991functional} (Fig.~\ref{txn}\textcolor{red}{b}).
-Moreover bound class II activator prevents binding of the RNA polymerase $\alpha$ subunit to the preferred position right upstream of -35 element.
-Class I and class II activation thus can occur simultaneously on the same promoter when two different activators are required to trigger the transcription \cite{lloyd2002requirement}.
-
-The last classical activation mechanism causes a conformational change of the sequence between -10 and -35 elements.
-RNA polymerase binding to these promoters without activator is weakened or impaired due to inappropriate distance between -10 and -35 elements.
-And this is also where the operators of such activators are located (Fig.~\ref{txn}\textcolor{red}{b}).
-A bound activator then brings the elements into the optimal position for RNA polymerase recruitment \cite{heldwein2001crystal}.
-
-% 17.9.2018
-% this is a lot of detail on s54, not sure it's needed.
-%%%All activation mechanisms mentioned above just enable RNA polymerase binding strong enough for an efficient transcription initiation.
-%%%Other kind of activation of transcription initiation is not even required for most RNA polymerase holoenzymes.
-%%%However, RNA polymerase containing $\sigma^{54}$ factor is unable to unwind promoter DNA to begin transcribe.
-%%%This is facilitated by enhancer binding proteins (EBPs) which interact with the $\sigma^{54}$ factor \cite{morett1989vivo, cannon2000dna}.
-%%%Nevertheless, EBPs bind upstream of the promoter elements, so to get in contact with the $\sigma^{54}$ factor a loop has to be produced.
-%%%Production of this loop is known to be mediated by nucleoid associated protein IHF which as well as other NAPs plays a role in DNA accessibility \cite{de1991upstream, sze2001vivo}.
-
-\subsubsection{Regulation of mRNA elongation and transcription termination}
-After a successful transcription initiation the elongation of mRNA follows until termination comes to place.
-Even though the main transcription regulation occurs at the level of transcription initiation, elongation and termination can be also modulated, ranging from repression of elongation \cite{monsalve1996protein}, through elongation pausing and backtracking \cite{mustaev2017transcription} to transcription attenuation and anti-termination \cite{naville2009transcription}.
-
 To the end of the section about transcription regulation it is good to point out the complexity of the whole process.
 Even when both global and specific regulation of transcription initiation permit transcript production the gene expression is still regulated further downstream e.g. during mRNA elongation or translation.
 Moreover one transcription factor can regulate multiple genes as well as being co-regulated by several factors including itself.
 Regulation of gene expression thus exhibit a huge network of mutually controlled outputs based on the information acquired by a cell.
+
 
 % 17.9.2018
 % I would almost flip this whole sectiobn up top, after Transcriptional Networks, as this is more general - topology - followed by specific examples. Or you could name specific examples and mechanisms after mentioning each type of topoology.
