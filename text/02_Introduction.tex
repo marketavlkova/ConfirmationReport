@@ -15,16 +15,14 @@ Anyway, cells which don't manage to adapt to the new conditions are excluded by 
 
 % 17.9.2018
 % see if you can get someone to proff grammar? Georgia?
-\section{Transcriptional networks}
-
-\subsection{Cellular responses}
+\section{Cellular responses}
 % 17.9.2018
 % I think you can go into a bit more detail about what you are going to say below here. e.g. once you talk about transcription, "Responses time depend on the topology of the circuit, the signals that bacteria have observed previously (memory), and any predicitve behaviour that the bacteria are capable of. Below I go into each of these properties in more detail to establish the current state of the field..." Then first, your section on topology (eg FFLs) and effects on response, memory, etc., then with specific examples. Then prediction, then the fact that not much is known about selection on memory, response, et.c except circumstantial evidence (e.g. the predictive behaviour of things in the gut).
 It is essential for a living cell to sense what is happening in the environment and react accordingly.
 If the timescale of this reaction should be on the order of seconds, there is no time for changes in transcription or translation.
 In that case the cell fate depends on the proteins or other small molecules it has already synthesised.
 One example of a fast response to a signal is chemotaxis.
-When a motile bacterium occurs in a gradient of an attractant (e.g. nutrients such as sugars or amino acids) or repellent (toxic metabolites, some divalent cations), it swim towards or away from the higher concentration of it, respectively.
+When a motile bacterium occurs in a gradient of an attractant (e.g. nutrients such as sugars or amino acids) or repellent (toxic metabolites, some divalent cations), it swims towards or away from the higher concentration of it, respectively.
 % 17.9.2018
 % say something more specific about the mechanisms and how it occurs ona second-level timescale
 In order to react swiftly, the cell needs to have the flagella already expressed.
@@ -37,39 +35,48 @@ Cells might even benefit from not responding at all for some time, for example i
 To manage and orchestrate many responses to multiple signals cells evolved a network of extra- and intracellular signalling pathways.
 As I focus on transcriptional responses the following text covers mostly these cases.
 
+\subsection{Signal recognition}
+The first step of cellular response is sensing of internal and external cues.
+There are several ways how bacteria can detect such signals and these are described below.
+On the other hand, there is little known about how these different signal sensing mechanisms affect the cell response dynamics in terms of speed, sensitivity, noise and memory.
+
 \subsubsection{Direct signalling pathways}
-Direct signalling occurs when a signal molecule is imported through cell membrane into the cytosol, or is produced by the cell and subsequently interacts with regulatory proteins.
+Direct signalling occurs when a signal molecule is imported through a cell membrane into the cytosol, or is produced by the cell and subsequently interacts with regulatory proteins.
 This is often the case for genes involved in carbohydrate catabolism and amino acid biosynthesis \cite{charlier1992arginine, weickert1992isorepressor, pittard1996various, wheatley2013structural}.
+In this case, the necessity to import the nutrients into a cell prior to their consumption is utilized also for signalling.
 Physical signals such as UV or heat are also considered direct, although no active import takes place in the signalling.
-Two simple models of direct signalling are described below.
 
-In order to save energy, it is be advantageous for cells to avoid wasteful production of proteins which are not used at all the time.
-For instance, there is no sense in producing plenty of enzyme hydrolysing lactose (LacZ) if no lactose is present or expected to be present soon.
-This is well studied in the best known bacterial model organism \tax{E. coli}.
-To avoid wasteful production of LacZ, \tax{E. coli} expresses \tax{lac} repressor (LacI) \cite{hudson1990co}.
-However, \tax{lac} operon transcription is desired if lactose is present in the media, this is ensured by \tax{lac} operon inducers.
-Allolactose - \tax{lac} operon inducer - is imported by lactose permease into the cell where it binds directly to the repressor LacI.
-Lactose itself has to be modified to the allolactose by $\beta$-galactosidase (LacZ) at first \cite{jobe1972lac, wheatley2013structural}.
-LacI binding to the promoter DNA is then released triggering \tax{lacZYA} expression (Fig. \ref{dir}\textcolor{red}{a}) together with binding of general regulatory protein CRP \cite{hudson1990co, clark2005molecular}.
-CRP levels rise when the availability of a preferred carbon source (e.g. glucose) drops.
-
-\begin{figure}[ht]
-  \centering
-  \includegraphics[scale=0.27]{text/Pictures/DirectSignaling.png}
-	\caption{Schemes of direct signaling; \textbf{a} if \tax{lac} operon inducer (allolactose) is present it binds to LacI repressor and induces \tax{lac} operon transcription; \textbf{b} expression of arginine structural genes is co-repressed by arginine itself, because without it ArgR repressor cannot bind to DNA.}
-	\label{dir}
-\end{figure}
-
-For other metabolic pathways regulation might occur through a different mechanism, however.
-Arginine, for instance, acts as a co-repressor of its own biosynthesis (Fig. \ref{dir}\textcolor{red}{b}).
-Thus, when a bacterium does not have enough of this amino acid available for protein production the transcription of arginine genes is active \cite{charlier2004biosynthesis, caldara2006arginine}.
-On the other hand, when arginine is abundant in the culture medium and thus in the cell, there is no need to make more of it.
-The cell has ArgR repressor present in cytosol but ArgR itself cannot bind to DNA and inhibit transcription in the arginine absence \cite{clark2005molecular, caldara2006arginine}.
-However when there is plenty of arginine in the cell it binds to ArgR and as a co-repressor inhibits expression of arginine structural genes binding to an appropriate promoter \cite{charlier1992arginine, charlier2004biosynthesis, clark2005molecular}.
+%%%In order to save energy, it is be advantageous for cells to avoid wasteful production of proteins which are not used at all the time.
+%%%For instance, there is no sense in producing plenty of enzyme hydrolysing lactose (LacZ) if no lactose is present or expected to be present soon.
+%%%This is well studied in the best known bacterial model organism \tax{E. coli}.
+%%%To avoid wasteful production of LacZ, \tax{E. coli} expresses \tax{lac} repressor (LacI) \cite{hudson1990co}.
+%%%However, \tax{lac} operon transcription is desired if lactose is present in the media, this is ensured by \tax{lac} operon inducers.
+%%%Allolactose - \tax{lac} operon inducer - is imported by lactose permease into the cell where it binds directly to the repressor LacI.
+%%%Lactose itself has to be modified to the allolactose by $\beta$-galactosidase (LacZ) at first \cite{jobe1972lac, wheatley2013structural}.
+%%%LacI binding to the promoter DNA is then released triggering \tax{lacZYA} expression (Fig. \ref{dir}\textcolor{red}{a}) together with binding of general regulatory protein CRP \cite{hudson1990co, clark2005molecular}.
+%%%CRP levels rise when the availability of a preferred carbon source (e.g. glucose) drops.
+%%%
+%%%\begin{figure}[ht]
+%%%  \centering
+%%%  \includegraphics[scale=0.27]{text/Pictures/DirectSignaling.png}
+%%%	\caption{Schemes of direct signaling; \textbf{a} if \tax{lac} operon inducer (allolactose) is present it binds to LacI repressor and induces \tax{lac} operon transcription; \textbf{b} expression of arginine structural genes is co-repressed by arginine itself, because without it ArgR repressor cannot bind to DNA.}
+%%%	\label{dir}
+%%%\end{figure}
+%%%
+%%%For other metabolic pathways regulation might occur through a different mechanism, however.
+%%%Arginine, for instance, acts as a co-repressor of its own biosynthesis (Fig. \ref{dir}\textcolor{red}{b}).
+%%%Thus, when a bacterium does not have enough of this amino acid available for protein production the transcription of arginine genes is active \cite{charlier2004biosynthesis, caldara2006arginine}.
+%%%On the other hand, when arginine is abundant in the culture medium and thus in the cell, there is no need to make more of it.
+%%%The cell has ArgR repressor present in cytosol but ArgR itself cannot bind to DNA and inhibit transcription in the arginine absence \cite{clark2005molecular, caldara2006arginine}.
+%%%However when there is plenty of arginine in the cell it binds to ArgR and as a co-repressor inhibits expression of arginine structural genes binding to an appropriate promoter \cite{charlier1992arginine, charlier2004biosynthesis, clark2005molecular}.
 
 \subsubsection{Indirect signalling pathways}
+It is not always beneficial for a cell to import signal molecules into cytosol as some of them might be toxic or simply too big (e.g. host-pathogen interactions).
+In order to sense environmental cues without the necessity to import them, bacteria possess sensory proteins which are located in their membrane.
+Upon binding of a signal molecule by extracellular domain, the protein changes its conformation transferring the received signal into the cell interior.
+
 A classic example of indirect signalling is the two-component system.
-This consists of a transmembrane sensory kinase which is autophosphorylated at its histidine residue after receiving physical or chemical signal from the environment (Fig. \ref{two}\textcolor{red}{a}).
+This consists of a transmembrane sensory kinase which is autophosphorylated at its histidine residue after receiving signal from the environment (Fig. \ref{two}\textcolor{red}{a}).
 To be able to phosphorylate itself the kinase requires ATP or other phosphate donor.
 Next, the phosphorylated kinase transfers the phosphate group to its partner regulatory protein enabling its activity, most often DNA-binding and transcriptional regulation \cite{lynch2012prioritization, gao2015temporal, cui2018novel}.
 This protein receives the phosphate to its aspartate residue and might act as both gene repressor and/or activator.
@@ -91,60 +98,9 @@ In some cases, multiple different signals are detected by the same sensory kinas
 This results in similar outputs in response to various signals \cite{kaczmarczyk2014complex, chambonnier2016hybrid}.
 In contrast, some signals result in multiple responses.
 A divergent signal transmission mediates this (Fig. \ref{two}\textcolor{red}{e}) as one sensory kinase is able to phosphorylate aspartate domains of different acceptor proteins \cite{mika2005two, groisman2016feedback}.
-Moreover, all these variations of two-component system mentioned above combine in cells producing a complex sensory-response network \cite{kaczmarczyk2014complex, chambonnier2016hybrid}.
 
-\subsubsection{Regulatory kinetics}
-For better understanding of the whole transcription network regulation, it is important to look at the speed of different regulatory circuits as well.
-%%%\subsubsection{Promoter strength and protein lifetime}
-Naturally the more easily and often RNA polymerase binds effectively to a promoter the more of an appropriate protein is produced at the time.
-The strength of the promoter is given by its nucleotide sequence and binding of transcription factors increases or decreases RNA polymerase affinity to it.
-On the other side of this equilibrium is degradation of the product, as its stability in certain conditions determines its lifetime.
-A functional protein is also diluted during cell division, which further reduces its amount per cell.
-
-%%%\subsubsection{Transcriptional network motifs}
-\textbf{Feedback loops} are transcriptional network motifs in which the products affect their own production  (Fig.~\ref{motifs}).
-Such motifs affect the speed , variation and sensitivity of cellular responses.
-Negative autoregulation, i.e. a circuit where the product inhibits its own expression, decreases the response time \cite{rosenfeld2002negative}.
-It also reduces the variability in product concentration decreasing cell-to-cell and temporal variability \cite{becskei2000engineering}.
-This enables the cell to use stronger promoters for proteins needed in a short time but at low concentration without overshoots and risks of protein toxicity.
-
-Positive autoregulation, i.e. motif in which the product further induces the expression of the gene coding it (Fig.~\ref{motifs}\textcolor{red}{b}), exhibits the opposite traits then negative feedback.
-Transcriptional activation is slower and noisier in case of positive feedback loops compared to no feedback systems \cite{maeda2006regulatory, sayut2007noise}.
-Although it takes longer for the cell to reach certain level of desired protein, this motif allows to react to much lower concentrations of a signal.
-Both graded and hysteretic expression can occur in positively autoregulated genes \cite{maeda2006regulatory}.
-
-\begin{figure}[ht!]
-  \centering
-  \includegraphics[scale=0.29]{text/Pictures/TxnMotifs.png}
-	\caption{Schemes of transcriptional network motifs; \textbf{a} negative feedback loop - gene product represses its own transcription; \textbf{b} positive feedback loop - gene product induced transcription of its own gene; \textbf{c} coherent feed-forward loops; \textbf{d} incoherent feed-forward loops.}
-	\label{motifs}
-\end{figure}
-
-\textbf{Feed forward loops} (FFLs) are more complex, but also common regulatory motifs.
-FFL generally, is a regulatory circuit when a transcription factor X regulates another transcription factor, Y, and both (X and Y) regulate a gene or operon Z (Fig.~\ref{motifs}\textcolor{red}{c} and \textcolor{red}{d}).
-It has been predicted that coherent FFLs cause sign-sensitive delays in regulatory kinetics and incoherent FFLs should act as sign-sensitive accelelators and exhibit transient pulses of expression \cite{mangan2003structure}.
-The most abundant schemes were later experimentally confirmed \cite{mangan2003coherent, kalir2005coherent, mangan2006incoherent}.
-The distinction between coherent and incoherent FFL depends on whether the sign (positive or negative) of Z regulation caused by factor X \textit{through} Y is the same as regulation of Z by X itself \cite{shen2002network, mangan2003structure}.
-
-Coherent FFL type 1 (Fig.~\ref{motifs}\textcolor{red}{c}, C1), in which both X and Y must bind to trigger transcription (AND-gate logic) delays activation compared to non-FFL systems \cite{mangan2003coherent}.
-No delay occurs when transcriptional induction is turned off.
-On the other hand, if only factor X or Y is sufficient to induce Z (OR- gate logic in C1 FFL) gene activation is not delayed, but the its deactivation is delayed considerably \cite{kalir2005coherent}.
-The AND-FFL prevents Z expression when the concentration of X fluctuates close to a threshold, while the OR-FFL enables continuous production of Z even if X concentration drops below a threshold for a while.
-
-From incoherent FFL motifs the type 1 (Fig.~\ref{motifs}\textcolor{red}{d}, I1) is the predominant in \tax{E. coli} transcriptional network.
-Factor X here positively regulates both Y and Z, however factor Y acts as an inhibitor of Z gene.
-This incoherent FFL speeds up transcriptional responses, but weak pulse-generating power was expected \cite{mangan2003structure}.
-Nevertheless, this motif was used to create effective pulsers \cite{basu2004spatiotemporal}.
-Later the acceleration trait was experimentally confirmed as well despite the fact that other motifs contribute to the used regulatory system \cite{mangan2006incoherent}.
-This suggests that the motifs' fundamental functions are preserved even when combined with other motifs.
-Overall this type of regulation similarly to negative feedback loop shortens the rise-time, but unlike the negative feedback doesn't avoid overshoots rather the opposite.
-The overshoot is seen as a pulse of high gene Z expression which is subsequently inhibited by factor Y, but not necessarily back to the basal level.
-
-
-% 17.9.2018
-% Thjs needs a better title, as above you have been talking about "bacterial gene regulation"
-\subsection{Bacterial gene regulation}
-As mentioned above several ways of control of gene products take place in cells.
+\subsection{Signal processing}
+After a signal is received by a cell, it triggers changes in activity of proteins and/or gene expression.
 While control of protein activity helps to respond to quick environmental changes, translational regulation is a useful tool for controlling differential production of proteins coded within the same operon and thus transcribed on the same mRNA \cite{dar2018extensive}.
 Transcriptional regulation on the other hand might be considered as the most economical as it inhibits the very synthesis of products which are not needed at the moment.
 This saves resources and energy for synthesis of desired gene outputs.
@@ -157,7 +113,7 @@ discriminator region, the UP element and the core recognition element.
 These elements mediate interaction of promoter and RNA polymerase and their proximity to consensus sequences influences the strength of the promoter.
 The rate of transcription initiation is proportional to the total amount of produced mRNA specifically if an early transcription termination doesn't occur \cite{kennell1977transcription, iyer1996absolute}.
 Here I'm going to describe regulation of this step involving transcription factors.
-Activity of these factors corresponds to signals the cell acquires from internal or external environment as mentioned in the section dedicated to cellular responses.
+Activity of these factors corresponds to signals the cell acquires from internal or external environment.
 Even though some factors control only one promoter, majority of at least \tax{E. coli} promoters is regulated by more of them \cite{karp2014ecocyc}.
 
 \textbf{Repression} of promoters is often based on producing an obstacle in the place of -10 and -35 elements which blocks RNA polymerase binding to the promoter.
@@ -207,7 +163,78 @@ A bound activator then brings the elements into the optimal position for RNA pol
 After a successful transcription initiation the elongation of mRNA follows until termination comes to place.
 Even though the main transcription regulation occurs at the level of transcription initiation, elongation and termination can be also modulated, ranging from repression of elongation \cite{monsalve1996protein}, through elongation pausing and backtracking \cite{mustaev2017transcription} to transcription attenuation and anti-termination \cite{naville2009transcription}.
 
-\subsubsection{DNA accessibility}
+\subsubsection{Transcription network topology}
+For better understanding of the whole transcription network regulation, it is important to look at the speed of different regulatory circuits as well.
+This is usually characterised by a rise-time (or response time), i.e. time when the concentration of a gene product reaches its half maximal concentration after gene induction.
+Compared to signal sensing the effect of network motifs on speed of the responses, transcriptional noise and bacterial memory is more understood.
+
+%%%\subsubsection{Promoter strength and protein lifetime}
+\textbf{Promoter strength and protein lifetime.}
+Naturally the more easily and often RNA polymerase binds effectively to a promoter the more of an appropriate protein is produced at the time.
+The strength of the promoter is given by its nucleotide sequence and binding of transcription factors increases or decreases RNA polymerase affinity to it.
+On the other side of this equilibrium is degradation of the product, as its stability in certain conditions determines its lifetime.
+A functional protein is also diluted during cell division, which further reduces its amount per cell.
+
+%%%\subsubsection{Transcriptional network motifs}
+\textbf{Feedback loops} are transcriptional network motifs in which the products affect their own production  (Fig.~\ref{motifs}).
+They are quite common in bacterial gene regulation and can lead to epigenetic switches \cite{smits2006phenotypic, veening2008bistability}.
+These motifs also affect the speed, variation and sensitivity of cellular responses.
+A negative feedback loop, i.e. a circuit where the product inhibits its own expression, decreases the response time \cite{rosenfeld2002negative} (Fig.~\ref{motifs}\textcolor{red}{a}).
+It also reduces the variability in product concentration decreasing cell-to-cell and temporal variability \cite{becskei2000engineering}.
+This enables the cell to use stronger promoters for proteins needed in a short time but at low concentration without overshoots and risks of protein toxicity.
+
+A double negative feedback loop is known to play a role in epigenetic switching between lytic and lysogenic cycle of \tax{E. coli} phage $\lambda$ \cite{smits2006phenotypic, casadesus2013programmed}.
+After inserting its DNA the virus cycle might undergo two different ways - i.e. either replicate producing new phages and heading for bacterial lysis or integrate its DNA into the bacterial chromosome and persist there within a lysogeny.
+The fate of the phage lies in two repressors, CI and Cro, each repressing transcription of the other \cite{eisen1970regulation, neubauer1970immunity}.
+Besides, CI inhibits phage propagation genes and activates its own transcription.
+Both CI and Cro are produced since the beginning of the infection.
+If the level of CI reaches a certain threshold and outcompetes Cro, whose activity is suppressed, the phage enters a lysogenic cycle staying dormant in the cell thanks to CI-\tax{cI} positive feedback loop (described further).
+Otherwise Cro levels rise further inhibiting CI production and establishing phage proliferation with subsequent cell lysis \cite{svenningsen2005role}.
+It should be noted that although it is not predictable whether the phage enters lytic or lysogenic cycle, the ratio of lysed/lysogenized cells depends on bacterial physiologic situation and other environmental factors as well.
+Interestingly, Toman et al. used the CI-Cro system for epigenetic reuglation of \tax{gal} operon in \tax{E. coli} \cite{toman1985system}.
+%%% it's not epigenetics in E. coli, but in the phage lambda! (except for the engineered system by Toman et al.)
+
+%%%As the CI-Cro regulation is a phage system, the first evidence of bacterial epigenetics driven by a double negative feedback loop was published just 3 years ago.
+
+%%% detection of double negative feedback loop originating in bacteria?
+%%% double negative feedback detected in "A Novel Feedback Loop That Controls Bimodal Expression of Genetic Competence" which talks about cell competence
+%%% there is no direct evidence for epigenetics playing role in it, however paper "Agent-based modeling of competence phenotype switching in Bacillus subtilis" suggests it might be so according to their model
+%%% especially when in similar case - bacillus sporulation is it proven in: "Bet-hedging and epigenetic inheritance in bacterial cell development"
+%%% Olin also argumented by "An excitable gene regulatory circuit induces transient cellular differentiation", because they say becoming competent is probabilistic in Bacillus
+
+A positive feedback loop, i.e. motif in which the product further induces the expression of the gene coding it (Fig.~\ref{motifs}\textcolor{red}{b}), exhibits the opposite traits then negative feedback.
+Transcriptional activation is slower and noisier in case of positive feedback loops compared to no feedback systems \cite{maeda2006regulatory, sayut2007noise}.
+Although it takes longer for the cell to reach certain level of desired protein, this motif allows to react to much lower concentrations of a signal.
+Both graded and hysteretic expression can occur in positively autoregulated genes \cite{maeda2006regulatory}.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.29]{text/Pictures/TxnMotifs.png}
+	\caption{Schemes of transcriptional network motifs; \textbf{a} negative feedback loop - gene product represses its own transcription; \textbf{b} positive feedback loop - gene product induced transcription of its own gene; \textbf{c} coherent feed-forward loops; \textbf{d} incoherent feed-forward loops.}
+	\label{motifs}
+\end{figure}
+
+\textbf{Feed forward loops} (FFLs) are more complex, but also common regulatory motifs.
+FFL generally, is a regulatory circuit when a transcription factor X regulates another transcription factor, Y, and both (X and Y) regulate a gene or operon Z (Fig.~\ref{motifs}\textcolor{red}{c} and \textcolor{red}{d}).
+It has been predicted that coherent FFLs cause sign-sensitive delays in regulatory kinetics and incoherent FFLs should act as sign-sensitive accelelators and exhibit transient pulses of expression \cite{mangan2003structure}.
+The most abundant schemes were later experimentally confirmed \cite{mangan2003coherent, kalir2005coherent, mangan2006incoherent}.
+The distinction between coherent and incoherent FFL depends on whether the sign (positive or negative) of Z regulation caused by factor X \textit{through} Y is the same as regulation of Z by X itself \cite{shen2002network, mangan2003structure}.
+
+Coherent FFL type 1 (Fig.~\ref{motifs}\textcolor{red}{c}, C1), in which both X and Y must bind to trigger transcription (AND-gate logic) delays activation compared to non-FFL systems \cite{mangan2003coherent}.
+No delay occurs when transcriptional induction is turned off.
+On the other hand, if only factor X or Y is sufficient to induce Z (OR- gate logic in C1 FFL) gene activation is not delayed, but the its deactivation is delayed considerably \cite{kalir2005coherent}.
+The AND-FFL prevents Z expression when the concentration of X fluctuates close to a threshold, while the OR-FFL enables continuous production of Z even if X concentration drops below a threshold for a while.
+
+From incoherent FFL motifs the type 1 (Fig.~\ref{motifs}\textcolor{red}{d}, I1) is the predominant in \tax{E. coli} transcriptional network.
+Factor X here positively regulates both Y and Z, however factor Y acts as an inhibitor of Z gene.
+This incoherent FFL speeds up transcriptional responses, but weak pulse-generating power was expected \cite{mangan2003structure}.
+Nevertheless, this motif was used to create effective pulsers \cite{basu2004spatiotemporal}.
+Later the acceleration trait was experimentally confirmed as well despite the fact that other motifs contribute to the used regulatory system \cite{mangan2006incoherent}.
+This suggests that the motifs' fundamental functions are preserved even when combined with other motifs.
+Overall this type of regulation similarly to negative feedback loop shortens the rise-time, but unlike the negative feedback doesn't avoid overshoots rather the opposite.
+The overshoot is seen as a pulse of high gene Z expression which is subsequently inhibited by factor Y, but not necessarily back to the basal level.
+
+\subsection{Global control of transcription}
 Differential physical access to DNA within a chromosome presents one of the explanations to observed variations in promoters activity based on their position in the chromosome \cite{bryant2014chromosome}.
 Nucleoid associated proteins (NAPs) and supercoiling are general mechanisms affecting this accessibility.
 NAPs' role in several cell processes such as replication, horizontal gene transfer or transcription regulation was shown \cite{dixon1984protein, kayoko1992histone, aznar2013hha}.
@@ -295,25 +322,6 @@ Interestingly this high ratio of \tax{per}-ON vs \tax{per}-OFF cells remains for
 Transition back from \tax{per}-ON to \tax{per}-OFF phase is achieved when cells are grown up to stationary phase.
 The long-term stability of \tax{per}-ON state relies on a positive feedback of PerA which acts as an activator of its own gene beside \tax{perB} and \tax{perC} in the \tax{per} operon (Fig.~\ref{per}) \cite{ibarra2003identification, ronin2017long}.
 
-As an illustration of \textbf{double negative feedback loop} in epigenetic regulation a switch between lytic and lysogenic cycle of \tax{E. coli} phage $\lambda$ is often described \cite{smits2006phenotypic, casadesus2013programmed}.
-After inserting its DNA the virus cycle might undergo two different ways - i.e. either replicate producing a lot of new phages and heading for bacterial lysis or integrate its own DNA into the bacterial chromosome and persist there within a lysogeny.
-The fate of the phage lies in two repressors, CI and Cro, each repressing transcription of the other \cite{eisen1970regulation, neubauer1970immunity}.
-Besides CI inhibits phage propagation genes and activates its own transcription.
-However, both CI and Cro are produced since the beginning of the infection.
-If the level of CI reaches a certain threshold and outcompetes Cro, whose activity is suppressed, the phage enters a lysogenic cycle staying dormant in the cell thanks to CI-\tax{cI} positive feedback loop.
-Otherwise Cro levels rise further inhibiting CI production and establishing phage proliferation with subsequent cell lysis \cite{svenningsen2005role}.
-It should be noted that although it is not predictable whether the phage enters lytic or lysogenic cycle, the ratio of lysed/lysogenized cells depends on bacterial physiologic situation and other environmental factors as well.
-Interestingly, Toman et al. used the CI-Cro system for epigenetic reuglation of \tax{gal} operon in \tax{E. coli} \cite{toman1985system}.
-%%% it's not epigenetics in E. coli, but in the phage lambda! (except for the engineered system by Toman et al.)
-
-%%%As the CI-Cro regulation is a phage system, the first evidence of bacterial epigenetics driven by a double negative feedback loop was published just 3 years ago.
-
-%%% detection of double negative feedback loop originating in bacteria?
-%%% double negative feedback detected in "A Novel Feedback Loop That Controls Bimodal Expression of Genetic Competence" which talks about cell competence
-%%% there is no direct evidence for epigenetics playing role in it, however paper "Agent-based modeling of competence phenotype switching in Bacillus subtilis" suggests it might be so according to their model
-%%% especially when in similar case - bacillus sporulation is it proven in: "Bet-hedging and epigenetic inheritance in bacterial cell development"
-%%% Olin also argumented by "An excitable gene regulatory circuit induces transient cellular differentiation", because they say becoming competent is probabilistic in Bacillus
-
 \subsubsection{DNA methylation by orphan methyltransferases}
 % in my opinion you can shrink this section a bit.
 % one thing to note is that you have gone back and forth between very general topics (the toplogy of regulation networks), to more specific mechanisms (regulating txn via TFs), to very specific mechanisms (dam / dcm). Don't dive too deep. Deep dives into very particular cellular mechanisms can be for later (e.g. if you end up doing a lot fo work on one type of mechanism).
@@ -378,7 +386,7 @@ The process of this opposite transition i.e. from ON to OFF phase involves trans
 %%%The authors show that cells which inherit protein aggregates are more likely to survive sub-lethal heat-shock or streptomycin exposure.
 %%%They also resume growth much earlier than genetically identical cells without PA.
 
-\subsection{Predictive cell behaviour}
+\section{Predictive cell behaviour}
 An ability to predict an upcoming event in the environment can be beneficial for any organism.
 No matter whether the event means a presence of antibiotic or just a shift in carbon source availability.
 If a bacterium is able to predict such event it has a fitness advantage over those who don't expect this to happen in that community.
