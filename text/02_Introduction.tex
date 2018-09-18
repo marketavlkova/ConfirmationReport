@@ -4,7 +4,6 @@
 
 \shorthandoff{-}
 
-\section{Natural selection}
 Bacteria exhibit genotypic and phenotypic variability even at the levels of genus.
 This variability is continuously shaped by natural selection as the cells that are better adapted to the current conditions are more likely to survive and proliferate.
 In the case of unicellular organisms the survival game is more stringent, because they face the changing conditions directly and have limited ability to escape.
@@ -23,9 +22,9 @@ Anyway, cells which don't manage to adapt to the new conditions are excluded by 
 % I think you can go into a bit more detail about what you are going to say below here. e.g. once you talk about transcription, "Responses time depend on the topology of the circuit, the signals that bacteria have observed previously (memory), and any predicitve behaviour that the bacteria are capable of. Below I go into each of these properties in more detail to establish the current state of the field..." Then first, your section on topology (eg FFLs) and effects on response, memory, etc., then with specific examples. Then prediction, then the fact that not much is known about selection on memory, response, et.c except circumstantial evidence (e.g. the predictive behaviour of things in the gut).
 It is essential for a living cell to sense what is happening in the environment and react accordingly.
 If the timescale of this reaction should be on the order of seconds, there is no time for changes in transcription or translation.
-In that case the cell fate depends on the proteins or other small molecules it has already synthesised, and when none with an appropriate enzymatic activity is present, the cell has a higher chance of dying.
+In that case the cell fate depends on the proteins or other small molecules it has already synthesised.
 One example of a fast response to a signal is chemotaxis.
-When a motile bacterium occurs in an attractant (e.g. nutrients such as sugars or amino acids) or repellent (toxic metabolites, some divalent cations) gradient, it swim towards or away from the higher concentration of it, respectively.
+When a motile bacterium occurs in a gradient of an attractant (e.g. nutrients such as sugars or amino acids) or repellent (toxic metabolites, some divalent cations), it swim towards or away from the higher concentration of it, respectively.
 % 17.9.2018
 % say something more specific about the mechanisms and how it occurs ona second-level timescale
 In order to react swiftly, the cell needs to have the flagella already expressed.
@@ -33,18 +32,15 @@ In order to react swiftly, the cell needs to have the flagella already expressed
 On the other hand if it is advantageous or only necessary to react in minutes or hours, responses can be mediated through translational or transcriptional changes.
 Sometimes a fast change in expression might be even detrimental, especially in the case of an extensive physiological reprogramming.
 Such alterations consume a lot of energy.
-For the cell is thus more profitable to do not respond at once.
-Cell might even benefit from not responding at all for some time, for example if the signal triggering costly response is only transient.
-Transcriptional responses are also adequate in slowly changing environments (e.g. decrease in preferred carbon source concentration).
-When a non-preferred carbon source is present as well the cells are brought to decision whether to enter long-term stationary phase or begin to utilize the alternative carbon source.
-In any case they have to alter their transcription accordingly.
+For the cell it might be more profitable to not respond at once.
+Cells might even benefit from not responding at all for some time, for example if the signal triggering costly response is likely to be transient.
 To manage and orchestrate many responses to multiple signals cells evolved a network of extra- and intracellular signalling pathways.
 As I focus on transcriptional responses the following text covers mostly these cases.
 
 \subsubsection{Direct signalling pathways}
-Direct signalling is a case when a signal molecule is imported through cell membrane into cytosol or is produced by the cell and subsequently interacts with gene regulatory protein.
-This is often the case in the regulation of carbohydrate catabolism and amino acid biosynthesis genes \cite{charlier1992arginine, weickert1992isorepressor, pittard1996various, wheatley2013structural}.
-Physical signals such as UV or heat are also considered direct, although no active import takes place in the signalling, cell's interior cannot avoid them.
+Direct signalling occurs when a signal molecule is imported through cell membrane into the cytosol, or is produced by the cell and subsequently interacts with regulatory proteins.
+This is often the case for genes involved in carbohydrate catabolism and amino acid biosynthesis \cite{charlier1992arginine, weickert1992isorepressor, pittard1996various, wheatley2013structural}.
+Physical signals such as UV or heat are also considered direct, although no active import takes place in the signalling.
 Two simple models of direct signalling are described below.
 
 In order to save energy, it is be advantageous for cells to avoid wasteful production of proteins which are not used at all the time.
@@ -78,10 +74,7 @@ To be able to phosphorylate itself the kinase requires ATP or other phosphate do
 Next, the phosphorylated kinase transfers the phosphate group to its partner regulatory protein enabling its activity, most often DNA-binding and transcriptional regulation \cite{lynch2012prioritization, gao2015temporal, cui2018novel}.
 This protein receives the phosphate to its aspartate residue and might act as both gene repressor and/or activator.
 Alternatively, the output of the two-component system can be a modification of biochemical activity of target proteins or RNAs instead or on the top of the change in gene expression \cite{shu2002antar, chambonnier2016hybrid}.
-
-The described kinases and cognate regulatory proteins do not necessarily need to be separated units.
-Proteins with histidine kinase domains connected to aspartate domains of DNA-binding proteins are known.
-These hybrid systems are usually located in cell membrane with their sensory domains in periplasmic space (Fig. \ref{two}\textcolor{red}{b}) \cite{lynch2012prioritization, hirano2013regulon}.
+Hybrid two-component systems also exist, and are usually located in cell membrane with their sensory domains in periplasmic space (Fig. \ref{two}\textcolor{red}{b}) \cite{lynch2012prioritization, hirano2013regulon}.
 
 \begin{figure}[h!]
   \centering
@@ -91,18 +84,12 @@ These hybrid systems are usually located in cell membrane with their sensory dom
 \end{figure}
 
 Another version of two-component system is phosphorelay (Fig. \ref{two}\textcolor{red}{c}).
-In this case multiple steps of phosphate transfer occur before the final phosphorylation of target regulator.
-The histidine domain of a sensor protein serves here as a phosphate donor to an aspartate domain of the same or another protein.
-From this domain the phosphate is further transferred to another histidine domain.
-This can exist again within the same protein or as a separated one.
-Finally, the aspartate domain of a DNA-binding regulator receives phosphate from the third domain in row.
+In this case multiple steps of phosphate transfers occur before the final phosphorylation of target regulator.
 These multiple steps allow an easier regulation by other signals as the phosphorelay can be silenced at any of the intermediate steps during the transmission \cite{perego2001pentapeptide, groisman2016feedback}.
 
-Systems where a regulatory protein can be phosphorylated by different sensory units also occur.
-And even phosphorylated metabolites might act as signal donors (Fig. \ref{two}\textcolor{red}{d}).
+In some cases, multiple different signals are detected by the same sensory kinase or converge into the same regulatory protein (Fig. \ref{two}\textcolor{red}{d}).
 This results in similar outputs in response to various signals \cite{kaczmarczyk2014complex, chambonnier2016hybrid}.
-
-Contrary, some cases require various response to a single signal, when multiple genes are affected.
+In contrast, some signals result in multiple responses.
 A divergent signal transmission mediates this (Fig. \ref{two}\textcolor{red}{e}) as one sensory kinase is able to phosphorylate aspartate domains of different acceptor proteins \cite{mika2005two, groisman2016feedback}.
 Moreover, all these variations of two-component system mentioned above combine in cells producing a complex sensory-response network \cite{kaczmarczyk2014complex, chambonnier2016hybrid}.
 
@@ -115,16 +102,16 @@ On the other side of this equilibrium is degradation of the product, as its stab
 A functional protein is also diluted during cell division, which further reduces its amount per cell.
 
 %%%\subsubsection{Transcriptional network motifs}
-\textbf{Feedback loop} is a transcriptional network motif in which the product affects positively or negatively its own production  (Fig.~\ref{motifs}).
-Such motifs have also its effect on the speed of cellular responses.
-Negative feedback loop, i.e. circuit where the product inhibits its own expression, decreases the response time \cite{rosenfeld2002negative}.
+\textbf{Feedback loops} are transcriptional network motifs in which the products affect their own production  (Fig.~\ref{motifs}).
+Such motifs affect the speed , variation and sensitivity of cellular responses.
+Negative autoregulation, i.e. a circuit where the product inhibits its own expression, decreases the response time \cite{rosenfeld2002negative}.
 It also reduces the variability in product concentration decreasing cell-to-cell and temporal variability \cite{becskei2000engineering}.
 This enables the cell to use stronger promoters for proteins needed in a short time but at low concentration without overshoots and risks of protein toxicity.
 
 Positive autoregulation, i.e. motif in which the product further induces the expression of the gene coding it (Fig.~\ref{motifs}\textcolor{red}{b}), exhibits the opposite traits then negative feedback.
 Transcriptional activation is slower and noisier in case of positive feedback loops compared to no feedback systems \cite{maeda2006regulatory, sayut2007noise}.
 Although it takes longer for the cell to reach certain level of desired protein, this motif allows to react to much lower concentrations of a signal.
-Moreover, both graded and hysteretic expression can occur in positively autoregulated genes \cite{maeda2006regulatory}.
+Both graded and hysteretic expression can occur in positively autoregulated genes \cite{maeda2006regulatory}.
 
 \begin{figure}[ht!]
   \centering
@@ -133,21 +120,20 @@ Moreover, both graded and hysteretic expression can occur in positively autoregu
 	\label{motifs}
 \end{figure}
 
-\textbf{Feed forward loops} (FFLs) are also common regulatory motifs.
-They affect response time in cells as well, but each type of FFL do so in a bit different way \cite{shen2002network}.
+\textbf{Feed forward loops} (FFLs) are more complex, but also common regulatory motifs.
 FFL generally, is a regulatory circuit when a transcription factor X regulates another transcription factor, Y, and both (X and Y) regulate a gene or operon Z (Fig.~\ref{motifs}\textcolor{red}{c} and \textcolor{red}{d}).
 It has been predicted that coherent FFLs cause sign-sensitive delays in regulatory kinetics and incoherent FFLs should act as sign-sensitive accelelators and exhibit transient pulses of expression \cite{mangan2003structure}.
 The most abundant schemes were later experimentally confirmed \cite{mangan2003coherent, kalir2005coherent, mangan2006incoherent}.
 The distinction between coherent and incoherent FFL depends on whether the sign (positive or negative) of Z regulation caused by factor X \textit{through} Y is the same as regulation of Z by X itself \cite{shen2002network, mangan2003structure}.
 
-Coherent FFL type 1 (Fig.~\ref{motifs}\textcolor{red}{c}, C1), where both X and Y has to bind to trigger transcription (AND-gate logic) delays full gene expression compared to non-FFL system \cite{mangan2003coherent}, while no delay was observed in the inverse (ON to OFF) transition.
-On the other hand, when only factor X or Y is sufficient to induce Z transcription (OR- gate logic in C1 FFL) transition from OFF to ON shows no delays  \cite{kalir2005coherent}.
-But when factor X is deactivated the ON to OFF step is considerably delayed in comparison with strain with deleted gene for factor Y.
-The former motif (AND-FFL) thus prevents Z expression when concentration of X fluctuates close to a threshold, while the latter circuit (OR-FFL) enables continuous production of Z even if X concentration drops below a threshold for a while.
+Coherent FFL type 1 (Fig.~\ref{motifs}\textcolor{red}{c}, C1), in which both X and Y must bind to trigger transcription (AND-gate logic) delays activation compared to non-FFL systems \cite{mangan2003coherent}.
+No delay occurs when transcriptional induction is turned off.
+On the other hand, if only factor X or Y is sufficient to induce Z (OR- gate logic in C1 FFL) gene activation is not delayed, but the its deactivation is delayed considerably \cite{kalir2005coherent}.
+The AND-FFL prevents Z expression when the concentration of X fluctuates close to a threshold, while the OR-FFL enables continuous production of Z even if X concentration drops below a threshold for a while.
 
-From incoherent FFL motifs the type 1 (Fig.~\ref{motifs}\textcolor{red}{d}, I1) is predominant in \tax{E. coli} transcriptional network.
+From incoherent FFL motifs the type 1 (Fig.~\ref{motifs}\textcolor{red}{d}, I1) is the predominant in \tax{E. coli} transcriptional network.
 Factor X here positively regulates both Y and Z, however factor Y acts as an inhibitor of Z gene.
-The model predicted this incoherent FFL to speed up transcriptional responses, but weak pulse-generating power was expected \cite{mangan2003structure}.
+This incoherent FFL speeds up transcriptional responses, but weak pulse-generating power was expected \cite{mangan2003structure}.
 Nevertheless, this motif was used to create effective pulsers \cite{basu2004spatiotemporal}.
 Later the acceleration trait was experimentally confirmed as well despite the fact that other motifs contribute to the used regulatory system \cite{mangan2006incoherent}.
 This suggests that the motifs' fundamental functions are preserved even when combined with other motifs.
@@ -301,7 +287,7 @@ On the other side naive cells have very small amounts of LacY if any, so they ar
 	\label{per}
 \end{figure}
 
-Another nice example of a long-term epigenetic switch mediated by a positive feedback loop was published recently.
+Another example of a long-term epigenetic switch mediated by a positive feedback loop was published recently.
 Enteropathogenic \tax{E. coli} (EPEC) has been revealed to coexists in two, non-virulent and hyper-virulent, sub-populations, each having lag phases of different length \cite{ronin2017long}.
 At transcription level it is a change in \tax{per} operon expression (located on EAF plasmid) and \tax{per} regulated genes.
 EPEC cultivation in virulence-activating conditions gives rise to \tax{per}-ON hyper-virulent aggregative sub-population (SMALL phenotype) reaching nearly 100\% \cite{ronin2017long}.
@@ -466,7 +452,7 @@ Thus, little is still known how microorganisms evolve such reflex to neutral cue
 A mathematical model suggests this to occur if benefits of such prediction exceed its costs in other environments \cite{mitchell2011mathematical}, but no experimental evidence is available so far.
 Nevertheless the reported decoupling of reaction to a signal in the absence of expected outcome is an indication of selection acting on predictive behaviour \cite{tagkopoulos2008predictive, mitchell2009adaptive}.
 
-Basically all work in this area has been done on single strains.
+Most work in this area has been done on single strains.
 % 17.9.2018
 % Almost all work on bacterial responses, memory, and predictive behaviour has been performed on lab strains" (don't forget C cresecentus, B subtilis, and P. fluorescens (among others).
 But the questions about how natural selection acts on transcriptional responses and memory in bacteria cannot be fully addressed without exploring natural variability in individual promoters among various isolates of the same genus.
