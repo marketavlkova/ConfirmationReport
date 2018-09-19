@@ -177,11 +177,55 @@ A functional protein is also diluted during cell division, which further reduces
 
 %%%\subsubsection{Transcriptional network motifs}
 \textbf{Feedback loops} are transcriptional network motifs in which the products affect their own production  (Fig.~\ref{motifs}).
-They are quite common in bacterial gene regulation and can lead to epigenetic switches \cite{smits2006phenotypic, veening2008bistability}.
-These motifs also affect the speed, variation and sensitivity of cellular responses.
-A negative feedback loop, i.e. a circuit where the product inhibits its own expression, decreases the response time \cite{rosenfeld2002negative} (Fig.~\ref{motifs}\textcolor{red}{a}).
+The influence of the output on itself transcription might be direct or indirect if multiple effectors are involved.
+Feedback loop are quite common in bacterial gene regulation and affect the speed, variation and sensitivity of cellular responses and can also lead to epigenetic switches.
+Effects of feedback loops on both aspects i.e. transcription dynamics and memory are characterized in detail below.
+
+A positive feedback loop is a motif in which the product further induces the expression of the gene coding it (Fig.~\ref{motifs}\textcolor{red}{a}).
+Transcriptional activation is slower and noisier in case of positive feedback loops compared to no feedback systems \cite{maeda2006regulatory, sayut2007noise}.
+This is so probably due to low initial amounts of the auto-inducer which might be either diluted before the expression is fully induced or bound to its other functions within the cell.
+This stochasticity in auto-inducer binding to its promoter is likely to cause higher transcription noise upon the induction among individuals and delay it.
+Although slower and noisier, this motif enables cells to react to much lower concentrations of a signal thanks to the positive feedback.
+Both graded and hysteretic expression can occur in genes regulated this way \cite{maeda2006regulatory}.
+
+A negative feedback loop, i.e. a circuit where the product inhibits its own expression, exhibits the opposite traits then positive feedback as it decreases the response time \cite{rosenfeld2002negative} (Fig.~\ref{motifs}\textcolor{red}{b}).
 It also reduces the variability in product concentration decreasing cell-to-cell and temporal variability \cite{becskei2000engineering}.
 This enables the cell to use stronger promoters for proteins needed in a short time but at low concentration without overshoots and risks of protein toxicity.
+
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.29]{text/Pictures/TxnMotifs.png}
+	\caption{Schemes of transcriptional network motifs; \textbf{a} positive feedback loop - gene product induces its own transcription; \textbf{b} negative feedback loop - gene product represses transcription of its own gene; \textbf{c} coherent feed-forward loops; \textbf{d} incoherent feed-forward loops.}
+	\label{motifs}
+\end{figure}
+
+% 2018.06.28
+% Eventually, go into way more detail here, as this will end up as a full section on lac. But if you are leaving this as a brief intro to positive, negative, double negative, that's fine. You might also start with sensing/reaction and then move to epigenetics. This is a reasonable ref I think *An introduction to systems biology: design principles of biological circuits*, although you always have to be a little careful with Uri Alon's take on things, sometimes it's a bit too facile.
+%%% DO YOU STILL WANT ME TO GO INTO MORE DETAIL ABOUT lac OPERON REGULATION? I DESCRIBE IT IN SOME DETAIL WITHIN SECTION ABOUT CELLULAR RESPONSES...
+Positive feedback loops and double negative feedback loops are known to play a role in memory of prokaryotes so far.
+Positive feedback is the first described example of bacterial epigenetics.
+It was shown already in 1957 that \tax{E. coli} sub-population primed by high concentration of lactose analogue TMG is able to maintain \tax{lac} operon fully induced even in low non-inducible TMG concentrations \cite{novick1957enzyme}.
+While if the same bacteria are exposed to the low non-inducible TMG concentration without priming the \tax{lac} operon remains repressed by LacI.
+The mechanism behind this resides in different levels of $\beta$-galactoside permease (LacY) present in TMG induced and naive cells.
+Induced population has high level of the permease in cell membrane, because \tax{lacY} gene expression has been activated by previous high TMG concentrations.
+This state is preserved in a sub-population of induced cells after transfer into low TMG concentration as the abundant permease is able to maintain intracellular TMG level high enough to avoid LacI repression.
+Thus the high level of permease leads to high intracellular TMG concentration which in turn acts as permease transcription activator.
+On the other side naive cells have very small amounts of LacY if any, so they are not able to obtain enough TMG from the solution to activate \tax{lac} operon expression \cite{smits2006phenotypic, casadesus2013programmed}.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.2]{text/Pictures/perOperonRegulation.jpg}
+	\caption{Scheme of EPEC virulence regulation. PerA positivelly autoregulates \tax{perABC} operon and triggers expression of type IV pili. PerC activates transcription of Ler which is the main regulator of T3SS secretion system machinery. (reproduced from \cite{ronin2017long})}
+	\label{per}
+\end{figure}
+
+Another example of a long-term epigenetic switch mediated by a positive feedback loop was published recently.
+Enteropathogenic \tax{E. coli} (EPEC) has been revealed to coexists in two, non-virulent and hyper-virulent, sub-populations, each having lag phases of different length \cite{ronin2017long}.
+At transcription level it is a change in \tax{per} operon expression (located on EAF plasmid) and \tax{per} regulated genes.
+EPEC cultivation in virulence-activating conditions gives rise to \tax{per}-ON hyper-virulent aggregative sub-population (SMALL phenotype) reaching nearly 100\% \cite{ronin2017long}.
+Interestingly this high ratio of \tax{per}-ON vs \tax{per}-OFF cells remains for many generations even after transferring the culture back into non-activating conditions, although naive EPEC culture contains only a minority of \tax{per}-ON cells.
+Transition back from \tax{per}-ON to \tax{per}-OFF phase is achieved when cells are grown up to stationary phase.
+The long-term stability of \tax{per}-ON state relies on a positive feedback of PerA which acts as an activator of its own gene beside \tax{perB} and \tax{perC} in the \tax{per} operon (Fig.~\ref{per}) \cite{ibarra2003identification, ronin2017long}.
 
 A double negative feedback loop is known to play a role in epigenetic switching between lytic and lysogenic cycle of \tax{E. coli} phage $\lambda$ \cite{smits2006phenotypic, casadesus2013programmed}.
 After inserting its DNA the virus cycle might undergo two different ways - i.e. either replicate producing new phages and heading for bacterial lysis or integrate its DNA into the bacterial chromosome and persist there within a lysogeny.
@@ -202,17 +246,7 @@ Interestingly, Toman et al. used the CI-Cro system for epigenetic reuglation of 
 %%% especially when in similar case - bacillus sporulation is it proven in: "Bet-hedging and epigenetic inheritance in bacterial cell development"
 %%% Olin also argumented by "An excitable gene regulatory circuit induces transient cellular differentiation", because they say becoming competent is probabilistic in Bacillus
 
-A positive feedback loop, i.e. motif in which the product further induces the expression of the gene coding it (Fig.~\ref{motifs}\textcolor{red}{b}), exhibits the opposite traits then negative feedback.
-Transcriptional activation is slower and noisier in case of positive feedback loops compared to no feedback systems \cite{maeda2006regulatory, sayut2007noise}.
-Although it takes longer for the cell to reach certain level of desired protein, this motif allows to react to much lower concentrations of a signal.
-Both graded and hysteretic expression can occur in positively autoregulated genes \cite{maeda2006regulatory}.
 
-\begin{figure}[ht!]
-  \centering
-  \includegraphics[scale=0.29]{text/Pictures/TxnMotifs.png}
-	\caption{Schemes of transcriptional network motifs; \textbf{a} negative feedback loop - gene product represses its own transcription; \textbf{b} positive feedback loop - gene product induced transcription of its own gene; \textbf{c} coherent feed-forward loops; \textbf{d} incoherent feed-forward loops.}
-	\label{motifs}
-\end{figure}
 
 \textbf{Feed forward loops} (FFLs) are more complex, but also common regulatory motifs.
 FFL generally, is a regulatory circuit when a transcription factor X regulates another transcription factor, Y, and both (X and Y) regulate a gene or operon Z (Fig.~\ref{motifs}\textcolor{red}{c} and \textcolor{red}{d}).
@@ -285,42 +319,6 @@ Such ability is advantageous especially if the change in the conditions is predi
 Various epigenetic mechanisms such as histone modifications, genomic imprinting or RNA associated silencing are well studied in eukaryotes \cite{durso2014mechanisms}.
 In the case of bacteria DNA methylation by methyltransferases is mostly mentioned, although positive and double negative feedback loops play their role as well especially in terms of population bistability \cite{casadesus2006epigenetic, casadesus2013programmed, adhikari2016dna}.
 Moreover, a new way of memory based on protein aggregation was revealed recently \cite{govers2018protein} and is described further in more detail.
-
-% 2018.06.28
-% Eventually, go into way more detail here, as this will end up as a full section on lac. But if you are leaving this as a brief intro to positive, negative, double negative, that's fine. You might also start with sensing/reaction and then move to epigenetics. This is a reasonable ref I think *An introduction to systems biology: design principles of biological circuits*, although you always have to be a little careful with Uri Alon's take on things, sometimes it's a bit too facile.
-%%% DO YOU STILL WANT ME TO GO INTO MORE DETAIL ABOUT lac OPERON REGULATION? I DESCRIBE IT IN SOME DETAIL WITHIN SECTION ABOUT CELLULAR RESPONSES...
-% 17.9.2018
-% I think you could just incorporate some of these above, which you already do but only briefly, e.g. by mentioning hysteresis above.
-\subsubsection{Feedback loops}
-System where a product is able to affect positively or negatively its own production, i.e. a feedback loop was already mentioned in the context of transcriptional network kinetics.
-This part is dedicated to another aspect autoregulations play in bacterial cells - memory. 
-The influence of the output on itself transcription might be direct or indirect if multiple effectors are involved.
-Feedback loops are quite common in bacterial gene regulation and can lead to epigenetic switches \cite{smits2006phenotypic, veening2008bistability}.
-Positive feedback loop and double negative feedback loop are known to play a role in memory of prokaryotes so far and are characterized in detail below.
-
-\textbf{Positive feedback loop} is the first described example of bacterial epigenetics.
-It was shown already in 1957 that \tax{E. coli} sub-population primed by high concentration of lactose analogue TMG is able to maintain \tax{lac} operon fully induced even in low non-inducible TMG concentrations \cite{novick1957enzyme}.
-While if the same bacteria are exposed to the low non-inducible TMG concentration without priming the \tax{lac} operon remains repressed by LacI.
-The mechanism behind this resides in different levels of $\beta$-galactoside permease (LacY) present in TMG induced and naive cells.
-Induced population has high level of the permease in cell membrane, because \tax{lacY} gene expression has been activated by previous high TMG concentrations.
-This state is preserved in a sub-population of induced cells after transfer into low TMG concentration as the abundant permease is able to maintain intracellular TMG level high enough to avoid LacI repression.
-Thus the high level of permease leads to high intracellular TMG concentration which in turn acts as permease transcription activator.
-On the other side naive cells have very small amounts of LacY if any, so they are not able to obtain enough TMG from the solution to activate \tax{lac} operon expression \cite{smits2006phenotypic, casadesus2013programmed}.
-
-\begin{figure}[h!]
-  \centering
-  \includegraphics[scale=0.2]{text/Pictures/perOperonRegulation.jpg}
-	\caption{Scheme of EPEC virulence regulation. PerA positivelly autoregulates \tax{perABC} operon and triggers expression of type IV pili. PerC activates transcription of Ler which is the main regulator of T3SS secretion system machinery. (reproduced from \cite{ronin2017long})}
-	\label{per}
-\end{figure}
-
-Another example of a long-term epigenetic switch mediated by a positive feedback loop was published recently.
-Enteropathogenic \tax{E. coli} (EPEC) has been revealed to coexists in two, non-virulent and hyper-virulent, sub-populations, each having lag phases of different length \cite{ronin2017long}.
-At transcription level it is a change in \tax{per} operon expression (located on EAF plasmid) and \tax{per} regulated genes.
-EPEC cultivation in virulence-activating conditions gives rise to \tax{per}-ON hyper-virulent aggregative sub-population (SMALL phenotype) reaching nearly 100\% \cite{ronin2017long}.
-Interestingly this high ratio of \tax{per}-ON vs \tax{per}-OFF cells remains for many generations even after transferring the culture back into non-activating conditions, although naive EPEC culture contains only a minority of \tax{per}-ON cells.
-Transition back from \tax{per}-ON to \tax{per}-OFF phase is achieved when cells are grown up to stationary phase.
-The long-term stability of \tax{per}-ON state relies on a positive feedback of PerA which acts as an activator of its own gene beside \tax{perB} and \tax{perC} in the \tax{per} operon (Fig.~\ref{per}) \cite{ibarra2003identification, ronin2017long}.
 
 \subsubsection{DNA methylation by orphan methyltransferases}
 % in my opinion you can shrink this section a bit.
