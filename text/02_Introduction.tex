@@ -260,6 +260,8 @@ No delay occurs when transcriptional induction is turned off.
 On the other hand, if only factor X or Y is sufficient to induce Z (Table \ref{ANDvsOR}; OR-gate logic in C1 FFL) gene activation is not delayed, but the its deactivation is delayed considerably \cite{kalir2005coherent}.
 The AND-FFL prevents Z expression when the concentration of X fluctuates close to a threshold, while the OR-FFL enables continuous production of Z even if X concentration drops below a threshold for a while.
 
+\definecolor{mygreen}{RGB}{30,180,0}
+
 \begin{center}
 \LTcapwidth=\textwidth
 	\begin{longtable}[c]{|c|c|c|c|}
@@ -274,11 +276,11 @@ The AND-FFL prevents Z expression when the concentration of X fluctuates close t
 
 0 & 0 & \textcolor{red}{OFF} & \textcolor{red}{OFF} \\
 \hline
-0 & 1 & \textcolor{red}{OFF} & \textcolor{green}{ON} \\
+0 & 1 & \textcolor{red}{OFF} & \textcolor{mygreen}{ON} \\
 \hline
-1 & 0 & \textcolor{red}{OFF} & \textcolor{green}{ON} \\
+1 & 0 & \textcolor{red}{OFF} & \textcolor{mygreen}{ON} \\
 \hline
-1 & 1 & \textcolor{green}{ON} & \textcolor{green}{ON} \\
+1 & 1 & \textcolor{mygreen}{ON} & \textcolor{mygreen}{ON} \\
 	\end{longtable}
 \end{center}
 
