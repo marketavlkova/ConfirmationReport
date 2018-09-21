@@ -10,11 +10,11 @@ We will use these strains in order to elucidate how natural selection acts on tr
 
 	\item \textbf{Quantify genotypic and phenotypic variation in promoters among environmental \tax{E. coli} isolates}
 	
-	In order to quantify variation in transcriptional, we will focus initially on studying natural variation in the response of the \tax{lac} operon in the presence of different carbon sources, either separately or in combination.
+	In order to quantify variation in transcriptional responses, we will focus initially on studying natural variation in the response of the \tax{lac} operon in the presence of different carbon sources, either separately or in combination.
 	To begin we will study these responses using a promoter-based system.
-	Previously, initial data were collected which suggested that differences in the \tax{lac} promoter sequence and further downstream in \tax{lacZ} gene itself result in differential gene expression.
-	Moreover not only the sequence of the promoter, but also the genetic background of the strain was observed to affect the level of expression (i.e. cis- and trans- effects).
-	I will follow up on and expand these findings with \tax{lacZ} promoter and include other promoters and strains as well.
+	Previously, initial data comparing environmental strain SC1\textunderscore D9 and a lab strain MG1655 were collected which suggested that differences in the \tax{lacZ} promoter sequence and further downstream in \tax{lacZ} gene itself result in differential gene expression.
+	Moreover not only the sequence, but also the genetic background of the strain was observed to affect the level of expression (i.e. cis- and trans- effects).
+	I will follow up on and expand these findings with \tax{lacZ} promoter and include four other promoters and about twenty environmental \tax{E. coli} strains as well.
 	The specific steps of this objective are described further below.
 
 	\begin{enumerate}[font=\bfseries]
@@ -22,33 +22,43 @@ We will use these strains in order to elucidate how natural selection acts on tr
 		\item \textbf{Choose promoter sequences among environmental \tax{E. coli} isolates to study}
 		
 		For the beginning we have selected the well studied \tax{lacZ} and \tax{recA} promoters, because each create a different type of cell response - carbon source catabolism and stress response, respectively.
-		We will select three(\textcolor{red}{?}) other transcriptional circuits to study as well.
+		We will select three other transcriptional circuits to study as well.
 		Promoters with known function and regulation mechanism will be picked based on annotated MG1655 genome.
 		Then we will search for corresponding sequences in genomes of natural isolates and identify the sequence differences in them.
 		As we want to cover a broad variation scale on genetic level we will select promoter sequences which are both highly and slightly diverse among natural isolates.
 		Those which are mainly bound by RNA polymerase with a conventional $\sigma^{70}$ factor will be preferred.
 
+
 		\item \textbf{Quantify phenotypic variation in promoters using plasmid system}
 		
-		% 17.9.2018
-		% maybe let's say as a first step to look for differences in responses we will study the plasmid system using the (already clones) K12 sequence. I think this makes sense.
-
+		As we have a collection of MG1655 promoters cloned on plasmids upstream of fluorescent reporter (GFP gene) available \cite{zaslaver2006comprehensive}, next step after the promoter selection is to transform selected MG1655 promoters on these plasmid systems into chosen environmental \tax{E. coli} strains.
+		Then we will use flow cytometry to see whether there are differential expression levels and dynamics of promoters originating from MG1655 among environmental strains.
+		Further we will also clone promoters originating from chosen environmental strains upstream of the fluorescent reporter into the same plasmid system.
+		Transcriptional responses of those will be analysed under sets of conditions (e.g. different carbon sources for \tax{lacZ} promoter, exposure to sublethal concentrations of an antibiotic for \tax{recA} promoter) using flow cytometry.
+		A subset of strains with various promoters will be also picked to compare patterns acquired from flow cytometry under dynamic conditions.
+		Fluorescent microscopy and microfluidics will be used for this.
+		Besides studying the transcriptional responses only, microfluidics will allow as to look into how the activity of selected promoters reacts under fluctuating environment and thus investigate occurrence of epigenetic memory in those transcriptional networks.
+		
 
 		\item \textbf{Confirm observed relationships between genotypic and phenotypic variation by chromosomal integration}
 		
-		As plasmid based models might cause problems in interpreting the results in respect to usually single copy of promoter in bacterial chromosome and multiple copies of plasmid, we will clone a subset of promoters showing differential expression upstream of a fluorescent reporter and then integrate them into chromosome of studied strains.
-		We will then monitor variation under sets of conditions to determine the dynamics in studied transcriptional responses.
-		For this purposes flow cytometry will be mainly used.
-		However, we want to investigate these trait not only at single cell level, but under dynamic conditions as well, so fluorescent microscopy and microfluidics with high throughput image data analysis will follow.
-		Microfluidics can also help us to go deeper into transcriptional regulation under fluctuating environments and potential epigenetic memory.
+		Plasmid based models are relatively fast and easy to acquire, but they might cause problems in interpreting the results in respect to usually a single copy of promoter present in bacterial chromosome, while there are usually multiple copies of the plasmid in a cell.
+		There might be also different transcriptional activities on a plasmid compared to a chromosome for example depending on NAPs binding.
+		To check whether this is the case in studied promoters, we will clone a subset of promoters showing differential expression upstream of a fluorescent reporter and then integrate them into chromosome of studied strains.
+		We will then monitor variation under the same sets of conditions as for plasmid-based models (e.g. different carbon sources or sublethal concentration of antibiotic).
+		Flow cytometry will be used for this.
+		If different expression patterns will be seen when compared to plasmid models, we will continue studying expression of such promoters after chromosomal integration only.
+		Thus fluorescent microscopy and microfluidics will be performed on a subset of strains having a promoter with fluorescent reporter integrated into chromosome and showing various expression dynamics among promoters under flow cytometry.
 
 	\end{enumerate}
 	
-	\item \textbf{Compare natural variation in transcriptional responses with random distribution}
 	
-	Results from the previous aim will give us some view on how much natural variation there is in expression, sensitivity, plasticity and noise.
-	To understand whether selection has acted to increase or decrease such variation, we need a neutral model to compare to.
-	Thus, we will generate sets of promoters with random mutations - i.e. variation expected to occur if there is no selection acting on the particular trait of promoter.
+	\item \textbf{Compare natural variation in transcriptional responses with neutral model}
+	
+	Results from the previous aim will give us some view on how much natural variation there is in expression, sensitivity, plasticity and noise and also whether an epigenetics plays a role in any of the selected transcriptional networks.
+	However, to understand whether natural selection has acted to increase or decrease variation in such transcriptional traits, we need a neutral model to compare to.
+	Thus, we will generate sets of promoters with random mutations - i.e. variation expected to occur if there is no selection acting on neither of the traits of chosen promoters.
+	Such approach might also help us determine whether there is natural selection acting on memory.
 	This will be achieved by a random mutagenesis and analysis of variation produced this way as delineated below.
 
 	\begin{enumerate}[font=\bfseries]
@@ -56,25 +66,24 @@ We will use these strains in order to elucidate how natural selection acts on tr
 		\item \textbf{Generate libraries of promoters by random mutagenesis}
 		
 		First, we need to create a random variation in the selected promoters.
-		% 17.9.2018
-		% perhaps a bit more detail, e.g. avg number of changes per promoter, number of variants (will you study 10 or 100 or 1000)...
-		Error-prone polymerases will be used for that and produced variants will be then cloned upstream of a fluorescent reporters and incorporated into chromosome of all studied genotypic backgrounds the same way as for the naturally occurring promoters.
+		Error-prone polymerases will be used for that.
+		We will aim for promoters with one to several SNPs within the promoter sequence.
+		The produced variants will be then cloned upstream of a fluorescent reporter into a plasmid or further incorporated into chromosome of all studied genotypic backgrounds.
+		Chromosomal integration will be chosen over plasmid based model if the previous results show differences in expression between these two approaches.
 
-		\item \textbf{Investigate phenotypic variation in promoters created by random mutagenesis}
+
+		\item \textbf{Quantify phenotypic variation in promoters created by random mutagenesis}
 		
-		% 17.9.2018
-		% "same techniques as previously" - again more detail. I guess you can study hundreds using cytometry but only select a subset to study with microscopy. You could say this.
-		Next, we will compare the observed phenotypic variation in native promoters to those randomly generated among studied strains using the same techniques as previously.
-		% 17.9.2018
-		% be more direct: "whether selection has acted to decrease or increase..."
-		Based on those results we will be able to define in which direction the selection acts on particular promoters compared to the random distribution.
-		We should be also able to answer a question whether the chosen promoters were selected for a certain level of sensitivity, noise or memory and if so, which one.
-
+		Next, we will compare the observed phenotypic variation in native promoters to hundreds of randomly generated variants per selected promoter among studied strains using flow cytometry at the start.
+		Later, a subset of samples will be picked for further analysis under dynamic and fluctuating conditions by fluorescent microscopy and microfluidics.
+		Based on those results we will be able to define whether selection has acted to decrease or increase certain traits (i.e. expression level, noise, sensitivity, plasticity) in respect to particular promoters when compared to the random distribution.
+		In the cases when a memory is observed in naturally occurring promoter variants, we will also check whether this is still present in promoters after the random mutagenesis.
 	
 	\end{enumerate}
 
 \end{enumerate}
 
+\cleardoublepage%%% keeps correct headings
 
 \shorthandon{-} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

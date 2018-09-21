@@ -321,9 +321,20 @@ December\fi \space\number\year}
 \fancyhf{}%
   \if@twoside
     \fancyhead[CO]{\small\it Introduction\ \hrulefill\ \thepage}% TWOSIDE
-    \fancyhead[CE]{\small\it\thepage\ \hrulefill\ Introduction}% TWOSIDE
+    \fancyhead[CE]{\small\it\thepage\ \hrulefill\ Introduction }% TWOSIDE
   \else
     \fancyhead[C]{\small\it Introduction\ \hrulefill\ \thepage}% ONESIDE
+  \fi
+}
+
+\newcommand{\HeadingObjectives}{
+\pagestyle{fancy}%
+\fancyhf{}%
+  \if@twoside
+    \fancyhead[CO]{\small\it Objectives\ \hrulefill\ \thepage}% TWOSIDE
+    \fancyhead[CE]{\small\it\thepage\ \hrulefill\ Objectives}% TWOSIDE
+   \else
+    \fancyhead[C]{\small\it Objectives\ \hrulefill\ \thepage}% ONESIDE
   \fi
 }
 
