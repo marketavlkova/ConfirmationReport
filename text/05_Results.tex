@@ -7,7 +7,7 @@ As most of the strains listed in the Table \ref{strains} were prepared several y
 For this purpose I designed pUA66\textunderscore insert primers (Table \ref{pcr}) based on the pUA66 and pU139 vector sequences (\hyperlink{pUA66seq}{Appendix 1} and \hyperlink{pUA66seq}{Appendix 2}).
 PCR products were sequenced by Macrogen, Korea using Sanger platform.
 
-\subsection{\tax{placZ::GFP} strains}
+\hypertarget{SeqRes}{\subsection{\tax{placZ::GFP} strains}}
 In the Fig. \ref{placZ} we can see that SC1\textunderscore D9 and MG1655 differ in \tax{lacZ} promoter region by a single SNP at position 39 nt upstream from \tax{lacZ} gene start codon (position 199 in Fig. \ref{placZ}).
 These 2 strains have 3 more SNPs further downstream in \tax{lacZ} gene itself 
 (positions 306, 324 and 363 in Fig. \ref{placZ}).
@@ -32,23 +32,68 @@ It was also confirmed by sequencing as well as that the sequence upstream of GFP
 Similar to the cloned \tax{lacI}-\tax{lacZ} intergenic regions mentioned above, the sequence incorporated into pU139 and then transformed into these \tax{precA::GFP} strains includes parts of \tax{recA} gene downstream and \tax{pncC} gene upstream of the very promoter.
 
 
+\section{Ciprofloxacin susceptibility}
+Because we want to induce \tax{recA} promoter by exposing the cells to a sub-lethal (i.e. sub-MIC) exposure to Ciprofloxacin, I had to make sure the strains I use are susceptible to Ciprofloxacin, first.
+I wanted also to estimate what are the minimum inhibitory concentrations (MICs) for this antibiotic in the strains used.
+MG1655 and SC1\textunderscore D9 were incubated in an increasing concentration of Ciprofloxacin (see \hyperlink{MIC}{Materials and Methods}).
+\begin{figure}[b!]
+  \centering
+  \includegraphics[scale=0.25]{text/Pictures/KillCurve.png}
+	\caption{Cell density after 24 h growth of MG1655 and SC1\textunderscore D9 strains in various Ciprofloxacin concentrations. Strains with a promoter-less plasmid are also included.}
+	\label{killing}
+\end{figure}
+Strains with promoter-less pU139 or pUA66 plasmid were also included to ensure the Kanamycin resistance carried on the plasmid does not affect Ciprofloxacin sensitivity.
+The MIC for both strains is 10 ng/ml of Ciprofloxacin or less, however 5 ng/ml is the concentration which both strains are able to survive, although a decrease in the final cell density is observed when compared to the growth in the absence of Ciprofloxacin (Fig. \ref{killing}).
+Plasmid carried Kanamycin resistance causes none or small effect on Ciprofloxacin susceptibility.
+
+
 \section{Variation in promoter activity}
-To explore the differences in promoter activity and genetic backgrounds, 4 h cultures grown in M9 minimal media with a single carbon source were assayed using flow cytometry (see Materials and Methods).
+To explore the differences in promoter activity and genetic backgrounds, 4 h cultures grown in M9 minimal media with a single carbon source were assayed using flow cytometry (see \hyperlink{FC}{Materials and Methods}).
 Exported FCS files were then analysed in R - used scripts are available at \href{https://github.com/marketavlkova/}{GitHub} repositories.
 
 \subsection{Activity of \tax{lacZ} promoters}
+\subsubsection{Expression in lactose environment}
+All strains with \tax{lacZ} promoter cloned upstream of GFP gene and strain ASC662, which has GFP integrated into chromosome in \tax{lac} operon, show strong GFP expression when grown in lactose as a sole carbon source (Fig. \ref{lacZassay}).
+All plasmid based models show about 2.5 to 10.5 times (3.842 au $\pm$ 0.113 in pZ1\textunderscore K12-K12 to 4.464 au $\pm$ 0.095 in pZm1\textunderscore D9-K12) higher GFP expression than ASC662 (3.442 au $\pm$ 0.140).
+Differences are observed, as expected, when a promoter sequences of the same length originating from different strains are cloned into the same genotypic background.
+Strain pZ\textunderscore D9-D9 has over 1.5 times higher mean GFP expression than pZ2\textunderscore K12-D9 (4.403 au $\pm$ 0.202 and 4.219 au $\pm$ 0.134, respectively).
+Similarly, pZ\textunderscore D9-K12 has almost 1.5 times higher mean expression than pZ2\textunderscore K12-K12 (4.437 au $\pm$ 0.117 and 4.267 au $\pm$ 0.103, respectively).
+Over 2.5-fold difference in expression is also observed when comparing both strains with two versions of cloned promoter sequence both originating from MG1655 into the same strain, i.e. pZ1\textunderscore K12-K12 and pZ2\textunderscore K12-K12.
+The former having mean expression 3.842 au $\pm$ 0.113, the latter 4.267 au $\pm$ 0.103.
 
+\begin{figure}[ht!]
+  \centering
+  \includegraphics[scale=0.4]{text/Pictures/lacZassay.png}
+	\caption{\tax{lacZ} promoter activity in various carbon sources. Strain ASC662 has GFP gene integrated into chromosome in \tax{lac} operon native locus. pU139-K12 is negative control of GFP expression for plasmid based models - promoter-less pU139 plasmid present. The rest are strains with various \tax{lacZ} promoters cloned upstream of GFP gene in a plasmid - see Table \ref{strains}.}
+	\label{lacZassay}
+\end{figure}
 
+The strains pZ\textunderscore D9-K12 and pZ2\textunderscore K12-K12 differ just by the two SNPs in the sequence cloned upstream of GFP gene, while one of the SNPs is located in the cloned part of \tax{lacZ} gene, not in the promoter itself (see \hyperlink{SeqRes}{sequencing results}).
+If the SNPs from \tax{lacZ} gene had no effect on the GFP expression we should see the same expression pattern in pZm1\textunderscore D9-K12 as in pZ2\textunderscore K12-K12 (i.e. 4.267 au $\pm$ 0.103).
+However, this is not the case - the recurrent mutation of the first SNP (A to G) leads to even higher mean expression difference (4.464 au $\pm$ 0.095) than is seen with the original sequence from SC1\textunderscore D9 (4.437 au $\pm$ 0.117).
+Interestingly we get much closer mean expression values to MG1655 promoter sequence with the recurrent mutation in the \tax{lacZ} coding sequence.
+This time pZm2\textunderscore D9-K12 shows a bit lower expression level than pZ2\textunderscore K12-K12 (4.249 au $\pm$ 0.105 vs 4.267 au $\pm$ 0.103).
+
+\subsubsection{Expression in non-lactose environments}
+ASC662 does not express GFP when grown in any other carbon source used as the fluorescence levels are the same as for negative control pU139-K12.
+Negative control for SC1\textunderscore D9 background i.e. pU139-D9 is comparable to pU139-K12 (\hyperlink{FCnegs}{Appendix 5}).
+Interestingly some \tax{lacZ} promoter activity is observed in all plasmid model strains grown in any other carbon source, even glucose (Fig. \ref{lacZassay}).
+Generally in all of them we can see the same pattern - an increasing \tax{lacZ} promoter activity based on the carbon source used: glucose $<$ arabinose $<$ ribose $<$ galactose $<$ lactose.
+The difference in expression between arabinose and ribose environment is relatively small, but consistent among all strains and replicates.
+Moreover the mean expression levels in all these carbon sources depends not only on the promoter variant the strain has, but also at the genetic background of the strain (see pZ\textunderscore D9-D9 vs pZ\textunderscore D9-K12 and pZ2\textunderscore K12-D9 vs pZ2\textunderscore K12-K12 in Fig. \ref{lacZassay}).
+Note, that some density curves (mainly those from glucose growth) do not have the regular shape which is common for all samples from lactose growth.
+
+\subsection{Activity of \tax{recA} promoter}
 
 % 17.9.2018
 % where is this name from?
 \section{Construction of pADOUCH plasmid}
-As we could see, \tax{lacZ} promoters cloned into plasmids were active even in non-lactose environments, but that is not the case for strain ASC662 which has GFP gene integrated into chromosome.
+As we could see, \tax{lacZ} promoters cloned into plasmids were active even in non-lactose environments, but that is not the case if GFP gene is integrated into chromosome.
 We hypothesise, that this differential results might be caused by the naturally low amounts of LacI repressor present in a cell.
 When a cell makes multiple copies of \tax{lacZ} promoter by its sequence on a plasmid, all LacI proteins become saturated and a part of the promoters escape the repression, even though the plasmids used should produce only several copies within a cell \cite{zaslaver2006comprehensive}.
 To confirm that we decided to place the \tax{placZ::GFP} sequences into chromosome, creating only one additional \tax{lacZ} promoter per a cell.
 
-We have available pLW001 plasmid which is suitable for chromosomal integration (\hyperlink{pLW001}{Appendix 5}) however, this plasmid lacks ribosome binding site (RBS).
+We have available pLW001 plasmid which is suitable for chromosomal integration (\hyperlink{pLW001}{Appendix 6}) however, this plasmid lacks ribosome binding site (RBS).
 Thus we constructed a new plasmid by replacing the GFP gene present in pLW001 vector with the GFP sequence we have in our negative control plasmid pUA66 (\hyperlink{pUA66seq}{Appendix 1}) together with its strong RBS, some additional restriction sites and a transcriptional terminator (Fig. \ref{cloning}).
 \begin{figure}[h!]
   \centering
@@ -66,8 +111,8 @@ We successfully amplified sequence of expected length (1.1 kb) in all 8 transfor
 \end{figure}
 Sanger sequencing confirmed the presence of desired insert in digested pLW001 vector.
 However, we identified four SNPs compared to the expected sequence in GFP gene (Fig. \ref{1:3(1)seq}).
-But as both sequenced clones have exactly the same SNPs (\hyperlink{pADOUCHseq}{Appendix 6}) and all of these SNPs are synonymous (Fig. \ref{1:3(1)seq}), we inferred that the reference sequence of GFP gene in the pUA66 plasmid was inaccurate.
-Complete revised sequence of pADOUCH vector can be found in \hyperlink{pADOUCHwhole}{Appendix 7}.
+But as both sequenced clones have exactly the same SNPs (\hyperlink{pADOUCHseq}{Appendix 7}) and all of these SNPs are synonymous (Fig. \ref{1:3(1)seq}), we inferred that the reference sequence of GFP gene in the pUA66 plasmid was inaccurate.
+Complete revised sequence of pADOUCH vector can be found in \hyperlink{pADOUCHwhole}{Appendix 8}.
 \begin{figure}[ht]
   \centering
   \includegraphics[scale=0.26]{text/Pictures/pADOUCHseq.png}

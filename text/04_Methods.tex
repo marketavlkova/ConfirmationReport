@@ -62,16 +62,20 @@ Kanamycin to concentration 50 $\mu$g/ml is also added to the media if the bacter
 All strains are grown at 37$^{\circ}$C, except for pLW001-Top10 which is grown at 30$^{\circ}$C (and in presence of 100 $\mu$g/ml Ampicillin as well).
 
 
+\hypertarget{MIC}{\section{MIC determination}}
+To find out minimum inhibitory concentration to Ciprofloxacin, cells are first grown in 96-well micro-plate in 18 replicates in M9 minimal medium supplemented with 0.4\% glucose.
+Kanamycin to concentration 50 $\mu$g/ml is added to the media as well if the bacterium contains pU139 or pUA66 plasmid.
+After 24 h incubation at 37$^{\circ}$C with shaking, the cells are transferred into the same fresh media by a pin replicator, but this time with an increasing concentration of Ciprofloxacin: 0, 5, 10, 15, 20 and 25 ng/ml.
+This results in triplicates of a strain per particular Ciprofloxacin concentration.
+Another 24 h incubation at 37$^{\circ}$C with shaking follows.
+Next, the final optical density (OD) of the cultures at wave length 600 nm is measured by a plate reader and these values are then plotted using R (version 3.4.3).
+
+
 \section{DNA isolation, PCR and sequencing}
 For sequencing and cloning purposes 0.5 ml of LB supplemented with an appropriate antibiotic is inoculated by a single colony of desired strain and grown for 8 h at 37$^{\circ}$C or for 16 h at 30$^{\circ}$C with shaking.
 5 $\mu$l of this culture is transferred into 100 $\mu$l of sterile deionized water and incubated at 95$^{\circ}$C for 5 min.
 Isolated DNA is stored at -20$^{\circ}$C freezer.
 For screening of positive clones a colony PCR is performed - I touch a single colony by a sterile pipette tip and swirl it in PCR tube with all reagents ready.
-
-In case of screening DreamTaq Green PCR Master Mix (2X) is used for PCR according to manufacturer's \href{https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0012704_DreamTaq_Green_PCR_MasterMix_K1081_UG.pdf}{instructions}.
-The PCR is run at these conditions: 3~min @ 95$^{\circ}$C; 35 cycles: 30~s @ 94$^{\circ}$C + 30~s @ T$_{a}$ + 60~s/kb @ 72$^{\circ}$C; 5~min @ 72$^{\circ}$C.
-For sequencing PCR with recombinant \tax{Taq} DNA polymerase [Invitrogen] is performed according to manufacturer's \href{https://assets.thermofisher.com/TFS-Assets/LSG/manuals/0814_Taq_DNA_Polymerase_recombinant.pdf}{instructions}.
-PCR conditions are as follows: 3~min @ 95$^{\circ}$C; 35 cycles: 45~s @ 94$^{\circ}$C + 30~s @ T$_{a}$ + 90~s/kb @ 72$^{\circ}$C; 10~min @ 72$^{\circ}$C. Used T$_{a}$ for different primers are listed in Table \ref{pcr}.
 
 \begin{center}
 	\begin{longtable}[c]{|l|c|c|c|}
@@ -94,6 +98,11 @@ ATT-RP2 & \footnotesize{\texttt{CAGAATCCCTGCTTCGTCCA}} & \multirow{2}{*}{55$^{\c
 PSC-FP2 & \footnotesize{\texttt{TATCGAATCAAAGCTGCCGA}} & & \\
 	\end{longtable}
 \end{center}
+
+In case of screening DreamTaq Green PCR Master Mix (2X) is used for PCR according to manufacturer's \href{https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0012704_DreamTaq_Green_PCR_MasterMix_K1081_UG.pdf}{instructions}.
+The PCR is run at these conditions: 3~min @ 95$^{\circ}$C; 35 cycles: 30~s @ 94$^{\circ}$C + 30~s @ T$_{a}$ + 60~s/kb @ 72$^{\circ}$C; 5~min @ 72$^{\circ}$C.
+For sequencing PCR with recombinant \tax{Taq} DNA polymerase [Invitrogen] is performed according to manufacturer's \href{https://assets.thermofisher.com/TFS-Assets/LSG/manuals/0814_Taq_DNA_Polymerase_recombinant.pdf}{instructions}.
+PCR conditions are as follows: 3~min @ 95$^{\circ}$C; 35 cycles: 45~s @ 94$^{\circ}$C + 30~s @ T$_{a}$ + 90~s/kb @ 72$^{\circ}$C; 10~min @ 72$^{\circ}$C. Used T$_{a}$ for different primers are listed in Table~\ref{pcr}.
 
 PCR products are column purified before dispatch for Sanger sequencing to Macrogen, Korea.
 Column purification is performed using E.Z.N.A.\textsuperscript{\textregistered} Cycle Pure Kit according to manufacturer's \href{http://omegabiotek.com/store/wp-content/uploads/2013/09/D6492_D6493-Cycle-Pure-Kit-Combo-Online.pdf}{centrifugation protocol}.
@@ -180,7 +189,7 @@ Non-diluted culture is plated as well.
 Plates are then incubated overnight at 37$^{\circ}$C (or two overnights at 30$^{\circ}$C) and single colonies are checked for desired plasmid presence by a colony PCR.
 
 
-\section{Activity assays of promoters}
+\hypertarget{FC}{\section{Activity assays of promoters}}
 \subsection{Promoter \tax{lacZ}}
 M9 media with 0.4\% of chosen single carbon sources (0.2~ml) in 96-well micro-titre plates are inoculated by strains from a glycerol stock in triplicates using a pin replicator.
 After overnight incubation at 37$^{\circ}$C without shaking the strains are transferred into the same fresh media by a pin replicator and incubated again at 37$^{\circ}$C without shaking for 4~h.
