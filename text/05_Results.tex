@@ -55,11 +55,12 @@ Exported FCS files were then analysed in R - used scripts are available at \href
 \subsubsection{Expression in lactose environment}
 All strains with \tax{lacZ} promoter cloned upstream of GFP gene and strain ASC662, which has GFP integrated into chromosome in \tax{lac} operon, show strong GFP expression when grown in lactose as a sole carbon source (Fig. \ref{lacZassay}).
 All plasmid based models show about 2.5 to 10.5 times (3.842 au $\pm$ 0.113 in pZ1\textunderscore K12-K12 to 4.464 au $\pm$ 0.095 in pZm1\textunderscore D9-K12) higher GFP expression than ASC662 (3.442 au $\pm$ 0.140).
-Differences are observed, as expected, when a promoter sequences of the same length originating from different strains are cloned into the same genotypic background.
+Expression differences are also observed when a promoter sequences of the same length, but originating from different strains (2 SNPs present) are cloned into the same genotypic background.
 Strain pZ\textunderscore D9-D9 has over 1.5 times higher mean GFP expression than pZ2\textunderscore K12-D9 (4.403 au $\pm$ 0.202 and 4.219 au $\pm$ 0.134, respectively).
 Similarly, pZ\textunderscore D9-K12 has almost 1.5 times higher mean expression than pZ2\textunderscore K12-K12 (4.437 au $\pm$ 0.117 and 4.267 au $\pm$ 0.103, respectively).
 Over 2.5-fold difference in expression is also observed when comparing both strains with two versions of cloned promoter sequence both originating from MG1655 into the same strain, i.e. pZ1\textunderscore K12-K12 and pZ2\textunderscore K12-K12.
 The former having mean expression 3.842 au $\pm$ 0.113, the latter 4.267 au $\pm$ 0.103.
+We think this is caused by differences in 5' end of the produced mRNA between these two plasmid models, which might have effect on the mRNA stability or translation efficiency.
 
 \begin{figure}[ht!]
   \centering
@@ -70,9 +71,11 @@ The former having mean expression 3.842 au $\pm$ 0.113, the latter 4.267 au $\pm
 
 The strains pZ\textunderscore D9-K12 and pZ2\textunderscore K12-K12 differ just by the two SNPs in the sequence cloned upstream of GFP gene, while one of the SNPs is located in the cloned part of \tax{lacZ} gene, not in the promoter itself (see \hyperlink{SeqRes}{sequencing results}).
 If the SNPs from \tax{lacZ} gene had no effect on the GFP expression we should see the same expression pattern in pZm1\textunderscore D9-K12 as in pZ2\textunderscore K12-K12 (i.e. 4.267 au $\pm$ 0.103).
-However, this is not the case - the recurrent mutation of the first SNP (A to G) leads to even higher mean expression difference (4.464 au $\pm$ 0.095) than is seen with the original sequence from SC1\textunderscore D9 (4.437 au $\pm$ 0.117).
+However, this is not the case - the recurrent mutation of the first SNP (A to G) leads to even higher mean expression difference (4.464 au $\pm$ 0.095; i.e. 1.57-fold change) than is seen when the MG1655 promoter is compared to the original sequence from SC1\textunderscore D9 (4.437 au $\pm$ 0.117; i.e. 1.48-fold change).
 Interestingly we get much closer mean expression values to MG1655 promoter sequence with the recurrent mutation in the \tax{lacZ} coding sequence.
-This time pZm2\textunderscore D9-K12 shows a bit lower expression level than pZ2\textunderscore K12-K12 (4.249 au $\pm$ 0.105 vs 4.267 au $\pm$ 0.103).
+This time pZm2\textunderscore D9-K12 shows a bit lower expression level than pZ2\textunderscore K12-K12 (4.249 au $\pm$ 0.105 vs 4.267 au $\pm$ 0.103; i.e. 1.04-fold change).
+Again we think this might be caused by differential mRNA stability and/or translation efficiency in the plasmid based models.
+Because the second SNP, which is located in \tax{lacZ} gene itself is transcribed into 5' end of the mRNA coding GFP in our models and might thus have effect on the mRNA folding.
 
 \subsubsection{Expression in non-lactose environments}
 ASC662 does not express GFP when grown in any other carbon source used as the fluorescence levels are the same as for negative control pU139-K12.
@@ -83,15 +86,34 @@ The difference in expression between arabinose and ribose environment is relativ
 Moreover the mean expression levels in all these carbon sources depends not only on the promoter variant the strain has, but also at the genetic background of the strain (see pZ\textunderscore D9-D9 vs pZ\textunderscore D9-K12 and pZ2\textunderscore K12-D9 vs pZ2\textunderscore K12-K12 in Fig. \ref{lacZassay}).
 Note, that some density curves (mainly those from glucose growth) do not have the regular shape which is common for all samples from lactose growth.
 
-\subsection{Activity of \tax{recA} promoter}
+Presence of the fluorescence in some of these strains even during growth on non-lactose carbon source was confirmed by time-lapse fluorescent microscopy.
+You can find results from growth on glucose as a sole carbon source in \hyperlink{micro}{Appendix 6}.
+The results obtained this way were assessed just visually for now.
+Strain pZ1\textunderscore K12-K12 seems to have the lowest GFP expression levels as well as the smallest fraction of fluorescent cells from the analysed plasmid based models.
+The other two strains pZ2\textunderscore K12-K12 and pZ2\textunderscore K12-D9 also seem to exhibit the same pattern which is seen from flow cytometry results, it is that the latter strain has higher GFP expression levels than the former one and higher fraction of fluorescent cells as well.
+As negative control for GFP expression pUA66-K12 was included in the experiments as well (\hyperlink{micro}{Appendix 6}).
+No fluorescence (above autofluorescence) is detectable using this approach.
 
+We believe the disproportion in GFP expression between plasmid based models and ASC662 strain under non-lactose environments is caused by multiple copies of \tax{lacZ} promoter present in plasmid models.
+Even though the plasmids used produce low copy number \cite{zaslaver2006comprehensive}, it probably exceeds the number of LacI repressors present in the cells and thus enables induction of some of the \tax{lacZ} promoters present.
+
+\subsection{Activity of \tax{recA} promoter}
+Mean GFP expression levels driven by \tax{recA} promoter are proportional to the concentration of Ciprofloxacin the cells are exposed to, as you can see in Fig. \ref{recAassay}.
 \begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.25]{text/Pictures/recAassay.png}
 	\caption{\tax{recA} promoter activity in increasing concentration of Ciprofloxacin. Strains pUA66-K12 and pU139-D9 are negative controls of GFP expression for plasmid based models - promoter-less plasmid present. The rest are strains with the same \tax{recA} promoter cloned upstream of GFP gene in a plasmid - see Table \ref{strains}.}
-	\label{lacZassay}
+	\label{recAassay}
 \end{figure}
+The induction under higher Ciprofloxacin concentrations is slightly less pronounced in pA\textunderscore K12-D9 than in pA\textunderscore K12-K12 (from 4.274 $\pm$ 0.219 to 4.779 $\pm$ 0.165, i.e. 3.20-fold change and from 4.315 $\pm$ 0.235 to 4.974 $\pm$ 0.178, i.e. 4.56-fold change from 2.0 to 4.0 ng/ml of Cip, respectively).
+The mean fluorescence level is also over 1.5 times higher under 4.0 ng/ml of Ciprofloxacin in pA\textunderscore K12-K12.
 
+Another change based on the Ciprofloxacin concentration is observed in scatter plots.
+At 2.0 ng/ml of it both the forward and side scatter values of the cells begins to increase (data not shown).
+This is expected to happen due to cell filamentation under higher Ciprofloxacin exposure.
+It also explains the shift in fluorescence in the negative controls of GFP expression, i.e. pUA66-K12 and pU139-D9, under the highest Ciprofloxacin concentration used (Fig. \ref{recAassay}).
+Interestingly, the effect of filamentation is higher in SC1\textunderscore D9 background than in MG1655 (from 2.307 $\pm$ 0.197 to 2.589 $\pm$ 0.155, i.e. 1.91-fold change and from 2.332 $\pm$ 0.193 to 2.517 $\pm$ 0.169, i.e. 1.53-fold change from 2.0 to 4.0 ng/ml of Cip, respectively), which is the opposite of what we see in \tax{recA} promoter induction.
+The higher filamentation effect of SC1\textunderscore D9 is likely due to its generally smaller cells compared to MG1655.
 
 
 % 17.9.2018
@@ -102,11 +124,11 @@ We hypothesise, that this differential results might be caused by the naturally 
 When a cell makes multiple copies of \tax{lacZ} promoter by its sequence on a plasmid, all LacI proteins become saturated and a part of the promoters escape the repression, even though the plasmids used should produce only several copies within a cell \cite{zaslaver2006comprehensive}.
 To confirm that we decided to place the \tax{placZ::GFP} sequences into chromosome, creating only one additional \tax{lacZ} promoter per a cell.
 
-We have available pLW001 plasmid which is suitable for chromosomal integration (\hyperlink{pLW001}{Appendix 6}) however, this plasmid lacks ribosome binding site (RBS).
+We have available pLW001 plasmid which is suitable for chromosomal integration (\hyperlink{pLW001}{Appendix 7}) however, this plasmid lacks ribosome binding site (RBS).
 Thus we constructed a new plasmid by replacing the GFP gene present in pLW001 vector with the GFP sequence we have in our negative control plasmid pUA66 (\hyperlink{pUA66seq}{Appendix 1}) together with its strong RBS, some additional restriction sites and a transcriptional terminator (Fig. \ref{cloning}).
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.4]{text/Pictures/Cloning.png}
+  \includegraphics[scale=0.37]{text/Pictures/Cloning.png}
 	\caption{Scheme of pADOUCH plasmid construction by replacing GFP sequence from pLW001 vector by sequence from pUA66 plasmid.}
 	\label{cloning}
 \end{figure}
@@ -120,14 +142,16 @@ We successfully amplified sequence of expected length (1.1 kb) in all 8 transfor
 \end{figure}
 Sanger sequencing confirmed the presence of desired insert in digested pLW001 vector.
 However, we identified four SNPs compared to the expected sequence in GFP gene (Fig. \ref{1:3(1)seq}).
-But as both sequenced clones have exactly the same SNPs (\hyperlink{pADOUCHseq}{Appendix 7}) and all of these SNPs are synonymous (Fig. \ref{1:3(1)seq}), we inferred that the reference sequence of GFP gene in the pUA66 plasmid was inaccurate.
-Complete revised sequence of pADOUCH vector can be found in \hyperlink{pADOUCHwhole}{Appendix 8}.
-\begin{figure}[ht]
+But as both sequenced clones have exactly the same SNPs (\hyperlink{pADOUCHseq}{Appendix 8}) and all of these SNPs are synonymous (Fig. \ref{1:3(1)seq}), we inferred that the reference sequence of GFP gene in the pUA66 plasmid was inaccurate.
+Complete revised sequence of pADOUCH vector can be found in \hyperlink{pADOUCHwhole}{Appendix 9}.
+\begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.26]{text/Pictures/pADOUCHseq.png}
 	\caption{Excerpt of 1:3(1) clone sequence alignment with expected pADOUCH references. DNA sequence is dotted except for SNPs; protein sequence is always beneath its DNA sequence.}
 	\label{1:3(1)seq}
 \end{figure}
+
+\cleardoublepage%%% keeps correct headings
 
 \shorthandon{-} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

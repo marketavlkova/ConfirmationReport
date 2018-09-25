@@ -209,7 +209,13 @@ For fluorescent microscopy 1~$\mu$l of fresh 4~h culture (see promoter activity 
 Multiple agarose pads are placed within a single gene frame on a microscopy slide and after adding cultures covered with a coverslip.
 Two positions per an agarose pad are chosen and automated time-lapse phase contrast and fluorescent (GFP; 200~ms exposure time) microscopy is set-up.
 Both phase contrast and fluorescent images are taken using 100x immersion objective and Hamamatsu camera [ORCA-Flash4.0].
-All pictures are stored and handled in TIFF format.
+
+All pictures are stored and further handled in TIFF format using Fiji ImageJ software.
+To produce movies the fluorescent pictures are merged with the phase contrast ones (only focused pictures are used for this).
+Next, the minimum and maximum pixel values of both channels are adjusted: fluorescent channel 0-4095 (i.e. 12-bit), phase contrast channel 0-65535 (i.e. 16-bit).
+This is finally saved into AVI format.
+
+\cleardoublepage%%% keeps correct headings
 
 \shorthandon{-}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
