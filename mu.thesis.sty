@@ -241,36 +241,37 @@ December\fi \space\number\year}
 %%%%%% BIBLIOGRAPHIC ENTRY %%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\BibliographicEntry}{
-\pdfbookmark{Bibliographic Entry}{Bibliographic Entry}
-\Outset{Bibliographic Entry}
-\thispagestyle{empty}
-
-\newlength{\leftw}
-\settowidth{\leftw}{{\bf Number of Pages:} } %% set necessary width of left column
-
-\newlength{\rightw}
-\setlength{\rightw}{\textwidth - \rightw - 24 pt} %% calculate right column
-
-\noindent
-\begin{tabular}{ p{\leftw} p{\rightw} }
-  {\bf Author:}           & \AuthorDegree\\
-                          & College of Science, Massey University\\
-                          & \Department \\[6mm]
-  {\bf Title of Thesis:}  & \TitleOfThesis  \\[6mm]
-  {\bf Course:}   & \FieldOfStudy \\[6mm]
-  {\bf Number of Pages:}  & \Pages \\[6mm]
-  {\bf Keywords:}         & \Keywords
-\end{tabular}
-
-\cleardoublepage
-}
+%%%\newcommand{\BibliographicEntry}{
+%%%\pdfbookmark{Bibliographic Entry}{Bibliographic Entry}
+%%%\Outset{Bibliographic Entry}
+%%%\thispagestyle{empty}
+%%%
+%%%\newlength{\leftw}
+%%%\settowidth{\leftw}{{\bf Number of Pages:} } %% set necessary width of left column
+%%%
+%%%\newlength{\rightw}
+%%%\setlength{\rightw}{\textwidth - \rightw - 24 pt} %% calculate right column
+%%%
+%%%\noindent
+%%%\begin{tabular}{ p{\leftw} p{\rightw} }
+%%%  {\bf Author:}           & \AuthorDegree\\
+%%%                          & College of Science, Massey University\\
+%%%                          & \Department \\[6mm]
+%%%  {\bf Title of Thesis:}  & \TitleOfThesis  \\[6mm]
+%%%  {\bf Course:}   & \FieldOfStudy \\[6mm]
+%%%  {\bf Number of Pages:}  & \Pages \\[6mm]
+%%%  {\bf Keywords:}         & \Keywords
+%%%\end{tabular}
+%%%
+%%%\cleardoublepage
+%%%}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%% OUTSET %%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\MakeOutset}{\Folder\TitlePage\BibliographicEntry}
+%%%\newcommand{\MakeOutset}{\Folder\TitlePage\BibliographicEntry}
+\newcommand{\MakeOutset}{\Folder\TitlePage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% ABSTRACT %%%%%%
