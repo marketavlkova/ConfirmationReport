@@ -52,6 +52,7 @@ To explore the differences in promoter activity and genetic backgrounds, 4 h cul
 Exported FCS files were then analysed in R - used scripts are available at \href{https://github.com/marketavlkova/}{GitHub} repositories.
 
 \subsection{Activity of \tax{lacZ} promoters}
+\phantomsection%%% removes warning: "package hyperref warning the anchor of a bookmark and its parent's must not be the same. Added a new anchor on input line 55."
 \subsubsection{Expression in lactose environment}
 All strains with \tax{lacZ} promoter cloned upstream of GFP gene and strain ASC662, which has GFP integrated into chromosome in \tax{lac} operon, show strong GFP expression when grown in lactose as a sole carbon source (Fig. \ref{lacZassay}).
 All plasmid based models show about 2.5 to 10.5 times (3.842 au $\pm$ 0.113 in pZ1\textunderscore K12-K12 to 4.464 au $\pm$ 0.095 in pZm1\textunderscore D9-K12) higher GFP expression than ASC662 (3.442 au $\pm$ 0.140).
@@ -126,7 +127,7 @@ To confirm that we decided to place the \tax{placZ::GFP} sequences into chromoso
 
 We have available pLW001 plasmid which is suitable for chromosomal integration (\hyperlink{pLW001}{Appendix 7}) however, this plasmid lacks ribosome binding site (RBS).
 Thus we constructed a new plasmid by replacing the GFP gene present in pLW001 vector with the GFP sequence we have in our negative control plasmid pUA66 (\hyperlink{pUA66seq}{Appendix 1}) together with its strong RBS, some additional restriction sites and a transcriptional terminator (Fig. \ref{cloning}).
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.37]{text/Pictures/Cloning.png}
 	\caption{Scheme of pADOUCH plasmid construction by replacing GFP sequence from pLW001 vector by sequence from pUA66 plasmid.}
@@ -134,7 +135,7 @@ Thus we constructed a new plasmid by replacing the GFP gene present in pLW001 ve
 \end{figure}
 
 We successfully amplified sequence of expected length (1.1 kb) in all 8 transformants tested (Fig. \ref{colonyPCR}), showing that successful integration had occurred.
-\begin{figure}[h!]
+\begin{figure}[ht!]
   \centering
   \includegraphics[scale=0.2]{text/Pictures/ColonyPCR.jpg}
 	\caption{Electrophoresis of colony PCR using pUA66\textunderscore clon primers; M - marker; first 8 samples (1:5(1) - 1:3(2)) - tested clones; pLW001-Top10 and Top10 - negative controls with template DNA; pUA66-K12 - positive control; NEG - negative control without template DNA.}
