@@ -218,9 +218,9 @@ December\fi \space\number\year}
 \vfill
 
 \newlength{\titlew} %% sets text width with supervisor name
-\settowidth{\titlew}{\fontsize{18.5pt}{20pt}\selectfont{\textbf{Supervisor: \ThesisSupervisor}}}
+\settowidth{\titlew}{\fontsize{15.5pt}{20pt}\selectfont{\textbf{Supervisors: \ThesisSupervisor}}}
 
-\setbox2=\hbox{\bf Supervisor: \ThesisSupervisor}
+\setbox2=\hbox{\bf Supervisors: \ThesisSupervisor}
 \setbox1=\hbox{\bf A}
 \ht2=\the\ht1
 \setbox0=\hbox{\resizebox{0.75\textwidth}{!}{\box2}}
@@ -228,7 +228,7 @@ December\fi \space\number\year}
 \begin{raggedright}
  \ifthenelse{\lengthtest{\titlew > 0.72\textwidth}}%
        {\noindent\copy0 \hfill \resizebox{!}{\the\ht0}{\bf Auckland \YearSubmit}}
-       {{\fontsize{18.5pt}{20pt}\selectfont{\textbf{Supervisor: \ThesisSupervisor \hfill Auckland
+       {{\fontsize{15.5pt}{20pt}\selectfont{\textbf{Supervisors: \ThesisSupervisor \hfill Auckland
 \YearSubmit}}}}
 \end{raggedright}
 
