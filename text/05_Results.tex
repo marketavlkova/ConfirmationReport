@@ -8,7 +8,7 @@ For this purpose I designed pUA66\textunderscore insert primers (Table \ref{pcr}
 PCR products were sequenced by Macrogen, Korea using the Sanger platform.
 
 \hypertarget{SeqRes}{\subsection{\tax{placZ::GFP} strains}}
-In the Fig. \ref{placZ} we can see that SC1\textunderscore D9 and MG1655 differ in \tax{lacZ} promoter region by a single SNP at position 39 nt upstream from \tax{lacZ} gene start codon (position 199 in Fig. \ref{placZ}).
+In Fig. \ref{placZ} we can see that SC1\textunderscore D9 and MG1655 differ in \tax{lacZ} promoter region by a single SNP located 39 nt upstream from the \tax{lacZ} gene start codon (position 199 in Fig. \ref{placZ}).
 These 2 strains have 3 more SNPs further downstream in \tax{lacZ} gene itself 
 (positions 306, 324 and 363 in Fig. \ref{placZ}).
 Based on the alignment of acquired sequencing results (Fig. \ref{placZ}) we can confirm that \tax{lacZ} promoters assumed to originate from SC1\textunderscore D9 have an appropriate sequence as well as for MG1655.
@@ -20,21 +20,21 @@ Based on the alignment of acquired sequencing results (Fig. \ref{placZ}) we can 
 \end{figure}
 Beside the SNPs in \tax{lacZ} promoter, the first SNP from \tax{lacZ} coding sequence is included in all vectors upstream of GFP.
 Most of the strains possess pU139 as the vector except for pZ1\textunderscore K12-K12 which was acquired from Alon library \cite{zaslaver2006comprehensive}.
-This strain also has a longer part of \tax{lacZ} gene cloned into its pUA66 vector, potentially covering second SNP in it when compared to SC1\textunderscore D9.
-This is not the only difference of pZ1\textunderscore K12-K12, as part of the \tax{lacI} gene is incorporated in all sequences listed in Fig. \ref{placZ} on the opposite side of the promoter (\hyperlink{placZalign}{Appendix 3}) and pZ1\textunderscore K12-K12 has this \tax{lacI} sequence almost 60 bp shorter than the rest of these strains.
+This strain also has a longer part of \tax{lacZ} gene cloned into its pUA66 vector, potentially covering the second SNP when compared to SC1\textunderscore D9.
+This is not the only difference found in pZ1\textunderscore K12-K12, as part of the \tax{lacI} gene is incorporated in all sequences listed in Fig. \ref{placZ} on the opposite side of the promoter (\hyperlink{placZalign}{Appendix 3}) and in pZ1\textunderscore K12-K12 this \tax{lacI} sequence is almost 60 bp shorter than in the other strains.
 Note that strain pZ1m1\textunderscore D9-K12 and pZ1m2\textunderscore D9-K12 possess a recurrent mutation of the SNP in \tax{lacZ} promoter or \tax{lacZ} gene, respectively (from SC1\textunderscore D9 back to MG1655).
 Strain pZ2\textunderscore K12-K12 is not included in the Fig. \ref{placZ}.
 The reason is that it was made by transformation of the plasmid from pZ2\textunderscore K12-D9 into MG1655 after receiving the sequencing data and was not sequenced afterwards.
 
 \subsection{\tax{precA::GFP} strains}
-Both pA\textunderscore K12-K12 and pA\textunderscore K12-D9 strains have the same plasmid (pU139) as the latter was made by transforming plasmid from the former.
+Both pA\textunderscore K12-K12 and pA\textunderscore K12-D9 strains have the same plasmid (pU139) as the latter was made by transforming the plasmid from the former.
 It was confirmed by sequencing as well as that the sequence upstream of the GFP gene corresponds to the \tax{recA} promoter of MG1655 (\hyperlink{precAalign}{Appendix 4}).
-Similar to the cloned \tax{lacI}-\tax{lacZ} intergenic regions mentioned above, the sequence incorporated into pU139 and then transformed into these \tax{precA::GFP} strains includes parts of \tax{recA} gene downstream and \tax{pncC} gene upstream of the very promoter.
+Similar to the cloned \tax{lacI}-\tax{lacZ} intergenic regions mentioned above, the sequence incorporated into pU139 and then transformed into these \tax{precA::GFP} strains includes parts of \tax{recA} gene downstream and \tax{pncC} gene upstream of the promoter.
 
 
 \section{Ciprofloxacin susceptibility}
-Because we want to induce \tax{recA} promoter by exposing the cells to a sub-lethal (i.e., sub-MIC) concentration to Ciprofloxacin, I tested the susceptibility of MG1655 and SC1\textunderscore D9 strains to Ciprofloxacin.
-I also wanted to estimate what are the minimum inhibitory concentrations (MICs) for this antibiotic of the strains used.
+Because we want to induce the \tax{recA} promoter by exposing the cells to a sub-lethal (i.e., sub-MIC) concentration to Ciprofloxacin, I tested the susceptibility of MG1655 and SC1\textunderscore D9 strains to Ciprofloxacin.
+I also wanted to estimate what are the minimum inhibitory concentrations (MICs) of this antibiotic for the strains used.
 MG1655 and SC1\textunderscore D9 were incubated in an increasing concentration of Ciprofloxacin (see \hyperlink{MIC}{Materials and Methods}).
 \begin{figure}[b!]
   \centering
@@ -44,12 +44,12 @@ MG1655 and SC1\textunderscore D9 were incubated in an increasing concentration o
 \end{figure}
 Strains with a promoter-less pU139 or pUA66 plasmid were also included to ensure the Kanamycin resistance carried on the plasmid does not affect Ciprofloxacin sensitivity.
 The MIC for both strains is 10 ng/ml of Ciprofloxacin or less; however, 5 ng/ml is a concentration which both strains are able to survive, although a decrease in the final cell density is observed when compared to the growth in the absence of Ciprofloxacin (Fig. \ref{killing}).
-Plasmid carried Kanamycin resistance causes none or small effect to Ciprofloxacin susceptibility.
+Plasmid carried Kanamycin resistance causes none or a small effect to Ciprofloxacin susceptibility.
 
 
 \section{Variation in promoter activity}
 To explore the differences in promoter activity and genetic backgrounds 4 h cultures grown in M9 minimal media with a single carbon source were assayed using flow cytometry (see \hyperlink{FC}{Materials and Methods}).
-Exported FCS files were then analysed in R - used scripts are available at \href{https://github.com/marketavlkova/}{GitHub} repositories.
+Exported FCS files were then analysed in R - the scripts used are available at \href{https://github.com/marketavlkova/}{GitHub} repositories.
 
 \subsection{Activity of \tax{lacZ} promoters}
 \phantomsection%%% removes warning: "package hyperref warning the anchor of a bookmark and its parent's must not be the same. Added a new anchor on input line 55."
@@ -70,16 +70,16 @@ We think this is caused by differences in 5' end of the produced mRNA between th
     \label{lacZassay}
 \end{figure}
 
-The strains pZ\textunderscore D9-K12 and pZ2\textunderscore K12-K12 differ just by the two SNPs in the sequence cloned upstream of GFP gene, while one of the SNPs is located in the cloned part of \tax{lacZ} gene, not in the promoter itself (see \hyperlink{SeqRes}{sequencing results}).
+The strains pZ\textunderscore D9-K12 and pZ2\textunderscore K12-K12 differ by just the two SNPs in the sequence cloned upstream of GFP gene, while one of the SNPs is located in the cloned part of \tax{lacZ} gene, not in the promoter itself (see \hyperlink{SeqRes}{sequencing results}).
 If the SNPs from \tax{lacZ} gene had no effect on the GFP expression, we should see the same expression pattern in pZm1\textunderscore D9-K12 as in pZ2\textunderscore K12-K12 (i.e., 4.267 au, stdev: 0.103).
 However, this is not the case - the recurrent mutation of the first SNP (A to G) leads to even higher mean expression difference (4.464 au, stdev: 0.095; i.e., 1.57-fold change) than is seen when the MG1655 promoter is compared to the original sequence from SC1\textunderscore D9 (4.437 au, stdev: 0.117; i.e., 1.48-fold change).
 Interestingly we get much closer mean expression values to MG1655 promoter sequence with the recurrent mutation in the \tax{lacZ} coding sequence.
 This time pZm2\textunderscore D9-K12 shows a bit lower expression level than pZ2\textunderscore K12-K12 (4.249~au, stdev: 0.105 vs. 4.267 au, stdev: 0.103; i.e., 1.04-fold change).
 This might be caused by differential mRNA stability and/or translation efficiency in the plasmid-based models.
-Because the second SNP, which is located in \tax{lacZ} gene itself is transcribed into 5' end of the mRNA coding GFP in our models and might thus affect the mRNA folding.
+As the second SNP (located in \tax{lacZ} gene itself) is transcribed into 5' end of the mRNA coding GFP in our models it might affect the mRNA folding.
 
 \subsubsection{Expression in non-lactose environments}
-ASC662 does not express GFP when grown in any other carbon source used as the fluorescence levels are the same as for negative control pU139-K12.
+ASC662 does not express GFP when grown in any other carbon source used, as the fluorescence levels are the same as for negative control pU139-K12.
 Negative control for SC1\textunderscore D9 background, i.e., pU139-D9 is comparable to pU139-K12 (\hyperlink{FCnegs}{Appendix 5}).
 Interestingly some \tax{lacZ} promoter activity is observed in all plasmid model strains grown in any other carbon source, even glucose (Fig. \ref{lacZassay}).
 Generally, in all of them we can see the same pattern - an increasing \tax{lacZ} promoter activity based on the carbon source used: glucose $<$ arabinose $<$ ribose $<$ galactose $<$ lactose.
@@ -89,7 +89,7 @@ Note that some density curves (mainly those from glucose growth) do not have a l
 
 Presence of the fluorescence in some of these strains even during growth on non-lactose carbon source was confirmed by time-lapse fluorescent microscopy.
 These results from growth on glucose as a sole carbon source are available in \hyperlink{micro}{Appendix 6}.
-The results obtained this way were assessed just visually for now.
+The results obtained this way were assessed only visually for now.
 Strain pZ1\textunderscore K12-K12 seems to have the lowest GFP expression levels as well as the smallest fraction of fluorescent cells from the analysed plasmid-based models.
 The other two strains pZ2\textunderscore K12-K12 and pZ2\textunderscore K12-D9 also seem to exhibit the same pattern which is seen from flow cytometry results.
 It is that the latter strain has higher GFP expression levels than the former one and higher fraction of fluorescent cells as well.
@@ -111,7 +111,7 @@ The induction under higher Ciprofloxacin concentrations is slightly less pronoun
 The mean fluorescence level is also over 1.5 times higher under 4.0 ng/ml of Ciprofloxacin in pA\textunderscore K12-K12 compared to pA\textunderscore K12-D9.
 
 Another change based on the Ciprofloxacin concentration is observed in scatter plots.
-At 2.0 ng/ml of it both the forward and side scatter values of the cells begins to increase (data not shown).
+At 2.0 ng/ml of Ciprofloxacin both the forward and side scatter values of the cells begins to increase (data not shown).
 This is expected to happen due to cell filamentation under higher Ciprofloxacin exposure.
 It also explains the shift in fluorescence in the negative controls of GFP expression, i.e., pUA66-K12 and pU139-D9, under the highest Ciprofloxacin concentration used (Fig. \ref{recAassay}).
 Interestingly, the effect of filamentation is higher in SC1\textunderscore D9 background than in MG1655 (from 2.307 au, stdev: 0.197 to 2.589 au, stdev: 0.155, i.e., 1.91-fold change and from 2.332 au, stdev: 0.193 to 2.517 au, stdev: 0.169, i.e., 1.53-fold change from 2.0 to 4.0 ng/ml of Cip, respectively), which is the opposite of what we see in \tax{recA} promoter induction.
@@ -121,12 +121,12 @@ The higher filamentation effect of SC1\textunderscore D9 is likely due to its ge
 % 17.9.2018
 % where is this name from?
 \section{Construction of pADOUCH plasmid}
-As we could see, \tax{lacZ} promoters cloned into plasmids were active even in non-lactose environments, but that is not the case if the GFP gene is integrated into a chromosome (Fig. \ref{lacZassay}).
-We hypothesise that this differential results might be caused by the naturally low amounts of LacI repressor present in a cell.
-When a cell makes multiple copies of \tax{lacZ} promoter, because of its presence on a plasmid, all LacI proteins become saturated, and a part of the promoters escape the repression, even though the plasmids used should produce only several copies within a cell \cite{zaslaver2006comprehensive}.
-To confirm that we decided to place the \tax{placZ::GFP} sequences into chromosome, creating only one additional \tax{lacZ} promoter per a cell.
+As shown above, \tax{lacZ} promoters cloned into plasmids were active even in non-lactose environments, but that is not the case if the GFP gene is integrated into a chromosome (Fig. \ref{lacZassay}).
+We hypothesise that these differential results might be caused by the naturally low amounts of LacI repressor present in a cell.
+When a cell makes multiple copies of \tax{lacZ} promoter, because of its presence on a plasmid, all LacI proteins become saturated, and some of the promoters escape the repression, even though the plasmids used should produce only several copies within a cell \cite{zaslaver2006comprehensive}.
+To confirm this, we decided to place the \tax{placZ::GFP} sequences into chromosome, creating only one additional \tax{lacZ} promoter per a cell.
 
-We have available pLW001 plasmid which is suitable for chromosomal integration (\hyperlink{pLW001}{Appendix 7}) however, this plasmid lacks ribosome binding site (RBS).
+We have available pLW001 plasmid which is suitable for chromosomal integration (\hyperlink{pLW001}{Appendix 7}) however, this plasmid lacks a ribosome binding site (RBS).
 Thus we constructed a new plasmid by replacing the GFP gene present in the pLW001 vector with the GFP sequence we have in our negative control plasmid pUA66 (\hyperlink{pUA66seq}{Appendix 1}) together with its strong RBS, some additional restriction sites and a transcriptional terminator (Fig. \ref{cloning}).
 \begin{figure}[ht!]
   \centering

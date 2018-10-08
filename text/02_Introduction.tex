@@ -7,50 +7,49 @@
 Bacteria exhibit genotypic and phenotypic variability even at the level of genus.
 This variability is continuously shaped by natural selection as the cells that are better adapted to the current conditions are more likely to survive and proliferate.
 In the case of unicellular organisms, the survival game is more stringent, because they face changing conditions directly, and have limited ability to escape.
-Cells must survive osmotic stress, nutrient-poor environments, or high UV radiation. They have evolved multiple ways to overcome such conditions, many of which rely on responding to such environmental changes with physiological adaptations.
+Cells must survive for example osmotic stress, nutrient-poor environments, or high UV radiation. They have evolved multiple ways to overcome such conditions, many of which rely on responding to such environmental changes with physiological adaptations.
 These are all mediated by sensing external signals and translating them into internal responses.
 However, the responses to the same signal might differ among bacteria.
-This differences could be driven by other selection forces acting simultaneously or could be a result of previous evolution in response to a similar environment.
-Anyway, cells which do not manage to adapt to the new conditions are likely to be excluded by natural selection and die.
+These differences could be driven by other selection forces acting simultaneously or could be a result of previous evolution in response to a similar environment.
+In any case, cells which do not manage to adapt to the new conditions are likely to be excluded by natural selection and die.
 
-It is thus essential for a living cell to sense what is happening in the environment and react accordingly.
-It also means to react in a timely manner.
+It is thus essential for a living cell to sense what is happening in the environment and react accordingly and in a timely manner.
 If the timescale of an appropriate reaction should be on the order of seconds, there is no time for changes in transcription or translation.
 In that case, the cell fate depends on the proteins or other small molecules it has already synthesised.
 One example of a fast response to a signal is chemotaxis.
-When a motile bacterium occurs in a gradient of an attractant (e.g., nutrients such as sugars or amino acids) or repellent (e.g., toxic metabolites, some divalent cations), it swims towards or away from the higher concentration of it, respectively.
+When a motile bacterium occurs in a gradient of an attractant (e.g., nutrients such as sugars or amino acids) or repellent (e.g., toxic metabolites), it swims towards or away from the higher concentration of it, respectively.
 The change from a random bacterial walk to active chemotaxis is mediated by a protein CheY.
 Its phosphorylation depends on sensing of external signals and determines the probability of flagella rotating clockwise (i.e., cell rotation) switching into counter-clockwise motion (i.e., straight run) \cite{shimizu2010modular, mears2014escherichia}.
 
 On the other hand, if it is advantageous or only necessary to react in minutes or hours, responses can be mediated through translational or transcriptional changes.
-Sometimes a quick change in expression can be even detrimental, especially in the case of an extensive physiological reprogramming.
-Such alterations consume a lot of energy.
-For the cell, it might be more profitable to not respond at once.
+Sometimes a quick change in expression can even be detrimental, especially in the case of extensive physiological reprogramming.
+Because such alterations consume a lot of energy it might be more profitable for the cell to not respond at once.
 Cells might even benefit from not responding at all for some time, for example, if the signal triggering costly response is likely to be transient.
 To manage and orchestrate many responses to multiple signals cells evolved a network of extra- and intracellular signalling pathways.
 
 As I focus on transcriptional responses, the following text covers mostly these cases and describes the effects of different mechanisms on the speed of the cell response, transcriptional noise, sensitivity, and epigenetics.
 Response times depend on the topology of the circuit, the signals that bacteria have observed previously (memory), and any predictive behaviour that the bacteria are capable of.
-By epigenetics or memory, I mean a heritable change in gene expression without simultaneous changes in DNA primary sequence and transcriptional noise is understood as variability in gene expression among individual cells with the same genetic background.
+By epigenetics or memory, I mean a heritable change in gene expression without simultaneous changes in DNA primary sequence.
+The transcriptional noise is understood as variability in gene expression among individual cells with the same genetic background.
 Below I go into each of these properties in more detail to establish the current state of the field.
 I focus on \tax{E. coli} strains as it is a well-studied model organism, however little is known about its environmental isolates which seems to be adapted to survive and proliferate outside their hosts \cite{byappanahalli2004indigenous, ishii2006presence, somorin2016general}.
 
 
 
 \section{Signal recognition}
-The first step of cellular response is sensing of internal and external cues.
+The first step of cellular response is the sensing of internal and external cues.
 There are several means by which bacteria can detect such signals, and these are described below.
-On the other hand, there is little known about how these different signal sensing mechanisms affect the cell response dynamics and whether they differ in terms of speed, sensitivity, noise or memory.
+However, there is little known about how these different signal sensing mechanisms affect the cell response dynamics and whether they differ in terms of speed, sensitivity, noise or memory.
 
 \subsection{Direct signalling pathways}
 Direct signalling occurs when a signal molecule is imported through a cell membrane into the cytosol, or is produced by the cell and subsequently interacts with regulatory proteins.
 This is often the case for genes involved in carbohydrate catabolism and amino acid biosynthesis \cite{charlier1992arginine, weickert1992isorepressor, pittard1996various, wheatley2013structural}.
-In this case, the necessity to import the nutrients into a cell prior to their consumption is utilized also for signalling.
+In these cases, the nutrient import into a cell is utilized also for signalling besides consumption purposes.
 Physical signals such as UV or heat are also considered direct, although no active import takes place in the signalling.
 
 \subsection{Indirect signalling pathways}
 It is not always beneficial for a cell to import signal molecules into the cytosol as some of these might be toxic or simply too big (e.g., host-pathogen cell-cell interactions).
-In order to sense environmental cues without the necessity to import them, bacteria possess sensory proteins which are located in their membrane.
+In order to sense environmental cues without the necessity to import them, bacteria possess transmembrane sensory proteins.
 Upon binding of a signal molecule by extracellular domain, the protein changes its conformation transferring the received signal into the cell interior.
 
 \begin{figure}[ht!]
@@ -65,34 +64,33 @@ This consists of a transmembrane sensory kinase which is autophosphorylated at i
 To be able to phosphorylate itself the kinase requires ATP or other phosphate donors.
 Next, the phosphorylated kinase transfers the phosphate group to its partner regulatory protein enabling its activity, most often DNA-binding and transcriptional regulation \cite{lynch2012prioritization, gao2015temporal, cui2018novel}.
 This protein receives the phosphate to its aspartate residue and might act as both gene repressor and/or activator.
-Alternatively, the output of the two-component system can be a modification of biochemical activity of target proteins or RNAs instead or on the top of the change in gene expression \cite{shu2002antar, chambonnier2016hybrid}.
-Hybrid two-component systems also exist, and are usually located in cell membrane with their sensory domains in periplasmic space (Fig. \ref{two}\textcolor{red}{b}) \cite{lynch2012prioritization, hirano2013regulon}.
+Alternatively, the regulatory protein can modify biochemical activity of target proteins or RNAs instead or on the top of the change in gene expression \cite{shu2002antar, chambonnier2016hybrid}.
+Hybrid two-component systems also exist, and are usually located in the cell membrane with their sensory domains in periplasmic space (Fig. \ref{two}\textcolor{red}{b}) \cite{lynch2012prioritization, hirano2013regulon}.
 
 Another version of two-component system is the phosphorelay (Fig. \ref{two}\textcolor{red}{c}).
 In this case, multiple steps of phosphate transfers occur before the final phosphorylation of target regulator.
-These multiple steps allow an easier regulation by other signals as the phosphorelay can be silenced at any of the intermediate steps during the transmission \cite{perego2001pentapeptide, groisman2016feedback}.
+These multiple steps allow for easier regulation by other signals as the phosphorelay can be silenced at any of the intermediate steps during the transmission \cite{perego2001pentapeptide, groisman2016feedback}.
 
 In some cases, multiple different signals are detected by the same sensory kinase or converge into the same regulatory protein (Fig. \ref{two}\textcolor{red}{d}).
 This results in similar outputs in response to various signals \cite{kaczmarczyk2014complex, chambonnier2016hybrid}.
-In contrast, some signals result in multiple responses.
-A divergent signal transmission mediates this (Fig. \ref{two}\textcolor{red}{e}) as one sensory kinase is able to phosphorylate aspartate domains of different acceptor proteins \cite{mika2005two, groisman2016feedback}.
+In contrast, a divergent signal transmission results in multiple responses to the same signal (Fig. \ref{two}\textcolor{red}{e}) as one sensory kinase is able to phosphorylate aspartate domains of different acceptor proteins \cite{mika2005two, groisman2016feedback}.
 
 \section{Signal processing}
-After a signal is received by cell, it triggers changes in the activity of proteins and/or gene expression.
-While control of protein activity helps to respond to quick environmental changes, translational regulation is a useful tool for controlling the differential production of proteins coded within the same operon and thus transcribed on the same mRNA \cite{dar2018extensive}.
-Transcriptional regulation, on the other hand, might be considered as the most economical as it inhibits the very synthesis of products which are not needed at the moment.
+After a signal is received by the cell, it triggers changes in the activity of proteins and/or gene expression.
+Control of protein activity helps to respond to rapid environmental changes. Translational regulation is a useful tool for controlling the differential production of proteins coded within the same operon and thus transcribed on the same mRNA \cite{dar2018extensive}.
+Transcriptional regulation might be considered as the most economical response as it inhibits the very synthesis of products which are not needed at the moment.
 This saves resources and energy for synthesis of desired gene outputs.
 As the latter type of regulation is the focus of this work, I outline the important aspects of this process in more detail below.
 
 \subsection{Regulation of transcription initiation}
-Initiation of transcription is the very first step of gene expression and as that it is highly regulated.
-The crucial step is RNA polymerase binding to the promoter sequence, which contains motifs known as the -35 element, the extended -10 element, the -10 element, the
+Initiation of transcription is the first step of gene expression and as that it is highly regulated.
+The crucial step is RNA polymerase binding to the promoter sequence, which contains motifs known as: the -35 element, the extended -10 element, the -10 element, the
 discriminator region, the UP element and the core recognition element.
 These elements mediate the interaction of the promoter and RNA polymerase, and their proximity to consensus sequences influences the strength of the promoter.
 The rate of transcription initiation is proportional to the total amount of produced mRNA as long as an early transcription termination does not occur \cite{kennell1977transcription, iyer1996absolute}.
 Here I am going to describe the regulation of this step involving transcription factors.
 The activity of these factors corresponds to signals the cell acquires from the internal or external environment.
-Even though some factors control only one promoter, the majority of at least \tax{E. coli} promoters is regulated by more of them \cite{karp2014ecocyc}.
+Even though some factors control only one promoter, the majority of at least \tax{E. coli} promoters is regulated by more transcription factors \cite{karp2014ecocyc}.
 
 \begin{figure}[ht!]
   \centering
@@ -107,16 +105,16 @@ This is achieved through various mechanisms.
 The simplest one is repressor binding to the operator which overlaps one or both of those promoter elements \cite{brent1981mechanism} (Fig.~\ref{txn}\textcolor{red}{a}).
 Other promoters have distant operators outside -10 and -35 elements, but bound repressors cluster creating a DNA loop which also constitutes a blockage \cite{semsey2004dna} (Fig.~\ref{txn}\textcolor{red}{a}).
 A more complex and indirect way of repression is by inhibiting activators (described below) - i.e., repressors acting as anti-activators \cite{sogaard1993protein}.
-Because some promoters require activation for the transcription initiation, anti-activation might be sufficient for complete repression (Fig.~\ref{txn}\textcolor{red}{a}).
+Because some promoters require activation for transcription initiation, anti-activation might be sufficient for complete repression (Fig.~\ref{txn}\textcolor{red}{a}).
 
 The activity of specific promoters can be controlled gradually.
 Such promoter sequences have arrays of operators, and the amount of bound repressors affects the strength of the repression.
 Some promoters are also recognized by more than one kind of repressor which usually do not affect each other \cite{el2009repression}.
 
-For instance arginine acts as a co-repressor of its own biosynthesis (Fig. \ref{dir}\textcolor{red}{a}).
+For instance, arginine acts as a co-repressor of its own biosynthesis (Fig. \ref{dir}\textcolor{red}{a}).
 When a bacterium does not have enough of this amino acid available for protein production the transcription of arginine genes is active \cite{charlier2004biosynthesis, caldara2006arginine}.
 On the other hand, when arginine is abundant in the culture medium, and thus in the cell, there is no need to make more of it.
-The cell has ArgR repressor present in the cytosol, but ArgR itself cannot bind to DNA and inhibit transcription in the arginine absence \cite{clark2005molecular, caldara2006arginine}.
+The cell has ArgR repressor present in the cytosol, but ArgR itself cannot bind to DNA and inhibit transcription in the absence of arginine \cite{clark2005molecular, caldara2006arginine}.
 However when there is plenty of arginine in the cell, it binds to ArgR and as a co-repressor inhibits expression of arginine structural genes by binding to an appropriate promoter \cite{charlier1992arginine, charlier2004biosynthesis, clark2005molecular}.
 
 \begin{figure}[ht]
@@ -127,15 +125,15 @@ However when there is plenty of arginine in the cell, it binds to ArgR and as a 
 \end{figure}
 
 \subsubsection{Activation}
-Activation, on the other hand, enables particular gene transcription or increases the strength of RNA polymerase binding to the promoter.
-Similar to repression, some activators interact directly with RNA polymerase but other act indirectly as anti-repressors most often by releasing and preventing repressor binding to the operator \cite{frederix2011co}.
+Activation enables particular gene transcription or increases the strength of RNA polymerase binding to the promoter.
+Similar to repression, some activators interact directly with RNA polymerase but others act indirectly as anti-repressors most often by releasing bound repressors and preventing their further binding to the operator \cite{frederix2011co}.
 Besides affecting sequence specific repressors, some indirect activators also affect binding of nucleoid-associated proteins (NAPs; described more in the next section), altering access for RNA polymerase to the promoter sequence \cite{santana2001transcriptional}.
-Direct activators mostly facilitate the very interaction of RNA polymerase and promoter.
+Direct activators mostly facilitate the interaction of RNA polymerase and promoter.
 Three mechanisms of direct activation are usually described: class I activation, class II activation, and activation by conformational change.
 
-Class I activators bind upstream of -35 element and interact with $\alpha$ subunit of RNA polymerase \cite{ushida1990helical} (Fig.~\ref{txn}\textcolor{red}{b}).
-Operators of class II activators in turn overlap with -35 promoter element and the activators interact with given $\sigma$ factor of RNA polymerase \cite{igarashi1991functional} (Fig.~\ref{txn}\textcolor{red}{b}).
-Moreover, bound class II activator prevents binding of the RNA polymerase $\alpha$ subunit to the preferred position right upstream of -35 element.
+Class I activators bind upstream of -35 element and interact with the $\alpha$ subunit of RNA polymerase \cite{ushida1990helical} (Fig.~\ref{txn}\textcolor{red}{b}).
+Operators of class II activators in turn overlap with -35 promoter element and the activators interact with a given $\sigma$ factor of RNA polymerase \cite{igarashi1991functional} (Fig.~\ref{txn}\textcolor{red}{b}).
+Moreover, bound class II activators prevent binding of the RNA polymerase $\alpha$ subunit to the preferred position right upstream of -35 element.
 Class I and class II activation thus can co-occur on the same promoter when two different activators are required to trigger the transcription \cite{lloyd2002requirement}.
 
 The last classical activation mechanism causes a conformational change of the sequence between -10 and -35 elements.
@@ -156,24 +154,24 @@ Gene activation is best studied in the \tax{lac} operon of model organism \tax{E
 To avoid wasteful production of enzyme hydrolysing lactose (LacZ), if no lactose is available, \tax{E. coli} expresses \tax{lac} repressor (LacI) \cite{hudson1990co}.
 However, \tax{lac} operon transcription is desired if lactose is present in the media, and this is ensured by \tax{lac} operon inducers.
 Allolactose - \tax{lac} operon inducer - is imported by lactose permease into the cell where it binds directly to the repressor LacI.
-Lactose first has to be modified to allolactose by $\beta$-galactosidase (LacZ) \cite{jobe1972lac, wheatley2013structural}.
+Lactose has to be modified to allolactose by $\beta$-galactosidase (LacZ) to act as a \tax{lac} operon inducer \cite{jobe1972lac, wheatley2013structural}.
 Allolactose then induces \tax{lac} operon gene indirectly by acting as an anti-repressor.
 LacI binding to the promoter DNA is then released triggering \tax{lacZYA} expression (Fig. \ref{dir}\textcolor{red}{b}) together with binding of general regulatory protein CRP \cite{hudson1990co, clark2005molecular}.
 CRP levels rise when the availability of a preferred carbon source (e.g., glucose) drops.
 Low levels of CRP thus prevent lactose utilization favouring glucose consumption even when lactose is available.
 
 \subsection{Regulation of mRNA elongation and transcription termination}
-After a successful transcription initiation, the elongation of mRNA follows until termination comes to place.
+After a successful transcription initiation, the elongation of mRNA follows until termination occurs.
 Even though the main transcription regulation occurs at the level of transcription initiation, elongation and termination can also be modulated, ranging from the repression of elongation \cite{monsalve1996protein}, through elongation pausing and backtracking \cite{mustaev2017transcription} to transcription attenuation and anti-termination \cite{naville2009transcription}.
 
 \subsection{Transcription network topology}
 For a better understanding of the whole transcription network regulation, it is important to look at how individual transcriptional motifs affect the speed of regulatory circuits, transcriptional noise, and possible epigenetic memory.
 The speed in transcriptional response is usually characterised by a rise-time (or response time), i.e., a time when the concentration of a gene product reaches its half maximal concentration after gene induction.
-Compared to signal sensing the effects of network motifs on these aspects of transcription are better understood.
+While the effects of different signal sensing mechanisms (described above) on the transcriptional response dynamics (e.g., speed, noise, sensitivity) are not well studied, the ways how network motifs affect these aspects are better understood.
 
 \phantomsection%%% removes warning: "package hyperref warning the anchor of a bookmark and its parent's must not be the same. Added a new anchor on input line 172."
 \subsubsection{Promoter strength and protein lifetime}
-Naturally, the more easily and often RNA polymerase binds effectively to a promoter the more of an appropriate protein is produced at the time.
+The stronger a promoter the more easily and often RNA polymerase binds to it and the more of an appropriate protein is produced at the time.
 The strength of the promoter is given by its nucleotide sequence and binding of transcription factors increases or decreases RNA polymerase affinity to it.
 On the other side of this equilibrium is the degradation of the product, as its stability in certain conditions determines its lifetime.
 A functional protein is also diluted during cell division, which further reduces its amount per cell.
@@ -181,20 +179,19 @@ A functional protein is also diluted during cell division, which further reduces
 %%%\subsubsection{Transcriptional network motifs}
 \subsubsection{Feedback loops}
 A feedback loop is a transcriptional network motif in which the products affect their own production (Fig.~\ref{motifs}\textcolor{red}{a},\textcolor{red}{b}).
-The influence of the output on itself transcription might be direct or indirect if multiple effectors are involved.
+The influence of the output on its own transcription might be direct or indirect if multiple effectors are involved.
 Feedback loops are quite common in bacterial gene regulation and affect the speed, variation, and sensitivity of cellular responses and can also lead to epigenetic switches.
-First, the effects of feedback loops on transcription dynamics are characterized below.
-Next, I devote a part to their connection with cell memory.
+First, the effects of feedback loops on transcription dynamics are characterized below, further a relationship between these loops and cell memory is described.
 Note that most of the work on feedback loop dynamics has been done by comparing the feedback loops to systems with no feedback, and not by positive versus negative feedback comparison.
 
 A positive feedback loop is a motif in which the product further induces the expression of the gene coding it (Fig.~\ref{motifs}\textcolor{red}{a}).
 Transcriptional activation is slower and noisier in case of positive feedback loops compared to no feedback systems \cite{maeda2006regulatory, sayut2007noise}.
-This is probably due to low initial amounts of the auto-inducer which might either be diluted before the expression is fully auto-induced or get bound to its other functions within the cell.
+This is probably due to low initial amounts of the auto-inducer which might either be diluted before the expression is fully auto-induced or are bound to other functions within the cell.
 This stochasticity in auto-inducer binding to its promoter is likely to cause higher transcription noise upon the induction among individuals and delay the effect of the strong induction by positive feedback.
 Although slower and noisier, this motif enables cells to react to much lower concentrations of a signal once the positive feedback loop establishes.
 Both graded and hysteretic expression (i.e., ON or OFF expression state depending on recent events or memory) can occur in genes regulated this way \cite{maeda2006regulatory}.
 
-A negative feedback loop, i.e., a circuit where the product inhibits its own expression, exhibits the opposite traits compared to the positive feedback, as it decreases the response time \cite{rosenfeld2002negative} (Fig.~\ref{motifs}\textcolor{red}{b}).
+A negative feedback loop, i.e., a circuit where the product inhibits its own expression, exhibits the opposite traits of a positive feedback, as it decreases the response time \cite{rosenfeld2002negative} (Fig.~\ref{motifs}\textcolor{red}{b}).
 It also reduces the variability in product concentration decreasing cell-to-cell and temporal variability \cite{becskei2000engineering}.
 This enables the cell to use stronger promoters for proteins needed in a short time but at low concentration without overshoots and risks of protein toxicity.
 Hysteresis in terms of simple negative feedback loop has not been reported but could be readily achieved by double-negative feedback \cite{toman1985system}.
@@ -202,11 +199,11 @@ An example of this is detailed below.
 
 Positive feedback loops and double-negative feedback loops are known to play a role in memory of bacteria.
 Positive feedback is the first described example of bacterial epigenetics.
-It was shown already in 1957 that \tax{E. coli} sub-population primed by high concentration of lactose analogue TMG is able to maintain \tax{lac} operon fully induced even in low non-inducible TMG concentrations \cite{novick1957enzyme}.
+It was shown in 1957 that an \tax{E. coli} sub-population primed by high concentration of lactose analogue TMG is able to maintain \tax{lac} operon fully induced even in low non-inducible TMG concentrations \cite{novick1957enzyme}.
 While if the same bacteria are exposed to the low non-inducible TMG concentration without priming the \tax{lac} operon remains repressed by LacI.
 The mechanism behind this resides in different levels of $\beta$-galactoside permease (LacY) present in TMG induced and naive cells.
 The induced population has a high level of the permease in the cell membrane, because \tax{lacY} gene expression has been activated by previous high TMG concentrations.
-This state is preserved in a sub-population of induced cells after transfer into low TMG concentration as the abundant permease is able to maintain intracellular TMG level high enough to avoid LacI repression.
+This state is preserved in a sub-population of induced cells after transfer into low TMG concentration as the abundant permease is able to maintain the intracellular TMG level high enough to avoid LacI repression.
 Thus the high level of permease leads to high intracellular TMG concentration which in turn acts as permease transcription activator.
 On the other side, naive cells have minimal amounts of LacY if any, so they are not able to obtain enough TMG from the solution to activate \tax{lac} operon expression \cite{smits2006phenotypic, casadesus2013programmed}.
 
@@ -219,18 +216,17 @@ On the other side, naive cells have minimal amounts of LacY if any, so they are 
 
 Another example of a long-term epigenetic switch mediated by a positive feedback loop was published recently.
 Enteropathogenic \tax{E. coli} (EPEC) has been revealed to coexists in two, non-virulent and hyper-virulent, sub-populations, each having lag phases of different length \cite{ronin2017long}.
-At transcription level it is a change in \tax{per} operon expression (located on EAF plasmid) and \tax{per} regulated genes.
+At the transcriptional level it is a change in \tax{per} operon expression (located on EAF plasmid) and \tax{per} regulated genes.
 EPEC cultivation in virulence-activating conditions gives rise to \tax{per}-ON hyper-virulent aggregative sub-population (SMALL phenotype) reaching nearly 100\% \cite{ronin2017long}.
 Interestingly this high ratio of \tax{per}-ON vs. \tax{per}-OFF cells remained for many generations even after transferring the culture back into non-activating conditions, although naive EPEC culture contains only a minority of \tax{per}-ON cells.
 Transition back from \tax{per}-ON to \tax{per}-OFF phase is achieved when cells are grown up to stationary phase.
 The long-term stability of \tax{per}-ON state relies on a positive feedback of PerA which acts as an activator of its own gene beside \tax{perB} and \tax{perC} in the \tax{per} operon (Fig.~\ref{per}) \cite{ibarra2003identification, ronin2017long}.
 
 A double negative feedback loop is known to play a role in epigenetic switching between a lytic and lysogenic cycle of \tax{E. coli} phage $\lambda$ \cite{smits2006phenotypic, casadesus2013programmed}.
-After inserting its DNA, the virus cycle might undergo two different ways - i.e., either replicate producing new phages and heading for bacterial lysis or integrate its DNA into the bacterial chromosome and persist there within lysogeny.
+After inserting its DNA, the virus might undergo two different cycles - i.e., either replicate producing new phages and heading for bacterial lysis or integrate its DNA into the bacterial chromosome and persist there within lysogeny.
 The fate of the phage lies in two repressors, CI and Cro, each repressing transcription of the other \cite{eisen1970regulation, neubauer1970immunity}.
-Besides, CI inhibits phage propagation genes and activates its own transcription.
 Both CI and Cro are produced at the beginning of the infection.
-If the level of CI reaches a certain threshold and outcompetes Cro, whose activity is suppressed, the phage enters a lysogenic cycle staying dormant in the cell thanks to the CI-\tax{cI} positive feedback loop.
+If the level of CI reaches a certain threshold and outcompetes Cro, whose activity is suppressed, the phage enters a lysogenic cycle staying dormant in the cell thanks to a CI-\tax{cI} positive feedback loop.
 Otherwise, Cro levels rise further inhibiting CI production and establishing phage proliferation with subsequent cell lysis \cite{svenningsen2005role}.
 It should be noted that although it is not predictable whether the phage enters the lytic or lysogenic cycle, the ratio of lysed/lysogenized cells depends on the bacterial physiologic situation and other environmental factors as well.
 Interestingly, Toman et al. used the CI-Cro system for epigenetic regulation of \tax{gal} operon in \tax{E. coli} \cite{toman1985system}.
@@ -291,10 +287,10 @@ The AND-FFL prevents Z expression when the concentration of X fluctuates close t
 
 From incoherent FFL motifs, type 1 is predominant in \tax{E. coli} transcriptional network.
 Factor X here positively regulates both Y and Z; however factor Y acts as an inhibitor of the Z gene (Fig.~\ref{motifs}\textcolor{red}{d}, I1).
-This incoherent FFL speeds up transcriptional responses and was used to create effective pulses, although weak pulse-generating was expected \cite{mangan2003structure, basu2004spatiotemporal, mangan2006incoherent}.
+This incoherent FFL speeds up transcriptional responses and was used to create effective transcriptional pulses (or transcriptional bursting), although weak pulse-generating was expected \cite{mangan2003structure, basu2004spatiotemporal, mangan2006incoherent}.
 The acceleration trait was confirmed despite the fact that other motifs (e.g., feedback loop) contributed to the used regulatory system.
 This suggests that the motifs' fundamental functions are preserved even when combined with other motifs.
-Overall this type of regulation similarly to negative feedback loop shortens the rise-time, but unlike the negative feedback does not avoid overshoots rather the opposite.
+Overall this type of regulation similarly, to negative feedback loop shortens the rise-time, but unlike the negative feedback does not avoid overshoots rather the opposite.
 The overshoot is seen as a pulse of high gene Z expression which is subsequently inhibited by factor Y, but not necessarily back to the basal level.
 
 \section{Global control of transcription}
@@ -304,12 +300,12 @@ NAPs' role in several cellular processes such as replication, horizontal gene tr
 Here I mention their global influence of gene expression and respective DNA accessibility to other DNA-binding transcriptional factors and RNA polymerase principally.
 NAPs, in general, have a dual effect on transcription, i.e., can act as both enhancers or silencers of genes.
 
-H-NS is one of the most abundant nucleoid-associated proteins of \textit{E. coli} chromosome which occurs at all growth phases \cite{azam1999growth}.
+H-NS is one of the most abundant nucleoid-associated proteins of the \textit{E. coli} chromosome which occurs during all growth phases \cite{azam1999growth}.
 Its expression is negatively autoregulated, but another NAP Fis acts as an activator of \tax{hns} gene \cite{ueguchi1993autoregulatory, falconi1996antagonistic}.
 H-NS binds AT-rich DNA regions and forms polymers bridging distant DNA sequences  \cite{navarre2006selective, arold2010h}.
-This leads to promoter silencing especially in cases when $\alpha$ subunit of RNA polymerase uses AT-rich sites to stabilize binding of the whole complex to the promoter \cite{singh2013h}.
-However, H-NS can compete with RNA polymerase and other transcriptional factors binding of AT-rich sites in general.
-RNA polymerase might get even stuck in a DNA loop unable to elongate mRNA \cite{dame2002structural}.
+This leads to promoter silencing especially in cases when the $\alpha$ subunit of RNA polymerase uses AT-rich sites to stabilize binding of the whole complex to the promoter \cite{singh2013h}.
+However, H-NS can compete with RNA polymerase and other transcriptional factors binding of AT-rich sites.
+RNA polymerase might get stuck in a DNA loop unable to elongate mRNA \cite{dame2002structural}.
 Creation of such loops is the outcome of H-NS polymerization.
 The silencing of affected promoters is not strict though.
 RNA polymerase sometimes bypasses this by association with an alternative $\sigma$ factors instead of conventional $\sigma^{70}$ \cite{grainger2008selective}.
@@ -326,16 +322,16 @@ Review from 2010 lists 14 additional bacterial NAPs \cite{dillon2010bacterial}, 
 
 Supercoiling is another general mechanism affecting the access to the genetic code \cite{brahms1985activation}.
 Overwinding (positive supercoiling) and underwinding (negative supercoiling) is generated during transcription when a transcription bubble forms \cite{wu1988transcription}.
-This happens thanks to the helical structure of DNA.
+This happens due to the helical structure of DNA.
 Although some NAPs such as Fis and H-NS might affect the supercoiling levels \cite{ouafa2012nucleoid} topoisomerases take care of this process.
 \tax{E. coli} possess two major topoisomerases - gyrase (topoisomerase II) and topoisomerase I.
 The former releases positive the latter negative supercoiling \cite{wang1971interaction, gellert1976dna}.
 If high levels of supercoiling are not released the access to the DNA is reduced, and even already initiated transcription is slowed down or terminated \cite{chong2014mechanism}.
 
-To conclude the section about transcription regulation, it is good to point out the complexity of the whole process.
+To conclude this section about transcription regulation, it is good to point out the complexity of the whole process.
 Even when both global and specific regulation of transcription initiation permit production of a transcript the gene expression is still regulated further downstream, e.g., during mRNA elongation or translation.
 Moreover, one transcription factor can regulate multiple genes as well as being co-regulated by several factors including itself.
-Regulation of gene expression thus exhibit a huge network of mutually controlled outputs based on the information acquired by a cell, and each of these components can be influenced by selection.
+Regulation of gene expression thus exhibits a huge network of mutually controlled outputs based on the information acquired by a cell, and each of these components can be influenced by selection.
 
 
 
@@ -353,7 +349,7 @@ Regulation of gene expression thus exhibit a huge network of mutually controlled
 DNA methylation is a covalent modification of certain nucleotides, which is mediated by methyltransferases (MTs).
 While MTs associated with restriction endonucleases (REs) are known for their role as a primitive bacterial immune system, orphan MTs (with no cognate RE) were shown to affect transcription.
 Orphan MTs were initially studied within the restriction-modification system, although an ability of one of them to alter some gene expression was described already in the mid-80s \cite{sternberg1985evidence, bickle1993biology}.
-I describe the epigenetic mechanisms of Dam in detail below as the MT whose relationship to cell memory is most understood.
+I describe the epigenetic mechanisms of Dam in detail below as this is the MT whose relationship to cell memory is most understood.
 Some authors have considered the change in expression of certain genes in \tax{Caulobacter crescentus} which is associated with an orphan MT called CcrM to be epigenetic as well \cite{casadesus2006epigenetic, adhikari2016dna}.
 However, I do not include it here as these transcriptional changes are not heritable across generations and occur only during a part of a cell cycle.
 %%%Other \tax{E. coli} orphan MTs are mentioned briefly as well although none of them is known to play a role in epigenetics so far.
@@ -364,7 +360,7 @@ Dam, one of two first orphan MTs described in \tax{E. coli}, methylates adenine 
 For most of the DNA, both strands of the chromosome are fully methylated throughout the cell cycle if Dam is present.
 Of course, one of the exceptions is a short time hemimethylation of a leading strand and Okazaki fragments right after their synthesis during replication.
 Both strands lack GATC methylation in \tax{dam} mutants, moreover, higher mutation rate, uncoordinated replication initiation or loss of virulence were observed as well.
-Interestingly for some species, e.g., \tax{Vibrio cholerae} the presence of an orphan DNA adenine methylase is vital, whereas it is non-essential for other, such as \tax{E. coli} \cite{casadesus2006epigenetic, casadesus2013programmed, adhikari2016dna}.
+Interestingly for some species, e.g., \tax{Vibrio cholerae} the presence of an orphan DNA adenine methylase is vital, whereas it is non-essential for others, such as \tax{E. coli} \cite{casadesus2006epigenetic, casadesus2013programmed, adhikari2016dna}.
 
 \begin{figure}[ht!]
   \centering
@@ -384,7 +380,7 @@ Lrp in this position prevents binding not only by Dam but by $\sigma^{70}$ RNA p
 For a switch to ON phase an initial Lrp dissociation from GATC$^{prox}$ is necessary.
 This likely happens during replication when an opportunity for Lrp to bind the hemimethylated GATC$^{dist}$ site instead of GATC$^{prox}$ raises.
 The probability of this switch depends on the level of regulatory protein PapI in the cell as complex PapI/Lrp has lower affinity to GATC$^{prox}$ but binds more likely to hemimethylated GATC$^{dist}$ than to fully methylated DNA \cite{hernday2003mechanism}.
-Besides Lrp release from GATC$^{prox}$ site enables access of Dam to it so it can become methylated which further reduces Lrp affinity to this site.
+Besides, Lrp release from GATC$^{prox}$ site enables access of Dam to it so it can become methylated which further reduces Lrp affinity to this site.
 Even though RNA polymerase's access to \tax{papBA} promoter is not blocked anymore the expression itself requires CRP \cite{weyand2001essential}.
 When PapB is being produced it acts as a \tax{papI} gene transcription activator leading to a feedback loop which stabilizes the cells in ON phase \cite{forsman1989autoregulation}.
 However, the described transition from OFF to ON phase occurs with 100-fold lower frequency than vice versa \cite{blyn1990regulation}.
@@ -422,14 +418,14 @@ Circadian rhythms in photoautotrophic Cyanobacteria represent one example of pre
 It consists of alternation between photosynthetic activity during the day and nitrogen fixation at night.
 This periodicity persists in complete darkness or light for days.
 It can also be reset by light or dark pulses in a way that two genetically identical populations act in the opposite way (oxygen production or nitrogen fixation) in a constant dark or light conditions at the same time \cite{kondo1993circadian}.
-A similar oscillatory rhythm was described in a bacterium other than Cyanobacterium as well.
+A similar oscillatory rhythm was described in a bacterium other than Cyanobacterium.
 \tax{Rhodobacter sphaeroides} also controls gene expression in circadian (aerobic conditions) or ultradian (anaerobic conditions) rhythms \cite{min2005rhythmic}.
 A recent study investigating the connection between the day-and-night cycle and overall gene expression of microbial mat suggests that daily rhythmicity might not be uncommon outside Cyanobacteria \cite{hornlein2018daily}.
 The authors state that 50\% of the rhythmic genes was derived from phylum \tax{Proteobacteria}.
 
 Predictive behaviour has been observed in \tax{E. coli} as well.
 Naturally, it faces recurrent transitions between mammalian gastrointestinal tract (GIT) - higher temperature, lower oxygen - and outside environment - lower temperature, higher oxygen.
-Consistent with predictive behaviour \tax{E. coli} strongly represses genes responsible for aerobic metabolism to temperature increase (without a change in oxygen levels) in laboratory conditions \cite{tagkopoulos2008predictive}.
+\tax{E. coli} strongly represses genes responsible for aerobic metabolism after temperature increase (without a change in oxygen levels) in laboratory conditions \cite{tagkopoulos2008predictive}.
 While if the temperature drops, a correlation in up-regulation of aerobic metabolism genes occurs.
 They also evolved this strain in conditions where an increase in temperature was followed by oxygen saturation and temperature decrease by anaerobic conditions.
 The two responses were successfully decoupled after 1000 generations suggesting that anticipatory regulation can be evolved for and against.
@@ -437,18 +433,18 @@ The two responses were successfully decoupled after 1000 generations suggesting 
 Predictive behaviour in maltose to lactose shift was also described \cite{mitchell2009adaptive}.
 Evolution under high lactose concentrations without maltose resulted in the loss in the prediction of maltose exposure and evolved lines exhibit a significant fitness disadvantage compared to ancestor upon lactose-maltose transition.
 The same authors investigated anticipation of oxidative stress by yeast which occurs in its natural habitat upon transition from fermentation to respiration.
-\tax{Saccharomyces cerevisiae} uses heat-shock, ethanol, and low pH as cues to prepare for its coming without actually experiencing it at the time \cite{mitchell2009adaptive}.
+\tax{Saccharomyces cerevisiae} uses heat-shock, ethanol, and low pH as cues to prepare for its coming environment without actually experiencing it at the time \cite{mitchell2009adaptive}.
 
 
 \section{Natural selection on responses and memory}
 The current knowledge about gene expression in prokaryotes shows that transcription is a fairly regulated process.
-However, how this regulation evolved under selection in natural conditions is not fully understood yet.
+However, how this regulation evolved under selection in natural conditions is not yet fully understood yet.
 
 \subsection{Selection on sensitivity}
 I mentioned above that cells possess mechanisms to modulate the time-dependent sensitivity of gene expression to a signal (e.g., FFLs).
 Some of them are overrepresented in living organisms over others compared to randomized networks \cite{shen2002network, mangan2003structure}.
 This suggests that selection has acted to increase the accurate timing of their responses.
-But, is concentration-dependent sensitivity to a signal under the selective pressure as well?
+But, is concentration-dependent sensitivity to a signal under selective pressure as well?
 Generally, there should be selection towards the concentration of a signal that is somehow informative in the particular environment.
 However, there has been little work done to address this question so far.
 One way to look into whether it is possible for promoter sensitivity to change in response to selection is through experimental evolution.
@@ -465,13 +461,14 @@ Indeed, a very recent study of the effect of expression noise on the fitness of 
 They also indicate that after the introduction of an organism into a new environment selection might act towards high noise in the expression of some genes before appropriate expression plasticity evolves.
 However, note that mutations in promoter regions usually change both expression level and noise at the same time \cite{metzger2015selection}.
 Some work in this area on other model organisms such as \tax{Drosophila melanogaster} \cite{schor2017promoter} and mouse \cite{barroso2017evolution} has been done as well.
-But, it remains to validate that it is actually selected for certain levels of noise in the natural environment by looking into noise variations of individual genes among distinct microbial isolates coming from the same location.
+But, it remains to validate that it is actually selected for certain levels of noise in the natural environment.
+This could be done by looking into noise variations of individual genes among distinct microbial isolates coming from the same location.
 
 \subsection{Selection on memory}
 It is known that some bacteria can react faster to a signal if they were exposed to the same signal in past \cite{novick1957enzyme}.
 For example, sister and cousin cells have correlated lag times upon glucose-lactose media switch \cite{boulineau2013single, kaiser2018monitoring}.
 LacY production in \tax{E. coli} continues after a short lactose pulse although the lactose is no longer present \cite{lambert2014memory} and \tax{E. coli} also keeps producing more LacZ even after reaching maximal growth rate and thus overshooting its actual need \cite{kaiser2018monitoring}.
-Similar behaviour was observed, e.g., in yeast galactose system \cite{zacharioudakis2007yeast, razinkov2013measuring}.
+Similar behaviour was observed in yeast galactose system \cite{zacharioudakis2007yeast, razinkov2013measuring}.
 But, a question remains: are these observed traits indeed what is actively selected for in a natural fluctuating environment in order to remember past events for several generations?
 
 Some bacteria are also able to predict upcoming event based on otherwise unrelated signal \cite{kondo1993circadian, min2005rhythmic, tagkopoulos2008predictive, mitchell2009adaptive}.
