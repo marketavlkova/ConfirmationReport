@@ -78,7 +78,7 @@ In contrast, a divergent signal transmission results in multiple responses to th
 \section{Signal processing}
 After a signal is received by the cell, it triggers changes in the activity of proteins and/or gene expression.
 Control of protein activity helps to respond to rapid environmental changes. Translational regulation is a useful tool for controlling the differential production of proteins coded within the same operon and thus transcribed on the same mRNA \cite{dar2018extensive}.
-Transcriptional regulation might be considered as the most economical response as it inhibits the very synthesis of products which are not needed at the moment.
+Transcriptional regulation might be considered as the most economical response as it inhibits the synthesis of products which are not needed at the moment.
 This saves resources and energy for synthesis of desired gene outputs.
 As the latter type of regulation is the focus of this work, I outline the important aspects of this process in more detail below.
 
@@ -109,7 +109,7 @@ Because some promoters require activation for transcription initiation, anti-act
 
 The activity of specific promoters can be controlled gradually.
 Such promoter sequences have arrays of operators, and the amount of bound repressors affects the strength of the repression.
-Some promoters are also recognized by more than one kind of repressor which usually do not affect each other \cite{el2009repression}.
+Alternatively, some promoters can be recognized by multiple repressors which usually do not affect each other \cite{el2009repression}.
 
 For instance, arginine acts as a co-repressor of its own biosynthesis (Fig. \ref{dir}\textcolor{red}{a}).
 When a bacterium does not have enough of this amino acid available for protein production the transcription of arginine genes is active \cite{charlier2004biosynthesis, caldara2006arginine}.
@@ -151,7 +151,7 @@ A bound activator then brings the elements into the optimal position for RNA pol
 %%%Production of this loop is known to be mediated by nucleoid-associated protein IHF which as well as other NAPs plays a role in DNA accessibility \cite{de1991upstream, sze2001vivo}.
 
 Gene activation is best studied in the \tax{lac} operon of model organism \tax{E. coli}.
-To avoid wasteful production of enzyme hydrolysing lactose (LacZ), if no lactose is available, \tax{E. coli} expresses \tax{lac} repressor (LacI) \cite{hudson1990co}.
+To avoid wasteful production of the enzyme hydrolysing lactose (LacZ), if no lactose is available, \tax{E. coli} expresses \tax{lac} repressor (LacI) \cite{hudson1990co}.
 However, \tax{lac} operon transcription is desired if lactose is present in the media, and this is ensured by \tax{lac} operon inducers.
 Allolactose - \tax{lac} operon inducer - is imported by lactose permease into the cell where it binds directly to the repressor LacI.
 Lactose has to be modified to allolactose by $\beta$-galactosidase (LacZ) to act as a \tax{lac} operon inducer \cite{jobe1972lac, wheatley2013structural}.
@@ -167,14 +167,14 @@ Even though the main transcription regulation occurs at the level of transcripti
 \subsection{Transcription network topology}
 For a better understanding of the whole transcription network regulation, it is important to look at how individual transcriptional motifs affect the speed of regulatory circuits, transcriptional noise, and possible epigenetic memory.
 The speed in transcriptional response is usually characterised by a rise-time (or response time), i.e., a time when the concentration of a gene product reaches its half maximal concentration after gene induction.
-While the effects of different signal sensing mechanisms (described above) on the transcriptional response dynamics (e.g., speed, noise, sensitivity) are not well studied, the ways how network motifs affect these aspects are better understood.
+While the effects of different signal sensing mechanisms (described above) on the transcriptional response dynamics (e.g., speed, noise, sensitivity) are not well studied, the ways in which network motifs affect these aspects are better understood.
 
 \phantomsection%%% removes warning: "package hyperref warning the anchor of a bookmark and its parent's must not be the same. Added a new anchor on input line 172."
 \subsubsection{Promoter strength and protein lifetime}
 The stronger a promoter the more easily and often RNA polymerase binds to it and the more of an appropriate protein is produced at the time.
 The strength of the promoter is given by its nucleotide sequence and binding of transcription factors increases or decreases RNA polymerase affinity to it.
 On the other side of this equilibrium is the degradation of the product, as its stability in certain conditions determines its lifetime.
-A functional protein is also diluted during cell division, which further reduces its amount per cell.
+A functional protein is also diluted during cell division, which further reduces its concentration in a cell.
 
 %%%\subsubsection{Transcriptional network motifs}
 \subsubsection{Feedback loops}
@@ -304,14 +304,13 @@ H-NS is one of the most abundant nucleoid-associated proteins of the \textit{E. 
 Its expression is negatively autoregulated, but another NAP Fis acts as an activator of \tax{hns} gene \cite{ueguchi1993autoregulatory, falconi1996antagonistic}.
 H-NS binds AT-rich DNA regions and forms polymers bridging distant DNA sequences  \cite{navarre2006selective, arold2010h}.
 This leads to promoter silencing especially in cases when the $\alpha$ subunit of RNA polymerase uses AT-rich sites to stabilize binding of the whole complex to the promoter \cite{singh2013h}.
-However, H-NS can compete with RNA polymerase and other transcriptional factors binding of AT-rich sites.
-RNA polymerase might get stuck in a DNA loop unable to elongate mRNA \cite{dame2002structural}.
-Creation of such loops is the outcome of H-NS polymerization.
+However, H-NS can compete with RNA polymerase and other transcriptional factors binding to AT-rich sites.
+RNA polymerase might get stuck in a DNA loop due to H-NS polymerization and become unable to elongate mRNA \cite{dame2002structural}.
 The silencing of affected promoters is not strict though.
 RNA polymerase sometimes bypasses this by association with an alternative $\sigma$ factors instead of conventional $\sigma^{70}$ \cite{grainger2008selective}.
-Although H-NS is generally considered as global gene silencer, evidence of the H-NS necessity for successful transcription initiation was published \cite{singh2013h}.
+Although H-NS is generally considered to be a global gene silencer, H-NS binding to the promoter sequence of a \tax{ehxCABD} operon in Shiga toxin-producing \tax{E. coli} (STEC) is needed for the \tax{ehxCABD} operon expression \cite{singh2013h}.
 
-Fis protein similarly to H-NS prefers binding of AT-rich sites and is negatively autoregulated \cite{ball1992dramatic, stella2010shape}.
+Fis protein similarly to H-NS prefers binding to AT-rich sites and is negatively autoregulated \cite{ball1992dramatic, stella2010shape}.
 Fis's ability to affect gene expression in both positive and negative ways is better known \cite{choi2005effects, karambelkar2012silencing}.
 Moreover, it antagonizes H-NS silencing of some promoters \cite{falconi2001involvement}.
 Even though Fis shares its binding preferences for AT-rich DNA with H-NS, it does not polymerase but bends the DNA sequence at the binding site \cite{hubner1989bent}.
@@ -358,7 +357,7 @@ Dam, one of two first orphan MTs described in \tax{E. coli}, methylates adenine 
 %%%Its homologs were found in some bacteriophages as well as in other \tax{Gammaproteobacteria}, however many of bacterial DNA adenine methylases are associated with restriction endonucleases \cite{low2001roles, casadesus2006epigenetic, bochow2012bacteriophage}.
 %%%On the other hand, strains having an orphan DNA adenine methylase can be characterized by the presence of SeqA and MutH, overrepresentation of GATC sites in \tax{oriC}, genes close to it and in the \tax{dnaA} promoter \cite{sobetzko2016distamo}.
 For most of the DNA, both strands of the chromosome are fully methylated throughout the cell cycle if Dam is present.
-Of course, one of the exceptions is a short time hemimethylation of a leading strand and Okazaki fragments right after their synthesis during replication.
+One exception is a short period of hemimethylation during DNA replication due to the semi-conservative nature of this process. 
 Both strands lack GATC methylation in \tax{dam} mutants, moreover, higher mutation rate, uncoordinated replication initiation or loss of virulence were observed as well.
 Interestingly for some species, e.g., \tax{Vibrio cholerae} the presence of an orphan DNA adenine methylase is vital, whereas it is non-essential for others, such as \tax{E. coli} \cite{casadesus2006epigenetic, casadesus2013programmed, adhikari2016dna}.
 
@@ -442,7 +441,7 @@ However, how this regulation evolved under selection in natural conditions is no
 
 \subsection{Selection on sensitivity}
 I mentioned above that cells possess mechanisms to modulate the time-dependent sensitivity of gene expression to a signal (e.g., FFLs).
-Some of them are overrepresented in living organisms over others compared to randomized networks \cite{shen2002network, mangan2003structure}.
+Some of these mechanisms are overrepresented in living organisms compared to what it would look like in randomized networks \cite{shen2002network, mangan2003structure}.
 This suggests that selection has acted to increase the accurate timing of their responses.
 But, is concentration-dependent sensitivity to a signal under selective pressure as well?
 Generally, there should be selection towards the concentration of a signal that is somehow informative in the particular environment.
@@ -473,7 +472,7 @@ But, a question remains: are these observed traits indeed what is actively selec
 
 Some bacteria are also able to predict upcoming event based on otherwise unrelated signal \cite{kondo1993circadian, min2005rhythmic, tagkopoulos2008predictive, mitchell2009adaptive}.
 An attempt of an evolution of classical Pavlovian reflex to initially neutral signal in microorganisms was published last year \cite{lopez2017adaptive}.
-As the neutral signal caffeine was added to media which yeast \tax{S. cerevisiae} was expected to associate with the upcoming 5-fluoroorotic acid presence (metabolised into a toxic substance).
+Caffeine was added to the media as the neutral signal and yeast \tax{S. cerevisiae} was expected to associate it with the upcoming 5-fluoroorotic acid presence (metabolised into a toxic substance).
 This predictive-like response appeared just within a few hundred generations but was not stable over time.
 Thus, little is still known how microorganisms evolve such reflex to neutral cues.
 A mathematical model suggests this to occur if benefits of such prediction exceed its costs in other environments \cite{mitchell2011mathematical}, but no experimental evidence is available so far.
